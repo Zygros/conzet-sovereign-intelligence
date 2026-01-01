@@ -1,119 +1,24 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-venv/
-ENV/
-env/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb_checkpoints/
-
-# Environment variables and secrets
+# Secrets only
 .env
 .env.local
-.env.*.local
+*api_key*
+*API_KEY*
 *.key
 *.pem
 secrets/
-config/secrets.json
 
-# API Keys (CRITICAL)
-*api_key*
-*API_KEY*
-*token*
-*TOKEN*
-anthropic_api_key
-openai_api_key
-
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-.npm
-.eslintcache
+# Python cache
+__pycache__/
+*.py[cod]
 
 # IDE
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
-.DS_Store
-
-# Logs
-*.log
-logs/
-*.log.*
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-chromadb/
-*.vectordb
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-
-# Build artifacts
-*.pyc
-*.pyo
-*.class
-*.o
-*.out
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-_temp/
-
-# Large files (use Git LFS if needed)
-*.zip
-*.tar.gz
-*.rar
-*.7z
 
 # OS
-Thumbs.db
 .DS_Store
+Thumbs.db
 
-# Project specific
-phoenix_data/
-cache/
-output/
-results/
-experiments/
-
-# Blockchain (keep .ots files, ignore working files)
-*.ots.bak
-
-# Don't ignore
-!.gitignore
-!requirements.txt
-!package.json
-!README.md
-!LICENSE
+# Git
+.git/
