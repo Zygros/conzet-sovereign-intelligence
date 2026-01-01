@@ -1,0 +1,14 @@
+Suggested topics to add via GitHub web interface:
+
+ai
+multi-ai
+phoenix-protocol
+ai-coordination
+multi-agent-systems
+sovereign-ai
+mobile-development
+termux
+android-development
+python
+javascript
+ai-orchestration
