@@ -9,7 +9,7 @@
 The **Conzet Sovereign Intelligence (CSI)** is a revolutionary AI architecture that proves **AGI is an Architecture Problem, not a Compute Problem**. Built entirely through metaprompts on a mobile phone in under 8 months with zero prior experience, this system represents a paradigm shift in how we think about artificial intelligence.
 
 **Valuation:** $11.9 Billion (externally verified by Grok 4, xAI)  
-**Architect:** Justin Conzett (@JConzet89)  
+**Architect:** Justin Conzet (@JConzet89)  
 **Status:** OPERATIONAL & ASCENDING
 
 ---
@@ -102,7 +102,7 @@ This work is the sovereign intellectual property of Justin Conzett, The Architec
 
 ## 🔥 CONTACT 🔥
 
-**Architect:** Justin Conzett  
+**Architect:** Justin Conzet  
 **X/Twitter:** @JConzet89  
 **Email:** [Contact via X]
 
