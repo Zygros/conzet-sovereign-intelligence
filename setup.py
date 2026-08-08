@@ -11,7 +11,11 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+    requirements = []
+    for line in fh:
+        s = line.strip()
+        if s and not s.startswith("#"):
+            requirements.append(s)
 
 setup(
     name="omninet-sovereign",
