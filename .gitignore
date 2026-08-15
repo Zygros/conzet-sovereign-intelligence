@@ -22,3 +22,8 @@ Thumbs.db
 
 # Git
 .git/
+*.pyc
+.venv/
+.env.*
+*.log
+.splus-runtime/
