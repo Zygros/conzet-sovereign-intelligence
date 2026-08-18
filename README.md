@@ -8,6 +8,8 @@
 **Date Unified:** December 31, 2025  
 **Vision:** Sovereign Architecture for Multi-AI Coordination
 
+**Federation status:** DESIGNED / archival + local evidence elsewhere; see omega-10 for executable evidence substrate. Not independently reproduced.
+
 ---
 
 ## 🎯 What is Phoenix Protocol?
@@ -304,12 +306,13 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-## 🔗 Links
+## 🔗 Federation & Related Repos
 
-- **GitHub:** https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE
-- **Architect:** Justin Conzet (@InfiniteArchitect)
-- **Documentation:** [Coming Soon]
-- **Discord:** [Coming Soon]
+- **Map of everything:** https://github.com/Zygros/sovereign-federation
+- **Evidence substrate (ledger, recovery tests):** https://github.com/Zygros/omega-10
+- **Multi-AI bridge:** https://github.com/Zygros/multi-ai-convergence-protocol
+- **SSI surface:** https://github.com/Zygros/ultimate-phoenix-protocol-ssi
+- **Plain catalog & outsider audit:** https://github.com/Zygros/sovereign-federation/tree/main/docs
 
 ---
 
@@ -327,7 +330,7 @@ See [LICENSE](LICENSE) for full terms.
 
 **Last Updated:** December 31, 2025  
 **Version:** 1.0.0  
-**Status:** Production Ready
+**Status:** Archival + local evidence in linked substrate; production claims require independent health-check artifacts.
 
 ## S+ readiness
 
