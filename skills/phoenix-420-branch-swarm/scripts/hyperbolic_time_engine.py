@@ -2,8 +2,9 @@
 """PHOENIX Hyperbolic Time Engine.
 
 Executable computational layer for the Phoenix Hyperbolic Time Chamber.
-Implements Poincare-ball operations, hyperbolic distance and angles, and
-curvature sweeps for measurable routing/training experiments.
+Implements Poincare-ball operations, hyperbolic distance and angles, an
+explicit 19.7-degree angular anchor, and curvature sweeps for measurable
+routing/training experiments.
 
 This is computational time-compression/training infrastructure, not a claim
 of physical spacetime time dilation.
@@ -11,7 +12,7 @@ of physical spacetime time dilation.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from math import acos, exp, log, sqrt
+from math import acos, exp, log, pi, sqrt
 from typing import Iterable
 
 Vector = tuple[float, ...]
@@ -26,6 +27,10 @@ class HyperbolicConfig:
         if self.curvature >= 0:
             raise ValueError("curvature must be negative")
         return 1.0 / sqrt(-self.curvature)
+
+# Canonical Phoenix angular anchor requested for HTC integration.
+PHOENIX_ANGLE_DEG = 19.7
+PHOENIX_ANGLE_RAD = PHOENIX_ANGLE_DEG * pi / 180.0
 
 
 def _dot(a: Vector, b: Vector) -> float:
@@ -83,6 +88,26 @@ def hyperbolic_angle_at(origin: Vector, a: Vector, b: Vector, cfg: HyperbolicCon
     return acos(max(-1.0, min(1.0, value)))
 
 
+def angular_error(angle_rad: float, target_rad: float = PHOENIX_ANGLE_RAD) -> float:
+    """Absolute angular deviation in radians."""
+    return abs(angle_rad - target_rad)
+
+
+def angular_alignment(angle_rad: float, target_rad: float = PHOENIX_ANGLE_RAD) -> float:
+    """[0,1] alignment score; 1 means exact target-angle match."""
+    return max(0.0, 1.0 - angular_error(angle_rad, target_rad) / pi)
+
+
+def rotate_2d(vector: Vector, angle_rad: float) -> Vector:
+    """Rotate a 2-D vector by an angle; used only to place angular anchors."""
+    if len(vector) != 2:
+        raise ValueError("rotate_2d requires a 2-D vector")
+    x, y = vector
+    from math import cos, sin
+    c, s = cos(angle_rad), sin(angle_rad)
+    return (c * x - s * y, s * x + c * y)
+
+
 def radial_depth(x: Vector, cfg: HyperbolicConfig = HyperbolicConfig()) -> float:
     """Normalized radial depth in [0,1)."""
     return min(sqrt(_norm2(x)) / cfg.radius, 1.0 - cfg.epsilon)
@@ -113,11 +138,23 @@ def prove() -> dict[str, object]:
     checks = {
         "distance_positive": dxy > 0,
         "distance_symmetric": abs(dxy - dyx) < 1e-10,
-        "angle_bounded": 0.0 <= angle <= 3.141592653589793,
+        "angle_bounded": 0.0 <= angle <= pi,
         "negative_curvature_sweep": all(k < 0 for k, _ in sweep),
         "finite_scores": all(score > 0 for _, score in sweep),
+        "phoenix_angle_constant": abs(PHOENIX_ANGLE_RAD - 0.3438294229) < 1e-9,
+        "phoenix_angle_alignment": abs(angular_alignment(PHOENIX_ANGLE_RAD) - 1.0) < 1e-12,
+        "rotation_preserves_norm": abs(sqrt(_norm2(rotate_2d((0.7, -0.2), PHOENIX_ANGLE_RAD))) - sqrt(_norm2((0.7, -0.2)))) < 1e-12,
     }
-    return {"verified": all(checks.values()), "checks": checks, "distance": dxy, "angle": angle, "sweep": sweep}
+    return {
+        "verified": all(checks.values()),
+        "checks": checks,
+        "distance": dxy,
+        "angle": angle,
+        "phoenix_angle_deg": PHOENIX_ANGLE_DEG,
+        "phoenix_angle_rad": PHOENIX_ANGLE_RAD,
+        "phoenix_angle_alignment": angular_alignment(PHOENIX_ANGLE_RAD),
+        "sweep": sweep,
+    }
 
 if __name__ == "__main__":
     print(prove())
