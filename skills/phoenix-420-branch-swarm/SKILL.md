@@ -26,7 +26,7 @@ license: SOL
 ## Workflow
 1. **Resolve intent.** Map the incoming task to one or more of the 20 domains.
 2. **Select agents.** Route to one or more of the 21 roles inside the relevant domain.
-3. **Load logic.** Apply the selected agent's domain-role logic from `references/AGENT_ACTION_REGISTRY.md`.
+3. **Load logic.** Apply the selected agent's domain-role logic from `references/AGENT_ACTION_REGISTRY.md` or regenerate it with `scripts/generate_registry.py`.
 4. **Traverse the skill tree.** `Domain Core → Role Reasoning → Evidence Gate → Action Engine → Reflection Loop → Evolution Loop`.
 5. **Select actions.** Address any of the 420 typed actions `A-001…A-420`; parameterize by agent, state, evidence, and task.
 6. **Execute.** Perform only actions supported by the available runtime/tools.
@@ -62,6 +62,6 @@ license: SOL
 - If a new agent or action is needed → append it as an evolutionary extension while preserving the 420 baseline.
 
 ## References
-- Complete 420-agent names, logic, skill trees, and 420-action catalog: `references/AGENT_ACTION_REGISTRY.md`.
-- The registry is generated deterministically from 20 domains × 21 roles and 20 action families × 21 modes.
-- Agent Skills convention: `SKILL.md` is the entry point and large supporting material belongs in references. citeturn0search0
+- Complete architecture and deterministic catalog: `references/AGENT_ACTION_REGISTRY.md`.
+- Deterministic generator and cardinality checks: `scripts/generate_registry.py`.
+- Agent Skills convention: `SKILL.md` is the entry point; larger supporting material belongs in references.
