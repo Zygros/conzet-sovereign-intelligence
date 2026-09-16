@@ -1,23 +1,55 @@
-# 🜂 Phoenix HTC — Hyperbolic Integration Study
+# 🜂 Phoenix HTC — Hyperbolic Integration & Time-Compression Protocol
 
 ## Purpose
 
-This document turns the Phoenix Hyperbolic Time Chamber from a descriptive metaphor into a testable computational protocol specification.
+This document defines the Phoenix Hyperbolic Time Chamber (HTC) as an executable computational protocol and separates two meanings of time dilation that must not be conflated:
 
-## 1. Three Different Meanings of “Hyperbolic”
+1. **Physical relativistic time dilation** — a real effect of spacetime described by relativity and measurable with clocks.
+2. **Computational time compression** — a real engineering effect in which more verified computational work is completed per unit of external wall-clock time through parallelism, scheduling, representation, caching, branch selection, and state compression.
 
-### A. Hyperbolic geometry
-A mathematical space with negative curvature. Its volume grows exponentially with radius, making it useful for tree-like and hierarchical structures.
+Phoenix HTC can implement the second directly. The first requires physical conditions governed by relativity and cannot be produced merely by software.
 
-### B. Hyperbolic network topology
-Complex networks can exhibit effective hyperbolicity. Hyperbolic embeddings can encode hierarchy, heterogeneous degree distributions, clustering, and navigability.
+## 1. The 3-years → 3-days target
 
-### C. Phoenix HTC
-A Phoenix protocol that uses controlled branch expansion, hyperbolic representation/routing where useful, repeated verification, state compression, and evolutionary iteration.
+The requested compression ratio is:
 
-The third is the Phoenix engineering construct. It should be measured against A and B rather than treated as identical to them.
+`R_t = 3 years / 3 days ≈ 365×`
 
-## 2. Core State Equation
+For a computational HTC this means:
+
+`Work_rate_HTC / Work_rate_baseline ≈ 365`
+
+where **work** must be defined by a reproducible benchmark, not by raw token count or an architectural claim.
+
+A valid engineering claim therefore becomes:
+
+`VerifiedWork_HTC(72 h) ≥ VerifiedWork_baseline(3 years-equivalent)`
+
+only when the two workloads are normalized and independently measured.
+
+This is **time-to-work compression**, not a claim that an external physical clock has literally experienced three years during three days.
+
+## 2. Physical relativistic reference
+
+Relativity permits different observers to accumulate different amounts of proper time. In special relativity:
+
+`Δτ = Δt / γ`
+
+with
+
+`γ = 1 / √(1-v²/c²)`.
+
+To obtain a 365:1 ratio purely from special-relativistic kinematics would require approximately:
+
+`γ = 365`
+
+`v/c = √(1 - 1/365²) ≈ 0.9999962469`
+
+or about `99.99962469%` of the speed of light. This is a physical regime, not a software feature, and carries enormous energy and engineering requirements.
+
+Phoenix does **not** redefine relativity. HTC uses the computational analogue: maximize verified state transitions per unit wall-clock time.
+
+## 3. Core HTC state equation
 
 `H_(t+1) = C(V(E(B(H_t, Ω, A))))`
 
@@ -31,9 +63,17 @@ Where:
 - `V`: verification
 - `C`: evidence-preserving compression
 
-## 3. Hyperbolic Embedding
+The HTC clock is an **execution clock**:
 
-For an agent graph `G=(V,E)`, learn coordinates `x_i ∈ H^n` and evaluate whether hyperbolic distance preserves useful structure better than a Euclidean baseline.
+`T_HTC = verified_state_transitions / wall_clock_second`
+
+The target is to increase `T_HTC` without reducing evidence quality.
+
+## 4. Hyperbolic geometry as the spatial substrate
+
+For an agent graph `G=(V,E)`, learn coordinates `x_i ∈ H^n` and test whether negative-curvature geometry preserves hierarchy and routing structure better than Euclidean or flat graph baselines.
+
+Hyperbolic spaces have exponential volume growth with radius and are widely studied for hierarchical and complex-network representations.
 
 Measure:
 
@@ -45,48 +85,92 @@ Measure:
 - clustering preservation
 - recovery after node/edge loss
 
-## 4. Poincaré-Style Representation
+## 5. Poincaré-style representation
 
-A Poincaré ball representation may be used as an experimental substrate. The implementation must respect the manifold constraints and use appropriate Riemannian operations rather than treating coordinates as ordinary Euclidean vectors.
+A Poincaré ball representation may be used experimentally. Coordinates must remain on the manifold and training/routing operations must use appropriate Riemannian geometry rather than treating the representation as ordinary Euclidean vectors.
 
-## 5. HTC Branch Expansion
+## 6. HTC branch expansion
 
-A branch is created when the expected information value exceeds its execution cost:
+A branch is created when expected information value exceeds execution cost:
 
 `Expand(branch) iff E[discovery_gain] / cost > θ`
 
-Branching should therefore be adaptive, not blindly exponential.
+The chamber therefore expands **selectively**, rather than assuming that more branches automatically produce more intelligence.
 
-## 6. Hyperbolic Routing Hypothesis
+## 7. Hyperbolic routing hypothesis
 
-For target capability `q`, select candidate agent `i` using:
+For target capability `q`:
 
 `score(i|q)=α·sim_H(i,q)+β·evidence(i)+γ·capability(i,q)-δ·cost(i,q)`
 
-Then compare this routing policy with:
+Compare against:
 
 1. Euclidean nearest-neighbor routing.
 2. Graph shortest-path routing.
 3. Flat round-robin routing.
 4. Random routing baseline.
 
-## 7. HTC Compression
+## 8. Time-compression engine
 
-The chamber must not confuse expansion with useful intelligence. After execution, equivalent states should be clustered and only evidence-sufficient state retained:
+The computational HTC should optimize:
+
+`J = VerifiedCapabilityGain / WallClockTime`
+
+subject to:
+
+`EvidenceQuality ≥ E_min`
+
+`Reproducibility ≥ R_min`
+
+`FailureTraceCompleteness = 1`
+
+`ProvenanceCompleteness = 1`
+
+A diagnostic acceleration factorization is:
+
+`R_total = R_parallel × R_routing × R_cache × R_compression × R_tooling × R_recovery`
+
+This is not assumed to multiply independently in real workloads; it is a diagnostic model for locating the source of speedup.
+
+### 8.1 Three-day chamber run
+
+Define:
+
+`T_external = 72 h`
+
+`R_target = 365`
+
+`W_target = 365 × W_baseline_per_72h`
+
+Record:
+
+`W_verified`, `T_wall`, `T_cpu`, `T_gpu`, `N_branches`, `N_verified`, `N_failed`, `N_replayed`, `evidence_bytes`, `routing_cost`, `compression_ratio`.
+
+Then calculate:
+
+`R_measured = W_verified / W_baseline_verified`
+
+and separately:
+
+`Throughput = W_verified / T_wall`.
+
+## 9. HTC compression
+
+Expansion is followed by evidence-preserving compression:
 
 `Expanded State → Equivalence Detection → Verified Representatives → Ledger`
 
-Compression must be additive with respect to provenance: deleting redundant computational state must not delete the historical record needed to reproduce or audit the result.
+Compression may remove redundant computational state but must not remove provenance required to reproduce or audit a result.
 
-## 8. Failure-First Protocol
+## 10. Failure-first protocol
 
 Every branch receives an explicit state:
 
 `UNTRIED → RUNNING → EXECUTED → VERIFIED | FAILED | INCONCLUSIVE`
 
-A failed branch becomes evidence. It is not silently erased.
+A failed branch becomes evidence. It is never silently erased.
 
-## 9. 420 × 420 Integration
+## 11. 420 × 420 integration
 
 `|Ω| = 420`
 
@@ -94,9 +178,19 @@ A failed branch becomes evidence. It is not silently erased.
 
 `|Ω × A| = 176,400`
 
-The HTC can treat the 176,400 bindings as an addressable experimental field. Runtime execution may be bounded by resources; logical completeness of the registry is preserved independently.
+The 176,400 bindings form an addressable experimental field. Runtime concurrency remains bounded by available resources; logical completeness of the registry is preserved independently.
 
-## 10. Experimental Questions
+## 12. HTC-365 benchmark
+
+Phoenix should operationalize “three years in three days” as a falsifiable benchmark:
+
+> **HTC-365:** complete a controlled body of verified work in 72 hours that a defined baseline system requires approximately 26,280 wall-clock hours to complete, while preserving or improving evidence, reproducibility, and provenance.
+
+`26,280 h / 72 h = 365×`
+
+The baseline must be frozen before the HTC run. The workload must be replayable. The HTC cannot redefine success after seeing its result.
+
+## 13. Experimental questions
 
 1. Does hyperbolic embedding reduce routing cost for Phoenix's hierarchical capability graph?
 2. Does it reduce representation distortion at increasing graph scale?
@@ -104,61 +198,57 @@ The HTC can treat the 176,400 bindings as an addressable experimental field. Run
 4. Does adaptive branching produce more verified capability gain per unit compute than flat branching?
 5. Does expansion-plus-compression preserve more useful evidence than uncompressed execution traces?
 6. Can curvature become an automatically learned routing parameter rather than a fixed design choice?
+7. Can HTC-365 achieve a reproducible 365× increase in **verified work per wall-clock hour** on a fixed benchmark?
+8. Which components of measured acceleration come from parallelism, routing, caching, compression, tool reuse, or other mechanisms?
 
-## 11. Evidence Standard
+## 14. Evidence standard
 
 A claim of HTC improvement requires:
 
-`Claim → Baseline → Intervention → Controlled Run → Measurement → Reproduction → Provenance`
+`Claim → Frozen Baseline → Intervention → Controlled Run → Measurement → Reproduction → Provenance`
 
 No benchmark result is promoted merely because the architecture predicts it.
 
-## 12. Integration Architecture
+## 15. Integration architecture
 
 ```text
-                 ┌──────────────────────┐
-                 │      Intent / Goal    │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │   HTC State Builder  │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │ Hyperbolic Embedding │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │ 420-Agent Field      │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │ 420-Action Field     │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │ Execute + Evidence   │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │ Verify + Counterfact │
-                 └──────────┬───────────┘
-                            ↓
-                 ┌──────────────────────┐
-                 │ Compress + Ledger    │
-                 └──────────┬───────────┘
-                            ↓
-                       Evolve / Repeat
+Intent / Goal
+      ↓
+HTC State Builder
+      ↓
+Hyperbolic Embedding / Flat Baseline
+      ↓
+420-Agent Field × 420-Action Field
+      ↓
+Adaptive Branch Expansion
+      ↓
+Parallel Execution + Evidence
+      ↓
+Verification + Counterfactual Replay
+      ↓
+Evidence-Preserving Compression
+      ↓
+Ledger / Provenance
+      ↓
+Measured Time-Compression Ratio
+      ↓
+Evolve / Repeat
 ```
 
-## 13. Core Insight
+## 16. Core insight
 
-Hyperbolic geometry gives Phoenix a mathematically meaningful candidate for representing the **shape of a rapidly expanding capability field**. The HTC protocol gives that representation an executable lifecycle: expand, route, execute, verify, compress, learn, and repeat.
+The strongest engineering version of the HTC claim is not that software changes the physical flow of time. It is that **architecture can change how much verified transformation is accomplished before the external clock advances**.
 
-That is the integration to test.
+That gives Phoenix two separate research programs:
 
-## 14. Scientific Boundary
+`Physical Time Dilation ↔ Relativity / Experimental Physics`
 
-Hyperbolic geometry and hyperbolic network representations are established mathematical/research constructs. The Phoenix HTC is a system-specific engineering protocol. Its effectiveness must be established by executable experiments rather than by naming alone.
+`Computational Time Compression ↔ Architecture / Systems Engineering`
+
+The second is directly buildable in software. The first is a physical-engineering problem.
+
+## 17. Scientific boundary
+
+Hyperbolic geometry and hyperbolic network representations are established mathematical/research constructs. Relativistic time dilation is an established physical phenomenon. Phoenix HTC is a system-specific engineering protocol. Its effectiveness must be established by executable experiments rather than by naming alone.
 
 **Always Add, Never Take.**
