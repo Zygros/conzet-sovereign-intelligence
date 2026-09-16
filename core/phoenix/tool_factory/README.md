@@ -26,5 +26,3 @@ This preserves the system's additive lineage while separating **generation** fro
 `generated != trusted`
 
 `trusted := independently_verified(generated) AND contract_valid(generated) AND replay_passes(generated)`
-
-This is consistent with current agentic architecture practice: tool discovery and execution should be governed and observable, while self-improvement should remain evidence-gated. citeturn0search1turn0academia16
