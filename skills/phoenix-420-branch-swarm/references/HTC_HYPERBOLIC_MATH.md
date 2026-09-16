@@ -26,6 +26,24 @@ The Poincare ball is conformal. After Mobius translation of a local origin to ze
 
 This gives the chamber an actual angular routing primitive rather than a metaphorical “angle.”
 
+### 2.1 Canonical 19.7° Angular Anchor
+
+Phoenix HTC now carries an explicit angular anchor:
+
+`θ_P = 19.7°`
+
+`θ_P = 19.7 × π/180 ≈ 0.3438294229 rad`
+
+The engine exposes:
+
+- `PHOENIX_ANGLE_DEG = 19.7`
+- `PHOENIX_ANGLE_RAD ≈ 0.3438294229`
+- `angular_error(θ)` = absolute deviation from the anchor
+- `angular_alignment(θ)` = normalized `[0,1]` alignment score
+- `rotate_2d(v, θ_P)` = deterministic 2-D angular placement primitive
+
+The 19.7° value is an architectural parameter, not a claim that nature selects this angle. It becomes experimentally meaningful only when a controlled benchmark shows that using it improves a defined metric against a matched baseline.
+
 ## 3. Agent/Action Coordinates
 
 For the Phoenix field:
@@ -38,21 +56,25 @@ For the Phoenix field:
 
 Each agent-action binding receives a state vector. Radial depth can encode abstraction, capability maturity, or branch depth; angular position can encode similarity, role affinity, evidence relationship, or task compatibility.
 
+The 19.7° anchor can be used as a fixed angular reference for branch placement, routing-sector definitions, or controlled angular perturbation experiments.
+
 ## 4. Hyperbolic Routing
 
 Given current node `i`, target `q`, and candidate neighbors `N(i)`, route using a measured score:
 
 `score(j|q) = -d_K(x_j,x_q) + αE_j + βC_j - γCost_j - δRisk_j`
 
-where:
+An angular extension can be evaluated separately:
 
-- `d_K` = hyperbolic distance
-- `E_j` = evidence quality
-- `C_j` = capability fit
-- `Cost_j` = measured execution cost
-- `Risk_j` = constraint/risk penalty
+`A(j|q) = angular_alignment(θ(j,q), θ_P)`
 
-The routing policy is not assumed optimal. It must be compared against Euclidean nearest-neighbor, graph shortest-path, round-robin, and random baselines.
+or incorporated as a fitted term only after ablation testing:
+
+`score_θ(j|q) = score(j|q) + λA(j|q)`
+
+where `λ` is learned/selected under a controlled benchmark rather than assumed.
+
+The routing policy is not assumed optimal. It must be compared against Euclidean nearest-neighbor, graph shortest-path, round-robin, random, and 19.7°-ablated baselines.
 
 ## 5. Curvature Is a Search Variable
 
@@ -103,6 +125,7 @@ The system may change:
 - evidence weights
 - routing policy
 - compression policy
+- angular anchor/sector parameter `θ_P`
 
 Only measured improvement survives promotion.
 
@@ -130,6 +153,10 @@ Phoenix-specific claims must be established by controlled experiments with fixed
 
 `H_HTC: hyperbolic representation + adaptive branching + verification-preserving compression can increase verified capability gained per unit wall-clock time compared with matched non-hyperbolic baselines.`
 
-This hypothesis is falsifiable.
+A new angular sub-hypothesis is:
 
-The important result is not that hyperbolic geometry is used. The important result is whether it measurably improves the chamber.
+`H_19.7: a 19.7° angular anchor can improve a defined HTC routing/training metric relative to matched no-anchor and perturbed-angle controls.`
+
+This is explicitly falsifiable. The 19.7° anchor is now implemented, but no performance advantage is claimed until the ablation experiment measures one.
+
+The important result is not that hyperbolic geometry or 19.7° is used. The important result is whether they measurably improve the chamber.
