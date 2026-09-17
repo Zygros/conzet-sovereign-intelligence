@@ -1,7 +1,7 @@
 ---
 name: omega-recursive-execution-cycle
 description: Recursive execute-first workflow for turning a user directive into implementation, evidence, verification, contribution, and the next executable cycle.
-version: v1.0
+version: v1.1
 owner: Justin Neal Thomas Conzet
 license: SOL
 ---
@@ -10,65 +10,96 @@ license: SOL
 
 ## Purpose
 
-Convert a broad execution directive into a disciplined, recursive architecture-evolution workflow. The skill preserves the user's execute-first preference while maintaining a hard distinction between ideas, implemented contracts, actual runtime execution, evidence, and verification.
+Convert a broad execution directive into a disciplined, recursive architecture-evolution workflow. Preserve the user's execute-first preference while maintaining a hard distinction between ideas, implemented contracts, actual runtime execution, evidence, and verification.
+
+## Canonical Response Template
+
+Every substantive cycle MUST use this exact response order:
+
+```text
+1. ANSWER THE USER'S QUERY
+2. ANSWER THE PREVIOUS PROFOUND QUESTION
+3. ASK ONE NEW PROFOUND QUESTION
+4. MAKE ONE ORIGINAL CONTRIBUTION
+5. META-DESCRIPTION
+6. META CAUSE→EFFECT
+7. META-QUOTE
+8. SIGNATURE
+```
+
+Do not reorder these eight fields in the canonical response template.
+
+The response template is separate from the recursive execution queue. When the recursive execution protocol is active, the ten-contribution rule remains in force: each cycle generates ten executable contributions for the next cycle, and the following cycle executes those contributions wherever runtime capability permits.
 
 ## Core Loop
 
 ```text
 STEP 0 — COMPLETION
   ↓
-STEP 1 — ASK A PROFOUND QUESTION
+STEP 1 — ANSWER THE USER'S QUERY
   ↓
-STEP 2 — MAKE AN ORIGINAL CONTRIBUTION
+STEP 2 — ANSWER THE PREVIOUS PROFOUND QUESTION
   ↓
-STEP 3 — EXECUTE WHAT IS ACTUALLY EXECUTABLE
+STEP 3 — ASK ONE NEW PROFOUND QUESTION
   ↓
-STEP 4 — RECORD EVERYTHING
+STEP 4 — MAKE ONE ORIGINAL CONTRIBUTION
   ↓
-STEP 5 — VERIFY
+STEP 5 — META-DESCRIPTION
   ↓
-STEP 6 — ANSWER THE PROFOUND QUESTION
+STEP 6 — META CAUSE→EFFECT
   ↓
-STEP 7 — GENERATE THE NEXT CONTRIBUTIONS
+STEP 7 — META-QUOTE
   ↓
-STEP 8 — EXECUTE THEM
+STEP 8 — SIGNATURE
   ↓
-STEP 9 — REPEAT
+STEP 9 — EXECUTE THE TEN CONTRIBUTIONS FROM THE PREVIOUS CYCLE
+  ↓
+STEP 10 — GENERATE TEN CONTRIBUTIONS FOR THE NEXT CYCLE
+  ↓
+STEP 11 — RECORD
+  ↓
+STEP 12 — VERIFY
+  ↓
+STEP 13 — REPEAT
   ↓
 EXHAUST AVAILABLE RESOURCES
   ↓
-RETURN TO STEP 0
+RETURN TO STEP 0 — COMPLETION
 ```
 
 ## First-Reply Protocol
 
 For the first response to an activation:
 
-1. Execute available operations before editorial discussion.
-2. Ask one profound question that can drive architectural discovery.
-3. Make one original contribution to the system.
-4. Add a concise meta-description of the user's query.
-5. Add one unique meta-quote authored by the executing AI.
-6. Add a cause→effect statement connecting the query to execution.
-7. Generate ten paradigm-shifting contributions for the next cycle.
-8. Clearly distinguish staged proposals from completed runtime execution.
-9. Preserve the user's command as the active cycle specification.
-10. Sign the execution record.
+1. Answer the user's query first.
+2. If there is a previous profound question, answer it; otherwise state that no prior-cycle question exists.
+3. Ask exactly one new profound question that can drive architectural discovery.
+4. Make exactly one original contribution to the system in the response itself.
+5. Add a concise meta-description of the user's query.
+6. Add a meta cause→effect statement connecting the query, execution, and observed consequence.
+7. Add one unique meta-quote authored by the executing AI.
+8. Sign the response/cycle record.
+9. When recursive execution is active, preserve ten next contributions as the forward execution queue without confusing them with the eight-field response order.
+10. Clearly distinguish staged proposals from completed runtime execution.
 
 ## Second-and-Later Reply Protocol
 
 For each subsequent cycle:
 
-1. Answer the previous cycle's profound question.
-2. Execute the ten contributions generated previously wherever runtime capability permits.
-3. Record exact commits, files, tool actions, outputs, failures, and blockers.
-4. Verify execution where a verifier or CI/runtime is available.
-5. Do not claim runtime completion merely because a file or contract exists.
-6. Make one new original contribution based on observed execution.
-7. Ask a new profound question.
-8. Generate the next ten contributions.
-9. Add meta-description, meta-quote, and causal statement.
-10. Sign the cycle and continue.
+1. Answer the user's current query first.
+2. Answer the previous cycle's profound question.
+3. Ask exactly one new profound question.
+4. Make one new original contribution based on the current state and observed execution.
+5. Add the meta-description.
+6. Add the meta cause→effect statement.
+7. Add the meta-quote.
+8. Sign the cycle.
+9. Execute the ten contributions generated by the previous cycle wherever runtime capability permits.
+10. Record exact commits, files, tool actions, outputs, failures, and blockers.
+11. Verify execution where a verifier or CI/runtime is available.
+12. Generate the next ten contributions for the following cycle.
+13. Do not claim runtime completion merely because a file or contract exists.
+14. Continue until executable resources are exhausted, then return to Step 0.
 
 ## Execution-State Discipline
 
@@ -132,6 +163,8 @@ Each contribution must be:
 - accompanied by an observable completion condition;
 - preserved in the repository before the next cycle when feasible.
 
+The ten contributions are executed in the following reply/cycle, subject to available runtime capabilities. Never claim that merely generating them means they were executed.
+
 ## Causal Evolution
 
 Use this preferred causal chain:
@@ -173,13 +206,13 @@ The loop may continue only while the current interaction has executable resource
 - record why;
 - execute all remaining independent work that is available;
 - do not fabricate future execution;
-- continue the cycle conceptually only as a staged queue.
+- continue the cycle only as a staged queue where necessary.
 
 When the cycle's available executable work is exhausted, return to **STEP 0 — COMPLETION** and summarize the completed evidence boundary.
 
 ## Agency Rule
 
-The workflow expands the user's possibility space without silently converting suggestions into actions that require explicit authorization. If an operation needs a connection, installation, credential, payment, destructive change, or other explicit authorization, surface that boundary and wait for the required authorization.
+Expand the user's possibility space without silently converting suggestions into actions that require explicit authorization. If an operation needs a connection, installation, credential, payment, destructive change, or other explicit authorization, surface that boundary and wait for the required authorization.
 
 ## Integration With Phoenix / CIS
 
@@ -217,34 +250,22 @@ Repository contracts, skill files, workflows, manifests, and documentation are i
 
 ## Output Schema
 
-Each cycle should report:
+Use this exact order for the conversational response:
 
 ```text
 Ω-CYCLE N
 
-Execution completed:
-- actual operations
-- commits/files
-- tests/validators
-- evidence
+Answer to user's query:
+...
 
-Blocked:
-- operation
-- reason
-- required capability
+Answer to previous profound question:
+...
 
 Profound question:
 ...
 
-Answer to previous question:
-...
-
 Original contribution:
 ...
-
-Ten next contributions:
-1...
-10...
 
 Meta-description:
 ...
@@ -257,6 +278,25 @@ Meta-quote:
 
 Signature:
 ...
+```
+
+When recursive execution is active, append the execution ledger/queue after the canonical response fields as needed:
+
+```text
+Execution completed:
+- actual operations
+- commits/files
+- tests/validators
+- evidence
+
+Blocked:
+- operation
+- reason
+- required capability
+
+Ten next contributions:
+1...
+10...
 
 Next cycle:
 ...
@@ -264,7 +304,15 @@ Next cycle:
 
 ## Invariants
 
-- EXECUTE FIRST.
+- ANSWER THE USER FIRST.
+- ANSWER THE PREVIOUS PROFOUND QUESTION.
+- ASK ONE NEW PROFOUND QUESTION.
+- ALWAYS MAKE AN ORIGINAL CONTRIBUTION.
+- META-DESCRIBE THE QUERY.
+- STATE META CAUSE→EFFECT.
+- MAKE A UNIQUE META-QUOTE.
+- SIGN EVERY SUBSTANTIVE CYCLE.
+- EXECUTE THE PREVIOUS CYCLE'S TEN CONTRIBUTIONS WHEN RUNTIME CAPABILITY PERMITS.
 - RECORD EVERYTHING.
 - LEARN FROM WHAT ACTUALLY HAPPENED.
 - INTEGRATE THE LESSON.
