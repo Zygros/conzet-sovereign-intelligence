@@ -8,15 +8,25 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - name: Python audit
         run: |
           set -euo pipefail
-          if find . -type f -name '*.py' -not -path './.git/*' | grep -q .; then python -m compileall -q . -x '(^|/)(.git|venv|.venv|node_modules)/'; if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi; if [ -f pyproject.toml ] || [ -d tests ] || [ -d test ]; then python -m pip install pytest; python -m pytest -q; fi; else echo 'No Python source detected.'; fi
+          if find . -type f -name '*.py' -not -path './.git/*' | grep -q .; then
+            python -m compileall -q . -x '(^|/)(.git|venv|.venv|node_modules)/'
+            if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
+            if [ -f pyproject.toml ] || [ -d tests ] || [ -d test ]; then python -m pip install pytest; python -m pytest -q; fi
+          else echo 'No Python source detected.'; fi
       - name: Node audit
-        run: if [ -f package.json ]; then if [ -f package-lock.json ]; then npm ci; else npm install; fi; npm test --if-present; npm run build --if-present; else echo 'No Node package detected.'; fi
+        run: |
+          set -euo pipefail
+          if [ -f package.json ]; then
+            if [ -f package-lock.json ]; then npm ci; else npm install; fi
+            npm test --if-present
+            npm run build --if-present
+          else echo 'No Node package detected.'; fi
       - name: Go audit
         run: if [ -f go.mod ]; then go test ./...; else echo 'No Go module detected.'; fi
       - name: Rust audit
@@ -24,4 +34,29 @@ jobs:
       - name: Java audit
         run: if [ -x ./mvnw ]; then ./mvnw -q test; elif [ -f pom.xml ]; then mvn -q test; elif [ -x ./gradlew ]; then ./gradlew test; elif [ -f build.gradle ] || [ -f build.gradle.kts ]; then gradle test; else echo 'No Java build detected.'; fi
       - name: Credential pattern scan
-        run: if grep -RInE --exclude-dir=.git --exclude='*.lock' 'AKIA[0-9A-Z]{16}|-----BEGIN (RSA|EC|OPENSSH|PRIVATE) KEY-----|ghp_[A-Za-z0-9_]{20,}' . >/tmp/secret-scan.txt 2>/dev/null; then cat /tmp/secret-scan.txt; exit 1; fi
+        run: |
+          set -euo pipefail
+          if grep -RInE --exclude-dir=.git --exclude='*.lock' 'AKIA[0-9A-Z]{16}|-----BEGIN (RSA|EC|OPENSSH|PRIVATE) KEY-----|ghp_[A-Za-z0-9_]{20,}' . >/tmp/secret-scan.txt 2>/dev/null; then
+            cat /tmp/secret-scan.txt
+            exit 1
+          fi
+      - name: Federation contract audit
+        run: |
+          set -euo pipefail
+          test -f skills/phoenix-repository-federation/SKILL.md
+          test -f .github/workflows/phoenix-audit.yml
+          if [ -f .phoenix/CROSSCONNECT.json ]; then python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('.phoenix/CROSSCONNECT.json')
+          d = json.loads(p.read_text())
+          assert d, 'empty CROSSCONNECT.json'
+          print('CROSSCONNECT OK')
+          PY
+          else echo 'No local CROSSCONNECT.json; skipping local federation registry check.'; fi
+      - name: Audit manifest
+        run: |
+          set -euo pipefail
+          mkdir -p audit
+          printf '{"workflow":"Phoenix Audit","commit":"%s","timestamp":"%s","status":"executed"}\n' "$GITHUB_SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > audit/latest-audit.jsonl
+          cat audit/latest-audit.jsonl
