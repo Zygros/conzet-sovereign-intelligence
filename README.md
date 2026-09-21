@@ -332,6 +332,24 @@ See [LICENSE](LICENSE) for full terms.
 **Version:** 1.0.0  
 **Status:** Archival + local evidence in linked substrate; production claims require independent health-check artifacts.
 
+## Phoenix Omega — 74M+1 rooted topology
+
+Phoenix Omega defines a sparse, declarative logical-agent topology with a first-class root node:
+
+```
+1 × 420 × 420 × 420 = 74,088,001 nodes
+```
+
+- 1 root node: `ROOT — P000/S000/A000`
+- 420 primary branches
+- 420 sub-branches per primary = 176,400 shards
+- 420 logical agent slots per shard = 74,088,000 logical agents
+- Total topology nodes = 74,088,001
+- Root-to-leaf lineage is deterministic
+- Logical addresses do not imply simultaneous physical activation
+
+Implementation: `core/phoenix/omega/agent_spawner.py`.
+
 ## S+ readiness
 
 This repository is maintained under an additive, provenance-preserving quality rubric. See `SPLUS.md`, `SECURITY.md`, `LICENSE-STATUS.md`, and `docs/PROVENANCE.md` for boundaries and validation guidance. This status does not claim production correctness, legal clearance, or security certification.
