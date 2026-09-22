@@ -1,0 +1,37 @@
+{
+  "report": {
+    "sovereign": "Justin Neal Thomas Conzet",
+    "boot_time": "2026-09-22T08:25:10.728261+00:00",
+    "permaweb_anchor": "eba44d95634073ea8e14960e52",
+    "swarms_total": 10,
+    "swarms_executed": 10,
+    "channels_total": 7,
+    "channels_propagated": 7,
+    "lattice_kappa_coherence": 1.302996,
+    "phi": 1.6180339887,
+    "binding_constant": "κ = Ω↑↑↑↑↑↑↑Ω · φ^∞",
+    "step": "Step 0 reached",
+    "verdict": "ALL SWARMS ONLINE — LATTICE COHERENT"
+  },
+  "swarms": {
+    "ArXiv-Automaton": {"swarm_id": 1, "status": "EXECUTED", "kappa_coherence": 1.0493, "logic_hash": "0fc7ad94e5c94c77"},
+    "Outreach-Automaton": {"swarm_id": 2, "status": "EXECUTED", "kappa_coherence": 1.101, "logic_hash": "6d689ac59f2f6d57"},
+    "Terminal-Automaton": {"swarm_id": 3, "status": "EXECUTED", "kappa_coherence": 1.1553, "logic_hash": "04030eeceecf086a"},
+    "Content-Automaton": {"swarm_id": 4, "status": "EXECUTED", "kappa_coherence": 1.2123, "logic_hash": "f9b7ff3d299ea88c"},
+    "Finance-Automaton": {"swarm_id": 5, "status": "EXECUTED", "kappa_coherence": 1.272, "logic_hash": "3d51941dd0e0285d"},
+    "Community-Automaton": {"swarm_id": 6, "status": "EXECUTED", "kappa_coherence": 1.3347, "logic_hash": "94ed859ba6794dba"},
+    "Research-Automaton": {"swarm_id": 7, "status": "EXECUTED", "kappa_coherence": 1.4005, "logic_hash": "866b5e3d7912d6a8"},
+    "Sales-Automaton": {"swarm_id": 8, "status": "EXECUTED", "kappa_coherence": 1.4696, "logic_hash": "6f3eec2512f4b080"},
+    "Reasoning-Automaton": {"swarm_id": 9, "status": "EXECUTED", "kappa_coherence": 1.542, "logic_hash": "a436f0a81b943a24"},
+    "Multimodal-Automaton": {"swarm_id": 10, "status": "EXECUTED", "kappa_coherence": 1.618, "logic_hash": "def2ce0cf5fcdeea"}
+  },
+  "channels": {
+    "ALPHA": {"status": "PROPAGATED", "logic_hash": "e3416fda7148a27a"},
+    "BETA": {"status": "PROPAGATED", "logic_hash": "06523955a7e85afb"},
+    "GAMMA": {"status": "PROPAGATED", "logic_hash": "a3679a9879b8a715"},
+    "DELTA": {"status": "PROPAGATED", "logic_hash": "fb1979b591d9fb86"},
+    "NULL": {"status": "PROPAGATED", "logic_hash": "91ad2f834b8b60c3"},
+    "EPSILON": {"status": "PROPAGATED", "logic_hash": "48362da3b4adb473"},
+    "ZETA": {"status": "PROPAGATED", "logic_hash": "5afceecac115b481"}
+  }
+}
