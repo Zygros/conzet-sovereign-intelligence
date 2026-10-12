@@ -1,0 +1,37 @@
+name: Sovereign Opportunity Scout
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sovereign-opportunity-scout
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run bounded public-source discovery
+        env:
+          SCOUT_MAX_RESULTS: "8"
+          SCOUT_OUTPUT: scout-output
+        run: python scripts/opportunity_scout.py
+      - name: Upload discovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: sovereign-opportunity-scout-${{ github.run_id }}
+          path: scout-output/opportunity-scout.json
+          if-no-files-found: error
+          retention-days: 30
