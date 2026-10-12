@@ -193,19 +193,48 @@ class MAIAFrameworkOrchestrator:
             # and exact relative-path allowlist. Validation occurs before import.
             trusted_root = os.environ.get("MAIA_PLUGIN_TRUST_ROOT")
             allowlist_raw = os.environ.get("MAIA_PLUGIN_ALLOWLIST", "")
+            digest_raw = os.environ.get("MAIA_PLUGIN_SHA256_ALLOWLIST", "")
             allowlist = [item.strip() for item in allowlist_raw.split(",") if item.strip()]
-            if not trusted_root or not allowlist:
+            digest_map = {}
+            for entry in digest_raw.split(","):
+                if "=" not in entry:
+                    continue
+                name, digest = entry.split("=", 1)
+                digest_map[name.strip()] = digest.strip().lower()
+
+            if not trusted_root or not allowlist or not digest_map:
                 return {
                     "success": False,
-                    "error": "Plugin blocked: configure MAIA_PLUGIN_TRUST_ROOT and "
-                             "MAIA_PLUGIN_ALLOWLIST before loading plugins.",
+                    "error": "Plugin blocked: configure MAIA_PLUGIN_TRUST_ROOT, "
+                             "MAIA_PLUGIN_ALLOWLIST, and MAIA_PLUGIN_SHA256_ALLOWLIST.",
                     "trust_gate": {"allowed": False, "reason": "TRUST_POLICY_NOT_CONFIGURED"},
+                }
+
+            # Every allowlisted plugin must have a pinned SHA-256 digest.
+            requested_path = Path(plugin_path)
+            try:
+                relative_name = (
+                    requested_path.resolve().relative_to(Path(trusted_root).resolve()).as_posix()
+                    if requested_path.is_absolute()
+                    else requested_path.as_posix()
+                )
+            except (ValueError, OSError):
+                relative_name = ""
+            expected_digest = digest_map.get(relative_name)
+            if not expected_digest or len(expected_digest) != 64 or any(
+                char not in "0123456789abcdef" for char in expected_digest
+            ):
+                return {
+                    "success": False,
+                    "error": "Plugin blocked: no valid pinned SHA-256 for this path.",
+                    "trust_gate": {"allowed": False, "reason": "PINNED_SHA256_REQUIRED"},
                 }
 
             trust_result = validate_plugin_path(
                 plugin_path=plugin_path,
                 trusted_root=trusted_root,
                 allowed_plugins=allowlist,
+                expected_sha256=expected_digest,
             )
             if not trust_result.get("allowed"):
                 return {
