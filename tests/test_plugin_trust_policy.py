@@ -48,7 +48,7 @@ class PluginTrustPolicyTests(unittest.TestCase):
             "../outside.py", str(self.root), ["../outside.py"]
         )
         self.assertFalse(result["allowed"])
-        self.assertEqual(result["reason"], "PATH_OUTSIDE_TRUSTED_ROOT")
+        self.assertEqual(result["reason"], "PATH_TRAVERSAL")
 
     def test_symlink_is_rejected(self):
         target = self.root / "target.py"
