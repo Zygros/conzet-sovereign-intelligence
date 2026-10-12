@@ -88,3 +88,19 @@ Each discovered source should be recorded with:
 `indexed ≠ downloaded ≠ integrated ≠ verified ≠ deployed ≠ permanently anchored`.
 
 Every state transition requires its own evidence. This registry is the trunk from which the global research and integration branches can grow.
+
+
+## Root 5 — Open inquiry, contested knowledge and unknowns
+
+- Research charter: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/genesis/research/OPEN_INQUIRY_AND_UNKNOWNS_RESEARCH_CHARTER_2026-10-12.md
+- A2A envelope contract: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/schemas/a2a-task-envelope.schema.json
+- Local envelope validator: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/scripts/a2a_envelope.py
+- Envelope regression tests: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/tests/test_a2a_envelope.py
+
+Branching:
+- Taboo-labelled or controversial claims → source genealogy → historical/context analysis → contradiction search → evidence-quality assessment.
+- Dual-use research → public-source discovery → benefit/risk mapping → safe, authorized evaluation → independent verification.
+- Unknowns → explicit uncertainty record → minimal discriminating experiment → outcome and negative-result record → new child questions.
+- Anomalous or fringe claims → primary-source retrieval → independent corroboration → alternative explanations → reproducibility assessment.
+
+This root expands inquiry; it does not treat a label as proof of danger or proof of truth. Discovery remains metadata-only until a candidate is deliberately reviewed. Public availability alone does not establish permission to execute code, access systems, or reproduce sensitive operational details.
