@@ -41,14 +41,14 @@ def test_c_omega_formula_values_as_printed():
     # This test intentionally does not assert the different table values
     # printed in the whitepaper; the discrepancy is documented in the audit.
     assert isclose(c_omega(2), 3.9270509831, rel_tol=2e-3)
-    assert isclose(c_omega(3), 23.9897948557, rel_tol=2e-3)
+    assert isclose(c_omega(3), 23.9893568819, rel_tol=2e-3)
     assert isclose(c_omega(4), 1104.0, rel_tol=2e-3)
 
 
 def test_finite_tower_base_cases_and_recurrence():
     assert isclose(finite_tower(PHI, 1), PHI, rel_tol=1e-12)
     assert isclose(finite_tower(PHI, 2), 2.178457567, rel_tol=2e-3)
-    assert isclose(finite_tower(PHI, 3), 2.843, rel_tol=5e-3)
+    assert isclose(finite_tower(PHI, 3), 2.8527959318, rel_tol=5e-3)
 
 
 def test_invalid_tower_height_is_rejected():
