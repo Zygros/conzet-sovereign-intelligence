@@ -1,0 +1,23 @@
+name: Conzetian Daemon Endowment Cycle
+on:
+  schedule:
+    - cron: '41 14 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  plan-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate governed task plan
+        run: |
+          python -m genesis.daemon_endowment genesis/daemon_registry.json daemon-cycle/plan.json --cycle-id '${{ github.run_id }}-${{ github.run_attempt }}'
+      - name: Upload cycle plan
+        uses: actions/upload-artifact@v4
+        with:
+          name: conzetian-daemon-cycle-${{ github.run_id }}
+          path: daemon-cycle/plan.json
+          if-no-files-found: error
+          retention-days: 30
