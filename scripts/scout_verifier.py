@@ -14,7 +14,10 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from scripts.a2a_envelope import validate_envelope
+try:
+    from scripts.a2a_envelope import validate_envelope
+except ModuleNotFoundError:  # Direct script execution places scripts/ on sys.path.
+    from a2a_envelope import validate_envelope
 
 SCHEMA_VERSION = "1.0"
 
