@@ -131,7 +131,7 @@ def test_jsonl_reader_rejects_non_object_records(tmp_path):
     from benchmarks.cis_verification_harness import read_jsonl
 
     fixture = tmp_path / "bad.jsonl"
-    fixture.write_text('["not", "an", "object"]\\n', encoding="utf-8")
+    fixture.write_text('["not", "an", "object"]\n', encoding="utf-8")
     try:
         read_jsonl(fixture)
     except ValueError as exc:
@@ -144,7 +144,7 @@ def test_jsonl_reader_reports_invalid_json_line(tmp_path):
     from benchmarks.cis_verification_harness import read_jsonl
 
     fixture = tmp_path / "bad.jsonl"
-    fixture.write_text('{"case_id": "valid"}\\n{invalid json}\\n', encoding="utf-8")
+    fixture.write_text('{"case_id": "valid"}\n{invalid json}\n', encoding="utf-8")
     try:
         read_jsonl(fixture)
     except ValueError as exc:
