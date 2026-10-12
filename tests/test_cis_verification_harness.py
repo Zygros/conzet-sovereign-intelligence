@@ -105,3 +105,49 @@ def test_committed_synthetic_fixture_is_reproducible():
     assert report["metrics"]["error_detection_recall"] == 0.5
     assert report["metrics"]["false_positive_rate"] == 0.5
     assert report["metrics"]["corrections_successful"] == 1
+
+
+def test_zero_denominators_are_defined_as_zero():
+    all_correct = [
+        {
+            "case_id": "only-correct-case",
+            "expected_output": "ok",
+            "observed_output": "ok",
+            "expected_action": "hold",
+            "observed_action": "hold",
+            "detector_flag": False,
+            "corrected_output": "ok",
+            "corrected_action": "hold",
+        }
+    ]
+    report = evaluate_cases(all_correct)
+    assert report["metrics"]["error_detection_precision"] == 0.0
+    assert report["metrics"]["error_detection_recall"] == 0.0
+    assert report["metrics"]["false_positive_rate"] == 0.0
+    assert report["metrics"]["correction_success_rate_when_flagged"] == 0.0
+
+
+def test_jsonl_reader_rejects_non_object_records(tmp_path):
+    from benchmarks.cis_verification_harness import read_jsonl
+
+    fixture = tmp_path / "bad.jsonl"
+    fixture.write_text('["not", "an", "object"]\\n', encoding="utf-8")
+    try:
+        read_jsonl(fixture)
+    except ValueError as exc:
+        assert "must contain a JSON object" in str(exc)
+    else:
+        raise AssertionError("non-object JSONL records must be rejected")
+
+
+def test_jsonl_reader_reports_invalid_json_line(tmp_path):
+    from benchmarks.cis_verification_harness import read_jsonl
+
+    fixture = tmp_path / "bad.jsonl"
+    fixture.write_text('{"case_id": "valid"}\\n{invalid json}\\n', encoding="utf-8")
+    try:
+        read_jsonl(fixture)
+    except ValueError as exc:
+        assert "invalid JSON on line 2" in str(exc)
+    else:
+        raise AssertionError("invalid JSON must be rejected with its line number")
