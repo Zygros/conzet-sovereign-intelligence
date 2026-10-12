@@ -42,7 +42,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest
+        PYTHONPATH=. pytest
 
     - name: Strict CIS verification benchmark tests
       run: |
