@@ -1,6 +1,10 @@
 name: Sovereign Opportunity Scout
 
 on:
+  push:
+    paths:
+      - "scripts/opportunity_scout.py"
+      - ".github/workflows/opportunity-scout.yml"
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
