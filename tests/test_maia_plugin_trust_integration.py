@@ -1,3 +1,4 @@
+import hashlib
 import os
 import tempfile
 import unittest
@@ -41,6 +42,7 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             env = {
                 "MAIA_PLUGIN_TRUST_ROOT": str(root),
                 "MAIA_PLUGIN_ALLOWLIST": "safe.py",
+                "MAIA_PLUGIN_SHA256_ALLOWLIST": "safe.py=" + hashlib.sha256(plugin.read_bytes()).hexdigest(),
             }
             with patch.dict(os.environ, env, clear=True):
                 orchestrator = MAIAFrameworkOrchestrator()
@@ -54,6 +56,29 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
                     capability_name="ping",
                 )
             self.assertEqual(invoked["result"], "pong")
+
+
+    def test_allowlisted_plugin_without_pinned_digest_is_blocked(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            plugin = root / "safe.py"
+            plugin.write_text(
+                "def get_plugin_manifest(): return {'name': 'safe'}\\n",
+                encoding="utf-8",
+            )
+            env = {
+                "MAIA_PLUGIN_TRUST_ROOT": str(root),
+                "MAIA_PLUGIN_ALLOWLIST": "safe.py",
+            }
+            with patch.dict(os.environ, env, clear=True):
+                result = MAIAFrameworkOrchestrator().act(
+                    "DISCOVER_AND_REGISTER_PLUGIN", plugin_path=str(plugin)
+                )
+            self.assertFalse(result["success"])
+            self.assertEqual(
+                result["trust_gate"]["reason"], "TRUST_POLICY_NOT_CONFIGURED"
+            )
+
 
 
 if __name__ == "__main__":
