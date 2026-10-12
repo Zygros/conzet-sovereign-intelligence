@@ -104,3 +104,20 @@ Branching:
 - Anomalous or fringe claims → primary-source retrieval → independent corroboration → alternative explanations → reproducibility assessment.
 
 This root expands inquiry; it does not treat a label as proof of danger or proof of truth. Discovery remains metadata-only until a candidate is deliberately reviewed. Public availability alone does not establish permission to execute code, access systems, or reproduce sensitive operational details.
+
+
+## Root 6 — Scout run evidence and provenance receipt pipeline
+
+- Expanded Scout run receipt: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/genesis/research/EXPANDED_OPPORTUNITY_SCOUT_RUN_RECEIPT_2026-10-12.md
+- Receipt generator: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/scripts/scout_verifier.py
+- Receipt regression tests: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/tests/test_scout_verifier.py
+- Execution register: https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/genesis/research/INFINITE_OPPORTUNITY_MESH_EXECUTION_REGISTER_2026-10-12.md
+
+The expanded metadata-only run produced 96 records: 87 without a recorded source error and 9 with source-query errors. The downloaded artifact digest matched the GitHub artifact digest. The 87 records remain unreviewed candidates, not verified findings.
+
+Branching:
+- Scout artifact → validate record shape → stable candidate ID → canonical record digest → local A2A envelope validation → review-pending receipt.
+- Receipt → primary-source retrieval → contradiction search → license/security/reproducibility review → independent test → disposition.
+- Preserve query errors, rejected candidates, uncertainty and negative results in the evidence trail.
+
+This receipt pipeline records what was received and what remains unverified. It does not fetch or prove the truth of source content, execute discovered code, implement remote A2A transport, digitally sign receipts, or create a permanent external anchor.
