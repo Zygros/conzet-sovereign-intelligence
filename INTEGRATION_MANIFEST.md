@@ -66,3 +66,11 @@ The canonical lattice preserves source claims as claims. Executed repository cha
 5. `integrations/GITHUB_ECOSYSTEM_SCOUT_2026-10-12.md` — focused inventory of 71 `SKILL.md` paths across three scanned repositories and a ranked open-source candidate set; commit `8f0f4c7012dc20b73549c8d8fca8198153afbab6`.
 
 The two files were fetched back after commit and their expected content was confirmed. GitHub Actions runs for both commits were queued at the time of this update; no result is inferred until they finish.
+
+## Additive Open-Source Integration Pass 02 — 2026-10-12
+
+6. `skills/portable-agent-skill-compatibility/SKILL.md` — compatibility contract for the open Agent Skills format with Conzetian provenance/evidence gates; commit `fabfd8286160197c70ef334bde460e9f39b2dabe`.
+7. `integrations/open_source_candidate_registry_2026-10-12.json` — machine-readable candidate registry and evidence states; commit `165081bd4e84052c51a373d4772370108affa90c`.
+8. `integrations/OPEN_SOURCE_INTEGRATION_PASS_02_2026-10-12.md` — decisions and next experiments for skill tooling, agent memory, browser automation, and agent evaluation; commit `8d925e579d0f1ef7a3a0153d1b937db70a3eb890`.
+
+All three files were fetched back and checked for expected content. CI runs for these commits were queued or in progress at the time of this manifest update; no pass is claimed until the runs conclude.
