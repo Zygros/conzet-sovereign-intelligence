@@ -151,3 +151,33 @@ def test_jsonl_reader_reports_invalid_json_line(tmp_path):
         assert "invalid JSON on line 2" in str(exc)
     else:
         raise AssertionError("invalid JSON must be rejected with its line number")
+
+
+
+def test_cli_appends_to_existing_ledger_without_replacing_history(tmp_path):
+    import json
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    repo_root = Path(__file__).resolve().parents[1]
+    fixture = repo_root / "benchmarks" / "data" / "cis_synthetic_cases.jsonl"
+    ledger = tmp_path / "evidence" / "runs.jsonl"
+    ledger.parent.mkdir(parents=True)
+    ledger.write_text('{"prior_record": "preserve-me"}\\n', encoding="utf-8")
+
+    command = [
+        sys.executable,
+        str(repo_root / "benchmarks" / "cis_verification_harness.py"),
+        str(fixture),
+        "--ledger",
+        str(ledger),
+    ]
+    first = subprocess.run(command, check=True, capture_output=True, text=True)
+    second = subprocess.run(command, check=True, capture_output=True, text=True)
+
+    records = [json.loads(line) for line in ledger.read_text(encoding="utf-8").splitlines()]
+    assert len(records) == 3
+    assert records[0] == {"prior_record": "preserve-me"}
+    assert records[1]["run_sha256"] == records[2]["run_sha256"]
+    assert json.loads(first.stdout)["run_sha256"] == json.loads(second.stdout)["run_sha256"]
