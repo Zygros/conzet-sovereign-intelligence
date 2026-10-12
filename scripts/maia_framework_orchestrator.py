@@ -10,7 +10,14 @@ import sys
 import os
 import json
 import importlib.util
+from pathlib import Path
 from datetime import datetime
+
+# Make the repository trust-policy module importable when this script is run directly.
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+from genesis.plugin_trust_policy import validate_plugin_path
 
 class MAIAFrameworkOrchestrator:
     """
@@ -182,7 +189,33 @@ class MAIAFrameworkOrchestrator:
         Internal method to discover and register a plugin.
         """
         try:
-            # Dynamic loading
+            # Fail closed unless an operator explicitly configures a trusted root
+            # and exact relative-path allowlist. Validation occurs before import.
+            trusted_root = os.environ.get("MAIA_PLUGIN_TRUST_ROOT")
+            allowlist_raw = os.environ.get("MAIA_PLUGIN_ALLOWLIST", "")
+            allowlist = [item.strip() for item in allowlist_raw.split(",") if item.strip()]
+            if not trusted_root or not allowlist:
+                return {
+                    "success": False,
+                    "error": "Plugin blocked: configure MAIA_PLUGIN_TRUST_ROOT and "
+                             "MAIA_PLUGIN_ALLOWLIST before loading plugins.",
+                    "trust_gate": {"allowed": False, "reason": "TRUST_POLICY_NOT_CONFIGURED"},
+                }
+
+            trust_result = validate_plugin_path(
+                plugin_path=plugin_path,
+                trusted_root=trusted_root,
+                allowed_plugins=allowlist,
+            )
+            if not trust_result.get("allowed"):
+                return {
+                    "success": False,
+                    "error": "Plugin blocked by trust policy.",
+                    "trust_gate": trust_result,
+                }
+
+            # The gate validates path and integrity metadata only. It does NOT
+            # sandbox the plugin; only allow reviewed code from a trusted root.
             spec = importlib.util.spec_from_file_location("plugin_module", plugin_path)
             plugin_module = importlib.util.module_from_spec(spec)
             sys.modules["plugin_module"] = plugin_module
