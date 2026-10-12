@@ -59,3 +59,10 @@ The canonical lattice preserves source claims as claims. Executed repository cha
 ## Boundaries
 
 “Integrate everything” is interpreted here as integrating the supplied evolution kernel and recording the accessible GitHub architecture surface in the canonical lattice. It does not imply that every repository's entire contents, every internet resource, model training data, or external storage system has been modified. Those require separate reads/writes and independent verification.
+
+## Additive Ecosystem Scout Integration — 2026-10-12
+
+4. `skills/open-source-gem-triage/SKILL.md` — specialized, evidence-gated external repository/skill triage procedure; commit `8669db54a4d3d9caffe37e5c9c427190753d138d`.
+5. `integrations/GITHUB_ECOSYSTEM_SCOUT_2026-10-12.md` — focused inventory of 71 `SKILL.md` paths across three scanned repositories and a ranked open-source candidate set; commit `8f0f4c7012dc20b73549c8d8fca8198153afbab6`.
+
+The two files were fetched back after commit and their expected content was confirmed. GitHub Actions runs for both commits were queued at the time of this update; no result is inferred until they finish.
