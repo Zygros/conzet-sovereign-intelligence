@@ -164,7 +164,7 @@ def test_cli_appends_to_existing_ledger_without_replacing_history(tmp_path):
     fixture = repo_root / "benchmarks" / "data" / "cis_synthetic_cases.jsonl"
     ledger = tmp_path / "evidence" / "runs.jsonl"
     ledger.parent.mkdir(parents=True)
-    ledger.write_text('{"prior_record": "preserve-me"}\n', encoding="utf-8")
+    ledger.write_text(json.dumps({"prior_record": "preserve-me"}) + chr(10), encoding="utf-8")
 
     command = [
         sys.executable,
