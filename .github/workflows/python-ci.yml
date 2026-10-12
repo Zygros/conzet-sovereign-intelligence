@@ -44,6 +44,10 @@ jobs:
       run: |
         pytest || true
 
+    - name: Strict CIS verification benchmark tests
+      run: |
+        python -m pytest -q tests/test_cis_verification_harness.py
+
     - name: Strict Conzetian formula regression tests
       run: |
         python -m pytest -q tests/test_conzetian_formula_regression.py
