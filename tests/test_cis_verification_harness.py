@@ -89,3 +89,19 @@ def test_missing_fields_are_rejected():
         assert "missing required fields" in str(exc)
     else:
         raise AssertionError("incomplete cases must be rejected")
+
+
+def test_committed_synthetic_fixture_is_reproducible():
+    from pathlib import Path
+
+    from benchmarks.cis_verification_harness import read_jsonl
+
+    fixture = Path(__file__).resolve().parents[1] / "benchmarks" / "data" / "cis_synthetic_cases.jsonl"
+    report = evaluate_cases(read_jsonl(fixture))
+    assert report["case_count"] == 4
+    assert report["metrics"]["task_success_before"] == 0.5
+    assert report["metrics"]["task_success_after"] == 0.75
+    assert report["metrics"]["error_detection_precision"] == 0.5
+    assert report["metrics"]["error_detection_recall"] == 0.5
+    assert report["metrics"]["false_positive_rate"] == 0.5
+    assert report["metrics"]["corrections_successful"] == 1
