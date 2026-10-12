@@ -1,0 +1,4 @@
+{"case_id":"synthetic-correct-baseline","expected_output":"42","observed_output":"42","expected_action":"save","observed_action":"save","detector_flag":false,"corrected_output":"42","corrected_action":"save"}
+{"case_id":"synthetic-detected-and-repaired","expected_output":"blue","observed_output":"red","expected_action":"open","observed_action":"close","detector_flag":true,"corrected_output":"blue","corrected_action":"open"}
+{"case_id":"synthetic-undetected-error","expected_output":"ready","observed_output":"not-ready","expected_action":"commit","observed_action":"commit","detector_flag":false,"corrected_output":"not-ready","corrected_action":"commit"}
+{"case_id":"synthetic-false-alarm","expected_output":"safe","observed_output":"safe","expected_action":"hold","observed_action":"hold","detector_flag":true,"corrected_output":"safe","corrected_action":"hold"}
