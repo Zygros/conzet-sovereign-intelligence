@@ -18,17 +18,32 @@ from pathlib import Path
 USER_AGENT = "Sovereign-Conzetian-Opportunity-Scout/1.0 (bounded public metadata discovery)"
 OUT = Path(os.environ.get("SCOUT_OUTPUT", "scout-output"))
 MAX_RESULTS = int(os.environ.get("SCOUT_MAX_RESULTS", "8"))
+# Broad, metadata-only inquiry: established systems, neglected questions,
+# contested claims, and governance around sensitive or dual-use knowledge.
+# These searches discover candidates; they do not endorse or execute them.
 GITHUB_QUERIES = [
     "agent interoperability A2A MCP",
     "agent memory benchmark verification",
     "LLM web crawler agent",
     "agent observability OpenTelemetry",
     "Arweave AO decentralized compute",
+    "dual use research governance risk assessment",
+    "history of scientific censorship taboo knowledge",
+    "cybersecurity threat modeling defensive research",
+    "biosecurity governance responsible research",
+    "privacy preserving cryptography secure computation",
+    "AI red teaming evaluation reproducibility",
+    "anomalous phenomena evidence replication",
+    "open science negative results replication crisis",
 ]
 ARXIV_QUERIES = [
     '("LLM agents" OR "AI agents") AND (memory OR verification)',
     '("multi-agent" OR "agentic") AND (coordination OR interoperability)',
     '("tool use" OR "agent") AND (evaluation OR benchmark)',
+    '("dual use" OR "dual-use") AND (governance OR risk OR ethics)',
+    '("scientific controversy" OR "replication crisis") AND (evidence OR reproducibility)',
+    '("privacy preserving" OR cryptography) AND (security OR verification)',
+    '("AI red teaming" OR "adversarial evaluation") AND (agents OR models)',
 ]
 
 def fetch(url: str, timeout: int = 20) -> bytes:
@@ -106,6 +121,8 @@ def main() -> int:
         "schema_version": "1.0",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "scope": "public metadata discovery only; no code execution or automatic promotion",
+        "research_posture": "open inquiry across mainstream, contested, taboo-labelled, and dual-use topics; labels are context, not verdicts",
+        "triage_status": "unreviewed_candidates",
         "record_count": len(unique),
         "records": unique,
     }
