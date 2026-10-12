@@ -80,7 +80,7 @@ def evaluate_cases(cases: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
         after_success += int(corrected_correct)
         if detected:
             corrections_attempted += 1
-            corrections_successful += int(corrected_correct)
+            corrections_successful += int(actual_error and corrected_correct)
 
         records.append(
             {
