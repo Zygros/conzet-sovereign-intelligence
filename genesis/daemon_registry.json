@@ -1,0 +1,71 @@
+{
+  "schema": "conzetian-daemon-registry/1.0",
+  "version": "1.0.0",
+  "principle": "Always Add, Never Take. Planning does not equal execution.",
+  "defaults": {
+    "deny_by_default": true,
+    "network_access": false,
+    "shell_access": false,
+    "credential_access": false,
+    "self_modification": false,
+    "self_replication": false
+  },
+  "daemons": [
+    {
+      "id": "diamond-scout",
+      "purpose": "Collect public upstream metadata and candidate deltas.",
+      "mode": "observe",
+      "enabled": true,
+      "requires_trusted_adapter": false
+    },
+    {
+      "id": "skill-linter",
+      "purpose": "Validate portable skill frontmatter and report defects.",
+      "mode": "verify",
+      "enabled": true,
+      "requires_trusted_adapter": false
+    },
+    {
+      "id": "receipt-auditor",
+      "purpose": "Validate execution receipt structure and evidence references.",
+      "mode": "verify",
+      "enabled": true,
+      "requires_trusted_adapter": false
+    },
+    {
+      "id": "integration-triage",
+      "purpose": "Create a prioritized, license-aware integration plan without executing third-party code.",
+      "mode": "plan",
+      "enabled": true,
+      "requires_trusted_adapter": false
+    },
+    {
+      "id": "corpus-provenance",
+      "purpose": "Compare available manifest metadata and flag unresolved source/hash mismatches.",
+      "mode": "plan",
+      "enabled": false,
+      "requires_trusted_adapter": true
+    },
+    {
+      "id": "isolated-prototype-runner",
+      "purpose": "Run approved candidate tests in a disposable environment.",
+      "mode": "plan",
+      "enabled": false,
+      "requires_trusted_adapter": true
+    },
+    {
+      "id": "release-verifier",
+      "purpose": "Check CI, artifacts, checksums, and acceptance criteria before release.",
+      "mode": "verify",
+      "enabled": true,
+      "requires_trusted_adapter": false
+    },
+    {
+      "id": "revenue-opportunity-scout",
+      "purpose": "Identify testable product offers and demand signals without claiming revenue.",
+      "mode": "plan",
+      "enabled": true,
+      "requires_trusted_adapter": false
+    }
+  ]
+}
