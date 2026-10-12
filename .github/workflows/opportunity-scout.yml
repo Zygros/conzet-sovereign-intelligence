@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "scripts/opportunity_scout.py"
+      - "scripts/scout_verifier.py"
+      - "scripts/a2a_envelope.py"
       - ".github/workflows/opportunity-scout.yml"
   workflow_dispatch:
   schedule:
@@ -32,10 +34,14 @@ jobs:
           SCOUT_MAX_RESULTS: "8"
           SCOUT_OUTPUT: scout-output
         run: python scripts/opportunity_scout.py
-      - name: Upload discovery evidence
+      - name: Generate review-pending provenance receipts
+        run: python scripts/scout_verifier.py scout-output/opportunity-scout.json --output scout-output/verification-receipts.json
+      - name: Upload discovery and receipt evidence
         uses: actions/upload-artifact@v4
         with:
           name: sovereign-opportunity-scout-${{ github.run_id }}
-          path: scout-output/opportunity-scout.json
+          path: |
+            scout-output/opportunity-scout.json
+            scout-output/verification-receipts.json
           if-no-files-found: error
           retention-days: 30
