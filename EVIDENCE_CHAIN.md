@@ -240,3 +240,12 @@ Live GitHub API checks now confirm:
 
 ### Execution boundary
 This decree changes the operational standard, not the underlying tool capabilities. Only observable actions and returned results count as execution evidence. The next concrete steps are to inspect the preserved timestamp-verification report, rerun the verifier when confirmation may have advanced, and continue the bounded real-task closed-loop implementation.
+
+
+## Execution continuation — timestamp retry and scheduled re-verification (2026-10-12 Pacific)
+
+- Latest decree commit `f985136050a38e48edad98c5fe45752738340b7d`: OmniNet Python CI [38330597886](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330597886) and Phoenix Audit [38330597894](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330597894) completed successfully.
+- Published Evidence Integrity retry, run [38329959507 attempt 2](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507), completed with failure because both OpenTimestamps proofs remain pending Bitcoin confirmation. The verifier reported `artifact_hashes_match: true`, but `timestamp_confirmation_complete: false`; no Bitcoin block was reported. This is an open proof obligation, not a successful timestamp verification.
+- The full verification report was preserved as artifact [11783115643](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507/artifacts/11783115643).
+- To keep the unresolved proof from being forgotten, the Published Evidence Integrity workflow now also runs on a six-hour schedule (`17 */6 * * *`), in addition to manual dispatch and Scout completion. Workflow change commit: `28f0742ccca333bc6196fa7f5acd8e927db7c294`. This config change is committed; a scheduled run has not yet been observed at this checkpoint.
+- Next action: let scheduled verification retry as OpenTimestamps calendars may later provide Bitcoin confirmation; keep byte-integrity and timestamp-confirmation statuses separate. Continue the independent-reproduction and real-task acceptance gates in parallel.
