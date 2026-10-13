@@ -1,3 +1,5 @@
+> **Federation index:** [FEDERATION_INDEX.md](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/FEDERATION_INDEX.md)
+
 # OMEGA-10 v0.1: Evidence Substrate
 
 **Status banner:** OMEGA-10 v0.1: implementation and local test evidence; not independently reproduced.
