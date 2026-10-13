@@ -266,3 +266,28 @@ This decree changes the operational standard, not the underlying tool capabiliti
 - **Scope:** deterministic local mock request/response, shared task ID, shared source SHA-256, explicit `execution_allowed: false`, sensitive-action confirmation, and malformed-digest rejection.
 - **Evidence boundary:** this is a local contract test. It does not implement network transport, authenticate a remote agent, or establish external-model collaboration.
 - **Verification state:** CI execution is pending at the time of this ledger entry. Promote only after the corresponding workflow run and strict test output are inspected.
+
+
+## Execution continuation — live pipeline review and verifier hardening (2026-10-13 UTC)
+
+### Newly observed workflow outcomes
+- [Sovereign Opportunity Scout run 38359073067](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38359073067) completed successfully. It produced **104 discovery records**, **101 review-pending receipts**, and rejected **3** records. The source run reported 3 source errors; these are not counted as verified opportunities.
+- [Witness run 38359203345](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38359203345) completed successfully and published [the 2026-10-13 witness report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/witness/reports/2026-10-13.md). It observed both `evidence/scout` and `federation-health` branches and passed all five structural checks. The report explicitly limits itself to structural observation, not truth validation.
+- [Published Evidence Integrity run 38359203368](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38359203368) correctly found matching SHA-256 payload hashes but failed the timestamp gate: both OTS proofs reported pending Bitcoin confirmation and no block height. This remains an external confirmation dependency.
+- [OmniNet Python CI run 38331147342](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38331147342) and [Phoenix Audit run 38331147389](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38331147389) completed successfully on commit `3a97bc948f2318ac781881878e97f4b8797a17b8). The inspected pytest log includes `tests/test_a2a_roundtrip_acceptance.py` with two passing cases; overall inspected pytest output reported 62 passed. The test is a local mock contract, not a real remote-agent session.
+
+### Repairs executed
+- **OTS confirmation parser hardened:** `scripts/ots_verify.py` now requires an explicit Bitcoin block number rather than treating a generic “Confirmed” word as proof. Regression tests were added at `tests/test_ots_verify.py` for a pending message containing “confirmed” and for an explicit block-height result. Commits: `fe51d9775bea1c63a88fc19a9f4f32f988d267b3` and `8e3254fe965745033c1600ce06540e5fafaefd7c`. CI for these latest commits was still running at the time of this ledger update.
+- **Stale run-ID defect identified and repaired:** the integrity workflow had hard-coded run `38329245120`, so it could keep rechecking an older publication instead of the newest one. `scripts/verify_published_evidence.py` now selects the highest numeric published run directory by default (or accepts an explicit run ID), and `.github/workflows/published-evidence-integrity.yml` no longer passes the stale ID. Commits: `13578f46621e5e40ef1ae434109407ff1fc6a4c4`, `1afaf61d350cae4ecfc63c324a0137994bb99ad7`, `91eb7f78bc76eba99b6dd920589020ffc3eafd94`, and `dece33e70cea987c23327e1a93ee21bc1e147f8d`. The intermediate `91eb7f7` revision produced a Phoenix Audit failure while the repair was in progress; the later `dece33e` revision removed the malformed intermediate lines. Final CI and integrity results for the corrected head are pending inspection.
+
+### Current proof boundary
+- Hash equality: observed passing for the published Scout payloads checked in run 38359203368.
+- Timestamp confirmation: **not verified**; no Bitcoin block height has been reported.
+- Evidence branch publication: observed.
+- Witness structural checks: observed passing.
+- Independent content reproduction: still open.
+- Real networked A2A execution with remote identity/authentication and an independently reproduced result: still open.
+- 74,088,000 logical agent slots: architecture arithmetic only; not a claim that those agent instances are physically materialized or concurrently running.
+
+### Next action
+Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OTS remains pending, keep that result classified as externally blocked, preserve the report, and continue the independent-reproduction and real-task round-trip work without upgrading the proof class.
