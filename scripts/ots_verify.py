@@ -41,7 +41,9 @@ def verify(ots_path):
 
     output = (result.stdout + "\n" + result.stderr).strip()
     match = re.search(r"Bitcoin block\s+(\d+)", output, flags=re.IGNORECASE)
-    confirmed = bool(match) or bool(re.search(r"\bConfirmed\b", output, re.IGNORECASE))
+    # Require an explicit Bitcoin block height. Generic words such as "confirmed"
+    # can occur in pending-status messages and must never promote a proof.
+    confirmed = result.returncode == 0 and match is not None
     return {
         "file": str(path),
         "ok": result.returncode == 0,
