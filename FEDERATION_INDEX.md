@@ -72,3 +72,13 @@ Find a piece if you can't find the whole, then continue.
 
 ## Status semantics
 This index is a navigation artifact. Its presence does not by itself prove that all links are reachable, that workflows have executed, or that technical claims are independently verified. Use the health-check script and linked evidence artifacts to establish those states.
+
+
+## EXECUTABLE VERIFICATION RECEIPTS — 2026-10-13
+
+- [Phoenix Proof Cycle runner](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/blob/main/tools/phoenix_proof_cycle.py) — deterministic Scout fixture, schema verification, bounded repair/re-verification, SHA-256 hash-chain ledger, tamper-evident JSON export.
+- [Proof Cycle implementation guide](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/blob/main/docs/PHOENIX_PROOF_CYCLE.md) — commands, test scope, and evidence boundaries.
+- [GitHub Actions run #1](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/38447568180) — completed SUCCESS at commit `cb061096a629432d937e2ae48e10884de43de40f`.
+- Workflow artifact: `phoenix-proof-cycle-receipts`, SHA-256 digest `ef467d6cbc7470679320f50b3875288e408541282a566a9008ca4739245315a3`.
+
+Evidence scope: CI reports successful self-tests, clean-cycle execution, seeded-defect repair/re-verification, and receipt upload. This is local deterministic verification machinery, not proof of external AI execution, Bitcoin/Arweave/OpenTimestamps anchoring, or end-to-end federation connectivity.
