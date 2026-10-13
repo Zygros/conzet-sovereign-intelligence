@@ -25,17 +25,29 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Run bounded public-source discovery
         env:
           SCOUT_MAX_RESULTS: "8"
           SCOUT_OUTPUT: scout-output
         run: python scripts/opportunity_scout.py
+
       - name: Generate review-pending provenance receipts
-        run: python scripts/scout_verifier.py scout-output/opportunity-scout.json --output scout-output/verification-receipts.json
+        run: |
+          python scripts/scout_verifier.py scout-output/opportunity-scout.json \
+            --output scout-output/verification-receipts.json
+
+      - name: Hash discovery and receipt evidence
+        run: |
+          cd scout-output
+          sha256sum opportunity-scout.json verification-receipts.json > manifest.sha256
+          cat manifest.sha256
+
       - name: Upload discovery and receipt evidence
         uses: actions/upload-artifact@v4
         with:
@@ -43,5 +55,81 @@ jobs:
           path: |
             scout-output/opportunity-scout.json
             scout-output/verification-receipts.json
+            scout-output/manifest.sha256
           if-no-files-found: error
           retention-days: 30
+
+  publish-evidence:
+    needs: discover
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download discovery artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: sovereign-opportunity-scout-${{ github.run_id }}
+          path: incoming
+
+      - name: Install OpenTimestamps client (best effort)
+        continue-on-error: true
+        run: pip install --quiet opentimestamps-client
+
+      - name: Stamp receipts (best effort)
+        continue-on-error: true
+        run: |
+          if ! command -v ots >/dev/null 2>&1; then
+            echo "OpenTimestamps client unavailable; publishing SHA-256 manifest without OTS stamps."
+            exit 0
+          fi
+          cd incoming
+          ots stamp verification-receipts.json || echo "OTS stamp skipped for verification receipts"
+          ots stamp manifest.sha256 || echo "OTS stamp skipped for manifest"
+          ls -la
+
+      - name: Publish to dedicated evidence branch
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          BRANCH="evidence/scout"
+          git config user.email "scout@conzetian.local"
+          git config user.name "Scout Automation"
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout --orphan "$BRANCH"
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          DEST="runs/${RUN_ID}"
+          mkdir -p "$DEST"
+          cp incoming/opportunity-scout.json "$DEST/"
+          cp incoming/verification-receipts.json "$DEST/"
+          cp incoming/manifest.sha256 "$DEST/"
+          for stamp in incoming/*.ots; do
+            if [ -f "$stamp" ]; then cp "$stamp" "$DEST/"; fi
+          done
+
+          printf 'run_id: %s\nrun_url: %s\npublished_at: %s\nsource_commit: %s\n' \
+            "$RUN_ID" "$RUN_URL" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$GITHUB_SHA" \
+            > "$DEST/RUN_META.yaml"
+
+          git add "$DEST"
+          git commit -m "evidence: scout run ${RUN_ID}"
+          git push origin "$BRANCH"
