@@ -148,3 +148,25 @@ Inspect the corrected integrity workflow outcome, then inspect the Diamond Watch
 - The workflow now correctly propagates the verifier's exit code instead of masking it through `tee`; the failed gate is an honest unresolved status, not a hash-integrity failure.
 - The report was preserved as workflow artifact: [published-evidence-verification](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507/artifacts).
 - Next action: rerun the verifier against the same proof files after calendar aggregation/Bitcoin confirmation has had time to progress. Do not regenerate or alter the target artifacts unless a new, separately identified evidence run is intended.
+
+
+## Cascading execution checkpoint — deterministic gate simulation
+
+- Added `scripts/simulate_closed_loop_gates.py` and workflow `.github/workflows/closed-loop-gate-simulation.yml`.
+- Simulation run: [38330230284](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330230284).
+- The simulation step completed successfully for six scenarios: all gates pass; hash mismatch; timestamp pending; no independent reproduction; acceptance-test failure; and multiple blockers.
+- Expected decision logic: one all-gates-pass scenario is eligible to advance; the five blocked scenarios must not advance; historical evidence remains preserved in every scenario.
+- At this checkpoint the simulation step itself is green, while the enclosing GitHub job was still completing cleanup. Do not claim the whole run completed until the run status confirms it.
+- This is a deterministic simulation of gate decisions, not a simulation of real autonomous agents or a full end-to-end execution cycle.
+
+### Existing gates rechecked
+- The prior completed integrity run [38329954491](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329954491) succeeded as a workflow, but its recorded payload still says both OTS proofs are pending. Treat that as a successful report-generation run, **not** as timestamp confirmation.
+- The latest fully completed OmniNet Python CI and Phoenix Audit runs at checkpoint [38330028839](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330028839) and [38330028715](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330028715) both passed.
+- New CI/Audit runs for subsequent simulation commits were still in progress at the time of this entry.
+
+### Next cascade
+1. Confirm the gate-simulation run has fully completed.
+2. Review the CI/Audit outcomes for the new commits.
+3. Keep OTS confirmation pending until the client reports confirmation and a block height.
+4. Proceed with source/license/security inspection of memory candidates, then run the fixed synthetic benchmark only in an isolated environment.
+5. Move from deterministic gate simulation to a real bounded task with independent verification.
