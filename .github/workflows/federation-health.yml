@@ -1,6 +1,10 @@
 name: Federation Health
 
 on:
+  push:
+    paths:
+      - "scripts/federation_check.py"
+      - ".github/workflows/federation-health.yml"
   workflow_dispatch:
   schedule:
     - cron: "23 6 * * *"
