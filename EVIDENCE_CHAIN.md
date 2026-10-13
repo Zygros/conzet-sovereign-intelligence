@@ -249,3 +249,12 @@ This decree changes the operational standard, not the underlying tool capabiliti
 - The full verification report was preserved as artifact [11783115643](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507/artifacts/11783115643).
 - To keep the unresolved proof from being forgotten, the Published Evidence Integrity workflow now also runs on a six-hour schedule (`17 */6 * * *`), in addition to manual dispatch and Scout completion. Workflow change commit: `28f0742ccca333bc6196fa7f5acd8e927db7c294`. This config change is committed; a scheduled run has not yet been observed at this checkpoint.
 - Next action: let scheduled verification retry as OpenTimestamps calendars may later provide Bitcoin confirmation; keep byte-integrity and timestamp-confirmation statuses separate. Continue the independent-reproduction and real-task acceptance gates in parallel.
+
+
+## Follow-up verification cycle — 2026-10-12 Pacific / 2026-10-13 UTC
+
+- Integrity workflow [38330836795](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330836795) executed after the six-hour retry schedule was committed. Both Scout payload hashes still match their published manifest. Both OpenTimestamps proofs remain pending Bitcoin confirmation; no block height was reported. The workflow correctly remains failed/incomplete rather than mislabeling pending proofs as verified.
+- The integrity report artifact was uploaded by the workflow; see [run 38330836795](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330836795) and its Artifacts section.
+- The recurring-verification workflow change commit `28f0742ccca333bc6196fa7f5acd8e927db7c294` passed [OmniNet Python CI](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330836808) and [Phoenix Audit](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330836801).
+- The ledger update commit `ba11812cbdda3f3e4510ced7fcb989461a468621` also triggered OmniNet Python CI [38330848892](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330848892) and Phoenix Audit [38330849046](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330849046), both completed successfully.
+- Status: byte integrity rechecked successfully; timestamp confirmation still blocked by external Bitcoin anchoring; CI/audit pass for the relevant commits; independent reproduction and full real-task closed-loop gates remain open.
