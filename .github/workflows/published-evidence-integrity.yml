@@ -34,7 +34,7 @@ jobs:
       - name: Fetch published evidence branch
         run: git fetch origin "+refs/heads/evidence/scout:refs/remotes/origin/evidence/scout"
       - name: Verify artifact hashes and timestamp proofs
-        run: python scripts/verify_published_evidence.py 38329245120 | tee published-evidence-verification.json
+        run: python scripts/verify_published_evidence.py 38329245120
       - name: Preserve verification report
         if: always()
         uses: actions/upload-artifact@v4
