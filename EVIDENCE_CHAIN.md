@@ -45,7 +45,7 @@ A commit is evidence of a committed file, not evidence of successful runtime exe
 2. Automated evidence branches have not yet been confirmed present.
 3. No OpenTimestamps stamp has been confirmed.
 4. The federation health check has not yet been executed and reviewed in this workflow.
-5. The public repository README cross-link sweep is pending; private repositories require separate visibility-aware handling.
+5. The public README cross-link sweep is committed for all 21 repositories in the supplied list. Combined with the two spine README links, all 23 public repositories now have the spine link; three private repositories remain outside this public sweep and need a separate visibility-aware pass.
 6. Independent reproduction and promotion remain human review gates.
 
 ## Scheduled paths
