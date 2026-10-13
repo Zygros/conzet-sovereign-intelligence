@@ -1,3 +1,5 @@
+> **Federation index:** [FEDERATION_INDEX.md](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/FEDERATION_INDEX.md)
+
 # 🐦‍🔥 PHOENIX PROTOCOL ULTIMATE ♾️
 
 **The Complete Unified Phoenix Protocol - All Repositories Integrated**
