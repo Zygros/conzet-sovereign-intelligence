@@ -66,3 +66,29 @@ Score:
 
 ## Exit criterion
 No candidate is promoted beyond DISCOVERED/INSPECTED until its pinned source, license, dependencies, and execution surface have been reviewed. No integration decision is made without raw reproducible benchmark evidence and a preserved decision record.
+
+
+## Preliminary source inspection checkpoint — 2026-10-12
+
+**Status:** PINNED AND PRELIMINARILY INSPECTED; NOT SECURITY-CLEARED; NOT INSTALLED; NOT BENCHMARKED.
+
+### Pinned snapshots
+- MCP Memory Service: `doobidoo/mcp-memory-service`, inspected default-branch commit `69d372b6af49ef1695c0fb31d53a8df3d58fa200`; [commit](https://github.com/doobidoo/mcp-memory-service/commit/69d372b6af49ef1695c0fb31d53a8df3d58fa200).
+- Cognee: `topoteretes/cognee`, inspected default-branch commit `0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1`; [commit](https://github.com/topoteretes/cognee/commit/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1).
+
+These are time-specific inspection pins, not endorsements of the repositories' future default branches.
+
+### Evidence observed
+- Both repository metadata endpoints identify Apache License 2.0, and both repositories' root `LICENSE` files were retrieved; this is an initial license check, not a legal review of all bundled dependencies or assets.
+- MCP Memory Service root `pyproject.toml` declares Python `>=3.10`, a broad runtime dependency set including network/HTTP, cryptography, FastAPI/Uvicorn, MCP, and storage/vector components. The repository tree includes installation/service scripts and configuration surfaces. These require targeted review before any install.
+- Cognee root `pyproject.toml` declares Python `>=3.10,<3.15` and a broad dependency set including LLM/client, database, model/tokenizer, and file-locking components. The separate `cognee-mcp/pyproject.toml` declares a Cognee MCP server with additional dependencies including FastMCP, HTTP, Torch, and optional database/documentation/graph extras. The repository tree includes telemetry-related code paths. These are review targets, not proof of unsafe behavior.
+- Readmes and repository metadata were read for orientation only. Marketing statements and repository-authored test claims are not treated as independently reproduced results.
+
+### Friction solved
+The comparison was previously only a plan with floating default branches. It now has immutable commit identifiers to anchor future inspection and reproducibility. No candidate was installed or executed.
+
+### Remaining gates
+1. Review the pinned dependency manifests/lockfiles, install and build hooks, network listeners/outbound calls, telemetry, authentication, persistence, export/delete semantics, and relevant license notices.
+2. Record a reproducible review receipt and dependency/license caveats.
+3. Only then perform isolated smoke tests and the fixed synthetic benchmark.
+4. Do not select a winner until benchmark outputs are generated and independently checked.
