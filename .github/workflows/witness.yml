@@ -1,6 +1,11 @@
 name: Witness
 
 on:
+  push:
+    paths:
+      - "scripts/witness.py"
+      - "scripts/omega_link.py"
+      - ".github/workflows/witness.yml"
   workflow_dispatch:
   schedule:
     - cron: "41 7 * * *"
