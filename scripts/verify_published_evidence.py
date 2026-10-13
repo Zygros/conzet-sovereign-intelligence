@@ -12,9 +12,26 @@ import subprocess
 import sys
 import tempfile
 
-RUN_ID = sys.argv[1] if len(sys.argv) > 1 else "38329245120"
 REF = "origin/evidence/scout"
-PREFIX = f"runs/{RUN_ID}/"
+RUN_ID = None
+PREFIX = ""
+
+
+def select_run_id():
+    """Use an explicitly requested run, otherwise the newest numeric published run."""
+    if len(sys.argv) > 1:
+        return sys.argv[1]
+    result = subprocess.run(
+        ["git", "ls-tree", "--name-only", f"{REF}:runs"],
+        capture_output=True, text=True, check=False,
+    )
+    if result.returncode:
+        raise RuntimeError(f"Cannot list published runs on {REF}: {result.stderr.strip()}")
+    run_ids = [line.strip().rstrip("/") for line in result.stdout.splitlines()
+               if line.strip().rstrip("/").isdigit()]
+    if not run_ids:
+        raise RuntimeError(f"No numeric run directories found on {REF}")
+    return str(max((int(run_id) for run_id in run_ids)))
 
 
 def git_bytes(path):
@@ -29,6 +46,10 @@ def git_bytes(path):
 
 
 def main():
+    global RUN_ID, PREFIX
+    RUN_ID = select_run_id()
+    PREFIX = f"runs/{RUN_ID}/"
+    print(f"Verifying published Scout run {RUN_ID} from {REF}")
     manifest = git_bytes("manifest.sha256").decode("utf-8")
     entries = []
     for line in manifest.splitlines():
