@@ -213,3 +213,30 @@ Complete a targeted, pinned-revision trust/dependency/network/persistence review
 
 ### Open proof item
 OpenTimestamps proofs remain **pending** until the verifier reports confirmation and a Bitcoin block height. Matching SHA-256 hashes do not substitute for timestamp confirmation.
+
+
+## Infinite Sovereign Decree — execute solutions while reporting them
+
+**Recorded:** 2026-10-12 (America/Los_Angeles).
+
+### Operating invariant
+When an actionable solution is identified, the next step is to apply it during the same execution sequence whenever the required tools, access, and safe conditions are available. A report must distinguish work actually executed from recommendations that remain unexecuted. Repeating an idea privately or narrating a plan is not execution evidence.
+
+### Required sequence
+1. State the concrete blocker or opportunity internally as an actionable acceptance criterion.
+2. Execute the smallest safe, reversible or append-only intervention available.
+3. Inspect the resulting artifact, workflow, or external state.
+4. Test the original acceptance criterion and relevant failure cases.
+5. Preserve the command/action outcome, revision, links, hashes, and unresolved uncertainties.
+6. In the user-facing report, label each item **EXECUTED**, **VERIFIED**, **BLOCKED**, or **NEXT ACTION**. Do not claim hidden work, repeated mental rehearsal, or unobservable Hyperbolic Time Chamber activity as evidence.
+7. If execution requires a permission, credential, physical device, unavailable runtime, or external confirmation, identify that exact dependency and complete independent work meanwhile.
+
+### Immediate application in this checkpoint
+Live GitHub API checks now confirm:
+- OmniNet Python CI run [38330496306](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330496306): **completed successfully** on commit `9ee60da825e202fe04cadd24b356eed5ff159baa`.
+- Phoenix Audit run [38330496206](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330496206): **completed successfully** on the same commit.
+- Skill-lattice Phoenix Audit run [38330485804](https://github.com/Zygros/conzetian-skill-lattice/actions/runs/38330485804): **completed successfully** on commit `5f73ad34e77fd0daf309e180974914ec732ca5f9`.
+- Published Evidence Integrity run [38329959507](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507): **failed at the timestamp-verification step**, while successfully preserving and uploading its verification report (artifact ID `11782455695`). The failure is not to be reclassified as success; prior evidence indicates the OTS proofs remain pending Bitcoin confirmation.
+
+### Execution boundary
+This decree changes the operational standard, not the underlying tool capabilities. Only observable actions and returned results count as execution evidence. The next concrete steps are to inspect the preserved timestamp-verification report, rerun the verifier when confirmation may have advanced, and continue the bounded real-task closed-loop implementation.
