@@ -1,0 +1,44 @@
+name: Published Evidence Integrity
+
+on:
+  push:
+    paths:
+      - "scripts/verify_published_evidence.py"
+      - ".github/workflows/published-evidence-integrity.yml"
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Sovereign Opportunity Scout"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: published-evidence-integrity
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install OpenTimestamps client
+        run: python -m pip install --disable-pip-version-check opentimestamps-client
+      - name: Fetch published evidence branch
+        run: git fetch origin "+refs/heads/evidence/scout:refs/remotes/origin/evidence/scout"
+      - name: Verify artifact hashes and timestamp proofs
+        run: python scripts/verify_published_evidence.py 38329245120 | tee published-evidence-verification.json
+      - name: Preserve verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: published-evidence-verification
+          path: published-evidence-verification.json
+          if-no-files-found: warn
