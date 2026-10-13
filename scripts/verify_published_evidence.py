@@ -47,37 +47,42 @@ def main():
         })
 
     proofs = []
-    for filename in ("manifest.sha256.ots", "verification-receipts.json.ots"):
+    for proof_name, target_name in (
+        ("manifest.sha256.ots", "manifest.sha256"),
+        ("verification-receipts.json.ots", "verification-receipts.json"),
+    ):
         try:
-            proof = git_bytes(filename)
+            proof = git_bytes(proof_name)
+            target = git_bytes(target_name)
         except RuntimeError as exc:
-            proofs.append({"file": filename, "present": False, "confirmed": False, "error": str(exc)})
+            proofs.append({"file": proof_name, "present": False, "confirmed": False, "error": str(exc)})
             continue
-        with tempfile.NamedTemporaryFile(suffix=".ots") as handle:
-            handle.write(proof)
-            handle.flush()
+        with tempfile.TemporaryDirectory() as directory:
+            proof_path = pathlib.Path(directory) / proof_name
+            target_path = pathlib.Path(directory) / target_name
+            proof_path.write_bytes(proof)
+            target_path.write_bytes(target)
             try:
                 result = subprocess.run(
-                    ["ots", "verify", handle.name],
+                    ["ots", "verify", str(proof_path)],
                     capture_output=True, text=True, timeout=90, check=False,
                 )
-                output = (result.stdout + "\n" + result.stderr).strip()
-                block = re.search(r"Bitcoin block\s+(\d+)", output, flags=re.IGNORECASE)
+                output = (result.stdout + "\\n" + result.stderr).strip()
+                block = re.search(r"Bitcoin block\\s+(\\d+)", output, flags=re.IGNORECASE)
                 confirmed = result.returncode == 0 and (
-                    bool(block) or bool(re.search(r"\bConfirmed\b", output, re.IGNORECASE))
+                    bool(block) or bool(re.search(r"\\bConfirmed\\b", output, re.IGNORECASE))
                 )
                 proofs.append({
-                    "file": filename, "present": True,
+                    "file": proof_name, "target_file": target_name, "present": True,
                     "client_exit_code": result.returncode,
                     "confirmed": confirmed,
                     "bitcoin_block": int(block.group(1)) if block else None,
                     "output_tail": output.splitlines()[-8:],
                 })
             except FileNotFoundError:
-                proofs.append({"file": filename, "present": True, "confirmed": False, "error": "ots client not installed"})
+                proofs.append({"file": proof_name, "present": True, "confirmed": False, "error": "ots client not installed"})
             except subprocess.TimeoutExpired:
-                proofs.append({"file": filename, "present": True, "confirmed": False, "error": "ots verify timed out"})
-
+                proofs.append({"file": proof_name, "present": True, "confirmed": False, "error": "ots verify timed out"})
     report = {
         "run_id": RUN_ID,
         "source_ref": REF,
