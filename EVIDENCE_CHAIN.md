@@ -170,3 +170,21 @@ Inspect the corrected integrity workflow outcome, then inspect the Diamond Watch
 3. Keep OTS confirmation pending until the client reports confirmation and a block height.
 4. Proceed with source/license/security inspection of memory candidates, then run the fixed synthetic benchmark only in an isolated environment.
 5. Move from deterministic gate simulation to a real bounded task with independent verification.
+
+
+## Infinite Sovereign Decree — friction-solving invariant
+**Declared:** 2026-10-12
+
+Operating rule for subsequent execution:
+1. Detect friction as soon as it blocks or degrades progress.
+2. Classify the blocker: missing information, tool/interface constraint, dependency, verification failure, permissions, safety/trust, or resource limit.
+3. Preserve the current state and all prior evidence before changing anything.
+4. Generate the strongest legitimate workaround or repair path that preserves the intended goal.
+5. Execute the smallest useful repair, preferring reversible and append-only changes.
+6. Test the repair against the original acceptance criteria and at least one relevant failure case.
+7. Record the change, observed result, remaining uncertainty, and next action.
+8. If blocked by a required human permission, credential, external service, or unavailable capability, identify the exact blocker and continue independent work rather than pretending it was resolved.
+
+**Invariant:** Friction is a problem to solve, route around, or explicitly bound, not a reason to abandon the end goal. This does not authorize bypassing security controls, fabricating evidence, destructive mutation, or claiming simulated work as real execution.
+
+**Current status:** Operating principle recorded. Its consistent application across all future tasks is a policy commitment, not a claim that every possible blocker has already been solved.
