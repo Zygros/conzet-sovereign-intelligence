@@ -110,3 +110,8 @@ The archive itself is 53,733 bytes as reported by GitHub, while the uncompressed
 - Follow-up: Witness workflow now has push triggers for changes to its script, `omega_link.py`, or the workflow itself, commit [8401e33](https://github.com/Zygros/conzet-sovereign-intelligence/commit/8401e337cea8855f28efcba839d8e415613d98ce), so the structural check can run again automatically.
 
 Qualification: successful workflow publication and matching hashes establish pipeline execution and byte identity. The OpenTimestamps proof files are present, but their Bitcoin confirmation has not yet been independently verified. Independent reproduction remains required before promoting evidence status.
+
+
+### Follow-up witness checkpoint
+
+The push-triggered Witness run [38329495697](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329495697) completed successfully after `scripts/omega_link.py` was added. Its refreshed [report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/witness/reports/2026-10-13.md) observes both published evidence branches and passes all five structural checks, including `omega_link_present`. No structural gaps were reported by those checks. OTS Bitcoin confirmation and independent reproduction remain separate, uncompleted verification gates.
