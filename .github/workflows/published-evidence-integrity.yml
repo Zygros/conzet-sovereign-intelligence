@@ -6,6 +6,8 @@ on:
       - "scripts/verify_published_evidence.py"
       - ".github/workflows/published-evidence-integrity.yml"
   workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
   workflow_run:
     workflows: ["Sovereign Opportunity Scout"]
     types: [completed]
