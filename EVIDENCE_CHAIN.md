@@ -99,3 +99,14 @@ The retained ZIP for [Scout run 38327019767](https://github.com/Zygros/conzet-so
 | `manifest.sha256` | 182 | `728e5a9eb321be008728b24eda54488e2b709f073e7d5c4037351a09a9e65831` | Recorded hashes match the two downloaded data files |
 
 The archive itself is 53,733 bytes as reported by GitHub, while the uncompressed files are larger. The artifact's generation timestamp is `2026-10-13T00:24:34Z`, which is October 12 in Pacific time. This establishes the downloaded artifact's contents and internal manifest consistency; it does not establish that the candidates are correct, valuable, safe, or independently reproduced. No `.ots` proof was present in this downloaded artifact.
+
+
+## Execution checkpoint — 2026-10-12 Pacific / 2026-10-13 UTC
+
+- Scout workflow [38329245120](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329245120): discovery, receipts, manifest, artifact upload, and `publish-evidence` all completed successfully. Published files are on `evidence/scout/runs/38329245120/`, including `manifest.sha256.ots` and `verification-receipts.json.ots`.
+- Federation Health [38329250209](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329250209): health check and publication job completed successfully. Run metadata is on `federation-health/health/RUN_META_2026-10-13.yaml`.
+- Witness [38329338512](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329338512): completed successfully and published [the report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/witness/reports/2026-10-13.md). It observed both evidence branches and identified the missing `scripts/omega_link.py` as a structural gap.
+- Friction fix: added `scripts/omega_link.py` in commit [ce98b9e](https://github.com/Zygros/conzet-sovereign-intelligence/commit/ce98b9ef2a2435ba8ea1cdfd1fbbb33fd1a288b0). It hashes a local artifact, optionally compares an expected SHA-256, and emits a `TESTED_PENDING_REVIEW` pointer. It does not assert semantic truth or independently verify claims.
+- Follow-up: Witness workflow now has push triggers for changes to its script, `omega_link.py`, or the workflow itself, commit [8401e33](https://github.com/Zygros/conzet-sovereign-intelligence/commit/8401e337cea8855f28efcba839d8e415613d98ce), so the structural check can run again automatically.
+
+Qualification: successful workflow publication and matching hashes establish pipeline execution and byte identity. The OpenTimestamps proof files are present, but their Bitcoin confirmation has not yet been independently verified. Independent reproduction remains required before promoting evidence status.
