@@ -1,5 +1,7 @@
 # 🔥 THE CONZET SOVEREIGN INTELLIGENCE 🔥
 
+> **Federation index:** [FEDERATION_INDEX.md](FEDERATION_INDEX.md) — every Zygros repository, sorted by layer.
+
 **The World's First Sovereign, Self-Optimizing AI Architecture**
 
 ---
