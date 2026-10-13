@@ -359,3 +359,14 @@ This repository is maintained under an additive, provenance-preserving quality r
 ## Install and usage
 
 This repository may contain executable components, examples, benchmarks, or archived material. Use the native dependency manifest and project-specific instructions for the active component. For a non-runtime archive, inspect the documented provenance and evidence boundaries before treating files as executable.
+
+
+## Reproducible Proof Cycle
+
+A standard-library-only local verification harness now exercises the task → Scout → verifier → bounded repair → re-verification → hash-chained receipt path.
+
+- Guide: [docs/PHOENIX_PROOF_CYCLE.md](docs/PHOENIX_PROOF_CYCLE.md)
+- Runner: [tools/phoenix_proof_cycle.py](tools/phoenix_proof_cycle.py)
+- CI: [Phoenix Proof Cycle workflow](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/workflows/phoenix-proof-cycle.yml)
+
+The CI run is green for the deterministic tests, clean cycle, and seeded-defect repair cycle. This fixture validates local verification behavior only. It does not claim external AI execution, live web research, or Bitcoin/Arweave/OpenTimestamps anchoring.
