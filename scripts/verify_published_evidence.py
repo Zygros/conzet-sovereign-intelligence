@@ -91,8 +91,6 @@ def main():
                 output = (result.stdout + "\n" + result.stderr).strip()
                 block = re.search(r"Bitcoin block\s+(\d+)", output, flags=re.IGNORECASE)
                 confirmed = result.returncode == 0 and block is not None
-                    bool(block) or bool(re.search(r"\bConfirmed\b", output, re.IGNORECASE))
-                )
                 proofs.append({
                     "file": proof_name, "target_file": target_name, "present": True,
                     "client_exit_code": result.returncode,
