@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/agents/receipt.schema.json",
+  "title": "Phoenix Agent Execution Receipt",
+  "description": "Evidence record for one bounded agent task. A receipt records observations; it does not itself prove semantic truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "task_id",
+    "agent_id",
+    "status",
+    "started_at",
+    "finished_at",
+    "input_sha256",
+    "output_sha256",
+    "actions",
+    "acceptance",
+    "evidence_class",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "task_id": {"type": "string", "minLength": 1},
+    "agent_id": {"type": "string", "minLength": 1},
+    "runtime": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "status": {"enum": ["planned", "running", "succeeded", "failed", "blocked", "cancelled"]},
+    "started_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": ["string", "null"], "format": "date-time"},
+    "input_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "output_sha256": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{64}$"},
+    "commit_sha": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{40}$"},
+    "workflow_run_url": {"type": ["string", "null"], "format": "uri"},
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action", "result", "external_side_effect", "evidence_ref"],
+        "properties": {
+          "action": {"type": "string", "minLength": 1},
+          "result": {"enum": ["succeeded", "failed", "blocked", "skipped"]},
+          "external_side_effect": {"type": "boolean"},
+          "approval_ref": {"type": ["string", "null"]},
+          "evidence_ref": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criteria", "passed", "failed", "not_run"],
+      "properties": {
+        "criteria": {"type": "array", "items": {"type": "string"}},
+        "passed": {"type": "array", "items": {"type": "string"}},
+        "failed": {"type": "array", "items": {"type": "string"}},
+        "not_run": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "evidence_class": {
+      "enum": ["DESIGNED", "IMPLEMENTED", "TESTED_PENDING_REVIEW", "TESTED", "VERIFIED"]
+    },
+    "reviewer_refs": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "supersedes_receipt_id": {"type": ["string", "null"]}
+  }
+}
