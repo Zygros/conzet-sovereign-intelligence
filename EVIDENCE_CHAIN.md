@@ -139,3 +139,12 @@ The push-triggered Witness run [38329495697](https://github.com/Zygros/conzet-so
 
 ### Next gate
 Inspect the corrected integrity workflow outcome, then inspect the Diamond Watch JSON artifact and prioritize a bounded, disposable memory-system comparison (MCP Memory Service versus Cognee) using fixed test data. No candidate code should be auto-executed or integrated before the applicable trust and test gates pass.
+
+
+### Final verifier result — run 38329959507
+- [Published Evidence Integrity run 38329959507](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507) completed with **failure by design of the gate**, because timestamp confirmation is still pending.
+- Both artifact SHA-256 comparisons **PASS** exactly as listed above.
+- Both OpenTimestamps clients returned exit code 1 and reported their calendars as **Pending confirmation in Bitcoin blockchain**. No Bitcoin block height was returned.
+- The workflow now correctly propagates the verifier's exit code instead of masking it through `tee`; the failed gate is an honest unresolved status, not a hash-integrity failure.
+- The report was preserved as workflow artifact: [published-evidence-verification](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507/artifacts).
+- Next action: rerun the verifier against the same proof files after calendar aggregation/Bitcoin confirmation has had time to progress. Do not regenerate or alter the target artifacts unless a new, separately identified evidence run is intended.
