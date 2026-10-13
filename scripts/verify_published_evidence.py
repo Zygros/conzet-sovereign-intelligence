@@ -90,7 +90,7 @@ def main():
                 )
                 output = (result.stdout + "\n" + result.stderr).strip()
                 block = re.search(r"Bitcoin block\s+(\d+)", output, flags=re.IGNORECASE)
-                confirmed = result.returncode == 0 and (
+                confirmed = result.returncode == 0 and block is not None
                     bool(block) or bool(re.search(r"\bConfirmed\b", output, re.IGNORECASE))
                 )
                 proofs.append({
@@ -113,7 +113,7 @@ def main():
         "timestamp_confirmation_complete": bool(proofs) and all(x.get("confirmed") for x in proofs),
         "interpretation": "Hash matches establish byte identity only. Timestamp confirmation requires recognized verifier confirmation.",
     }
-    rendered = json.dumps(report, indent=2) + "\\n"
+    rendered = json.dumps(report, indent=2) + "\n"
     pathlib.Path("published-evidence-verification.json").write_text(rendered, encoding="utf-8")
     print(rendered, end="")
     if not report["artifact_hashes_match"]:
