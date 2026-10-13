@@ -67,10 +67,10 @@ def main():
                     ["ots", "verify", str(proof_path)],
                     capture_output=True, text=True, timeout=90, check=False,
                 )
-                output = (result.stdout + "\\n" + result.stderr).strip()
-                block = re.search(r"Bitcoin block\\s+(\\d+)", output, flags=re.IGNORECASE)
+                output = (result.stdout + "\n" + result.stderr).strip()
+                block = re.search(r"Bitcoin block\s+(\d+)", output, flags=re.IGNORECASE)
                 confirmed = result.returncode == 0 and (
-                    bool(block) or bool(re.search(r"\\bConfirmed\\b", output, re.IGNORECASE))
+                    bool(block) or bool(re.search(r"\bConfirmed\b", output, re.IGNORECASE))
                 )
                 proofs.append({
                     "file": proof_name, "target_file": target_name, "present": True,
