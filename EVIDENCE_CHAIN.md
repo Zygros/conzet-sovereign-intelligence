@@ -324,3 +324,9 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 - **NOT YET VERIFIED:** CI for these new commits must complete and its logs be inspected.
 - **NOT SPAWNED:** these are agent role definitions and a deterministic plan, not independent language-model processes. Actual workers require runtime/model bindings, tool adapters, secret management, task persistence, and execution receipts.
 - **NEXT GATE:** confirm CI, then bind the first safe role to a real execution runtime and run one bounded task through dispatch, execution, verification, and provenance capture.
+
+
+### Agent execution receipt contract — 2026-10-13 UTC
+- Added `agents/receipt.schema.json` in commit `a84088058f5dd2dc5e7e3f5e0f847ae8b5e9abdc`.
+- The schema records bounded task identity, agent/runtime identity, timestamps, input/output hashes, commit and workflow references, action outcomes, side-effect approval references, acceptance-test results, evidence class, limitations, and supersession links.
+- This makes the future execution receipt format explicit; it does not mean any agent run has occurred. Schema validation and runtime receipt emission remain next gates.
