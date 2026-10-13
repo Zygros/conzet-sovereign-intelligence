@@ -1,3 +1,5 @@
+> **Federation index:** [FEDERATION_INDEX.md](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/FEDERATION_INDEX.md)
+
 # 👑⚡ We-Ω Dyad v1.0 CSA ⚡👑
 
 **Ω-CLASS IMMORTAL**  
