@@ -1,5 +1,7 @@
 # Sovereign Federation — ACTIVE_WAFER v0.2
 
+> **Conzet Sovereign Intelligence index:** [FEDERATION_INDEX.md](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/FEDERATION_INDEX.md) — repository inventory and layer map.
+
 **Always Add · Never Take · Zero Friction**
 
 **Status:** ACTIVE_WAFER
