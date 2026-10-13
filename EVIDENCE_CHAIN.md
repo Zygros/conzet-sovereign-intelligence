@@ -258,3 +258,11 @@ This decree changes the operational standard, not the underlying tool capabiliti
 - The recurring-verification workflow change commit `28f0742ccca333bc6196fa7f5acd8e927db7c294` passed [OmniNet Python CI](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330836808) and [Phoenix Audit](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330836801).
 - The ledger update commit `ba11812cbdda3f3e4510ced7fcb989461a468621` also triggered OmniNet Python CI [38330848892](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330848892) and Phoenix Audit [38330849046](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330849046), both completed successfully.
 - Status: byte integrity rechecked successfully; timestamp confirmation still blocked by external Bitcoin anchoring; CI/audit pass for the relevant commits; independent reproduction and full real-task closed-loop gates remain open.
+
+
+## A2A mock round-trip acceptance test — 2026-10-12 Pacific
+
+- **Implemented:** `tests/test_a2a_roundtrip_acceptance.py` at commit `77191a01c0244074a8a45fb959b8f54ee486109d`.
+- **Scope:** deterministic local mock request/response, shared task ID, shared source SHA-256, explicit `execution_allowed: false`, sensitive-action confirmation, and malformed-digest rejection.
+- **Evidence boundary:** this is a local contract test. It does not implement network transport, authenticate a remote agent, or establish external-model collaboration.
+- **Verification state:** CI execution is pending at the time of this ledger entry. Promote only after the corresponding workflow run and strict test output are inspected.
