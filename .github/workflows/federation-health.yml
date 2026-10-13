@@ -1,0 +1,78 @@
+name: Federation Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: federation-health
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run federation check once
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p federation-health
+          DATE="$(date -u +%F)"
+          MONTH="$(date -u +%Y-%m)"
+          python scripts/federation_check.py | tee "federation-health/${DATE}.txt"
+          mkdir -p "federation-health/log"
+          {
+            printf '\n## %s UTC\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            cat "federation-health/${DATE}.txt"
+          } >> "federation-health/log/${MONTH}.txt"
+
+      - name: Publish to dedicated federation-health branch
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="federation-health"
+          git config user.email "federation@conzetian.local"
+          git config user.name "Federation Health"
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout --orphan "$BRANCH"
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          mkdir -p health/log
+          cp "federation-health/$(date -u +%F).txt" health/
+          cp "federation-health/log/$(date -u +%Y-%m).txt" health/log/
+          printf 'run_url: %s\nsource_commit: %s\npublished_at: %s\n' \
+            "$RUN_URL" "$SOURCE_SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            > "health/RUN_META_$(date -u +%F).yaml"
+
+          git add health
+          if git diff --cached --quiet; then
+            echo "No new health evidence to publish."
+            exit 0
+          fi
+          git commit -m "health: federation check $(date -u +%F)"
+          git push origin "$BRANCH"
