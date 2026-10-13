@@ -1,0 +1,71 @@
+name: Witness
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 7 * * *"
+  workflow_run:
+    workflows: ["Federation Health", "Sovereign Opportunity Scout"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: witness
+  cancel-in-progress: false
+
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch evidence branches (best-effort)
+        shell: bash
+        run: |
+          set -u
+          for b in evidence/scout federation-health; do
+            if git fetch origin "+refs/heads/$b:refs/remotes/origin/$b"; then
+              echo "fetched origin/$b"
+            else
+              echo "branch $b not present yet"
+            fi
+          done
+          git branch -a
+
+      - name: Run witness
+        run: python scripts/witness.py .
+
+      - name: Publish witness report to witness branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="witness"
+          REPORT_DATE="$(date -u +%F)"
+          git config user.email "witness@conzetian.local"
+          git config user.name "Witness"
+          cp WITNESS_REPORT.md "/tmp/WITNESS_REPORT.md"
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout --orphan "$BRANCH"
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          mkdir -p reports
+          cp /tmp/WITNESS_REPORT.md "reports/$REPORT_DATE.md"
+          git add reports
+          git commit -m "witness: $REPORT_DATE" || echo "no change"
+          git push origin "$BRANCH"
