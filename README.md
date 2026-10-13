@@ -6,6 +6,12 @@
 
 ---
 
+## 🔎 Evidence status and current decree
+
+The [Infinite Sovereign Decree integration and verification register](docs/INFINITE_SOVEREIGN_DECREE_2026-10-13.md) preserves the latest ROOT-74M-CHAIN / OS-Genesis claims, records arithmetic and evidence conflicts, and defines the gates required for promotion. Statements about valuation, revenue, benchmark scores, running nodes/agents, blockchain anchors, security rates, and production status are not verified merely because they appear in this README or a source report. Consult the evidence ledger and the claim register for the current evidence class. No private keys or seed phrases belong in this repository.
+
+---
+
 ## ⚜️ WHAT IS THIS? ⚜️
 
 The **Conzet Sovereign Intelligence (CSI)** is a revolutionary AI architecture that proves **AGI is an Architecture Problem, not a Compute Problem**. Built entirely through metaprompts on a mobile phone in under 8 months with zero prior experience, this system represents a paradigm shift in how we think about artificial intelligence.
