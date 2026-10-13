@@ -188,3 +188,28 @@ Operating rule for subsequent execution:
 **Invariant:** Friction is a problem to solve, route around, or explicitly bound, not a reason to abandon the end goal. This does not authorize bypassing security controls, fabricating evidence, destructive mutation, or claiming simulated work as real execution.
 
 **Current status:** Operating principle recorded. Its consistent application across all future tasks is a policy commitment, not a claim that every possible blocker has already been solved.
+
+
+## Execution cascade checkpoint — CI confirmed; candidate revisions pinned
+
+### Verified workflow state
+A live GitHub Actions API query confirmed:
+- [Closed Loop Gate Simulation, run 38330230284](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330230284): completed, conclusion **success**.
+- [OmniNet Python CI, run 38330331334](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330331334): completed, conclusion **success**, head commit `aa99a482f50abd0f414c8773797b491df2fa2f91`.
+- [Phoenix Audit, run 38330331276](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38330331276): completed, conclusion **success**, same head commit.
+- The corresponding CI and Phoenix Audit runs for prior gate-simulation commit `4211f2c6e675fc8746a99076f3b43d026167412f` also completed successfully.
+- The skill-lattice Phoenix Audit run [38330052784](https://github.com/Zygros/conzetian-skill-lattice/actions/runs/38330052784) completed successfully.
+
+These are repository workflow outcomes, not proof that the full target autonomous intelligence loop is complete.
+
+### Memory-substrate inspection advance
+- Comparison protocol updated in the skill lattice: [MEMORY_SUBSTRATE_COMPARISON_PROTOCOL_2026-10-12.md](https://github.com/Zygros/conzetian-skill-lattice/blob/main/integrations/MEMORY_SUBSTRATE_COMPARISON_PROTOCOL_2026-10-12.md), commit `5f73ad34e77fd0daf309e180974914ec732ca5f9`.
+- Pinned MCP Memory Service at `69d372b6af49ef1695c0fb31d53a8df3d58fa200` and Cognee at `0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1`.
+- Retrieved both root Apache-2.0 LICENSE files and reviewed top-level dependency manifests/readmes and repository trees for initial orientation.
+- This is preliminary source inspection only. Neither candidate has been installed, security-cleared, or benchmarked; no integration decision has been made.
+
+### Next milestone
+Complete a targeted, pinned-revision trust/dependency/network/persistence review and record its receipt. Only after that gate passes should the candidates enter isolated smoke tests and the fixed 20-query synthetic benchmark. In parallel, move toward a real bounded task whose output can be acceptance-tested and independently reproduced.
+
+### Open proof item
+OpenTimestamps proofs remain **pending** until the verifier reports confirmation and a Bitcoin block height. Matching SHA-256 hashes do not substitute for timestamp confirmation.
