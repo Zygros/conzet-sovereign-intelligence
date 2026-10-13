@@ -61,3 +61,28 @@ These are configured paths, not claims that either branch already exists or that
 - Promote `TESTED → VERIFIED` only after a separate independent reviewer/context reproduces it.
 - Confirm OTS stamps only after verifying the resulting proof against the source artifact.
 - Complete and audit the remaining repository cross-links.
+
+
+## Live execution checkpoint — 2026-10-12 (Pacific)
+
+The following observations were checked against GitHub Actions and the live branch listing during this checkpoint. These entries record observed results, not inferred completion.
+
+| Observation | Class | Evidence pointer | Result / qualification |
+|---|---|---|---|
+| OmniNet Python CI | TESTED_PENDING_REVIEW | [Run 38327502934](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38327502934) | Successful inspected jobs for Python 3.8, 3.9, 3.10, and 3.11; pytest, mypy, CIS verification benchmark tests, formula regression tests, and plugin trust policy tests passed in those jobs. Independent reproduction pending. |
+| Phoenix Audit | TESTED_PENDING_REVIEW | [Run 38327502847](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38327502847) | Python, Node, Go, Rust, Java, and credential-pattern audit steps succeeded in the inspected run. This is not a full security certification. |
+| Scout discovery and receipt generation | TESTED_PENDING_REVIEW | [Run 38327019767](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38327019767) | Discovery, receipt generation, SHA-256 manifest generation, and artifact upload succeeded. Retained artifact: `sovereign-opportunity-scout-38327019767` (53,733 bytes reported by GitHub). |
+| Scout publication for run 38327019767 | IMPLEMENTED; publication not performed | [Run 38327019767](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38327019767) | `publish-evidence` was skipped because the run event was a push; the workflow gate allows only schedule or workflow_dispatch. Do not treat this run as evidence-branch publication. |
+| Target evidence branches | DESIGNED / not observed | Live GitHub branch listing at checkpoint | `evidence/scout`, `federation-health`, and `witness` were absent from the inspected listing. Recheck after dispatch before claiming they exist. |
+| OTS proof verification | DESIGNED / pending | `scripts/ots_verify.py` | No actual `.ots` proof verification or confirmed Bitcoin block height was observed during this checkpoint. |
+| Live witness report | DESIGNED / pending | `scripts/witness.py`, `.github/workflows/witness.yml` | No live `WITNESS_REPORT.md` was observed during this checkpoint. |
+
+### Next runtime gate
+
+1. Dispatch `federation-health.yml` manually and inspect its run logs and `federation-health` branch.
+2. Dispatch `opportunity-scout.yml` manually and confirm `publish-evidence` succeeds and publishes `evidence/scout`.
+3. Retrieve the actual published `.ots` proof, run `scripts/ots_verify.py`, and preserve the full output.
+4. Dispatch `witness.yml` after the evidence branches exist; inspect the resulting report on `witness`.
+5. Link a real artifact through `scripts/omega_link.py` and obtain independent reproduction before promoting the ledger.
+
+A successful CI test is evidence for the tested job and commit only. A committed workflow is not evidence of a successful workflow run. A hash establishes byte identity, not the truth of a claim.
