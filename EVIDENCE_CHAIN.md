@@ -115,3 +115,27 @@ Qualification: successful workflow publication and matching hashes establish pip
 ### Follow-up witness checkpoint
 
 The push-triggered Witness run [38329495697](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329495697) completed successfully after `scripts/omega_link.py` was added. Its refreshed [report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/witness/reports/2026-10-13.md) observes both published evidence branches and passes all five structural checks, including `omega_link_present`. No structural gaps were reported by those checks. OTS Bitcoin confirmation and independent reproduction remain separate, uncompleted verification gates.
+
+
+## Closed-loop execution progress — artifact integrity and Diamond Watch
+
+### Scout artifact hash verification
+- Automated verification workflow: [Published Evidence Integrity run 38329906059](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329906059).
+- `opportunity-scout.json`: expected and observed SHA-256 both `8d40218cfb7ccd84d9c05936d966fc957988daba89a9372bd054fbb4d416054d` (107,116 bytes).
+- `verification-receipts.json`: expected and observed SHA-256 both `25f0115b084dc5584459d17ac4cce16d20889d587f5b364fcdc8439308e94b50` (206,133 bytes).
+- **Hash result: PASS.** The published artifact bytes match their manifest entries.
+
+### OpenTimestamps status
+- Both `.ots` proof files were found and passed to the OpenTimestamps client with their corresponding target files.
+- At the inspected run, all queried calendars reported **pending confirmation in the Bitcoin blockchain**; no Bitcoin block height was established.
+- Therefore, **Bitcoin confirmation remains unverified**. The prior workflow masked the verifier's nonzero exit status through a shell pipe. The workflow has been corrected to let the verifier's exit status control the job; the latest run is tracked at https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38329959507 and must be inspected after completion.
+
+### Diamond Watch
+- The read-only Diamond Watch workflow completed successfully: [run 38329928341](https://github.com/Zygros/conzetian-skill-lattice/actions/runs/38329928341).
+- It checked seven configured public candidate repositories with zero metadata-fetch errors and uploaded artifact [11781974941](https://github.com/Zygros/conzetian-skill-lattice/actions/runs/38329928341/artifacts/11781974941).
+- Artifact ZIP SHA-256: `a3fef9e91457ebc73f13fdfe84705af87dc882dbfadd19721c40fcc0c8a9cf87`.
+- Receipt: https://github.com/Zygros/conzetian-skill-lattice/blob/main/integrations/DIAMOND_WATCH_EXECUTION_2026-10-12.md
+- This confirms metadata discovery and report publication only. It does not establish that candidates are safe, benchmarked, or integrated.
+
+### Next gate
+Inspect the corrected integrity workflow outcome, then inspect the Diamond Watch JSON artifact and prioritize a bounded, disposable memory-system comparison (MCP Memory Service versus Cognee) using fixed test data. No candidate code should be auto-executed or integrated before the applicable trust and test gates pass.
