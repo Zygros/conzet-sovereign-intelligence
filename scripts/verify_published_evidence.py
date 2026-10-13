@@ -92,7 +92,9 @@ def main():
         "timestamp_confirmation_complete": bool(proofs) and all(x.get("confirmed") for x in proofs),
         "interpretation": "Hash matches establish byte identity only. Timestamp confirmation requires recognized verifier confirmation.",
     }
-    print(json.dumps(report, indent=2))
+    rendered = json.dumps(report, indent=2) + "\\n"
+    pathlib.Path("published-evidence-verification.json").write_text(rendered, encoding="utf-8")
+    print(rendered, end="")
     if not report["artifact_hashes_match"]:
         return 1
     if not report["timestamp_confirmation_complete"]:
