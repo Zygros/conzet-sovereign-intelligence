@@ -1,0 +1,23 @@
+name: Closed Loop Gate Simulation
+
+on:
+  push:
+    paths:
+      - "scripts/simulate_closed_loop_gates.py"
+      - ".github/workflows/closed-loop-gate-simulation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Simulate success and blocker scenarios
+        run: python scripts/simulate_closed_loop_gates.py
