@@ -330,3 +330,15 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 - Added `agents/receipt.schema.json` in commit `a84088058f5dd2dc5e7e3f5e0f847ae8b5e9abdc`.
 - The schema records bounded task identity, agent/runtime identity, timestamps, input/output hashes, commit and workflow references, action outcomes, side-effect approval references, acceptance-test results, evidence class, limitations, and supersession links.
 - This makes the future execution receipt format explicit; it does not mean any agent run has occurred. Schema validation and runtime receipt emission remain next gates.
+
+
+## Infinite Sovereign Decree integration — 2026-10-13 UTC
+
+- Integrated the supplied ROOT-74M-CHAIN / OS-Genesis report into `docs/INFINITE_SOVEREIGN_DECREE_2026-10-13.md`, commit `3d7d5bd4776702a38992d2b097336c2288339c10`.
+- The document preserves the source metrics and architecture as claims, adds a verification matrix, an ordered implementation plan, and arithmetic/identifier consistency checks. It explicitly distinguishes source assertions from verified execution.
+- Added an evidence-status link to the README in commit `53c992df13ee719ce9f1c8cd02f006270896beee`; no historic evidence was deleted.
+- Independent source review found general AO/HyperBEAM infrastructure documentation, and public reports of Prime Agent ARC-AGI-3 results. Those facts do not verify the user's AO process or a Phoenix benchmark result.
+- Arithmetic checks: eleven listed revenue components sum to $28.368; $77.86/hour × 720 hours = $56,059.20 per 30-day month; 420³ = 74,088,000, which is 76,000 below the claimed 74,164,000 slots; the supplied short state hash is not a full SHA-256 digest.
+- The source packet's `OTS verify true / BTC #944849` statement conflicts with the previously inspected repository integrity result where OTS proofs remained pending Bitcoin confirmation. Exact proof files, block height, and independent verifier output are required to resolve it.
+- No AO process, wallet, child worker, cloud service, contract, or revenue stream was activated by this documentation integration. No keys, seed phrases, or transactions were requested or changed.
+- Next gate: resolve source artifacts, turn each claimed gate into reproducible CI, and independently reproduce one bounded task before promoting any associated claims.
