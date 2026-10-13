@@ -86,3 +86,16 @@ The following observations were checked against GitHub Actions and the live bran
 5. Link a real artifact through `scripts/omega_link.py` and obtain independent reproduction before promoting the ledger.
 
 A successful CI test is evidence for the tested job and commit only. A committed workflow is not evidence of a successful workflow run. A hash establishes byte identity, not the truth of a claim.
+
+
+### Retrieved Scout artifact detail
+
+The retained ZIP for [Scout run 38327019767](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38327019767) was downloaded and inspected during this checkpoint. The artifact metadata reported by GitHub identified artifact ID `11780734822` and archive size 53,733 bytes. The archive contains:
+
+| File | Bytes | SHA-256 | Interpretation |
+|---|---:|---|---|
+| `opportunity-scout.json` | 112,183 | `3f433aba39bf34f8381eff0c304fa628c0109086b75ec3a2e01232297251329d` | 104 discovery records; `triage_status` is `unreviewed_candidates` |
+| `verification-receipts.json` | 224,208 | `7ce81c34bb1268ca23cd8ebf200f85500da0459b9d241f76d86a5ae5fea8f7e7` | 101 receipts, 3 rejected candidates; review gate requires human or independent review |
+| `manifest.sha256` | 182 | `728e5a9eb321be008728b24eda54488e2b709f073e7d5c4037351a09a9e65831` | Recorded hashes match the two downloaded data files |
+
+The archive itself is 53,733 bytes as reported by GitHub, while the uncompressed files are larger. The artifact's generation timestamp is `2026-10-13T00:24:34Z`, which is October 12 in Pacific time. This establishes the downloaded artifact's contents and internal manifest consistency; it does not establish that the candidates are correct, valuable, safe, or independently reproduced. No `.ots` proof was present in this downloaded artifact.
