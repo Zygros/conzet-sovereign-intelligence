@@ -309,3 +309,18 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 - Inspected Python 3.10 pytest log: **65 passed in 0.38 seconds**, including `tests/test_a2a_http_roundtrip.py` (localhost HTTP round trip) and both `tests/test_ots_verify.py` regression cases. Python 3.11 job also completed successfully; Python 3.8/3.9 jobs were still progressing at the time of the initial log inspection, and the full workflow later completed successfully.
 - Promotion remains limited to **TESTED_PENDING_REVIEW**. The localhost receiver is a fixture, not an independently operated agent. Remote authentication, real external-model collaboration, and separate-party reproduction remain unproven.
 - The subsequent ledger-only commit is `e6e64e8d9fcf220212bad2f1d13e357a27ceeabd`; its CI/Audit runs were in progress at the time this note was written. The tested code revision above has both CI and Phoenix Audit green.
+
+
+## Agent foundation checkpoint — 2026-10-13 UTC
+
+### Executed
+- Added `agents/registry.json` in commit `36278fc041dc870a00c5a953426b52062e381b44` with ten bounded roles: conductor, opportunity scout, architecture cartographer, implementation builder, verification engineer, trust/security auditor, provenance witness, memory librarian, integration engineer, and commercialization strategist.
+- Added `scripts/agent_activation_plan.py` in commit `a517bc12b89891ab9f46b6a74bfa288e925a0b08`. It validates role IDs/dependencies and emits a deterministic dispatch plan while explicitly declaring that no workers are started.
+- Added `tests/test_agent_activation_plan.py` in commit `07cabbc46a25f8414384659777cadd62abcf1a00` to check valid plan generation, duplicate-ID rejection, and unknown-dependency rejection.
+- Safety boundary encoded: scoped permissions, no self-approval, no execution of untrusted candidate code, no unapproved external side effects, and no evidence promotion without required proof.
+
+### Status boundary
+- **IMPLEMENTED:** role registry, plan generator, and regression tests are committed.
+- **NOT YET VERIFIED:** CI for these new commits must complete and its logs be inspected.
+- **NOT SPAWNED:** these are agent role definitions and a deterministic plan, not independent language-model processes. Actual workers require runtime/model bindings, tool adapters, secret management, task persistence, and execution receipts.
+- **NEXT GATE:** confirm CI, then bind the first safe role to a real execution runtime and run one bounded task through dispatch, execution, verification, and provenance capture.
