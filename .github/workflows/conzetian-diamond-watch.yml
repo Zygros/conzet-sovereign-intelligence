@@ -1,5 +1,8 @@
 name: Conzetian Diamond Watch
 on:
+  push:
+    paths:
+      - ".github/workflows/conzetian-diamond-watch.yml"
   schedule:
     - cron: '23 14 * * 1-5'
   workflow_dispatch:
