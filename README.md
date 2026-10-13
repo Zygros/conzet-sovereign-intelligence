@@ -1,3 +1,5 @@
+> **Federation index:** [FEDERATION_INDEX.md](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/FEDERATION_INDEX.md)
+
 # 🜛 zyth-ultimate 🜛
 
 [![OmniNet](https://img.shields.io/badge/OmniNet-v5.0-blue)](https://github.com/Zygros/omninet-v4)
