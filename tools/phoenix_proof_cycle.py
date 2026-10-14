@@ -20,6 +20,10 @@ def canonical(value):
 def digest(value):
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
+def object_hash(value):
+    """Hash canonical JSON so structured results can be bound into ledger events."""
+    return digest(canonical(value))
+
 def append(ledger, event, payload):
     body = {"sequence": len(ledger) + 1,
             "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -65,27 +69,47 @@ def run_cycle(task, inject_defect=False, repair=True):
                "confidence": 0.5}
     if inject_defect:
         finding["evidence"] = ""
-    append(ledger, "scout.completed", {"source": "deterministic-local-fixture", "count": 1})
+    finding_hash_before_verification = object_hash(finding)
+    append(ledger, "scout.completed", {
+        "source": "deterministic-local-fixture", "count": 1,
+        "finding_sha256": finding_hash_before_verification
+    })
     errors = validate(finding)
-    append(ledger, "verifier.completed", {"valid": not errors, "errors": errors})
+    append(ledger, "verifier.completed", {
+        "valid": not errors, "errors": errors,
+        "finding_sha256": object_hash(finding)
+    })
     status = "PASS"
     original_errors = list(errors)
     if errors:
         status = "FAIL"
         if repair:
+            before_repair_hash = object_hash(finding)
             if not finding.get("id", "").strip():
                 finding["id"] = "repaired-001"
             if not finding.get("title", "").strip():
                 finding["title"] = "Repaired finding title"
             if not finding.get("evidence", "").strip():
                 finding["evidence"] = "Repair applied; original evidence was empty."
-            append(ledger, "repair.applied", {"repair_count": 1})
+            after_repair_hash = object_hash(finding)
+            append(ledger, "repair.applied", {
+                "repair_count": 1,
+                "before_finding_sha256": before_repair_hash,
+                "after_finding_sha256": after_repair_hash
+            })
             errors_after = validate(finding)
-            append(ledger, "verifier.recheck", {"valid": not errors_after, "errors": errors_after})
+            append(ledger, "verifier.recheck", {
+                "valid": not errors_after, "errors": errors_after,
+                "finding_sha256": object_hash(finding)
+            })
             status = "REPAIRED" if not errors_after else "FAIL"
-    append(ledger, "cycle.finished", {"status": status})
+    finding_sha256 = object_hash(finding)
+    append(ledger, "cycle.finished", {
+        "status": status, "finding_sha256": finding_sha256
+    })
     valid, message = verify_ledger(ledger)
     payload = {"schema": SCHEMA, "status": status, "finding": finding,
+               "finding_sha256": finding_sha256,
                "errors_before_repair": original_errors, "ledger": ledger,
                "ledger_valid": valid, "ledger_message": message,
                "evidence_boundary": {"external_ai": False, "web_research": False,
@@ -101,8 +125,27 @@ def verify_export(raw):
     supplied = payload.pop("export_sha256", None)
     if not isinstance(supplied, str) or supplied != digest(canonical(payload)):
         return False, "export hash mismatch"
-    ok, message = verify_ledger(payload.get("ledger", []))
-    return (ok, f"export and {message}" if ok else message)
+    if payload.get("schema") != SCHEMA:
+        return False, "unsupported or missing export schema"
+    finding = payload.get("finding")
+    ledger = payload.get("ledger")
+    if not isinstance(finding, dict) or not isinstance(ledger, list) or not ledger:
+        return False, "export is missing finding or ledger"
+    finding_hash = object_hash(finding)
+    if payload.get("finding_sha256") != finding_hash:
+        return False, "finding hash mismatch"
+    ok, message = verify_ledger(ledger)
+    if not ok:
+        return False, message
+    final_event = ledger[-1]
+    final_payload = final_event.get("payload", {})
+    if final_event.get("event") != "cycle.finished":
+        return False, "ledger has no terminal cycle event"
+    if final_payload.get("status") != payload.get("status"):
+        return False, "terminal status does not match export"
+    if final_payload.get("finding_sha256") != finding_hash:
+        return False, "ledger does not commit to exported finding"
+    return True, f"export and {message}; finding binding verified"
 
 class Tests(unittest.TestCase):
     def test_clean_cycle(self):
@@ -121,6 +164,15 @@ class Tests(unittest.TestCase):
         altered = json.loads(json.dumps(result["ledger"]))
         altered[0]["payload"]["task"] = "changed"
         self.assertFalse(verify_ledger(altered)[0])
+
+    def test_ledger_commits_to_finding_hash(self):
+        result = run_cycle("binding")
+        scout_event = next(e for e in result["ledger"] if e["event"] == "scout.completed")
+        finish_event = result["ledger"][-1]
+        self.assertEqual(scout_event["payload"]["finding_sha256"],
+                         object_hash(result["finding"]))
+        self.assertEqual(finish_event["payload"]["finding_sha256"],
+                         result["finding_sha256"])
     def test_export_roundtrip_and_tamper(self):
         result = run_cycle("export")
         raw = json.dumps(result)
@@ -128,6 +180,20 @@ class Tests(unittest.TestCase):
         altered = json.loads(raw)
         altered["finding"]["title"] = "tampered"
         self.assertFalse(verify_export(json.dumps(altered))[0])
+
+        # Even if someone recomputes the outer export hash, the ledger's
+        # terminal finding commitment must still match the exported finding.
+        altered = json.loads(raw)
+        altered["finding"]["title"] = "tampered"
+        altered.pop("export_sha256")
+        altered["export_sha256"] = digest(canonical(altered))
+        self.assertFalse(verify_export(json.dumps(altered))[0])
+
+    def test_export_requires_schema_finding_and_ledger(self):
+        malformed = {"schema": SCHEMA, "status": "PASS", "finding": {},
+                     "ledger": [], "finding_sha256": object_hash({})}
+        malformed["export_sha256"] = digest(canonical(malformed))
+        self.assertFalse(verify_export(json.dumps(malformed))[0])
     def test_empty_task_rejected(self):
         with self.assertRaises(ValueError):
             run_cycle("  ")
