@@ -1,4 +1,5 @@
 import { createServer } from "node:http";
+import { randomBytes, timingSafeEqual } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { OAuth2Client } from "google-auth-library";
 import open from "open";
@@ -11,12 +12,25 @@ if (!installed?.client_id || !installed?.client_secret) {
 const redirectUri = "http://127.0.0.1:53682/oauth2callback";
 const oauth = new OAuth2Client(installed.client_id, installed.client_secret, redirectUri);
 const scopes = ["https://www.googleapis.com/auth/drive.readonly"];
-const authUrl = oauth.generateAuthUrl({ access_type: "offline", prompt: "consent", scope: scopes });
+const oauthState = randomBytes(32).toString("hex");
+const authUrl = oauth.generateAuthUrl({
+  access_type: "offline",
+  prompt: "consent",
+  scope: scopes,
+  state: oauthState
+});
 
 const server = createServer(async (req, res) => {
   const url = new URL(req.url ?? "/", redirectUri);
   if (url.pathname !== "/oauth2callback") {
     res.writeHead(404).end("Not found");
+    return;
+  }
+  const returnedState = url.searchParams.get("state");
+  const expectedState = Buffer.from(oauthState);
+  const receivedState = Buffer.from(returnedState ?? "");
+  if (expectedState.length !== receivedState.length || !timingSafeEqual(expectedState, receivedState)) {
+    res.writeHead(400).end("OAuth state validation failed. Close this tab and restart authorization.");
     return;
   }
   const code = url.searchParams.get("code");
