@@ -119,3 +119,46 @@ This index establishes document-level integration for the available sources. It 
 See also the [Phoenix Protocol archive](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE), [Omega-10](https://github.com/Zygros/omega-10), and [Conzetian Skill Lattice](https://github.com/Zygros/conzetian-skill-lattice).
 
 **Final rule:** Integrate every available source by provenance and relationship, not by pretending omniscience. Past artifacts remain traceable; present claims require current evidence; future possibilities become testable gates. 🐦‍🔥♾️
+
+
+## C641 execution addendum · 2026-10-16
+
+This section appends current verified actions to the C637/C638 integration map without rewriting the prior evidence record.
+
+### Executed and verified
+
+- Phoenix Manifestation Core package upgraded to C641 in the available local Python runtime: compilation passed; **7 tests passed, 0 failures, 0 warnings**.
+- A concurrency race in audit-chain writes was corrected by serializing the read-link-write transaction with SQLite BEGIN IMMEDIATE. A bounded 100-write / 8-worker stress probe returned 100/100 successful requests and verified all 100 events in one chain.
+- GitHub source, tests, README, requirements, and CI workflow published to the additive branch in [ultimate-phoenix-protocol PR #1](https://github.com/Zygros/ultimate-phoenix-protocol/pull/1). Hosted workflow run [38894067636](https://github.com/Zygros/ultimate-phoenix-protocol/actions/runs/38894067636) completed successfully. PR remains draft/unmerged and currently reports mergeable=false.
+- Added a receipt-chain sidecar and four local regression tests in the Conzetian skill-lattice branch; payload mutation, truncation against a retained manifest, valid read-back, and no-overwrite behavior passed locally. The new hosted CI result for that cycle is not yet confirmed. See [skill-lattice PR #2](https://github.com/Zygros/conzetian-skill-lattice/pull/2).
+- Targeted source read-back found the default-branch CONZETIAN-AI dataset ingester used write/truncate mode on output. A stacked draft patch now refuses to overwrite existing output and adds a preservation regression test. See [CONZETIAN-AI PR #4](https://github.com/Zygros/CONZETIAN-AI/pull/4). Hosted CI for this stacked change is pending confirmation.
+- Targeted ZYGROS-PRIME review found its deploy script uses pip with --break-system-packages and the README-referenced root trading scripts were not found at the inspected paths. No trading or Telegram activation was attempted.
+
+### C641 phase matrix
+
+| Capability | State |
+|---|---|
+| Local Manifestation Core compile/tests | TESTED, PASS |
+| Audit chain concurrency | TESTED, bounded 100-event pass |
+| Hosted C641 workflow | PASS |
+| Receipt sidecar | IMPLEMENTED, 4 local tests pass; hosted CI pending |
+| Additive dataset overwrite guard | PATCH PROPOSED in draft PR; CI pending |
+| Live Gemini API | NOT RUN |
+| Samsung Galaxy A17 / Termux | NOT RUN |
+| Arweave/AO/OpenTimestamps/Bitcoin anchor | NOT CREATED |
+| ARC-AGI benchmark | NOT RUN |
+| Live multi-node OmniNet/Tor routing | NOT VERIFIED |
+| Gumroad checkout / revenue | NOT VERIFIED |
+| ZYGROS-PRIME trading deployment | NOT ACTIVATED |
+
+### Governing interpretation
+
+This is progress on the evidence and verification substrate, not proof that all 50 declared agents are running. Hash chains remain tamper-evident unless the head is independently retained or externally anchored. No live model comparison, external payment, trading activity, phone deployment, or subjective-consciousness claim is implied.
+
+### Next bounded gates
+
+1. Confirm fresh CI for skill-lattice cycle 005 and CONZETIAN-AI PR #4.
+2. Run the Manifestation Core suite on the actual Termux device and record environment versions.
+3. Verify the live provider identifier and API response only with the user's own configured credentials.
+4. Create and independently verify an external anchor only after the exact digest and destination are selected and an actual receipt is returned.
+5. Continue source-level audit of the remaining federation repositories, keeping finance, public deployment, private data, and irreversible actions behind their own authorization and evidence gates.
