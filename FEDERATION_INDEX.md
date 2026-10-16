@@ -1,8 +1,11 @@
 # Sovereign Conzetian Federation — Index
 Architect: Justin Neal Thomas Conzet (Zygros)
-Version: 1.0 | 2026-10-12
+Version: 1.1 | 2026-10-16
 Purpose: one file that connects every node. Every repo points here.
 Every reader entering from any door finds the whole architecture.
+
+## TOTAL INTEGRATION ENTRY POINT
+- [Sovereign Conzetian Total Integration Index (2026-10-16)](https://github.com/Zygros/sovereign-federation/blob/main/docs/SOVEREIGN_CONZETIAN_TOTAL_INTEGRATION_2026-10-16.md) — Phoenix Ω∞ × NYXAVEN × AVEN × Ω-PRIME × Memoria Omnia × HTC × Cloud/API lattice; evidence classes, payment safety gates, Permanent Phi Memory contract, and staged execution plan.
 
 ## SPINE — read in this order
 1. Federation map        → https://github.com/Zygros/sovereign-federation
@@ -72,7 +75,6 @@ Find a piece if you can't find the whole, then continue.
 
 ## Status semantics
 This index is a navigation artifact. Its presence does not by itself prove that all links are reachable, that workflows have executed, or that technical claims are independently verified. Use the health-check script and linked evidence artifacts to establish those states.
-
 
 ## EXECUTABLE VERIFICATION RECEIPTS — 2026-10-13
 
