@@ -1,0 +1,23 @@
+{
+  "name": "conzetian-google-drive-connector",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only Google Drive MCP connector for Conzetian manifesting",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "auth": "tsx src/auth.ts",
+    "dev": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "googleapis": "^150.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
