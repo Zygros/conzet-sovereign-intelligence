@@ -76,3 +76,5 @@ jobs:
           git push origin "$BRANCH"
 
 # C639 activation audit: additive trigger commit; report is structural evidence only.
+
+# C640 refresh: observe the completed Scout publication after its evidence branch update.
