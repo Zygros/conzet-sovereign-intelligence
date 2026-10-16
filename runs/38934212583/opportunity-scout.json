@@ -1,0 +1,585 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-16T16:45:54.281973+00:00",
+  "scope": "public metadata discovery only; no code execution or automatic promotion",
+  "research_posture": "open inquiry across mainstream, contested, taboo-labelled, and dual-use topics; labels are context, not verdicts",
+  "triage_status": "unreviewed_candidates",
+  "record_count": 61,
+  "records": [
+    {
+      "source_type": "github_repository",
+      "title": "Poke-nushi/Verifiable-Agent-Trust-Envelope",
+      "url": "https://github.com/Poke-nushi/Verifiable-Agent-Trust-Envelope",
+      "description": "A discussion draft for verifier-side trust / permit / receipt decisions in AI agent systems",
+      "updated_at": "2026-10-16T11:53:17Z",
+      "stars": 1,
+      "license": "Apache-2.0",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "shadowhunter-92/agentbridge",
+      "url": "https://github.com/shadowhunter-92/agentbridge",
+      "description": "Experimental Python Trust Kernel for agent interoperability, authorization, budgets, durable governance and verifiable evidence. Bounded protocol support; production qualification pending.",
+      "updated_at": "2026-10-16T08:34:44Z",
+      "stars": 4,
+      "license": "Apache-2.0",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "shashikanth-gs/a2a-wrapper",
+      "url": "https://github.com/shashikanth-gs/a2a-wrapper",
+      "description": "A2A protocol wrappers that turn AI backends into interoperable agents. Drop a JSON config, get a spec-compliant A2A server. Supports GitHub Copilot SDK, OpenCode, Claude, Codex and more.",
+      "updated_at": "2026-10-15T23:22:05Z",
+      "stars": 40,
+      "license": "MIT",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "asadullah48/protobridge",
+      "url": "https://github.com/asadullah48/protobridge",
+      "description": "Protocol-first interoperability layer: MCP + A2A for agentic AI, with cross-vendor governance and a tamper-evident audit ledger.",
+      "updated_at": "2026-10-15T11:05:21Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "dkharlanau/agent-ready-web-profile",
+      "url": "https://github.com/dkharlanau/agent-ready-web-profile",
+      "description": "Interoperability profile and MCP gateway for agent-ready websites — llms.txt, Agent Skills, WebMCP, MCP, A2A, schemas and provenance.",
+      "updated_at": "2026-10-14T07:55:52Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ssheleg/agent-stack",
+      "url": "https://github.com/ssheleg/agent-stack",
+      "description": "Production patterns for agent orchestrators, harnesses, evals, MCP/A2A interoperability, memory, provider routing, and LLM usage metering.",
+      "updated_at": "2026-10-13T11:47:22Z",
+      "stars": 4,
+      "license": "MIT",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ankitdcx/garden-swarm",
+      "url": "https://github.com/ankitdcx/garden-swarm",
+      "description": "Garden: public AGI governance and human-sovereignty architecture — AI safety, multi-agent systems, formal verification, privacy, justice and agent interoperability.",
+      "updated_at": "2026-10-13T08:00:50Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Kispatiznui/medlink-ai",
+      "url": "https://github.com/Kispatiznui/medlink-ai",
+      "description": "MedLink AI is an interoperable healthcare AI system. Built at the intersection of MCP (Model Context Protocol) and agent-based architectures (A2A), this project demonstrates how AI can evolve from passive responses into actionable healthcare workflows.",
+      "updated_at": "2026-10-13T03:57:53Z",
+      "stars": 1,
+      "license": "MIT",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "MarkRaza5457/Cognitive-Core-Skills",
+      "url": "https://github.com/MarkRaza5457/Cognitive-Core-Skills",
+      "description": "A universal, industry-neutral taxonomy of cognitive core skills (perception, memory, reasoning, planning, action, verification, learning, governance) for LLMs, SLMs, AI agents, and world models — with schemas, 159 skill cards, benchmarks, and CI.",
+      "updated_at": "2026-10-16T12:55:43Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "NayeonPetrov/Cognitive-Core-Skills",
+      "url": "https://github.com/NayeonPetrov/Cognitive-Core-Skills",
+      "description": "A universal, industry-neutral taxonomy of cognitive core skills (perception, memory, reasoning, planning, action, verification, learning, governance) for LLMs, SLMs, AI agents, and world models — with schemas, 159 skill cards, benchmarks, and CI.",
+      "updated_at": "2026-10-16T12:04:50Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "perdhevi/harness-loop-graph",
+      "url": "https://github.com/perdhevi/harness-loop-graph",
+      "description": "A step-by-step agent harness in plain Python: turns a request into a planned, built, test-verified and judged app with local (Ollama) or cloud models. Also reviews existing code and returns a patch. ReAct loop, hand-written MCP client, graph runner with resume, tracing, memory and benchmarks.",
+      "updated_at": "2026-10-16T10:58:15Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "chunxiaoxx/nautilus-compass",
+      "url": "https://github.com/chunxiaoxx/nautilus-compass",
+      "description": "Open memory & reliability layer for AI agents + independent judging/verification (NACRE judge, caliber-bench meta-benchmark, preregistered criteria) — by Nautilus Platform",
+      "updated_at": "2026-10-16T09:01:52Z",
+      "stars": 1254,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "SusanneSoderberg411/Cognitive-Core-Skills",
+      "url": "https://github.com/SusanneSoderberg411/Cognitive-Core-Skills",
+      "description": "A universal, industry-neutral taxonomy of cognitive core skills (perception, memory, reasoning, planning, action, verification, learning, governance) for LLMs, SLMs, AI agents, and world models — with schemas, 159 skill cards, benchmarks, and CI.",
+      "updated_at": "2026-10-15T21:39:11Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ArthurMorita/Cognitive-Core-Skills",
+      "url": "https://github.com/ArthurMorita/Cognitive-Core-Skills",
+      "description": "A universal, industry-neutral taxonomy of cognitive core skills (perception, memory, reasoning, planning, action, verification, learning, governance) for LLMs, SLMs, AI agents, and world models — with schemas, 159 skill cards, benchmarks, and CI.",
+      "updated_at": "2026-10-15T19:09:55Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "lawrence63066/Cognitive-Core-Skills",
+      "url": "https://github.com/lawrence63066/Cognitive-Core-Skills",
+      "description": "A universal, industry-neutral taxonomy of cognitive core skills (perception, memory, reasoning, planning, action, verification, learning, governance) for LLMs, SLMs, AI agents, and world models — with schemas, 159 skill cards, benchmarks, and CI.",
+      "updated_at": "2026-10-15T18:27:18Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "dianawilson721/Cognitive-Core-Skills",
+      "url": "https://github.com/dianawilson721/Cognitive-Core-Skills",
+      "description": "A universal, industry-neutral taxonomy of cognitive core skills (perception, memory, reasoning, planning, action, verification, learning, governance) for LLMs, SLMs, AI agents, and world models — with schemas, 159 skill cards, benchmarks, and CI.",
+      "updated_at": "2026-10-14T16:22:44Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "77777R7/Octocrawl",
+      "url": "https://github.com/77777R7/Octocrawl",
+      "description": "Octocrawl: readable Markdown and checked fields from public web pages, for AI agents, RAG and research. Failures come back with a reason. Self-host with REST, SDK or MCP.",
+      "updated_at": "2026-10-16T16:29:26Z",
+      "stars": 1,
+      "license": "AGPL-3.0",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+      "updated_at": "2026-10-16T16:40:53Z",
+      "stars": 192122,
+      "license": "AGPL-3.0",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ForkPoint/agent-lighthouse",
+      "url": "https://github.com/ForkPoint/agent-lighthouse",
+      "description": "Lighthouse-style audits for AI agents, LLM crawlers, MCP clients, and the agentic web.",
+      "updated_at": "2026-10-16T16:17:46Z",
+      "stars": 17,
+      "license": "Apache-2.0",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Abdullah-Al-Raju/milli-scrapes",
+      "url": "https://github.com/Abdullah-Al-Raju/milli-scrapes",
+      "description": "Ultra-fast visual web scraper, crawler, and anti-bot stealth engine built for LLMs and autonomous AI agents. Sub-15ms reactive settling in RAM.",
+      "updated_at": "2026-10-16T12:38:42Z",
+      "stars": 0,
+      "license": null,
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "RapierCraft/alterlab-mcp-server",
+      "url": "https://github.com/RapierCraft/alterlab-mcp-server",
+      "description": "Web scraping MCP server for Claude, Cursor, Windsurf & AI agents — scrape any site, extract structured data, take screenshots. Anti-bot bypass, proxy rotation, authenticated scraping.",
+      "updated_at": "2026-10-16T07:06:31Z",
+      "stars": 1,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "kush-coder/autopilot-crawl4ai",
+      "url": "https://github.com/kush-coder/autopilot-crawl4ai",
+      "description": "Official Build & Verified Release | Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key.",
+      "updated_at": "2026-10-16T04:59:42Z",
+      "stars": 0,
+      "license": "Apache-2.0",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "DeusAcc/agent-web-index",
+      "url": "https://github.com/DeusAcc/agent-web-index",
+      "description": "How much of the web can AI assistants actually read? Daily measurement of every crawler, domain by domain.",
+      "updated_at": "2026-10-16T01:59:10Z",
+      "stars": 0,
+      "license": null,
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Mingye-Lu/AgenticCrawler",
+      "url": "https://github.com/Mingye-Lu/AgenticCrawler",
+      "description": "acrawl — LLM-powered web crawler. Describe what you want in plain English, get structured data back. Single Rust binary, 25 providers, MCP server built-in.",
+      "updated_at": "2026-10-16T01:36:30Z",
+      "stars": 15,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "israelvicars/transit",
+      "url": "https://github.com/israelvicars/transit",
+      "description": "🚇 Transit: Subway maps of your data. Animate distributed traces, GitHub Actions runs and coding-agent sessions as NYC-subway-style maps (page, MP4, GIF). Local only. Agent skills for Claude Code, Codex, Cursor.",
+      "updated_at": "2026-10-16T16:36:11Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "uncovertechtalent/agent-observability",
+      "url": "https://github.com/uncovertechtalent/agent-observability",
+      "description": "Observability for local LLMs and coding agents: Ollama metering proxy, Claude Code OpenTelemetry, Prometheus, Loki, Tempo, Grafana dashboards as code",
+      "updated_at": "2026-10-16T16:35:58Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "AshwinUgale/tracelint",
+      "url": "https://github.com/AshwinUgale/tracelint",
+      "description": "A deterministic linter for agent runs — reads the execution trace and flags structural bugs (ignored errors, schema violations, loops) with evidence. No LLM judge.",
+      "updated_at": "2026-10-16T16:25:46Z",
+      "stars": 11,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "neatlogs/neatroots",
+      "url": "https://github.com/neatlogs/neatroots",
+      "description": "neatroots: see, check and replay your AI agent's runs on your machine while you build it. Local-first, by Neatlogs.",
+      "updated_at": "2026-10-16T16:01:06Z",
+      "stars": 70,
+      "license": "Apache-2.0",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "pydantic/logfire",
+      "url": "https://github.com/pydantic/logfire",
+      "description": "AI observability platform for production LLM and agent systems.",
+      "updated_at": "2026-10-16T16:00:12Z",
+      "stars": 4516,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "heyemlee/ai-helpdesk",
+      "url": "https://github.com/heyemlee/ai-helpdesk",
+      "description": "Multi-agent customer support and ticket orchestration — intent routing, hybrid RRF retrieval, sentence-level answer policy, confidence-based human handoff. FastAPI + React, fully observable.",
+      "updated_at": "2026-10-16T15:49:39Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "cuihairu/croupier",
+      "url": "https://github.com/cuihairu/croupier",
+      "description": "Croupier is a Server / Agent / SDK platform for game operations and control, designed for multiple games and multiple environments within a single game company.",
+      "updated_at": "2026-10-16T15:37:59Z",
+      "stars": 10,
+      "license": "Apache-2.0",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Kwondh0321/proofstack",
+      "url": "https://github.com/Kwondh0321/proofstack",
+      "description": "Experimental Agent Reliability Engineering platform — foundation under active development, not production-ready",
+      "updated_at": "2026-10-16T15:37:09Z",
+      "stars": 1,
+      "license": "Apache-2.0",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "SiddharthManjul/_Landing_Page",
+      "url": "https://github.com/SiddharthManjul/_Landing_Page",
+      "description": "Storarc is Decentralized Private Computing Solution powered by AO & Arweave",
+      "updated_at": "2025-11-23T06:19:33Z",
+      "stars": 0,
+      "license": null,
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Lesnak1/AO",
+      "url": "https://github.com/Lesnak1/AO",
+      "description": "Decentralized autonomous compute processes on Arweave AO",
+      "updated_at": "2026-09-25T12:22:22Z",
+      "stars": 0,
+      "license": null,
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "HelloRWA/awesome-ao",
+      "url": "https://github.com/HelloRWA/awesome-ao",
+      "description": "Decentralized compute at any scale. Only possible on Arweave.",
+      "updated_at": "2026-04-05T02:14:54Z",
+      "stars": 12,
+      "license": "MIT",
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ronaldkohhh/aos",
+      "url": "https://github.com/ronaldkohhh/aos",
+      "description": "Decentralized compute on Arweave",
+      "updated_at": "2024-03-13T08:03:16Z",
+      "stars": 0,
+      "license": null,
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+      "url": "https://github.com/Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+      "description": "Structured technical analyses of contemporary cybersecurity research, examining attack feasibility, threat models, system vulnerabilities, and defensive mechanisms across hardware, wireless, web, and machine learning systems.",
+      "updated_at": "2026-02-18T20:57:47Z",
+      "stars": 0,
+      "license": null,
+      "query": "cybersecurity threat modeling defensive research"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "codenik01/Keystroke-Logging-Research-Lab",
+      "url": "https://github.com/codenik01/Keystroke-Logging-Research-Lab",
+      "description": "Academic study project exploring software and hardware keystroke capture techniques for cybersecurity awareness, threat modeling, and defensive research. No malicious deployment intended.",
+      "updated_at": "2026-01-09T22:47:33Z",
+      "stars": 1,
+      "license": null,
+      "query": "cybersecurity threat modeling defensive research"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Chinghhc/secure-cryptographic-systems",
+      "url": "https://github.com/Chinghhc/secure-cryptographic-systems",
+      "description": "Applied Cryptography & Secure Data Sharing — Implemented AES, RSA, and Shamir’s Secret Sharing for secure data protection on numbers, texts, and images; explored Differential Privacy and Federated Learning for privacy-preserving computation.",
+      "updated_at": "2026-08-26T01:06:59Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "deepayansinha/pq-secure-federated-analytics",
+      "url": "https://github.com/deepayansinha/pq-secure-federated-analytics",
+      "description": "Post-Quantum Secure Multi-Party Computation for Privacy-Preserving Federated Analytics Merges lattice-based cryptography, homomorphic encryption, secure aggregation protocols, and Byzantine-robust federated averaging to defend against both classical and quantum adversaries.",
+      "updated_at": "2026-08-01T12:01:15Z",
+      "stars": 3,
+      "license": "Apache-2.0",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Devansh42-cyber/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+      "url": "https://github.com/Devansh42-cyber/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+      "description": "This project focuses on securing sensitive healthcare data while enabling meaningful computation and analysis. It explores privacy-preserving cryptographic techniques such as Functional Encryption (FE) and Secure Multi-Party Computation (MPC) to allow authorized entities to compute specific outputs without accessing raw patient data.",
+      "updated_at": "2026-06-25T15:20:24Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "RealAradhyaGupta/aegis",
+      "url": "https://github.com/RealAradhyaGupta/aegis",
+      "description": "AEGIS is an end-to-end urban safety system that applies cryptographic evidence handling, real-time geospatial risk computation, and privacy-preserving identity management to solve reactive routing and provide secure reporting.",
+      "updated_at": "2026-03-30T18:42:48Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+      "url": "https://github.com/Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+      "description": "This review focuses on Privacy-Preserving Neural Networks (PPNNs) based on cryptographic primitives such as Homomorphic Encryption (HE), Secure Multiparty Computation (MPC), and Functional Encryption (FE). Detailed methods and techniques are presented to enhance the cryptographic compatibility of PPNNs.",
+      "updated_at": "2026-02-25T15:49:49Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "SyedDaiam9101/privacy-health-ledger",
+      "url": "https://github.com/SyedDaiam9101/privacy-health-ledger",
+      "description": "HealthLedger PRO is a privacy-preserving analytics dashboard that uses Zero-Knowledge Proofs to verify health data computations without exposing sensitive patient records. It allows researchers to run secure queries on encrypted datasets while ensuring the integrity of the results through cryptographic verification.",
+      "updated_at": "2026-01-30T11:01:18Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "riya19verma/Encrypted-Computation",
+      "url": "https://github.com/riya19verma/Encrypted-Computation",
+      "description": "This project was built to understand real-world constraints of computation on encrypted data and to explore privacy-preserving techniques relevant to cryptography and secure systems research.",
+      "updated_at": "2026-01-21T18:08:04Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "MDhruv03/Secure-Stock-Trading-Exchange",
+      "url": "https://github.com/MDhruv03/Secure-Stock-Trading-Exchange",
+      "description": "A secure stock trading simulation platform ensuring confidentiality, integrity, authentication, and privacy-preserving computation using cryptographic techniques, while integrating Red Team vs Blue Team attack–defense simulations for real-time validation of security controls.",
+      "updated_at": "2025-11-12T08:37:34Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "alwaysprince05/Agent-Red-Teaming-Evaluation-Framework",
+      "url": "https://github.com/alwaysprince05/Agent-Red-Teaming-Evaluation-Framework",
+      "description": "Reproducible adversarial testing & safety evaluation for AI agents: YAML attack suites, deterministic + LLM-as-judge scoring, evidence-backed findings, regression comparison, CLI + FastAPI.",
+      "updated_at": "2026-10-16T11:06:51Z",
+      "stars": 7,
+      "license": "MIT",
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ANUBprad/redops",
+      "url": "https://github.com/ANUBprad/redops",
+      "description": "Production-grade AI evaluation and red-teaming platform for testing LLM quality, safety, reliability, and observability with automated evaluations, adversarial campaigns, reproducible workflows, and provider-agnostic execution.",
+      "updated_at": "2026-10-16T10:07:45Z",
+      "stars": 0,
+      "license": "Apache-2.0",
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "hallieren/substack-data",
+      "url": "https://github.com/hallieren/substack-data",
+      "description": "Data, scripts, and full agent trajectories behind the AI Agent Evaluation Substack series: a sealed SWE-bench Verified audit, eval sets, judge calibration, red-team rounds, online eval, and release gates on the pico agent.",
+      "updated_at": "2026-10-02T13:48:45Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ertematakavaz03/axiom-guardrail",
+      "url": "https://github.com/ertematakavaz03/axiom-guardrail",
+      "description": "Production-oriented security and evaluation platform for tool-using AI agents, with adversarial red-teaming, deterministic guardrails, trace-level evidence, reproducible benchmarks, and CI/CD release gating.",
+      "updated_at": "2026-09-26T21:51:30Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "qwer556617123/Kaggle-AI-Agent-Security-Multi-Step-Tool-Attacks",
+      "url": "https://github.com/qwer556617123/Kaggle-AI-Agent-Security-Multi-Step-Tool-Attacks",
+      "description": "Reproducible red-teaming research for Kaggle's AI Agent Security - Multi-Step Tool Attacks competition, with attack variants, offline evaluation, guardrail-transfer probes, and a technical retrospective.",
+      "updated_at": "2026-09-20T19:41:36Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "toluowo/ai-red-teaming-lab",
+      "url": "https://github.com/toluowo/ai-red-teaming-lab",
+      "description": "Hands-on AI security assessment lab with a synthetic vulnerable target, reproducible LLM red-team challenges, evidence-driven evaluation, and remediation retesting.",
+      "updated_at": "2026-09-02T17:07:46Z",
+      "stars": 0,
+      "license": null,
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "dkx955/ai-result-red-team",
+      "url": "https://github.com/dkx955/ai-result-red-team",
+      "description": "Free 7-point checklist to red-team any 'green' AI/computational result — plus a teardown of our own retracted flagship result.",
+      "updated_at": "2026-07-09T22:40:27Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "thehabeebops/Poly-Rubric-Scoreboard-For-Gen-AI",
+      "url": "https://github.com/thehabeebops/Poly-Rubric-Scoreboard-For-Gen-AI",
+      "description": "A structured AI evaluation framework spanning 24 domains and 225 scored items. Replaces subjective model assessment with reproducible, documented evidence across capability, reliability, safety, and alignment dimensions — built for enterprise QA workflows and red-team reporting.",
+      "updated_at": "2026-06-20T08:55:59Z",
+      "stars": 0,
+      "license": null,
+      "query": "AI red teaming evaluation reproducibility"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)",
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)",
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)",
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)",
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    }
+  ]
+}
