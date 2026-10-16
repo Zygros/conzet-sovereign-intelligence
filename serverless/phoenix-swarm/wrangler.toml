@@ -1,0 +1,18 @@
+name = "phoenix-serverless-swarm"
+main = "src/index.ts"
+compatibility_date = "2026-10-16"
+
+[[durable_objects.bindings]]
+name = "SWARM"
+class_name = "SwarmCoordinator"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["SwarmCoordinator"]
+
+[vars]
+ALLOWED_ORIGIN = "https://REPLACE-WITH-YOUR-PHOENIX-APP-DOMAIN"
+MAX_CONCURRENCY = "3"
+
+# Configure SWARM_TOKEN with: npx wrangler secret put SWARM_TOKEN
+# Do not put real secrets in this file or in frontend code.
