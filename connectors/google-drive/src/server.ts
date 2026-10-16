@@ -4,6 +4,7 @@ import { OAuth2Client } from "google-auth-library";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { isReadableTextMimeType } from "./content-type.js";
 
 const credentials = JSON.parse(await readFile(new URL("../credentials.json", import.meta.url), "utf8"));
 const token = JSON.parse(await readFile(new URL("../token.json", import.meta.url), "utf8"));
@@ -52,17 +53,7 @@ server.tool("drive_read_text_file", "Read a text file or export a Google Doc as 
     const response = await drive.files.export({ fileId, mimeType: "text/plain" }, { responseType: "text" });
     text = String(response.data);
   } else {
-    const textualMimeTypes = new Set([
-      "application/json",
-      "application/ld+json",
-      "application/xml",
-      "application/yaml",
-      "application/x-yaml",
-      "application/javascript",
-      "application/typescript",
-      "application/x-www-form-urlencoded"
-    ]);
-    if (!mime.startsWith("text/") && !textualMimeTypes.has(mime)) {
+    if (!isReadableTextMimeType(mime)) {
       throw new Error(
         `drive_read_text_file only reads text content and Google Docs; file ${fileId} has unsupported MIME type: ${mime || "unknown"}`
       );
