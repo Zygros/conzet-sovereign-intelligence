@@ -1,0 +1,14 @@
+{
+  "name": "phoenix-serverless-swarm",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Bounded deterministic Phoenix serverless task coordinator",
+  "scripts": {
+    "check:bundle": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
