@@ -133,3 +133,5 @@ jobs:
           git add "$DEST"
           git commit -m "evidence: scout run ${RUN_ID}"
           git push origin "$BRANCH"
+
+# C639 activation audit: additive trigger commit; discovery and publication remain separately verified.
