@@ -52,6 +52,21 @@ server.tool("drive_read_text_file", "Read a text file or export a Google Doc as 
     const response = await drive.files.export({ fileId, mimeType: "text/plain" }, { responseType: "text" });
     text = String(response.data);
   } else {
+    const textualMimeTypes = new Set([
+      "application/json",
+      "application/ld+json",
+      "application/xml",
+      "application/yaml",
+      "application/x-yaml",
+      "application/javascript",
+      "application/typescript",
+      "application/x-www-form-urlencoded"
+    ]);
+    if (!mime.startsWith("text/") && !textualMimeTypes.has(mime)) {
+      throw new Error(
+        `drive_read_text_file only reads text content and Google Docs; file ${fileId} has unsupported MIME type: ${mime || "unknown"}`
+      );
+    }
     const response = await drive.files.get({ fileId, alt: "media" }, { responseType: "text" });
     text = String(response.data);
   }
