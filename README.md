@@ -40,6 +40,7 @@ The system is cross-connected like the 50-layer memory tree: every layer knows t
 ## Key files
 
 - `FEDERATION_INDEX.json` — full repo inventory + core nodes + invariants
+- [`docs/SOVEREIGN_CONZETIAN_TOTAL_INTEGRATION_2026-10-16.md`](docs/SOVEREIGN_CONZETIAN_TOTAL_INTEGRATION_2026-10-16.md) — past/present/future integration index linking Phoenix Ω∞, NYXAVEN, AVEN, Ω-PRIME, Memoria Omnia, Omega-10, HTC, Cloud/API lattice, payment safety gates and federation evidence classes
 - `docs/CROSS_LINKS.md` — canonical wafer map
 - `docs/README_AUDIT_2026-09-16.md` — federation-wide README audit and quality gate
 - `FEDERATION_SPINE.md` — four-center resilience view
