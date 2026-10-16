@@ -342,3 +342,28 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 - The source packet's `OTS verify true / BTC #944849` statement conflicts with the previously inspected repository integrity result where OTS proofs remained pending Bitcoin confirmation. Exact proof files, block height, and independent verifier output are required to resolve it.
 - No AO process, wallet, child worker, cloud service, contract, or revenue stream was activated by this documentation integration. No keys, seed phrases, or transactions were requested or changed.
 - Next gate: resolve source artifacts, turn each claimed gate into reproducible CI, and independently reproduce one bounded task before promoting any associated claims.
+
+## C639 live activation checkpoint — 2026-10-16 UTC
+
+### Executed and independently inspected from GitHub Actions
+- Federation Health run [38871226362](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871226362) completed successfully. Its published report records **23/23 public repository URLs returning HTTP 200**. This proves URL reachability only, not code correctness or service health.
+- Witness run [38871235411](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871235411) completed successfully and published [the structural report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/witness/reports/2026-10-16.md). The report explicitly does not independently validate evidence contents.
+- Phoenix Audit runs [38871226335](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871226335), [38871231103](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871231103), and [38871235369](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871235369) completed successfully.
+- OmniNet Python CI runs [38871226429](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871226429), [38871231368](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871231368), and [38871235420](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871235420) completed successfully. The inspected matrix includes Python 3.8, 3.9, 3.10, and 3.11, with lint, formatting, type checks, pytest, CIS verification, formula regression, and plugin trust-policy checks successful.
+- Opportunity Scout run [38871231508](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/38871231508) completed successfully, including the publish-evidence job. Published run directory: [runs/38871231508](https://github.com/Zygros/conzet-sovereign-intelligence/tree/evidence/scout/runs/38871231508).
+- Scout discovery file reports **107 records**. Its receipt manifest reports **106 receipts and 1 rejected record**; receipts are explicitly pending human or independent review, with `claims_verified: false`, `source_content_fetched: false`, and `discovered_code_executed: false` in the inspected example.
+- The published SHA-256 manifest lists `opportunity-scout.json` as `08fc3fe00c1cb78eaa146c366c8f6a15694ba6cbfbbad1f298e735a4337d677a` and `verification-receipts.json` as `c6b4ca31a5b14b0fbe99eb95243ae014aa04cc609ce3da4eb2e51a62392faf2a`. The manifest was retrieved; an independent byte-for-byte recomputation has not yet been completed in this checkpoint.
+- Two `.ots` files were published: `manifest.sha256.ots` and `verification-receipts.json.ots`. Workflow logs confirm submission to OpenTimestamps calendars, but this is not confirmation of Bitcoin anchoring. The repository's `scripts/ots_verify.py` requires explicit `Bitcoin block <height>` output before marking a proof confirmed. Verification remains pending.
+
+### Evidence classification
+- **TESTED_PENDING_REVIEW:** workflow runs and published scout artifacts listed above.
+- **Not promoted to TESTED or VERIFIED:** no separate-party reproduction has been recorded for this checkpoint; OTS Bitcoin confirmation and independent hash recomputation remain open.
+- **Not established by these runs:** deployment of every logical agent/sub-agent, the full 420-node or 74,088,000-slot topology, persistent Phi Memory runtime, live cloud/API adapters, or payment settlement.
+
+### Next friction-removal gates
+1. Recompute both manifest hashes from the exact published file bytes and compare with the manifest.
+2. Run `ots verify` on both published proof files; preserve full output and only report a Bitcoin block if the verifier explicitly confirms one.
+3. Have Witness observe the newly published Scout run and retain its report.
+4. Run the Permanent Phi Memory restart/recall/integrity/correction test.
+5. Bind one bounded agent role to an actual runtime and capture a complete dispatch-to-verification receipt before scaling the swarm.
+
