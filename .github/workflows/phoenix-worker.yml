@@ -1,0 +1,35 @@
+name: Phoenix Serverless Worker Validation
+
+on:
+  push:
+    paths:
+      - "serverless/phoenix-swarm/**"
+      - ".github/workflows/phoenix-worker.yml"
+  pull_request:
+    paths:
+      - "serverless/phoenix-swarm/**"
+      - ".github/workflows/phoenix-worker.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: serverless/phoenix-swarm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: serverless/phoenix-swarm/package.json
+      - name: Install Wrangler
+        run: npm install --no-audit --no-fund
+      - name: Bundle Worker without deploying
+        run: npm run check:bundle
