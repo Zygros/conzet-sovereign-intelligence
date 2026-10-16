@@ -80,3 +80,5 @@ jobs:
           fi
           git commit -m "health: federation check $(date -u +%F)"
           git push origin "$BRANCH"
+
+# C639 activation audit: additive trigger commit; runtime outcome must be verified from Actions.
