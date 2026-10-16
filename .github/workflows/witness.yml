@@ -74,3 +74,5 @@ jobs:
           git add reports
           git commit -m "witness: $REPORT_DATE" || echo "no change"
           git push origin "$BRANCH"
+
+# C639 activation audit: additive trigger commit; report is structural evidence only.
