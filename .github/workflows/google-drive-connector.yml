@@ -29,3 +29,5 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: TypeScript validation
         run: npm run typecheck
+      - name: Regression tests
+        run: npm test
