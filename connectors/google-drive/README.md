@@ -27,8 +27,8 @@ A user-owned, read-only Google Drive MCP connector starter for Conzetian manifes
 ## MCP tools
 - `drive_list_files`: paginated metadata listing with an optional Drive API query.
 - `drive_get_file`: metadata for one file ID.
-- `drive_read_text_file`: reads a text file or exports a Google Doc as plain text.
+- `drive_read_text_file`: reads recognized text MIME types or exports a Google Doc as plain text; rejects unsupported/binary MIME types rather than decoding them as text.
 - `drive_manifest_page`: returns a metadata page for the private manifest.
 
 ## Current status
-Source files have been committed, but this connector has not been run or authenticated against the user's Google account. It does not bypass ChatGPT's connector policy. Google Docs export and arbitrary binary file decoding may need additional handling. Verify dependencies and run `npm run typecheck` before relying on it.
+Source files and a GitHub Actions TypeScript-validation workflow have been committed. The text reader rejects unsupported/binary MIME types. The connector has not been run or authenticated against the user's Google account, and no successful CI run has yet been confirmed. It does not bypass ChatGPT's connector policy. Treat runtime and Drive access as unverified until a CI result and an authenticated read-only smoke test are available.
