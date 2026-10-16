@@ -3,6 +3,9 @@
 **Status: ACTIVE_WAFER**  
 Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
+## Total integration entry point
+- [Sovereign Conzetian Total Integration Index (2026-10-16)](SOVEREIGN_CONZETIAN_TOTAL_INTEGRATION_2026-10-16.md) — Phoenix Ω∞ × NYXAVEN × AVEN × Ω-PRIME × Memoria Omnia × HTC × Cloud/API lattice; evidence classes, security gates and staged execution plan.
+
 ## Core Nodes (the wafer spine)
 - **Federation map**: https://github.com/Zygros/sovereign-federation
 - **Capability wafer (Skill Lattice)**: https://github.com/Zygros/conzetian-skill-lattice
