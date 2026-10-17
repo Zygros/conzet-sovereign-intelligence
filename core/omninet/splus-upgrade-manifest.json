@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "profile": "runtime",
+  "upgrade": "additive-splus-baseline",
+  "changed_files": [
+    "omninet-v4/SECURITY.md",
+    "omninet-v4/CONTRIBUTING.md",
+    "omninet-v4/LICENSE-STATUS.md",
+    "omninet-v4/DEPENDENCY-STATUS.md",
+    "omninet-v4/SPLUS.md",
+    "docs/PROVENANCE.md",
+    "scripts/splus_check.py",
+    ".gitignore",
+    "omninet-v4/README.md",
+    "workflows/splus-hygiene.yml",
+    "CI-STATUS.md"
+  ],
+  "source_deletion": false,
+  "source_overwrite": false,
+  "ci_status": "workflow-not-published-due-to-github-permission",
+  "generated_workflow_removed_before_publish": true
+}
