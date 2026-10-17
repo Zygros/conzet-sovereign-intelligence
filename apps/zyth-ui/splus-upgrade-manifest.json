@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "profile": "archive-or-hybrid",
+  "upgrade": "additive-splus-baseline",
+  "changed_files": [
+    "zyth-ultimate/SECURITY.md",
+    "zyth-ultimate/CONTRIBUTING.md",
+    "zyth-ultimate/LICENSE-STATUS.md",
+    "zyth-ultimate/DEPENDENCY-STATUS.md",
+    "zyth-ultimate/SPLUS.md",
+    "docs/PROVENANCE.md",
+    "scripts/splus_check.py",
+    ".gitignore",
+    "zyth-ultimate/README.md",
+    "workflows/splus-hygiene.yml",
+    "CI-STATUS.md"
+  ],
+  "source_deletion": false,
+  "source_overwrite": false,
+  "ci_status": "workflow-not-published-due-to-github-permission",
+  "generated_workflow_removed_before_publish": true
+}
