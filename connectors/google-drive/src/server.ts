@@ -1,6 +1,5 @@
 import { readFile } from "node:fs/promises";
 import { google } from "googleapis";
-import { OAuth2Client } from "google-auth-library";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -9,7 +8,10 @@ import { isReadableTextMimeType } from "./content-type.js";
 const credentials = JSON.parse(await readFile(new URL("../credentials.json", import.meta.url), "utf8"));
 const token = JSON.parse(await readFile(new URL("../token.json", import.meta.url), "utf8"));
 const installed = credentials.installed ?? credentials.web;
-const oauth = new OAuth2Client(installed.client_id, installed.client_secret, "http://127.0.0.1:53682/oauth2callback");
+// googleapis typechecks against the OAuth client it bundles. Importing
+// OAuth2Client from the direct google-auth-library dependency is a second
+// class (it is missing methods the bundled client has) and fails `tsc`.
+const oauth = new google.auth.OAuth2(installed.client_id, installed.client_secret, "http://127.0.0.1:53682/oauth2callback");
 oauth.setCredentials(token);
 const drive = google.drive({ version: "v3", auth: oauth });
 const server = new McpServer({ name: "conzetian-google-drive-readonly", version: "0.1.0" });
