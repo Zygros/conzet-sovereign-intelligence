@@ -1,0 +1,21 @@
+name: Phoenix Audit
+on: [push, pull_request, workflow_dispatch]
+permissions: {contents: read}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python and federation audit
+        run: |
+          set -euo pipefail
+          python -m compileall -q . -x '(^|/)(.git|venv|.venv|node_modules)/'
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
+          if [ -f scripts/validate_420_agent_manifest.py ]; then python scripts/validate_420_agent_manifest.py; fi
+          if [ -f scripts/generate_crossconnect_edges.py ]; then python scripts/generate_crossconnect_edges.py --help >/dev/null || true; fi
+          if [ -d tests ] || [ -d test ] || [ -f pyproject.toml ]; then python -m pip install pytest; python -m pytest -q; fi
+      - name: Node audit
+        run: if [ -f package.json ]; then if [ -f package-lock.json ]; then npm ci; else npm install; fi; npm test --if-present; npm run build --if-present; fi
+      - name: Secret patterns
+        run: if grep -RInE --exclude-dir=.git 'AKIA[0-9A-Z]{16}|-----BEGIN (RSA|EC|OPENSSH|PRIVATE) KEY-----|ghp_[A-Za-z0-9_]{20,}' . >/tmp/secret-scan.txt 2>/dev/null; then cat /tmp/secret-scan.txt; exit 1; fi

@@ -1,0 +1,13 @@
+{
+  "schema": "phoenix-crossconnect/v1",
+  "status": "IMPLEMENTED",
+  "scope": "Zygros repository federation",
+  "node_policy": "Every listed repository is a bidirectional logical federation node.",
+  "routing": "repository -> repository -> capability -> action -> evidence -> verification -> provenance -> evolution",
+  "non_fabrication": "Logical cross-links do not imply live runtime connectivity, credentials, or external endpoint availability.",
+  "actions": ["DISCOVER","DESCRIBE","CLASSIFY","DECOMPOSE","FORMALIZE","GENERATE","TRANSFORM","ROUTE","CONNECT","NEGOTIATE","AUTHORIZE","EXECUTE","MEASURE","COMPARE","SIMULATE","OPTIMIZE","TEST","FUZZ","MONITOR","DIAGNOSE","PATCH","REPLAY","VERIFY","VALIDATE","FALSIFY","CALIBRATE","BENCHMARK","REPLICATE","CRITIQUE","SYNTHESIZE","RECORD","CITE","COMMIT","ROLLBACK","PROPAGATE","EVOLVE","OBSERVE","PLAN","ALLOCATE","QUARANTINE","ESCALATE","REHYDRATE","AUDIT","HASH","TRACE","CHECKPOINT","RESUME","ARCHIVE","DIFF","PROMOTE"],
+  "repositories": ["Grossian_Scrolls","ZAAI-SYSTEM","Sovereign-Narrative-Intelligence-SNI-","ARC-AGI","zyth-ultimate","Sovereign-AGSI-Archive","conzet-sovereign-intelligence","agents","ultimate-phoenix-protocol","multi-ai-convergence-protocol","ultimate-phoenix-protocol-ssi","ZYGROS-PRIME","PHOENIX-PROTOCOL-ULTIMATE","sovereign-agsi-portal","omninet-v4","CZAOUA-UNITY-SYSTEM","we-omega","CONZETIAN-UNIFIED-INTELLIGANCE","CONZETIAN-AI","omega-10","sovereign-federation","conzetian-skill-lattice","Conzet-Intelligence-System-","agentql","conzetian-method"],
+  "edge_rule": "For every ordered pair (A,B), the federation records a logical route A -> B; self-routes are represented only as local maintenance actions, not peer edges.",
+  "evolution_rule": "New links and capabilities are additive and require evidence before promotion.",
+  "security_rule": "Do not propagate secrets, credentials, financial data, or private material through federation manifests."
+}
