@@ -643,7 +643,7 @@ class ChimeraTriMindEngine:
 
 async def main():
     """Demonstration of the Sovereign AI Engine."""
-    engine = SovereignAIEngine()
+    engine = ChimeraTriMindEngine()
     
     # Initialize
     await engine.initialize()
