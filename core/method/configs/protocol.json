@@ -1,0 +1,5 @@
+{
+  "protocol":"Sovereign Conzetian Framework","version":"0.1.0","declared_node_cardinality":74088000,
+  "substrate":"decentralized_web","evidence_policy":"reality_gated","axioms":["EXECUTE_FIRST","RECORD_EVERYTHING","VERIFY_BEFORE_CANONIZATION","LEARN_FROM_OBSERVED_RESULTS"],
+  "evidence_states":["DECLARED","DESIGNED","EXECUTED","OBSERVED","VERIFIED","ANCHORED"]
+}
