@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phoenix Contribution Node",
+  "type": "object",
+  "required": ["id", "name", "question", "answer", "action", "triggers", "verification_state"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^C-[0-9]{3,}$"},
+    "name": {"type": "string"},
+    "question": {"type": "string"},
+    "answer": {"type": "string"},
+    "claim": {"type": "string"},
+    "action": {"type": "string"},
+    "triggers": {"type": "array", "items": {"type": "string"}},
+    "activates": {"type": "array", "items": {"type": "string"}},
+    "depends_on": {"type": "array", "items": {"type": "string"}},
+    "extends": {"type": "array", "items": {"type": "string"}},
+    "tests": {"type": "array", "items": {"type": "string"}},
+    "contradicts": {"type": "array", "items": {"type": "string"}},
+    "composes_with": {"type": "array", "items": {"type": "string"}},
+    "resonates_with": {"type": "array", "items": {"type": "string"}},
+    "provenance": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "verification_state": {"enum": ["hypothesis", "designed", "executed", "reproduced", "verified"]},
+    "capability_delta": {"type": "string"},
+    "next_question": {"type": "string"}
+  }
+}

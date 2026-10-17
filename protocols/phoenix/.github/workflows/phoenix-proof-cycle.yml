@@ -1,0 +1,38 @@
+name: Phoenix Proof Cycle
+on:
+  push:
+    paths:
+      - "tools/phoenix_proof_cycle.py"
+      - ".github/workflows/phoenix-proof-cycle.yml"
+  pull_request:
+    paths:
+      - "tools/phoenix_proof_cycle.py"
+      - ".github/workflows/phoenix-proof-cycle.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  proof-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run deterministic proof-cycle tests
+        run: python tools/phoenix_proof_cycle.py --self-test
+      - name: Verify a clean cycle
+        run: python tools/phoenix_proof_cycle.py --task "CI acceptance cycle" --output phoenix-proof-cycle.json
+      - name: Verify fault detection and bounded repair
+        run: python tools/phoenix_proof_cycle.py --task "CI seeded fault" --inject-defect --output phoenix-proof-cycle-repaired.json
+      - name: Upload reproducible cycle receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: phoenix-proof-cycle-receipts
+          path: |
+            phoenix-proof-cycle.json
+            phoenix-proof-cycle-repaired.json
