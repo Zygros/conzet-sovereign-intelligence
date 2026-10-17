@@ -1,0 +1,58 @@
+name: Conzetian Diamond Watch
+on:
+  push:
+    paths:
+      - ".github/workflows/conzetian-diamond-watch.yml"
+  schedule:
+    - cron: '23 14 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  upstream-watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Inspect pinned candidate list and upstream HEADs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os, urllib.request
+          repos = [
+              'agentskills/agentskills',
+              'vercel-labs/skills',
+              'avvertix/skillsmd',
+              'openclaw/agent-skills',
+              'doobidoo/mcp-memory-service',
+              'topoteretes/cognee',
+              'browseros-ai/BrowserOS',
+          ]
+          headers = {'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'User-Agent': 'conzetian-diamond-watch'}
+          rows = []
+          for full_name in repos:
+              req = urllib.request.Request('https://api.github.com/repos/' + full_name, headers=headers)
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      meta = json.load(response)
+                  branch = meta.get('default_branch')
+                  req = urllib.request.Request('https://api.github.com/repos/' + full_name + '/commits/' + branch, headers=headers)
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      commit = json.load(response)
+                  rows.append({'repository': full_name, 'status': 'FETCHED', 'default_branch': branch, 'stars': meta.get('stargazers_count'), 'license_spdx': (meta.get('license') or {}).get('spdx_id'), 'pushed_at': meta.get('pushed_at'), 'head_sha': commit.get('sha'), 'head_commit_date': commit.get('commit', {}).get('committer', {}).get('date'), 'url': meta.get('html_url')})
+              except Exception as exc:
+                  rows.append({'repository': full_name, 'status': 'ERROR', 'error_type': type(exc).__name__, 'url': 'https://github.com/' + full_name})
+          report = {'schema': 'conzetian-diamond-watch-run/1.0', 'run_started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'scope': 'read-only upstream metadata and latest default-branch commit', 'repositories_checked': len(rows), 'results': rows, 'limitations': ['This is activity discovery, not full source, license, or security review.', 'A successful API fetch does not mean a candidate is safe or integrated.', 'No external repository code is downloaded or executed.']}
+          os.makedirs('diamond-watch-report', exist_ok=True)
+          with open('diamond-watch-report/report.json', 'w', encoding='utf-8') as f:
+              json.dump(report, f, indent=2)
+              f.write('\n')
+          print(json.dumps({'repositories_checked': len(rows), 'fetch_errors': sum(x['status'] == 'ERROR' for x in rows)}, indent=2))
+          PY
+      - name: Upload timestamped discovery report
+        uses: actions/upload-artifact@v4
+        with:
+          name: conzetian-diamond-watch-${{ github.run_id }}
+          path: diamond-watch-report/report.json
+          if-no-files-found: error
+          retention-days: 30
