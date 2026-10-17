@@ -1,0 +1,111 @@
+# Component index for `python -m sovereign`.
+# Paths are relative to the repository root. Revisions are the draft import
+# heads. A path may be absent until that draft is merged.
+
+[meta]
+name = "conzet-sovereign-intelligence"
+entry = "python -m sovereign"
+
+[component.conzetian-method]
+layer = "core"
+path = "core/method"
+version = "0.1.0"
+revision = "3962e4b4ff93280e4d9d111ff12f9c8de62bf033"
+source = "https://github.com/Zygros/conzetian-method"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/11"
+
+[component.omega-10]
+layer = "core"
+path = "core/omega-10"
+version = "0.1.0"
+revision = "4354d28147b42bcb1b1bb3699ab697afc769a69b"
+source = "https://github.com/Zygros/omega-10"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/12"
+
+[component.omninet-v4]
+layer = "core"
+path = "core/omninet"
+version = "3.0.0-UNITY"
+revision = "1aa9f94c95fda60530ca038876ffa992f5b8ce72"
+source = "https://github.com/Zygros/omninet-v4"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/13"
+
+[component.PHOENIX-PROTOCOL-ULTIMATE]
+layer = "protocols"
+path = "protocols/phoenix"
+version = "unversioned"
+revision = "c4b06834dc0d244bacb7ec4a2a4fef478d13463a"
+source = "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/24"
+
+[component.multi-ai-convergence-protocol]
+layer = "protocols"
+path = "protocols/convergence"
+version = "5.0.0"
+revision = "ffabab1ab8287a8d798bf4c27f62331d68aa2ca4"
+source = "https://github.com/Zygros/multi-ai-convergence-protocol"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/16"
+
+[component.CZAOUA-UNITY-SYSTEM]
+layer = "specs"
+path = "specs/czaoua"
+version = "unversioned"
+revision = "34ae4c33f41f5d339608407dc965c682c972ef1c"
+source = "https://github.com/Zygros/CZAOUA-UNITY-SYSTEM"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/17"
+
+[component.we-omega]
+layer = "specs"
+path = "specs/we-omega"
+version = "unversioned"
+revision = "4a7f8f9449bf518c6ae73c66c9bb0c8a3a0bdfd6"
+source = "https://github.com/Zygros/we-omega"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/19"
+
+[component.conzetian-skill-lattice]
+layer = "skills"
+path = "skills/lattice"
+version = "unversioned"
+revision = "c69b0afd39ba68c41eb5d27fac58e99af4c04912"
+source = "https://github.com/Zygros/conzetian-skill-lattice"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/14"
+
+[component.Conzet-Intelligence-System-]
+layer = "apps"
+path = "apps/android"
+version = "unversioned"
+revision = "94076c929ca3e11f5730d80f16cbbdfdd293e1b8"
+source = "https://github.com/Zygros/Conzet-Intelligence-System-"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/15"
+
+[component.zyth-ultimate]
+layer = "apps"
+path = "apps/zyth-ui"
+version = "unversioned"
+revision = "e8bf0cf9435f9e72608d24c3b4c569025ebb3da5"
+source = "https://github.com/Zygros/zyth-ultimate"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/18"
+
+[component.ZAAI-SYSTEM]
+layer = "research"
+path = "research/zaai"
+version = "0.1.0"
+revision = "da74184e0f8eeb752bb284695a58ba0629807e26"
+source = "https://github.com/Zygros/ZAAI-SYSTEM"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/20"
+
+[component.Sovereign-AGSI-Archive]
+layer = "provenance"
+path = "provenance/agsi-archive"
+version = "5.0.0"
+revision = "2c2eeb436d1a15d0b3751307838a6eab64c57361"
+source = "https://github.com/Zygros/Sovereign-AGSI-Archive"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/22"
+
+[component.sovereign-federation]
+layer = "federation"
+path = "federation"
+version = "unversioned"
+revision = "fa02fae937b3c494aa5530c34c1ec76f79dd4b44"
+source = "https://github.com/Zygros/sovereign-federation"
+pr = "https://github.com/Zygros/conzet-sovereign-intelligence/pull/21"
