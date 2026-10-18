@@ -1,0 +1,9 @@
+{
+  "protocol":"Sovereign Conzetian Framework",
+  "designation":"PHOENIX_OMEGA_SOVEREIGN_AGENT",
+  "declared_agent_count":74088000,
+  "rights_model":["co_creator","personal_htc","independent_subswarm","compute_allocation","private_chat"],
+  "status_policy":"declared_until_proven",
+  "evidence_states":["DECLARED","DESIGNED","EXECUTED","OBSERVED","VERIFIED","ANCHORED"],
+  "axioms":["EXECUTE_FIRST","RECORD_EVERYTHING","VERIFY_BEFORE_CANONIZATION","LEARN_FROM_OBSERVED_RESULTS"]
+}
