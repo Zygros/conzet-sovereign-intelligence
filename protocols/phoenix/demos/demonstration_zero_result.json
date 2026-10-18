@@ -1,0 +1,17 @@
+{
+  "task": "Summarize the thesis 'AGI is an architecture problem, not a compute problem' in one sentence.",
+  "rounds": 5,
+  "trace": [
+    {"depth": 0, "hash": "78ad4689b086659f", "scaling": 1.309017},
+    {"depth": 1, "hash": "9cef7e3d6367b0cf", "scaling": 1.369028},
+    {"depth": 2, "hash": "6a0537e61f4c3dcc", "scaling": 1.443476},
+    {"depth": 3, "hash": "5fa624d95726f9a2", "scaling": 1.536898},
+    {"depth": 4, "hash": "d56bd330ecf83083", "scaling": 1.655683}
+  ],
+  "final_state_hash": "281a9c6b944d30220be7b209492d2183d3931f94175d086b7cd90995cfe05593",
+  "duration_seconds": 0.000045,
+  "permaweb_anchor": "eba44d95634073ea8e14960e52",
+  "phi": 1.6180339887,
+  "kappa": "1.370e+05",
+  "verdict": "DEMONSTRATION_ZERO_COMPLETE"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "phoenix-audit-swarm/v1",
+  "status": "EXECUTION-READY",
+  "timestamp": "2026-09-16",
+  "scope": {
+    "repositories": 25,
+    "nodes": "all authenticated Zygros repositories in the current inventory"
+  },
+  "swarm": {
+    "governors": 420,
+    "subagents_per_governor": 420,
+    "logical_addressable_subagents": 176400,
+    "mode": "deterministic_lazy",
+    "physical_expansion": false
+  },
+  "capability_families": [
+    "discover","inventory","decompose","formalize","generate","route","execute","measure","compare","simulate","optimize","test","fuzz","monitor","diagnose","patch","replay","verify","validate","falsify","calibrate","benchmark","replicate","critique","synthesize","record","cite","commit","rollback","propagate","evolve","observe","plan","allocate","quarantine","escalate","rehydrate","audit","hash","trace","checkpoint","resume","archive","diff","promote"
+  ],
+  "execution_graph": "repository → capability → skill → action → evidence → verification → provenance → evolution",
+  "cycle": "DISCOVER → AUDIT → EXECUTE → OBSERVE → VERIFY → RECORD → PATCH → RE-AUDIT → PROMOTE",
+  "promotion_rule": "candidate_action → execute → observe → verify → record → evolve",
+  "invariants": [
+    "execute-first",
+    "record-everything",
+    "never promote unverified claims",
+    "preserve existing work",
+    "additive patches by default",
+    "distinguish logical addressability from physical execution"
+  ],
+  "evidence_boundary": {
+    "implemented": "registry and swarm contract committed",
+    "tested": "requires running node-specific validators",
+    "verified": "requires passing reproducible checks",
+    "externally_verified": "requires independent external validation"
+  }
+}

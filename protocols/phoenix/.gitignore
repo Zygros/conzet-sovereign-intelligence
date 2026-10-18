@@ -1,0 +1,29 @@
+# Secrets only
+.env
+.env.local
+*api_key*
+*API_KEY*
+*.key
+*.pem
+secrets/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+*.pyc
+.venv/
+.env.*
+*.log
+.splus-runtime/
