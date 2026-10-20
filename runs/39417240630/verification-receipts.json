@@ -1,0 +1,3073 @@
+{
+  "receipt_manifest_version": "1.0",
+  "generated_at": "2026-10-20T11:46:51.439328+00:00",
+  "input_generated_at": "2026-10-20T11:46:51.333243+00:00",
+  "input_record_count": 63,
+  "receipt_count": 54,
+  "rejected_count": 9,
+  "review_gate": "human_or_independent_review_required",
+  "receipts": [
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-11bf815fd4939ab23fb7bdd5",
+      "received_at": "2026-10-20T11:46:51.436872+00:00",
+      "source_url": "https://github.com/ANetResearch/ANet",
+      "record_sha256": "deb1af70036dad299b83092af9b2ba79ee9341e8f41a1022c4b6b8453029a5bf",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-c28c898ec20942f571a21bbd",
+        "task_id": "task-11bf815fd4939ab23fb7bdd5",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.436872+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-11bf815fd4939ab23fb7bdd5",
+          "title": "ANetResearch/ANet",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ANetResearch/ANet",
+            "sha256": "deb1af70036dad299b83092af9b2ba79ee9341e8f41a1022c4b6b8453029a5bf"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ANetResearch/ANet"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-53212b31b6e15f3e0fcdbf1d",
+      "received_at": "2026-10-20T11:46:51.436973+00:00",
+      "source_url": "https://github.com/ssheleg/agent-stack",
+      "record_sha256": "8b38a3671455b3eebadf5c4a476987950718f357caf4d65c70ebc586a7290f4c",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-c970737eedd1df23ee79f2d4",
+        "task_id": "task-53212b31b6e15f3e0fcdbf1d",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.436973+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-53212b31b6e15f3e0fcdbf1d",
+          "title": "ssheleg/agent-stack",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ssheleg/agent-stack",
+            "sha256": "8b38a3671455b3eebadf5c4a476987950718f357caf4d65c70ebc586a7290f4c"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ssheleg/agent-stack"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-5870f2db512602a8892d3dc3",
+      "received_at": "2026-10-20T11:46:51.437038+00:00",
+      "source_url": "https://github.com/Poke-nushi/Verifiable-Agent-Trust-Envelope",
+      "record_sha256": "a566c8603cdc69f307f81aa577a24a191c3dfede6260205eb54351dc1bee727f",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-ef78171e4950ed7d8bebf06c",
+        "task_id": "task-5870f2db512602a8892d3dc3",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437038+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-5870f2db512602a8892d3dc3",
+          "title": "Poke-nushi/Verifiable-Agent-Trust-Envelope",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Poke-nushi/Verifiable-Agent-Trust-Envelope",
+            "sha256": "a566c8603cdc69f307f81aa577a24a191c3dfede6260205eb54351dc1bee727f"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Poke-nushi/Verifiable-Agent-Trust-Envelope"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-fe4debc1a6e78d4a671744e6",
+      "received_at": "2026-10-20T11:46:51.437097+00:00",
+      "source_url": "https://github.com/Agent-Tong/Crossroad-A2A",
+      "record_sha256": "1ef7813ca23d54322a21bd3904956fd59e48c5adf9c4ec0808941b8009a286a8",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-7462b4e89a4b5e50cd64e16a",
+        "task_id": "task-fe4debc1a6e78d4a671744e6",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437097+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-fe4debc1a6e78d4a671744e6",
+          "title": "Agent-Tong/Crossroad-A2A",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Agent-Tong/Crossroad-A2A",
+            "sha256": "1ef7813ca23d54322a21bd3904956fd59e48c5adf9c4ec0808941b8009a286a8"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Agent-Tong/Crossroad-A2A"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-ac3a6ca465e6e79cc47fd1ef",
+      "received_at": "2026-10-20T11:46:51.437150+00:00",
+      "source_url": "https://github.com/api-evangelist/avora-agent-forge",
+      "record_sha256": "11711851ec84ff57d0ff91f68561d98ac933ef7180dbb9ddd1943fbb6b3cbc04",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-f499e8683f0743ddf9cfc068",
+        "task_id": "task-ac3a6ca465e6e79cc47fd1ef",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437150+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-ac3a6ca465e6e79cc47fd1ef",
+          "title": "api-evangelist/avora-agent-forge",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/api-evangelist/avora-agent-forge",
+            "sha256": "11711851ec84ff57d0ff91f68561d98ac933ef7180dbb9ddd1943fbb6b3cbc04"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/api-evangelist/avora-agent-forge"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-bf1b112f90cd7389507f4b2d",
+      "received_at": "2026-10-20T11:46:51.437204+00:00",
+      "source_url": "https://github.com/sallco/agent-protocols-mcp-a2a",
+      "record_sha256": "6bcc3920198ba722aaa6ce897442a7d5e2367381c1df3be1d986706cf77bfdd4",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-5390f2beb5303de767b78fef",
+        "task_id": "task-bf1b112f90cd7389507f4b2d",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437204+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-bf1b112f90cd7389507f4b2d",
+          "title": "sallco/agent-protocols-mcp-a2a",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/sallco/agent-protocols-mcp-a2a",
+            "sha256": "6bcc3920198ba722aaa6ce897442a7d5e2367381c1df3be1d986706cf77bfdd4"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/sallco/agent-protocols-mcp-a2a"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-9d011475faf859aeef9c63c7",
+      "received_at": "2026-10-20T11:46:51.437250+00:00",
+      "source_url": "https://github.com/sudhir-cse/agentic-shopping-assistant",
+      "record_sha256": "476c8140811d7c3dbc1d530d58634f3b5c8dcb9bcded2daec70572195f59fb6c",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-d4bc5743a3e52110d3df1cbb",
+        "task_id": "task-9d011475faf859aeef9c63c7",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437250+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-9d011475faf859aeef9c63c7",
+          "title": "sudhir-cse/agentic-shopping-assistant",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/sudhir-cse/agentic-shopping-assistant",
+            "sha256": "476c8140811d7c3dbc1d530d58634f3b5c8dcb9bcded2daec70572195f59fb6c"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/sudhir-cse/agentic-shopping-assistant"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-3f8c3c7e7b34956f7ab7acd3",
+      "received_at": "2026-10-20T11:46:51.437291+00:00",
+      "source_url": "https://github.com/shadowhunter-92/agentbridge",
+      "record_sha256": "11cc4457a4eb22597b6382b04a325d6bafee01f03e0c0d8d45e4d839cd635988",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-9118e557066383bc5779429b",
+        "task_id": "task-3f8c3c7e7b34956f7ab7acd3",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437291+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-3f8c3c7e7b34956f7ab7acd3",
+          "title": "shadowhunter-92/agentbridge",
+          "source_type": "github_repository",
+          "discovery_query": "agent interoperability A2A MCP",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/shadowhunter-92/agentbridge",
+            "sha256": "11cc4457a4eb22597b6382b04a325d6bafee01f03e0c0d8d45e4d839cd635988"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/shadowhunter-92/agentbridge"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-27f17fd12f6bc44da7290271",
+      "received_at": "2026-10-20T11:46:51.437330+00:00",
+      "source_url": "https://github.com/rezaxr14/Recap",
+      "record_sha256": "18f56fa16271c9d8473480135eaddeb3cda61268cf8382ca235e3d8d24311cce",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-ddb5dc17bd50ec5d4654e57d",
+        "task_id": "task-27f17fd12f6bc44da7290271",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437330+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-27f17fd12f6bc44da7290271",
+          "title": "rezaxr14/Recap",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/rezaxr14/Recap",
+            "sha256": "18f56fa16271c9d8473480135eaddeb3cda61268cf8382ca235e3d8d24311cce"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/rezaxr14/Recap"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-e52a3d727747af032bfe48cc",
+      "received_at": "2026-10-20T11:46:51.437373+00:00",
+      "source_url": "https://github.com/taeyong4367/Cognitive-Core-Skills",
+      "record_sha256": "b9603e8f699570a72763d2a51addb007bffe72cc1ca269b753e0034e16375a49",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-7990d59be8b11a682f089f1c",
+        "task_id": "task-e52a3d727747af032bfe48cc",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437373+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-e52a3d727747af032bfe48cc",
+          "title": "taeyong4367/Cognitive-Core-Skills",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/taeyong4367/Cognitive-Core-Skills",
+            "sha256": "b9603e8f699570a72763d2a51addb007bffe72cc1ca269b753e0034e16375a49"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/taeyong4367/Cognitive-Core-Skills"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-cbc0225c1bc588425d4c15bb",
+      "received_at": "2026-10-20T11:46:51.437451+00:00",
+      "source_url": "https://github.com/Gaia216/Cognitive-Core-Skills",
+      "record_sha256": "49d49550691ec17a7c80c63c298b672a92585bad58436885045480f36b66277f",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-95fd415793ab44ffec2db839",
+        "task_id": "task-cbc0225c1bc588425d4c15bb",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437451+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-cbc0225c1bc588425d4c15bb",
+          "title": "Gaia216/Cognitive-Core-Skills",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Gaia216/Cognitive-Core-Skills",
+            "sha256": "49d49550691ec17a7c80c63c298b672a92585bad58436885045480f36b66277f"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Gaia216/Cognitive-Core-Skills"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-f015226c25c0d348e3b40492",
+      "received_at": "2026-10-20T11:46:51.437508+00:00",
+      "source_url": "https://github.com/bhakansson64179/Cognitive-Core-Skills",
+      "record_sha256": "3294d20d15005746ddc5ba2af0e94880a82a2017878249ce3fdfd120129ae71f",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-0007fa787a60d632abc77178",
+        "task_id": "task-f015226c25c0d348e3b40492",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437508+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-f015226c25c0d348e3b40492",
+          "title": "bhakansson64179/Cognitive-Core-Skills",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/bhakansson64179/Cognitive-Core-Skills",
+            "sha256": "3294d20d15005746ddc5ba2af0e94880a82a2017878249ce3fdfd120129ae71f"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/bhakansson64179/Cognitive-Core-Skills"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-54a4bee5d0d8c1b7df05355b",
+      "received_at": "2026-10-20T11:46:51.437553+00:00",
+      "source_url": "https://github.com/ingridherrera5575/Cognitive-Core-Skills",
+      "record_sha256": "83741bc5f1869ad0133125468856c362db374f30a005cc4ad7ef5eb161dfd0bb",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-e473627904b09367338d47c9",
+        "task_id": "task-54a4bee5d0d8c1b7df05355b",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437553+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-54a4bee5d0d8c1b7df05355b",
+          "title": "ingridherrera5575/Cognitive-Core-Skills",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ingridherrera5575/Cognitive-Core-Skills",
+            "sha256": "83741bc5f1869ad0133125468856c362db374f30a005cc4ad7ef5eb161dfd0bb"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ingridherrera5575/Cognitive-Core-Skills"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-8d7be7d032ae974de794ef47",
+      "received_at": "2026-10-20T11:46:51.437592+00:00",
+      "source_url": "https://github.com/robertoberger1345/Cognitive-Core-Skills",
+      "record_sha256": "28530297c115c45e46f48c1e35c545414f8254846a43fb86c72da9ee4415ea2d",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-74e5d29e2214b6f36257c309",
+        "task_id": "task-8d7be7d032ae974de794ef47",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437592+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-8d7be7d032ae974de794ef47",
+          "title": "robertoberger1345/Cognitive-Core-Skills",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/robertoberger1345/Cognitive-Core-Skills",
+            "sha256": "28530297c115c45e46f48c1e35c545414f8254846a43fb86c72da9ee4415ea2d"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/robertoberger1345/Cognitive-Core-Skills"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-99a7f4aa4c958ab567eaabae",
+      "received_at": "2026-10-20T11:46:51.437634+00:00",
+      "source_url": "https://github.com/Alessio0163/Cognitive-Core-Skills",
+      "record_sha256": "ce8ef40fded141fb8836e108128c6c59e3aab4a6f7dc029202bf07dbb5b1d369",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-ea1eca13c8b35c8e9b6dfa3c",
+        "task_id": "task-99a7f4aa4c958ab567eaabae",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437634+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-99a7f4aa4c958ab567eaabae",
+          "title": "Alessio0163/Cognitive-Core-Skills",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Alessio0163/Cognitive-Core-Skills",
+            "sha256": "ce8ef40fded141fb8836e108128c6c59e3aab4a6f7dc029202bf07dbb5b1d369"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Alessio0163/Cognitive-Core-Skills"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-ce15f9591660073b18955698",
+      "received_at": "2026-10-20T11:46:51.437675+00:00",
+      "source_url": "https://github.com/perdhevi/harness-loop-graph",
+      "record_sha256": "7c46d36a19401c896eae2c082d6a4457c1904fe9d36fe1699471b0c6db76004f",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-3d53b0253443e6cb586f0748",
+        "task_id": "task-ce15f9591660073b18955698",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437675+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-ce15f9591660073b18955698",
+          "title": "perdhevi/harness-loop-graph",
+          "source_type": "github_repository",
+          "discovery_query": "agent memory benchmark verification",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/perdhevi/harness-loop-graph",
+            "sha256": "7c46d36a19401c896eae2c082d6a4457c1904fe9d36fe1699471b0c6db76004f"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/perdhevi/harness-loop-graph"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-e9dbf459bd01dca311934bf9",
+      "received_at": "2026-10-20T11:46:51.437716+00:00",
+      "source_url": "https://github.com/firecrawl/firecrawl",
+      "record_sha256": "2e3a54af914d6954f041fd52345d2222b64142ef622ddf108a3ac03b20cd5e99",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-329947e30307105a5dc417cc",
+        "task_id": "task-e9dbf459bd01dca311934bf9",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437716+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-e9dbf459bd01dca311934bf9",
+          "title": "firecrawl/firecrawl",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/firecrawl/firecrawl",
+            "sha256": "2e3a54af914d6954f041fd52345d2222b64142ef622ddf108a3ac03b20cd5e99"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/firecrawl/firecrawl"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-d46d1480c37c463a902b46f4",
+      "received_at": "2026-10-20T11:46:51.437755+00:00",
+      "source_url": "https://github.com/unclecode/crawl4ai",
+      "record_sha256": "7dc50d254cf34074af548b7dbde720e994a22b7e16816d4be4f1c56e87c3f8ab",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-d5b1ec1698377f3458f1dc46",
+        "task_id": "task-d46d1480c37c463a902b46f4",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437755+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-d46d1480c37c463a902b46f4",
+          "title": "unclecode/crawl4ai",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/unclecode/crawl4ai",
+            "sha256": "7dc50d254cf34074af548b7dbde720e994a22b7e16816d4be4f1c56e87c3f8ab"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/unclecode/crawl4ai"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-fde9181ac97c8c82bf4fe875",
+      "received_at": "2026-10-20T11:46:51.437795+00:00",
+      "source_url": "https://github.com/ForkPoint/agent-lighthouse",
+      "record_sha256": "229c6564ae8fa4acc21b1ef7bb437f79a9bd3d05b40dedc6257c086a5e4c3c47",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-888461e8898f72e02515007f",
+        "task_id": "task-fde9181ac97c8c82bf4fe875",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437795+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-fde9181ac97c8c82bf4fe875",
+          "title": "ForkPoint/agent-lighthouse",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ForkPoint/agent-lighthouse",
+            "sha256": "229c6564ae8fa4acc21b1ef7bb437f79a9bd3d05b40dedc6257c086a5e4c3c47"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ForkPoint/agent-lighthouse"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-4b6a258ee5c0e2737f0d4a1b",
+      "received_at": "2026-10-20T11:46:51.437874+00:00",
+      "source_url": "https://github.com/77777R7/Octocrawl",
+      "record_sha256": "ad5d2819540a6640ec3b81bf769171d36907a5cef9afb88a0ab97849968a057a",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-deefef5ff9f93021f53a0533",
+        "task_id": "task-4b6a258ee5c0e2737f0d4a1b",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437874+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-4b6a258ee5c0e2737f0d4a1b",
+          "title": "77777R7/Octocrawl",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/77777R7/Octocrawl",
+            "sha256": "ad5d2819540a6640ec3b81bf769171d36907a5cef9afb88a0ab97849968a057a"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/77777R7/Octocrawl"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-9fd3773305a94ba1613ab009",
+      "received_at": "2026-10-20T11:46:51.437920+00:00",
+      "source_url": "https://github.com/mark1russell7/crawler",
+      "record_sha256": "24765b7f599b660bab2562035bfb1ddb0ec6c02168dbce1c4a4bed06b0fbfe4f",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-6eb62f91d1d4fc8e5b95af19",
+        "task_id": "task-9fd3773305a94ba1613ab009",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437920+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-9fd3773305a94ba1613ab009",
+          "title": "mark1russell7/crawler",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/mark1russell7/crawler",
+            "sha256": "24765b7f599b660bab2562035bfb1ddb0ec6c02168dbce1c4a4bed06b0fbfe4f"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/mark1russell7/crawler"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-6b69b2957077dff1b7586e3b",
+      "received_at": "2026-10-20T11:46:51.437958+00:00",
+      "source_url": "https://github.com/DeusAcc/agent-web-index",
+      "record_sha256": "d223b42b74ad2e4a7daa1318631aeaf3ead1bd299386064252011752e10f2f35",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-7205ffae4caebd4d04466977",
+        "task_id": "task-6b69b2957077dff1b7586e3b",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437958+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-6b69b2957077dff1b7586e3b",
+          "title": "DeusAcc/agent-web-index",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/DeusAcc/agent-web-index",
+            "sha256": "d223b42b74ad2e4a7daa1318631aeaf3ead1bd299386064252011752e10f2f35"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/DeusAcc/agent-web-index"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-381f27049290d473a6f653ad",
+      "received_at": "2026-10-20T11:46:51.437999+00:00",
+      "source_url": "https://github.com/mysleekdesigns/crawlforge-mcp",
+      "record_sha256": "7bc49e9d494100257268e8b6b8f20bda8310ffa851324ecf27564512bebd40dc",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-cba70ed6cb5534cfecaef5ac",
+        "task_id": "task-381f27049290d473a6f653ad",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.437999+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-381f27049290d473a6f653ad",
+          "title": "mysleekdesigns/crawlforge-mcp",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/mysleekdesigns/crawlforge-mcp",
+            "sha256": "7bc49e9d494100257268e8b6b8f20bda8310ffa851324ecf27564512bebd40dc"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/mysleekdesigns/crawlforge-mcp"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-5fc49cf0276eb21a801570d9",
+      "received_at": "2026-10-20T11:46:51.438043+00:00",
+      "source_url": "https://github.com/opencoredev/scraping-bench",
+      "record_sha256": "3d17faf3ef06be4c20705bfb553c1f06fdceba8b00fc8a153ccb195f81318e78",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-8c415fabafaaa8e53ad97fcb",
+        "task_id": "task-5fc49cf0276eb21a801570d9",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438043+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-5fc49cf0276eb21a801570d9",
+          "title": "opencoredev/scraping-bench",
+          "source_type": "github_repository",
+          "discovery_query": "LLM web crawler agent",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/opencoredev/scraping-bench",
+            "sha256": "3d17faf3ef06be4c20705bfb553c1f06fdceba8b00fc8a153ccb195f81318e78"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/opencoredev/scraping-bench"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-0e5658da7a8b64d3aff202c0",
+      "received_at": "2026-10-20T11:46:51.438079+00:00",
+      "source_url": "https://github.com/ry-ops/commit-relay",
+      "record_sha256": "36646dd9bbfb784e560af28962cafeea4e3cf6631495a4b6c84d6c306e9ed3b3",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-2d9c3b2672d3917d81a050ab",
+        "task_id": "task-0e5658da7a8b64d3aff202c0",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438079+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-0e5658da7a8b64d3aff202c0",
+          "title": "ry-ops/commit-relay",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ry-ops/commit-relay",
+            "sha256": "36646dd9bbfb784e560af28962cafeea4e3cf6631495a4b6c84d6c306e9ed3b3"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ry-ops/commit-relay"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-b926b78d321e86b9f33dcbb8",
+      "received_at": "2026-10-20T11:46:51.438119+00:00",
+      "source_url": "https://github.com/RyszardDrabek/resilient-payment-gateway",
+      "record_sha256": "89bf0f6c4f9ebf2507d3e13ccba318a15156fe6fe530af76ba2ddc290b91eb53",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-32de5ff566265e787f9f7a09",
+        "task_id": "task-b926b78d321e86b9f33dcbb8",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438119+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-b926b78d321e86b9f33dcbb8",
+          "title": "RyszardDrabek/resilient-payment-gateway",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/RyszardDrabek/resilient-payment-gateway",
+            "sha256": "89bf0f6c4f9ebf2507d3e13ccba318a15156fe6fe530af76ba2ddc290b91eb53"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/RyszardDrabek/resilient-payment-gateway"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-9d1a77eb6124958c6aab6b3c",
+      "received_at": "2026-10-20T11:46:51.438157+00:00",
+      "source_url": "https://github.com/pydantic/logfire",
+      "record_sha256": "d9c73c3c96eb82f37af6aa76b80bc9229254760df423c1ac665bf580b6c7e89e",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-b997a3a79d15ff6e30900c28",
+        "task_id": "task-9d1a77eb6124958c6aab6b3c",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438157+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-9d1a77eb6124958c6aab6b3c",
+          "title": "pydantic/logfire",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/pydantic/logfire",
+            "sha256": "d9c73c3c96eb82f37af6aa76b80bc9229254760df423c1ac665bf580b6c7e89e"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/pydantic/logfire"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-4ef817e08d64c8ed4c953704",
+      "received_at": "2026-10-20T11:46:51.438196+00:00",
+      "source_url": "https://github.com/MalcolmMcNeely/skillworks",
+      "record_sha256": "b4c5e197971f95f271b0ccff0df678df3aeb3d078ad6e2d10de396534558f625",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-f2dd7fe3429fb689a288896b",
+        "task_id": "task-4ef817e08d64c8ed4c953704",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438196+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-4ef817e08d64c8ed4c953704",
+          "title": "MalcolmMcNeely/skillworks",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/MalcolmMcNeely/skillworks",
+            "sha256": "b4c5e197971f95f271b0ccff0df678df3aeb3d078ad6e2d10de396534558f625"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/MalcolmMcNeely/skillworks"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-22cf6db7cfa7fd73b000cee5",
+      "received_at": "2026-10-20T11:46:51.438233+00:00",
+      "source_url": "https://github.com/RandomCodeSpace/otelcontext",
+      "record_sha256": "a311e370bf7a46d6aed63a7b42b525cb5cd8ae9798f4ca0ec20e5c339014e52a",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-459fc30beb284f150283c542",
+        "task_id": "task-22cf6db7cfa7fd73b000cee5",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438233+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-22cf6db7cfa7fd73b000cee5",
+          "title": "RandomCodeSpace/otelcontext",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/RandomCodeSpace/otelcontext",
+            "sha256": "a311e370bf7a46d6aed63a7b42b525cb5cd8ae9798f4ca0ec20e5c339014e52a"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/RandomCodeSpace/otelcontext"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-ae822b7a9785326bfafb793d",
+      "received_at": "2026-10-20T11:46:51.438267+00:00",
+      "source_url": "https://github.com/anvia-hq/lens",
+      "record_sha256": "5f572bcb94903f871ba31f67a2ee554f9fff008f138424bf5d21bef5b72fa9a2",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-1fe5d00f702864eb5e444de6",
+        "task_id": "task-ae822b7a9785326bfafb793d",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438267+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-ae822b7a9785326bfafb793d",
+          "title": "anvia-hq/lens",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/anvia-hq/lens",
+            "sha256": "5f572bcb94903f871ba31f67a2ee554f9fff008f138424bf5d21bef5b72fa9a2"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/anvia-hq/lens"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-dacd1c8577779439ff732167",
+      "received_at": "2026-10-20T11:46:51.438307+00:00",
+      "source_url": "https://github.com/AgentTel/agenttel-sdk",
+      "record_sha256": "5bd898a51e179a42743a90e261ab91561a9c04ecb7d10d60c858c9c6051b7127",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-9b77c9a0c508d60958706f34",
+        "task_id": "task-dacd1c8577779439ff732167",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438307+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-dacd1c8577779439ff732167",
+          "title": "AgentTel/agenttel-sdk",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/AgentTel/agenttel-sdk",
+            "sha256": "5bd898a51e179a42743a90e261ab91561a9c04ecb7d10d60c858c9c6051b7127"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/AgentTel/agenttel-sdk"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-4ecd2ddca0ed603d33cf9a0b",
+      "received_at": "2026-10-20T11:46:51.438347+00:00",
+      "source_url": "https://github.com/cuihairu/croupier",
+      "record_sha256": "3e4db3cfdbc8748e8b10c08ec5480cc5a21fa60649c274bb3283bc762ef0ae77",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-5d14aa274a804d8cc993e1a2",
+        "task_id": "task-4ecd2ddca0ed603d33cf9a0b",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438347+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-4ecd2ddca0ed603d33cf9a0b",
+          "title": "cuihairu/croupier",
+          "source_type": "github_repository",
+          "discovery_query": "agent observability OpenTelemetry",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/cuihairu/croupier",
+            "sha256": "3e4db3cfdbc8748e8b10c08ec5480cc5a21fa60649c274bb3283bc762ef0ae77"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/cuihairu/croupier"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-cf619171a4df8e8ae4420c9e",
+      "received_at": "2026-10-20T11:46:51.438385+00:00",
+      "source_url": "https://github.com/SiddharthManjul/_Landing_Page",
+      "record_sha256": "9241af2abb8477dc282af000255a4aedf07bd6b9b53e02a74ac78f2b2cf22bf5",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-b54387fb24f85f6b527fa3f5",
+        "task_id": "task-cf619171a4df8e8ae4420c9e",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438385+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-cf619171a4df8e8ae4420c9e",
+          "title": "SiddharthManjul/_Landing_Page",
+          "source_type": "github_repository",
+          "discovery_query": "Arweave AO decentralized compute",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/SiddharthManjul/_Landing_Page",
+            "sha256": "9241af2abb8477dc282af000255a4aedf07bd6b9b53e02a74ac78f2b2cf22bf5"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/SiddharthManjul/_Landing_Page"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-669d419fcaf433147f8e9551",
+      "received_at": "2026-10-20T11:46:51.438420+00:00",
+      "source_url": "https://github.com/Lesnak1/AO",
+      "record_sha256": "d66f907bb6aaefee1b321a8859eec5fb407dcba272edf9d78e74f09b91b8c871",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-891250eb0b8f8987ba8b8c0e",
+        "task_id": "task-669d419fcaf433147f8e9551",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438420+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-669d419fcaf433147f8e9551",
+          "title": "Lesnak1/AO",
+          "source_type": "github_repository",
+          "discovery_query": "Arweave AO decentralized compute",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Lesnak1/AO",
+            "sha256": "d66f907bb6aaefee1b321a8859eec5fb407dcba272edf9d78e74f09b91b8c871"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Lesnak1/AO"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-0b673d15808c5e6ace4e4c40",
+      "received_at": "2026-10-20T11:46:51.438458+00:00",
+      "source_url": "https://github.com/HelloRWA/awesome-ao",
+      "record_sha256": "ef17d36f847f3bc48c9665ada5571d06c96a30d59f6b69be30bf898661a1a604",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-fcc088031a46cf4d72736af9",
+        "task_id": "task-0b673d15808c5e6ace4e4c40",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438458+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-0b673d15808c5e6ace4e4c40",
+          "title": "HelloRWA/awesome-ao",
+          "source_type": "github_repository",
+          "discovery_query": "Arweave AO decentralized compute",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/HelloRWA/awesome-ao",
+            "sha256": "ef17d36f847f3bc48c9665ada5571d06c96a30d59f6b69be30bf898661a1a604"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/HelloRWA/awesome-ao"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-465706df47a8ea1284ffe214",
+      "received_at": "2026-10-20T11:46:51.438494+00:00",
+      "source_url": "https://github.com/ronaldkohhh/aos",
+      "record_sha256": "6e11b2a235efc6f966e7c9eeddf6d64b617d776fa4f24a29654218822e7a2ef1",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-e32095c4d81437e04a213c53",
+        "task_id": "task-465706df47a8ea1284ffe214",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438494+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-465706df47a8ea1284ffe214",
+          "title": "ronaldkohhh/aos",
+          "source_type": "github_repository",
+          "discovery_query": "Arweave AO decentralized compute",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ronaldkohhh/aos",
+            "sha256": "6e11b2a235efc6f966e7c9eeddf6d64b617d776fa4f24a29654218822e7a2ef1"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ronaldkohhh/aos"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-90861509b05450ff769589eb",
+      "received_at": "2026-10-20T11:46:51.438534+00:00",
+      "source_url": "https://github.com/Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+      "record_sha256": "6407afbb2fc55ac6944e2ad0989331c6455705be0ffe010648b0e77dbd53f3ac",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-97bc180dfb9cf3c732b51db6",
+        "task_id": "task-90861509b05450ff769589eb",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438534+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-90861509b05450ff769589eb",
+          "title": "Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+          "source_type": "github_repository",
+          "discovery_query": "cybersecurity threat modeling defensive research",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+            "sha256": "6407afbb2fc55ac6944e2ad0989331c6455705be0ffe010648b0e77dbd53f3ac"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-cac4884472e215d0b4b7b4e6",
+      "received_at": "2026-10-20T11:46:51.438571+00:00",
+      "source_url": "https://github.com/codenik01/Keystroke-Logging-Research-Lab",
+      "record_sha256": "516e53fbc6df09ce29e4835228b8a901ddd44dff803a9cf015103156e65d3a38",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-954db1f1a985701ef60759b7",
+        "task_id": "task-cac4884472e215d0b4b7b4e6",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438571+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-cac4884472e215d0b4b7b4e6",
+          "title": "codenik01/Keystroke-Logging-Research-Lab",
+          "source_type": "github_repository",
+          "discovery_query": "cybersecurity threat modeling defensive research",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/codenik01/Keystroke-Logging-Research-Lab",
+            "sha256": "516e53fbc6df09ce29e4835228b8a901ddd44dff803a9cf015103156e65d3a38"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/codenik01/Keystroke-Logging-Research-Lab"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-90305f35addddae362428b9b",
+      "received_at": "2026-10-20T11:46:51.438606+00:00",
+      "source_url": "https://github.com/Chinghhc/secure-cryptographic-systems",
+      "record_sha256": "710af60a20f006b72109c22a51abf0d7d60cca845192ce591b7f026218615ead",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-07f585912cb3f8e8f5ceca38",
+        "task_id": "task-90305f35addddae362428b9b",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438606+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-90305f35addddae362428b9b",
+          "title": "Chinghhc/secure-cryptographic-systems",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Chinghhc/secure-cryptographic-systems",
+            "sha256": "710af60a20f006b72109c22a51abf0d7d60cca845192ce591b7f026218615ead"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Chinghhc/secure-cryptographic-systems"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-9b23f7951dd69240155284da",
+      "received_at": "2026-10-20T11:46:51.438641+00:00",
+      "source_url": "https://github.com/deepayansinha/pq-secure-federated-analytics",
+      "record_sha256": "31706ab94ea9e8239a3b6f5d664a05b91ac40e2bab9073c9242629ef1667c2ff",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-bd0567c3f4c81fbae000f285",
+        "task_id": "task-9b23f7951dd69240155284da",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438641+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-9b23f7951dd69240155284da",
+          "title": "deepayansinha/pq-secure-federated-analytics",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/deepayansinha/pq-secure-federated-analytics",
+            "sha256": "31706ab94ea9e8239a3b6f5d664a05b91ac40e2bab9073c9242629ef1667c2ff"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/deepayansinha/pq-secure-federated-analytics"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-e6ed08e6a4b62dfd9b2bbd9c",
+      "received_at": "2026-10-20T11:46:51.438735+00:00",
+      "source_url": "https://github.com/rohittsainii/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+      "record_sha256": "e0e9b27f4b1fd73d6f8f632b7e335be3fcb0a916682930c98c2d34c22edfa0da",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-455a8aa444221fe86666ae9c",
+        "task_id": "task-e6ed08e6a4b62dfd9b2bbd9c",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438735+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-e6ed08e6a4b62dfd9b2bbd9c",
+          "title": "rohittsainii/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/rohittsainii/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+            "sha256": "e0e9b27f4b1fd73d6f8f632b7e335be3fcb0a916682930c98c2d34c22edfa0da"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/rohittsainii/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-da525f0fb818cc7e0fc2bb50",
+      "received_at": "2026-10-20T11:46:51.438781+00:00",
+      "source_url": "https://github.com/RealAradhyaGupta/aegis",
+      "record_sha256": "05dea5660e3d08d55f36fc4aed5560c324d5c9ad72eb2adadf799d158f4a1fe6",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-eea452ad80cc9ee28259b147",
+        "task_id": "task-da525f0fb818cc7e0fc2bb50",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438781+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-da525f0fb818cc7e0fc2bb50",
+          "title": "RealAradhyaGupta/aegis",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/RealAradhyaGupta/aegis",
+            "sha256": "05dea5660e3d08d55f36fc4aed5560c324d5c9ad72eb2adadf799d158f4a1fe6"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/RealAradhyaGupta/aegis"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-83add76d1cac680b3d4cc572",
+      "received_at": "2026-10-20T11:46:51.438850+00:00",
+      "source_url": "https://github.com/Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+      "record_sha256": "ce81b0c2cd9b909b5047db28b88b690f560444cb54f220f51f4e3d4a7ec5364d",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-7df8dd8d47fc84d5ac5f3cac",
+        "task_id": "task-83add76d1cac680b3d4cc572",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438850+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-83add76d1cac680b3d4cc572",
+          "title": "Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+            "sha256": "ce81b0c2cd9b909b5047db28b88b690f560444cb54f220f51f4e3d4a7ec5364d"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-6d1bbe416cf150991ac8d2a6",
+      "received_at": "2026-10-20T11:46:51.438895+00:00",
+      "source_url": "https://github.com/SyedDaiam9101/privacy-health-ledger",
+      "record_sha256": "66102b5635f157f7c43fe1d5acebe1a1f178c8cde35811375db06561604d73a3",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-124b4f06bf44d81ec4368881",
+        "task_id": "task-6d1bbe416cf150991ac8d2a6",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438895+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-6d1bbe416cf150991ac8d2a6",
+          "title": "SyedDaiam9101/privacy-health-ledger",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/SyedDaiam9101/privacy-health-ledger",
+            "sha256": "66102b5635f157f7c43fe1d5acebe1a1f178c8cde35811375db06561604d73a3"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/SyedDaiam9101/privacy-health-ledger"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-11490cc4a4803ae1e60f3ad5",
+      "received_at": "2026-10-20T11:46:51.438933+00:00",
+      "source_url": "https://github.com/riya19verma/Encrypted-Computation",
+      "record_sha256": "2ba3bc8ac67a6c64d9d428331e3507a422630d65c8dde3f610fea49c6a808d80",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-2abc875021751abe4688cf8f",
+        "task_id": "task-11490cc4a4803ae1e60f3ad5",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438933+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-11490cc4a4803ae1e60f3ad5",
+          "title": "riya19verma/Encrypted-Computation",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/riya19verma/Encrypted-Computation",
+            "sha256": "2ba3bc8ac67a6c64d9d428331e3507a422630d65c8dde3f610fea49c6a808d80"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/riya19verma/Encrypted-Computation"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-323706dc98fa8b36508729e9",
+      "received_at": "2026-10-20T11:46:51.438977+00:00",
+      "source_url": "https://github.com/MDhruv03/Secure-Stock-Trading-Exchange",
+      "record_sha256": "96590fd916c1543f1df63a10d53da12294f07f7590e0d65bc8b08775b589bd50",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-a03fd736a06f443c23759f1b",
+        "task_id": "task-323706dc98fa8b36508729e9",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.438977+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-323706dc98fa8b36508729e9",
+          "title": "MDhruv03/Secure-Stock-Trading-Exchange",
+          "source_type": "github_repository",
+          "discovery_query": "privacy preserving cryptography secure computation",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/MDhruv03/Secure-Stock-Trading-Exchange",
+            "sha256": "96590fd916c1543f1df63a10d53da12294f07f7590e0d65bc8b08775b589bd50"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/MDhruv03/Secure-Stock-Trading-Exchange"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-41d299c14941cb4ad84008ef",
+      "received_at": "2026-10-20T11:46:51.439021+00:00",
+      "source_url": "https://github.com/ANUBprad/redops",
+      "record_sha256": "7b7610639ce51eee8d7e48d51808d44a48dabffa0c41a76513166367c492fc8d",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-df9ccc30241d85f5a43d13e8",
+        "task_id": "task-41d299c14941cb4ad84008ef",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439021+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-41d299c14941cb4ad84008ef",
+          "title": "ANUBprad/redops",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ANUBprad/redops",
+            "sha256": "7b7610639ce51eee8d7e48d51808d44a48dabffa0c41a76513166367c492fc8d"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ANUBprad/redops"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-5f68ac2ddfe12ae0460ca1e6",
+      "received_at": "2026-10-20T11:46:51.439058+00:00",
+      "source_url": "https://github.com/alwaysprince05/Agent-Red-Teaming-Evaluation-Framework",
+      "record_sha256": "f8d1f083094351881cee92b22baf34cb800ca6f949467d5ed0ab57dcc62fd957",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-e22c20330a5f211b6f1b5481",
+        "task_id": "task-5f68ac2ddfe12ae0460ca1e6",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439058+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-5f68ac2ddfe12ae0460ca1e6",
+          "title": "alwaysprince05/Agent-Red-Teaming-Evaluation-Framework",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/alwaysprince05/Agent-Red-Teaming-Evaluation-Framework",
+            "sha256": "f8d1f083094351881cee92b22baf34cb800ca6f949467d5ed0ab57dcc62fd957"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/alwaysprince05/Agent-Red-Teaming-Evaluation-Framework"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-bbd8fd139b36bb5bfdfab76e",
+      "received_at": "2026-10-20T11:46:51.439094+00:00",
+      "source_url": "https://github.com/hallieren/substack-data",
+      "record_sha256": "9b059084e13e7187bab47abc73c199dc3405543c969cc6c179e40e649021a972",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-d73c4f7f56054a63a1102ceb",
+        "task_id": "task-bbd8fd139b36bb5bfdfab76e",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439094+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-bbd8fd139b36bb5bfdfab76e",
+          "title": "hallieren/substack-data",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/hallieren/substack-data",
+            "sha256": "9b059084e13e7187bab47abc73c199dc3405543c969cc6c179e40e649021a972"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/hallieren/substack-data"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-8d1911051fb2100675837989",
+      "received_at": "2026-10-20T11:46:51.439132+00:00",
+      "source_url": "https://github.com/ertematakavaz03/axiom-guardrail",
+      "record_sha256": "c5ec260dd3a1596387259e040800de1f86d7472bc996156526e4442904ca1344",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-9556860e70d6864b99f3bc1d",
+        "task_id": "task-8d1911051fb2100675837989",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439132+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-8d1911051fb2100675837989",
+          "title": "ertematakavaz03/axiom-guardrail",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/ertematakavaz03/axiom-guardrail",
+            "sha256": "c5ec260dd3a1596387259e040800de1f86d7472bc996156526e4442904ca1344"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/ertematakavaz03/axiom-guardrail"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-aafc1f30fdf5b2b136dbd1a5",
+      "received_at": "2026-10-20T11:46:51.439174+00:00",
+      "source_url": "https://github.com/qwer556617123/Kaggle-AI-Agent-Security-Multi-Step-Tool-Attacks",
+      "record_sha256": "80a68e6c9249fc8f104b8236516f29825689b9489c2f85aadafc2d618aacc453",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-ce248c647a0727e8aae90d7d",
+        "task_id": "task-aafc1f30fdf5b2b136dbd1a5",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439174+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-aafc1f30fdf5b2b136dbd1a5",
+          "title": "qwer556617123/Kaggle-AI-Agent-Security-Multi-Step-Tool-Attacks",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/qwer556617123/Kaggle-AI-Agent-Security-Multi-Step-Tool-Attacks",
+            "sha256": "80a68e6c9249fc8f104b8236516f29825689b9489c2f85aadafc2d618aacc453"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/qwer556617123/Kaggle-AI-Agent-Security-Multi-Step-Tool-Attacks"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-0f6675c54dad39bc38de2a07",
+      "received_at": "2026-10-20T11:46:51.439210+00:00",
+      "source_url": "https://github.com/toluowo/ai-red-teaming-lab",
+      "record_sha256": "114eaae67ae5f35aa208a4b70d1f9425cf27deac59d692f4b804b53699cedfe3",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-a23829ad4d53fb207bedc574",
+        "task_id": "task-0f6675c54dad39bc38de2a07",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439210+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-0f6675c54dad39bc38de2a07",
+          "title": "toluowo/ai-red-teaming-lab",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/toluowo/ai-red-teaming-lab",
+            "sha256": "114eaae67ae5f35aa208a4b70d1f9425cf27deac59d692f4b804b53699cedfe3"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/toluowo/ai-red-teaming-lab"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-06f21eec7514ad72c87a72f1",
+      "received_at": "2026-10-20T11:46:51.439248+00:00",
+      "source_url": "https://github.com/dkx955/ai-result-red-team",
+      "record_sha256": "052f793cbf04f9fa7d8e51b27e13941f2a77936f12ee3bc6a9a0e96e1756287a",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-e84206fa0ac223d4c90c7002",
+        "task_id": "task-06f21eec7514ad72c87a72f1",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439248+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-06f21eec7514ad72c87a72f1",
+          "title": "dkx955/ai-result-red-team",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/dkx955/ai-result-red-team",
+            "sha256": "052f793cbf04f9fa7d8e51b27e13941f2a77936f12ee3bc6a9a0e96e1756287a"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/dkx955/ai-result-red-team"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    },
+    {
+      "receipt_version": "1.0",
+      "candidate_id": "cand-f85062ce335b38c9696dcd39",
+      "received_at": "2026-10-20T11:46:51.439283+00:00",
+      "source_url": "https://github.com/thehabeebops/Poly-Rubric-Scoreboard-For-Gen-AI",
+      "record_sha256": "eb5e4982a5537f39072ed1078df75e7aeeb6a874faab24cc9052f08fde95a5fe",
+      "review_status": "pending_independent_review",
+      "claims_verified": false,
+      "source_content_fetched": false,
+      "discovered_code_executed": false,
+      "disposition": "unreviewed_candidate",
+      "a2a_envelope": {
+        "protocol_version": "1.0",
+        "message_id": "msg-1c3500f25f347f48d3d42776",
+        "task_id": "task-f85062ce335b38c9696dcd39",
+        "sender": "opportunity-scout",
+        "recipient": "evidence-verifier",
+        "task_type": "review_discovery_candidate",
+        "created_at": "2026-10-20T11:46:51.439283+00:00",
+        "permissions": {
+          "scopes": [
+            "source:read",
+            "evidence:write"
+          ],
+          "sensitive_action_confirmation": true
+        },
+        "payload": {
+          "candidate_id": "cand-f85062ce335b38c9696dcd39",
+          "title": "thehabeebops/Poly-Rubric-Scoreboard-For-Gen-AI",
+          "source_type": "github_repository",
+          "discovery_query": "AI red teaming evaluation reproducibility",
+          "review_state": "pending",
+          "execution_allowed": false
+        },
+        "evidence": [
+          {
+            "kind": "discovery_record",
+            "uri": "https://github.com/thehabeebops/Poly-Rubric-Scoreboard-For-Gen-AI",
+            "sha256": "eb5e4982a5537f39072ed1078df75e7aeeb6a874faab24cc9052f08fde95a5fe"
+          }
+        ],
+        "provenance": {
+          "source_refs": [
+            "https://github.com/thehabeebops/Poly-Rubric-Scoreboard-For-Gen-AI"
+          ],
+          "producer": "Sovereign Opportunity Scout",
+          "schema_version": "1.0"
+        },
+        "status": "submitted"
+      },
+      "limitations": [
+        "URL and metadata are not proof that a claim is true.",
+        "The source content has not been fetched or independently corroborated.",
+        "This receipt is local provenance bookkeeping, not a digital signature or external anchor."
+      ]
+    }
+  ],
+  "rejected_records": [
+    {
+      "index": 36,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 37,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 56,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 57,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 58,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 59,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 60,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 61,
+      "reason": "record is not a candidate or contains a source error"
+    },
+    {
+      "index": 62,
+      "reason": "record is not a candidate or contains a source error"
+    }
+  ]
+}
