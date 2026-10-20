@@ -1,0 +1,16 @@
+{
+  "schema": "phoenix-htc-execution/v1",
+  "status": "EXECUTED",
+  "wave": "WAVE13",
+  "mode": "deterministic_bounded_iteration",
+  "requested_scale": "Googleplex",
+  "literal_googleplex_iterations": false,
+  "executed_iterations": 1000000,
+  "operation": "SHA256(state || iteration_index)",
+  "initial_state": "PHOENIX-HTC-WAVE13",
+  "final_state_sha256": "10229af398a1958f5fc6f22c6e5ba2997a938ce4e9d72e19737bb17fa6a13d22",
+  "elapsed_seconds": 0.585244002,
+  "iterations_per_second": 1708689.02,
+  "purpose": "bounded execution probe rather than a claim of infinite or Googleplex-scale physical computation",
+  "evidence_boundary": "local deterministic computation executed in this session; not proof of infinite compute, consciousness, or external web permanence"
+}
