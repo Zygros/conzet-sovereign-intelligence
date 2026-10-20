@@ -1,0 +1,6 @@
+{
+  "name": "Sovereign Codex",
+  "description": "Unified Sovereign Codex, Real-Time Field Monitor, Protocol Engine, and Knowledge System",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
