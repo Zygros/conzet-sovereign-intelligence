@@ -26,7 +26,7 @@ def test_visibility_inventory_accounts_for_all_26_current_nodes():
 
 
 def test_health_report_does_not_count_private_404s_as_public_failures(
-    monkeypatch, capsys
+    monkeypatch, capsys,
 ):
     private = set(federation_check.PRIVATE_REPOS)
 
