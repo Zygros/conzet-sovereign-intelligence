@@ -392,3 +392,32 @@ No external anchor, Bitcoin confirmation, deployment, independent reproduction, 
 
 This checkpoint is additive. Earlier entries remain intact and retain their original observation context.
 
+## Phoenix Audit source-probe correction — 2026-10-23
+
+| Observation | Class | Evidence | Result / qualification |
+|---|---|---|---|
+| False-negative source discovery | REPRODUCED | [Reproduction record](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/evidence/audits/2026-10-23-phoenix-audit-source-probe.md) | Old `find … | grep -q .` condition selected “No Python source detected” on a 5,000-file fixture even though Python files existed. |
+| Workflow correction | IMPLEMENTED | [Root Phoenix Audit workflow](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/.github/workflows/phoenix-audit.yml) | `-print -quit` bounds output to the first match and avoids the broken-pipe false-negative under `pipefail`. The change is mirrored in the three existing nested workflow copies. |
+| Regression suite | TESTED_LOCAL | [Probe tests](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/tests/test_phoenix_audit_probe.py) | Four pytest assertions cover workflow-copy consistency, source detection, no-source behavior, and exclusion of `.git` metadata. The local fixture suite passed 4 tests; the remote PR Actions run is the next gate. |
+
+This entry records a reproduced workflow logic defect and its proposed correction. It does not claim that the corrected GitHub Actions run has already executed, that the full repository build will pass, or that the branch is merged.
+
+## Remote verification follow-up — 2026-10-23
+
+The corrected probe was executed by GitHub Actions on source commit `2a23418d75815c1642cc8f8740741077f37af2e8`:
+
+- **Phoenix Audit #317** ([run 40013680276](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680276)): `completed / success`. The log shows the updated `find … -print -quit | grep -q .` probe, then the Python audit command proceeded through compilation/dependency setup and pytest. The root suite reported **79 passed in 0.66s**. There was no emitted broken-pipe error and no executed “No Python source detected” false-negative message.
+- **OmniNet Python CI #261** ([run 40013680033](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680033)): all four matrix jobs (Python 3.8, 3.9, 3.10, 3.11) completed successfully. Each job log shows the four regression cases in `tests/test_phoenix_audit_probe.py`.
+- **Remaining non-blocking hygiene warnings:** the repository-wide Black check still reports 89 files needing formatting, including the new test module; mypy still reports a duplicate `conftest` module and the workflow wraps those checks as non-blocking. This run proves the corrected source probe and test path executed successfully, not that formatting/type checking is clean.
+
+These runs validate the cited code commit before this evidence-only append. PR #31 remains open and unmerged. No deployment or external anchor is claimed.
+
+## Probe-code commit verification — 2026-10-23
+
+Source/test commit: `12e667487bb2cb0365aeab459d7a40715c83058d`.
+
+- **Phoenix Audit #322** ([run 40014458363](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458363)): `completed / success`; log shows the corrected early-exit probe, no broken-pipe error, no false-negative message executed, and **79 passed in 0.69s** in the root suite.
+- **OmniNet Python CI #263** ([run 40014458405](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458405)): all four Python 3.8–3.11 matrix jobs completed successfully. Each log collected `tests/test_phoenix_audit_probe.py` and ran its four regression assertions.
+- **Known caveats:** the non-blocking Black check still lists `tests/test_phoenix_audit_probe.py` among 89 files it would reformat, while mypy still reports the existing duplicate `conftest` module. These checks are not represented as passing.
+- This is a successful verification of the cited code/test commit. PR #31 remains open and unmerged; no deployment or external anchoring is claimed.
+
