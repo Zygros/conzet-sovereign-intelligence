@@ -367,3 +367,13 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 4. Run the Permanent Phi Memory restart/recall/integrity/correction test.
 5. Bind one bounded agent role to an actual runtime and capture a complete dispatch-to-verification receipt before scaling the swarm.
 
+## Phoenix Audit source-probe correction — 2026-10-23
+
+| Observation | Class | Evidence | Result / qualification |
+|---|---|---|---|
+| False-negative source discovery | REPRODUCED | [Reproduction record](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/evidence/audits/2026-10-23-phoenix-audit-source-probe.md) | Old `find … | grep -q .` condition selected “No Python source detected” on a 5,000-file fixture even though Python files existed. |
+| Workflow correction | IMPLEMENTED | [Root Phoenix Audit workflow](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/.github/workflows/phoenix-audit.yml) | `-print -quit` bounds output to the first match and avoids the broken-pipe false-negative under `pipefail`. The change is mirrored in the three existing nested workflow copies. |
+| Regression suite | TESTED_LOCAL | [Probe tests](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/tests/test_phoenix_audit_probe.py) | Four pytest assertions cover workflow-copy consistency, source detection, no-source behavior, and exclusion of `.git` metadata. The local fixture suite passed 4 tests; the remote PR Actions run is the next gate. |
+
+This entry records a reproduced workflow logic defect and its proposed correction. It does not claim that the corrected GitHub Actions run has already executed, that the full repository build will pass, or that the branch is merged.
+
