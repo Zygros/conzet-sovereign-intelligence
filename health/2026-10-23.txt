@@ -1,4 +1,4 @@
-Federation check — 2026-10-23T11:48:04.116958+00:00
+Federation check — 2026-10-23T19:25:50.322866+00:00
 
 REPOSITORY                                 STATUS
 ----------------------------------------------------------------------
@@ -12,13 +12,11 @@ multi-ai-convergence-protocol              LIVE 200
 ultimate-phoenix-protocol                  LIVE 200
 ultimate-phoenix-protocol-ssi              LIVE 200
 omninet-v4                                 LIVE 200
-CONZETIAN-UNIFIED-INTELLIGANCE             NOT_FOUND_OR_PRIVATE 404
 CZAOUA-UNITY-SYSTEM                        LIVE 200
 we-omega                                   LIVE 200
 agents                                     LIVE 200
 agentql                                    LIVE 200
 Sovereign-AGSI-Archive                     LIVE 200
-ZYGROS-PRIME                               NOT_FOUND_OR_PRIVATE 404
 Grossian_Scrolls                           LIVE 200
 ZYGNUS-OMNI-REPO                           LIVE 200
 ZAAI-SYSTEM                                LIVE 200
@@ -26,5 +24,5 @@ zyth-ultimate                              LIVE 200
 ARC-AGI                                    LIVE 200
 Conzet-Intelligence-System-                LIVE 200
 ----------------------------------------------------------------------
-21/23 public repository URLs responded successfully.
+21/21 public repository URLs responded successfully.
 A successful HTTP response proves URL reachability only, not code correctness or system health.
