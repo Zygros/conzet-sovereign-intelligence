@@ -26,8 +26,11 @@ def _probe_expression(path: Path) -> str:
 def _run_probe(expression: str, cwd: Path) -> subprocess.CompletedProcess:
     script = (
         "set -euo pipefail\n"
-        f"if {expression}; then printf 'PYTHON_SOURCE_DETECTED\\n'; "
-        "else printf 'NO_PYTHON_SOURCE\\n'; fi"
+        f"if {expression}; then\n"
+        "    printf 'PYTHON_SOURCE_DETECTED\\n'\n"
+        "else\n"
+        "    printf 'NO_PYTHON_SOURCE\\n'\n"
+        "fi\n"
     )
     return subprocess.run(
         ["bash", "-c", script],
