@@ -44,3 +44,11 @@ The corrected probe was exercised remotely on code commit `2a23418d75815c1642cc8
 
 The runs validate the cited code commit before this evidence-only update. PR #31 remains open and unmerged; no deployment or external anchor is claimed.
 
+## Probe-code commit verification — 2026-10-23
+
+The test-fixture correction at commit `12e667487bb2cb0365aeab459d7a40715c83058d` was verified remotely:
+
+- [Phoenix Audit run #322](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458363) completed successfully; the corrected probe proceeded into the Python audit and the root suite reported **79 passed in 0.69s**. No broken-pipe error or false-negative output was observed.
+- [OmniNet Python CI run #263](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458405) completed with all four Python 3.8–3.11 jobs successful; all four probe tests were collected in every matrix job.
+- The non-blocking Black check still lists the new test module among the files it would reformat; mypy still reports a duplicate `conftest` module. These remain explicit hygiene caveats.
+
