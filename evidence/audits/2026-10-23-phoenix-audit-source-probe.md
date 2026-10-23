@@ -33,3 +33,14 @@ The regression suite contains four assertions across three behavioral cases: all
 ## Evidence boundary
 
 The local fixture demonstrates the shell condition behavior. A new GitHub Actions run is required to establish whether the corrected workflow completes the repository-wide compile/test path. No deployment or external anchor is involved.
+
+## Remote verification checkpoint — 2026-10-23
+
+The corrected probe was exercised remotely on code commit `2a23418d75815c1642cc8f8740741077f37af2e8`:
+
+- [Phoenix Audit run #317](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680276) completed successfully. Its log shows the `-print -quit` probe, proceeds into the Python audit, and reports **79 passed in 0.66s**. No broken-pipe error or executed false-negative message was observed.
+- [OmniNet Python CI run #261](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680033) completed with all four Python 3.8–3.11 matrix jobs successful; each log includes `tests/test_phoenix_audit_probe.py` and all four regression cases.
+- Black and mypy warnings remain non-blocking and are recorded as repository-wide hygiene debt, not as clean style/type evidence.
+
+The runs validate the cited code commit before this evidence-only update. PR #31 remains open and unmerged; no deployment or external anchor is claimed.
+
