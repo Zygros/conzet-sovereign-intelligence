@@ -379,3 +379,16 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 | Federation navigation | IMPLEMENTED | [Branch index](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/FEDERATION_INDEX.md) | Private-node count and links updated additively. No change to main until review/merge. |
 
 No external anchor, Bitcoin confirmation, deployment, independent reproduction, or merged-main state is claimed by this entry.
+
+## Remote PR verification checkpoint — 2026-10-23
+
+**Classification:** PR-branch CI evidence observed; the source correction remains unmerged unless and until the pull request is merged.
+
+- **OmniNet Python CI, run #259** ([run 40012093501](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40012093501)): GitHub reported `completed / success`. The Python 3.8, 3.9, 3.10, and 3.11 matrix jobs each completed. Each job log shows the repository pytest suite at **78 passed** and includes `tests/test_federation_check.py` with three passing cases. The additional targeted suites in the workflow also completed successfully.
+- **Phoenix Audit, run #306** ([run 40012093647](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40012093647)): the job-level conclusion is success, but the Python subcheck did **not** run its compile/audit body. Its `find … | grep -q .` probe produced a broken-pipe error and then reported “No Python source detected.” This run is not counted as Python compileall evidence.
+- **Non-gating CI hygiene observations:** Black reported “89 files would be reformatted, 7 files would be left unchanged,” including `tests/test_federation_check.py`. The workflow's formatting command is non-blocking. The mypy step also reports duplicate module name `conftest` across `core/omninet/conftest.py` and `core/method/conftest.py`; its command is explicitly suffixed with `|| true`. Green job conclusions therefore establish that the workflow completed and pytest passed, not that formatting or static typing is clean.
+- **Local reproduction on the prepared candidate package:** `python -m pytest -q tests/test_federation_check.py` → **3 passed**; `python -m py_compile scripts/federation_check.py` → pass; candidate index reconciliation → **26 unique nodes, 21 public, 5 private, cross-links consistent**; every listed package checksum verified.
+- **Scope boundary:** these results apply to the proposed branch and local candidate package. They do not establish merged-main state, live reachability of every public URL, deployment, independent third-party reproduction, or an external timestamp/Bitcoin/Arweave anchor.
+
+This checkpoint is additive. Earlier entries remain intact and retain their original observation context.
+
