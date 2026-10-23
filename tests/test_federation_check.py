@@ -8,9 +8,14 @@ def test_public_health_roster_excludes_known_private_nodes():
 
     assert len(public) == 21
     assert len(set(public)) == 21
-    assert len(private) == 5
+    assert set(private) == {
+        "Sovereign-Narrative-Intelligence-SNI-",
+        "ZYGROS-PRIME",
+        "sovereign-agsi-portal",
+        "CONZETIAN-UNIFIED-INTELLIGANCE",
+        "CONZETIAN-AI",
+    }
     assert set(public).isdisjoint(private)
-    assert {"CONZETIAN-UNIFIED-INTELLIGANCE", "ZYGROS-PRIME"} <= set(private)
 
 
 def test_visibility_inventory_accounts_for_all_26_current_nodes():
@@ -20,7 +25,9 @@ def test_visibility_inventory_accounts_for_all_26_current_nodes():
     assert federation_check.REPOS is federation_check.PUBLIC_REPOS
 
 
-def test_health_report_does_not_count_private_404s_as_public_failures(monkeypatch, capsys):
+def test_health_report_does_not_count_private_404s_as_public_failures(
+    monkeypatch, capsys
+):
     private = set(federation_check.PRIVATE_REPOS)
 
     def fake_check(repo):
