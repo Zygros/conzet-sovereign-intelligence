@@ -377,3 +377,13 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 
 This entry records a reproduced workflow logic defect and its proposed correction. It does not claim that the corrected GitHub Actions run has already executed, that the full repository build will pass, or that the branch is merged.
 
+## Remote verification follow-up — 2026-10-23
+
+The corrected probe was executed by GitHub Actions on source commit `2a23418d75815c1642cc8f8740741077f37af2e8`:
+
+- **Phoenix Audit #317** ([run 40013680276](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680276)): `completed / success`. The log shows the updated `find … -print -quit | grep -q .` probe, then the Python audit command proceeded through compilation/dependency setup and pytest. The root suite reported **79 passed in 0.66s**. There was no emitted broken-pipe error and no executed “No Python source detected” false-negative message.
+- **OmniNet Python CI #261** ([run 40013680033](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680033)): all four matrix jobs (Python 3.8, 3.9, 3.10, 3.11) completed successfully. Each job log shows the four regression cases in `tests/test_phoenix_audit_probe.py`.
+- **Remaining non-blocking hygiene warnings:** the repository-wide Black check still reports 89 files needing formatting, including the new test module; mypy still reports a duplicate `conftest` module and the workflow wraps those checks as non-blocking. This run proves the corrected source probe and test path executed successfully, not that formatting/type checking is clean.
+
+These runs validate the cited code commit before this evidence-only append. PR #31 remains open and unmerged. No deployment or external anchor is claimed.
+
