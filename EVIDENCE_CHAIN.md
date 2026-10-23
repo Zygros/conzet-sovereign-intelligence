@@ -421,3 +421,14 @@ Source/test commit: `12e667487bb2cb0365aeab459d7a40715c83058d`.
 - **Known caveats:** the non-blocking Black check still lists `tests/test_phoenix_audit_probe.py` among 89 files it would reformat, while mypy still reports the existing duplicate `conftest` module. These checks are not represented as passing.
 - This is a successful verification of the cited code/test commit. PR #31 remains open and unmerged; no deployment or external anchoring is claimed.
 
+
+
+## Independent Scout evidence-integrity checkpoint — 2026-10-23
+
+- **Latest publication:** [Sovereign Opportunity Scout run #47 / 39993289060](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/39993289060), published at `2026-10-23T17:14:33Z` from source commit `dc2ee10f51eb4ff5fdc990d46d20537c18082eb5`.
+- **Independent byte-hash reproduction:** the published [manifest](https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/39993289060/manifest.sha256) matches the recomputed SHA-256 for [`opportunity-scout.json`](https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/39993289060/opportunity-scout.json) (`a4a96fa9da212b562bd066b85e4f1f7a5ed6de1763065e472700a28a49895833`, 97,643 bytes) and [`verification-receipts.json`](https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/39993289060/verification-receipts.json) (`d0175e9cf008dc1393e67867288ea0b98866eb4076f0e56d4cb01e7ca2c21ca4`, 196,602 bytes). Both JSON documents parse; 93 discovery records, 89 receipts, 4 rejections.
+- **Review boundary:** the Scout labels candidates `unreviewed_candidates`, sets `human_or_independent_review_required`, and limits discovery to public metadata with no code execution or automatic promotion. These counts are not counts of verified opportunities.
+- **Timestamp boundary:** [Published Evidence Integrity run #94 / 39993465496](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/39993465496) reported the newest run's `.ots` proofs as **pending** at `2026-10-23T17:14:56Z`, with no Bitcoin block. It separately confirmed older run `39903171799` at block **972716** using a public-block-header check. The older confirmation does not anchor the newest run. The integrity workflow's overall success reflects its grace-window policy and must not be read as newest-proof confirmation.
+- **Reproducible report:** [Scout integrity audit](evidence/audits/2026-10-23-scout-evidence-integrity.md) and [machine-readable result](evidence/audits/2026-10-23-scout-evidence-integrity.json) preserve hashes, lengths, run IDs, verification state, and qualifiers.
+
+No current/latest-run Bitcoin confirmation is claimed. No deployment or candidate promotion is claimed.

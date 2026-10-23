@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-10-23T20:20:11.742Z",
+  "scout_run": {
+    "run_id": "39993289060",
+    "run_number": 47,
+    "conclusion": "success",
+    "published_at": "2026-10-23T17:14:33Z",
+    "source_commit": "dc2ee10f51eb4ff5fdc990d46d20537c18082eb5",
+    "artifact_urls": {
+      "manifest": "https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/39993289060/manifest.sha256",
+      "scout": "https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/39993289060/opportunity-scout.json",
+      "receipts": "https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/39993289060/verification-receipts.json"
+    },
+    "independent_hash_reproduction": [
+      {
+        "file": "opportunity-scout.json",
+        "bytes": 97643,
+        "manifest_sha256": "a4a96fa9da212b562bd066b85e4f1f7a5ed6de1763065e472700a28a49895833",
+        "recomputed_sha256": "a4a96fa9da212b562bd066b85e4f1f7a5ed6de1763065e472700a28a49895833",
+        "match": true
+      },
+      {
+        "file": "verification-receipts.json",
+        "bytes": 196602,
+        "manifest_sha256": "d0175e9cf008dc1393e67867288ea0b98866eb4076f0e56d4cb01e7ca2c21ca4",
+        "recomputed_sha256": "d0175e9cf008dc1393e67867288ea0b98866eb4076f0e56d4cb01e7ca2c21ca4",
+        "match": true
+      }
+    ],
+    "records": 93,
+    "receipts": 89,
+    "rejected_records": 4,
+    "review_gate": "human_or_independent_review_required",
+    "triage_status": "unreviewed_candidates",
+    "execution_scope": "public metadata discovery only; no code execution or automatic promotion"
+  },
+  "latest_timestamp_status": {
+    "last_checked_at": "2026-10-23T17:14:56Z",
+    "integrity_run_id": "39993465496",
+    "integrity_run_url": "https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/39993465496",
+    "artifact_id": 12519181668,
+    "artifact_zip_sha256": "8b076c21d1902ad4e1d5c6a59c900c176303edd2d565c279f7aeec40a64bdde3",
+    "latest_run_proofs_confirmed": false,
+    "latest_run_state": "pending",
+    "bitcoin_block": null,
+    "reason": "calendar has not attached a Bitcoin block attestation yet",
+    "latest_run_timestamp_confirmation_complete": false
+  },
+  "older_confirmed_run": {
+    "run_id": "39903171799",
+    "published_at": "2026-10-23T05:00:17Z",
+    "integrity_run_id": "39993465496",
+    "state": "confirmed",
+    "bitcoin_block": 972716,
+    "header_source": "mempool.space",
+    "confirmation_method": "public-block-header"
+  },
+  "qualifications": [
+    "A successful integrity workflow did not confirm the newest run; it tolerated a pending newest proof inside the grace window because an older run outside the window was confirmed.",
+    "The older run's block confirmation does not transfer to the latest run.",
+    "No post-17:14:56Z recheck for the latest proof was observed in the inspected workflow history.",
+    "Local ots client was unavailable; timestamp status is attributed to the GitHub Actions verifier. Payload hashes were independently recomputed from the retrieved UTF-8 content."
+  ]
+}
