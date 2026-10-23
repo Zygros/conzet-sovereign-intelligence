@@ -387,3 +387,12 @@ The corrected probe was executed by GitHub Actions on source commit `2a23418d758
 
 These runs validate the cited code commit before this evidence-only append. PR #31 remains open and unmerged. No deployment or external anchor is claimed.
 
+## Probe-code commit verification — 2026-10-23
+
+Source/test commit: `12e667487bb2cb0365aeab459d7a40715c83058d`.
+
+- **Phoenix Audit #322** ([run 40014458363](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458363)): `completed / success`; log shows the corrected early-exit probe, no broken-pipe error, no false-negative message executed, and **79 passed in 0.69s** in the root suite.
+- **OmniNet Python CI #263** ([run 40014458405](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458405)): all four Python 3.8–3.11 matrix jobs completed successfully. Each log collected `tests/test_phoenix_audit_probe.py` and ran its four regression assertions.
+- **Known caveats:** the non-blocking Black check still lists `tests/test_phoenix_audit_probe.py` among 89 files it would reformat, while mypy still reports the existing duplicate `conftest` module. These checks are not represented as passing.
+- This is a successful verification of the cited code/test commit. PR #31 remains open and unmerged; no deployment or external anchoring is claimed.
+
