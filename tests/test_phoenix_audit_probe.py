@@ -49,7 +49,7 @@ def test_all_phoenix_audit_workflow_copies_use_early_exit_probe():
 def test_probe_detects_python_source(tmp_path):
     source = tmp_path / "package" / "module.py"
     source.parent.mkdir()
-    source.write_text("VALUE = 1\\n", encoding="utf-8")
+    source.write_text("VALUE = 1\n", encoding="utf-8")
 
     result = _run_probe(_probe_expression(WORKFLOW_PATHS[0]), tmp_path)
 
@@ -59,7 +59,7 @@ def test_probe_detects_python_source(tmp_path):
 
 
 def test_probe_reports_absence_without_python_source(tmp_path):
-    (tmp_path / "README.md").write_text("documentation only\\n", encoding="utf-8")
+    (tmp_path / "README.md").write_text("documentation only\n", encoding="utf-8")
 
     result = _run_probe(_probe_expression(WORKFLOW_PATHS[0]), tmp_path)
 
@@ -71,7 +71,7 @@ def test_probe_reports_absence_without_python_source(tmp_path):
 def test_probe_ignores_python_files_inside_git_metadata(tmp_path):
     git_file = tmp_path / ".git" / "ignored.py"
     git_file.parent.mkdir()
-    git_file.write_text("INTERNAL = True\\n", encoding="utf-8")
+    git_file.write_text("INTERNAL = True\n", encoding="utf-8")
 
     result = _run_probe(_probe_expression(WORKFLOW_PATHS[0]), tmp_path)
 
