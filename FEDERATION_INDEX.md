@@ -23,7 +23,8 @@ Every reader entering from any door finds the whole architecture.
 ## INTELLIGENCE & CAPABILITY
 - [conzetian-skill-lattice](https://github.com/Zygros/conzetian-skill-lattice) — SKILL.md files + permanent-phi-memory
 - [omninet-v4](https://github.com/Zygros/omninet-v4) — κ-Coherence Routing
-- [CONZETIAN-UNIFIED-INTELLIGANCE](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE) — unified intelligence
+- [CONZETIAN-UNIFIED-INTELLIGANCE](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE) — private unified intelligence
+- [CONZETIAN-AI](https://github.com/Zygros/CONZETIAN-AI) — private
 - [CONZETIAN-AI](https://github.com/Zygros/CONZETIAN-AI) — private
 - [conzetian-method](https://github.com/Zygros/conzetian-method) — method framework
 - [conzet-sovereign-intelligence](https://github.com/Zygros/conzet-sovereign-intelligence) — discovery pipeline
@@ -39,7 +40,7 @@ Every reader entering from any door finds the whole architecture.
 ## ARCHIVES & EVIDENCE
 - [omega-10](https://github.com/Zygros/omega-10) — hash chain, Ed25519, HTC bounded
 - [Sovereign-AGSI-Archive](https://github.com/Zygros/Sovereign-AGSI-Archive) — architecture archive, OTS anchoring claims require linked receipts
-- [ZYGROS-PRIME](https://github.com/Zygros/ZYGROS-PRIME) — master archive, Ghost Mode experiment
+- [ZYGROS-PRIME](https://github.com/Zygros/ZYGROS-PRIME) — private master archive, Ghost Mode experiment
 - [Grossian_Scrolls](https://github.com/Zygros/Grossian_Scrolls) — archive & scrolls
 - [ZYGNUS-OMNI-REPO](https://github.com/Zygros/ZYGNUS-OMNI-REPO) — omni-repository
 - [ZAAI-SYSTEM](https://github.com/Zygros/ZAAI-SYSTEM) — intelligence system
@@ -47,10 +48,12 @@ Every reader entering from any door finds the whole architecture.
 - [ARC-AGI](https://github.com/Zygros/ARC-AGI) — reasoning research
 - [Conzet-Intelligence-System-](https://github.com/Zygros/Conzet-Intelligence-System-) — intelligence system
 
-## PRIVATE NODES (3)
+## PRIVATE NODES (5) — visibility observed 2026-10-23
 - [Sovereign-Narrative-Intelligence-SNI-](https://github.com/Zygros/Sovereign-Narrative-Intelligence-SNI-)
 - [sovereign-agsi-portal](https://github.com/Zygros/sovereign-agsi-portal)
 - [CONZETIAN-AI](https://github.com/Zygros/CONZETIAN-AI)
+- [ZYGROS-PRIME](https://github.com/Zygros/ZYGROS-PRIME)
+- [CONZETIAN-UNIFIED-INTELLIGANCE](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE)
 
 ## EVIDENCE POLICY (inherited from omninet-v4)
 Every claim must be labeled:
@@ -84,3 +87,8 @@ This index is a navigation artifact. Its presence does not by itself prove that 
 - Workflow artifact: `phoenix-proof-cycle-receipts`, SHA-256 digest `ef467d6cbc7470679320f50b3875288e408541282a566a9008ca4739245315a3`.
 
 Evidence scope: CI reports successful self-tests, clean-cycle execution, seeded-defect repair/re-verification, and receipt upload. This is local deterministic verification machinery, not proof of external AI execution, Bitcoin/Arweave/OpenTimestamps anchoring, or end-to-end federation connectivity.
+
+
+## LIVE EXECUTION CHECKPOINT — 2026-10-23
+
+- [Repository Visibility and Federation Health Audit](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md) — records the observed 26-node inventory, visibility-aware correction, local regression results, and remote CI evidence boundary.

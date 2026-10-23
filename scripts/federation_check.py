@@ -5,7 +5,7 @@ import urllib.error
 import urllib.request
 
 OWNER = "Zygros"
-REPOS = [
+PUBLIC_REPOS = [
     "sovereign-federation",
     "conzetian-skill-lattice",
     "omega-10",
@@ -16,13 +16,11 @@ REPOS = [
     "ultimate-phoenix-protocol",
     "ultimate-phoenix-protocol-ssi",
     "omninet-v4",
-    "CONZETIAN-UNIFIED-INTELLIGANCE",
     "CZAOUA-UNITY-SYSTEM",
     "we-omega",
     "agents",
     "agentql",
     "Sovereign-AGSI-Archive",
-    "ZYGROS-PRIME",
     "Grossian_Scrolls",
     "ZYGNUS-OMNI-REPO",
     "ZAAI-SYSTEM",
@@ -30,6 +28,20 @@ REPOS = [
     "ARC-AGI",
     "Conzet-Intelligence-System-",
 ]
+
+# Visibility snapshot checked against authenticated GitHub repository metadata on
+# 2026-10-22. Private nodes intentionally are not probed through anonymous HTML GETs.
+PRIVATE_REPOS = [
+    "Sovereign-Narrative-Intelligence-SNI-",
+    "ZYGROS-PRIME",
+    "sovereign-agsi-portal",
+    "CONZETIAN-UNIFIED-INTELLIGANCE",
+    "CONZETIAN-AI",
+]
+
+# Preserve the existing REPOS name for callers while making its public-only scope explicit.
+REPOS = PUBLIC_REPOS
+
 
 def check(repo):
     url = f"https://github.com/{OWNER}/{repo}"
@@ -45,6 +57,7 @@ def check(repo):
     except Exception as exc:
         return "ERROR", str(exc)[:100]
 
+
 def main():
     print(f"Federation check — {datetime.datetime.now(datetime.timezone.utc).isoformat()}\n")
     print(f"{'REPOSITORY':<42} STATUS")
@@ -58,6 +71,7 @@ def main():
     print("-" * 70)
     print(f"{live}/{len(REPOS)} public repository URLs responded successfully.")
     print("A successful HTTP response proves URL reachability only, not code correctness or system health.")
+
 
 if __name__ == "__main__":
     main()
