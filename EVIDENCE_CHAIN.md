@@ -367,3 +367,15 @@ Inspect the corrected-head CI and integrity workflow runs. If hashes pass but OT
 4. Run the Permanent Phi Memory restart/recall/integrity/correction test.
 5. Bind one bounded agent role to an actual runtime and capture a complete dispatch-to-verification receipt before scaling the swarm.
 
+
+
+## Visibility-aware Federation Health correction — 2026-10-23
+
+| Observation | Class | Evidence pointer | Result / qualification |
+|---|---|---|---|
+| Public/private roster correction | IMPLEMENTED | [Source commit](https://github.com/Zygros/conzet-sovereign-intelligence/commit/313df557af99ddde41eafd41e8792c4ec44bb40d) | `PUBLIC_REPOS` and `PRIVATE_REPOS` are separate; legacy `REPOS` remains an alias for the public roster. |
+| Regression checks | TESTED_PENDING_REVIEW | [Regression tests](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/tests/test_federation_check.py) | Three local pytest cases passed with mocked HTTP responses; Python syntax and JSON/index reconciliation checks passed. Remote PR CI remains a separate gate. |
+| Visibility audit | IMPLEMENTED | [Audit record](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md) | 26 inventory nodes observed: 21 public, 5 private. The audit does not assert that all public URLs are currently reachable. |
+| Federation navigation | IMPLEMENTED | [Branch index](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/FEDERATION_INDEX.md) | Private-node count and links updated additively. No change to main until review/merge. |
+
+No external anchor, Bitcoin confirmation, deployment, independent reproduction, or merged-main state is claimed by this entry.
