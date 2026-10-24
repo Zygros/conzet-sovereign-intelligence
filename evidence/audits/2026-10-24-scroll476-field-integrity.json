@@ -1,0 +1,68 @@
+{
+  "schema_version": "conzetian-scroll476-integrity-audit/v1",
+  "observed_date": "2026-10-24",
+  "evidence_class": "REPRODUCED_FIELD_INCONSISTENCY_METADATA_ONLY",
+  "related_issue": "https://github.com/Zygros/conzet-sovereign-intelligence/issues/28",
+  "verification_hash": {
+    "markdown_field": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_field": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_of_empty_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fields_match": true,
+    "equals_empty_payload_sha256": true,
+    "source_files_nonempty_by_metadata_and_extracted_content": true,
+    "hash_scope_explicitly_declared_in_fetched_markdown_or_json": false,
+    "interpretation": "The field is inconsistent if intended to identify either non-empty source file or proposal_text; intended scope remains unresolved."
+  },
+  "source_artifacts": [
+    {
+      "filename": "DAO_Proposal_Scroll476.md",
+      "reported_bytes": 1135,
+      "server_modified": "2025-11-14T06:57:57Z",
+      "extracted_text_characters": 1136,
+      "raw_sha256": null,
+      "raw_sha256_status": "NOT_COMPUTED_TEXT_EXTRACTION_NOT_BYTE_PRESERVING"
+    },
+    {
+      "filename": "DAO_Proposal_Scroll476.json",
+      "reported_bytes": 1201,
+      "server_modified": "2025-11-14T06:46:28Z",
+      "extracted_text_characters": 1202,
+      "raw_sha256": null,
+      "raw_sha256_status": "NOT_COMPUTED_TEXT_EXTRACTION_NOT_BYTE_PRESERVING"
+    }
+  ],
+  "timestamp_proofs": [
+    {
+      "filename": "DAO_Proposal_Scroll476.ots",
+      "reported_bytes": 74,
+      "observed_prefix": "OpenTimestamps placeholder",
+      "state": "PLACEHOLDER_NOT_A_VALID_PROOF",
+      "verified": false
+    },
+    {
+      "filename": "DAO_Proposal_Scroll476.md.ots",
+      "reported_bytes": 514,
+      "observed": "Binary-like extraction includes an OpenTimestamps/Proof header and calendar references.",
+      "state": "PRESENT_UNVERIFIED",
+      "verified": false,
+      "bitcoin_block": null
+    }
+  ],
+  "execution": {
+    "local_download_attempt": "BLOCKED_DNS_TEMPORARY_ENDPOINT_UNRESOLVED",
+    "local_ots_verify": "NOT_RUN",
+    "source_artifacts_modified": false,
+    "production_behavior_changed": false,
+    "regression_tests": {
+      "command": "python -m pytest -q",
+      "result": "4 passed",
+      "scope": "Synthetic local fixtures for field inconsistency, placeholder detection, unverified proof candidates, and the SHA-256 empty-byte test vector. Not a raw-byte test of the Dropbox source files."
+    }
+  },
+  "required_follow_up": [
+    "Obtain exact raw bytes through a byte-preserving retrieval path.",
+    "Choose and document the canonical hash scope before correcting hash fields.",
+    "Create a new proof for the agreed bytes while retaining historical files.",
+    "Verify the proof and record raw output plus Bitcoin block height; do not infer confirmation from file presence."
+  ]
+}
