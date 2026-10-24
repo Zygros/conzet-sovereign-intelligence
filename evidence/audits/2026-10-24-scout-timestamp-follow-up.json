@@ -1,0 +1,83 @@
+{
+  "schema_version": "conzetian-scout-timestamp-follow-up/v1",
+  "evidence_class": "VERIFIED_BY_REMOTE_WORKFLOW",
+  "observed_at": "2026-10-24T20:04:48Z",
+  "scout_run": {
+    "run_id": 40109587547,
+    "run_url": "https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109587547",
+    "published_at": "2026-10-24T16:01:59Z",
+    "source_commit": "a9fa362edfcd1c5a8b77d7742df3c33d9d0a1bea",
+    "counts": {
+      "discovery_records": 100,
+      "receipts": 97,
+      "rejected_records": 3,
+      "receipts_pending_independent_review": 97,
+      "claims_verified_true": 0,
+      "source_content_fetched_true": 0,
+      "discovered_code_executed_true": 0
+    },
+    "payloads": [
+      {
+        "file": "opportunity-scout.json",
+        "bytes": 102319,
+        "manifest_sha256": "2ca43c08601cac4aa3171c0c97272d9da474f8e9a7ac31cc41ec2f0c15e9e602",
+        "recomputed_sha256": "2ca43c08601cac4aa3171c0c97272d9da474f8e9a7ac31cc41ec2f0c15e9e602",
+        "matches_manifest": true
+      },
+      {
+        "file": "verification-receipts.json",
+        "bytes": 214384,
+        "manifest_sha256": "68b97a14b45374d257a9ddb5ef9083857970e0d6ba65e5f2f7d27a78cc83f0c2",
+        "recomputed_sha256": "68b97a14b45374d257a9ddb5ef9083857970e0d6ba65e5f2f7d27a78cc83f0c2",
+        "matches_manifest": true
+      }
+    ]
+  },
+  "integrity_workflow": {
+    "run_id": 40109682679,
+    "run_url": "https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679",
+    "job_id": 120973919288,
+    "observed_at": "2026-10-24T20:04:48Z",
+    "result": "pass",
+    "exit_code": 0,
+    "timestamp_confirmation_complete": true,
+    "bitcoin_node": "not configured; verifier read public block headers from explorer APIs",
+    "timestamp_proofs": [
+      {
+        "file": "manifest.sha256.ots",
+        "target_file": "manifest.sha256",
+        "present": true,
+        "confirmed": true,
+        "state": "confirmed",
+        "bitcoin_block": 972947,
+        "header_source": "mempool.space",
+        "confirmation_method": "public-block-header",
+        "client_exit_code": 0
+      },
+      {
+        "file": "verification-receipts.json.ots",
+        "target_file": "verification-receipts.json",
+        "present": true,
+        "confirmed": true,
+        "state": "confirmed",
+        "bitcoin_block": 972947,
+        "header_source": "mempool.space",
+        "confirmation_method": "public-block-header",
+        "client_exit_code": 0
+      }
+    ],
+    "artifact": {
+      "name": "published-evidence-verification.zip",
+      "id": 12574345151,
+      "bytes": 1050,
+      "sha256": "aa2df1f4bc427b605c4917841f76ef53104f077e32253ab177d75596c0615a50",
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679/artifacts/12574345151"
+    }
+  },
+  "limitations": [
+    "Timestamp confirmation applies to the specific published manifest and receipt JSON for Scout run 40109587547.",
+    "Hash and timestamp confirmation do not establish semantic truth of candidate claims.",
+    "No candidate promotion or independent review is claimed.",
+    "The earlier pending checkpoint remains preserved as a historical observation."
+  ]
+}
