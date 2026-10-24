@@ -432,3 +432,19 @@ Source/test commit: `12e667487bb2cb0365aeab459d7a40715c83058d`.
 - **Reproducible report:** [Scout integrity audit](evidence/audits/2026-10-23-scout-evidence-integrity.md) and [machine-readable result](evidence/audits/2026-10-23-scout-evidence-integrity.json) preserve hashes, lengths, run IDs, verification state, and qualifiers.
 
 No current/latest-run Bitcoin confirmation is claimed. No deployment or candidate promotion is claimed.
+
+## Scout evidence-integrity checkpoint — observed 2026-10-24
+
+**Class:** `TESTED_PENDING_REVIEW`  
+**Latest publication observed:** [Scout run 40109587547](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109587547), published at `2026-10-24T16:01:59Z` from source commit `a9fa362edfcd1c5a8b77d7742df3c33d9d0a1bea`.
+
+- Independent SHA-256 recomputation of the exact published content matched the manifest for [`opportunity-scout.json`](https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/40109587547/opportunity-scout.json): 102,319 bytes, `2ca43c08601cac4aa3171c0c97272d9da474f8e9a7ac31cc41ec2f0c15e9e602`.
+- The same check matched [`verification-receipts.json`](https://github.com/Zygros/conzet-sovereign-intelligence/blob/evidence/scout/runs/40109587547/verification-receipts.json): 214,384 bytes, `68b97a14b45374d257a9ddb5ef9083857970e0d6ba65e5f2f7d27a78cc83f0c2`.
+- Counts reconcile: **100 records, 97 receipts, 3 rejections**. All 97 receipts remain `pending_independent_review`; each has `claims_verified=false`, `source_content_fetched=false`, and `discovered_code_executed=false`. The candidates are not promoted.
+- [Published Evidence Integrity run 40109682679](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679) returned success but its log at `2026-10-24T16:02:20Z` explicitly reported both proofs for run 40109587547 as **pending Bitcoin confirmation**, with no Bitcoin block. It separately reported older run 40063447250 confirmed at block **972879**. The older proof does not anchor the newest run; the workflow success reflects fallback/grace-window behavior.
+- The local runtime did not have `ots` installed and could not resolve GitHub's raw file host. The timestamp state is therefore scoped to the cited remote log, with no fresh local proof verification claimed.
+
+**Reproducible artifacts:** [Markdown audit](evidence/audits/2026-10-24-scout-evidence-integrity.md) and [machine-readable JSON](evidence/audits/2026-10-24-scout-evidence-integrity.json).
+
+No latest-run Bitcoin confirmation, candidate promotion, deployment, or semantic validation of candidate claims is claimed.
+
