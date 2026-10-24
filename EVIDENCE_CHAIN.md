@@ -448,3 +448,13 @@ No current/latest-run Bitcoin confirmation is claimed. No deployment or candidat
 
 No latest-run Bitcoin confirmation, candidate promotion, deployment, or semantic validation of candidate claims is claimed.
 
+
+
+## Scroll 476 field-integrity correction record — 2026-10-24
+
+- **Finding:** the paired Dropbox proposal Markdown and JSON both contain the digest e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, which is SHA-256 of zero bytes, while both source artifacts are non-empty. The intended hash scope is not explicit in the fetched files, so this record does not assume whether the field should identify the Markdown file, JSON file, or proposal text.
+- **Receipt classification:** DAO_Proposal_Scroll476.ots is a 74-byte placeholder whose extracted prefix is "OpenTimestamps placeholder"; do not count it as an OTS proof or anchor. A separate 514-byte DAO_Proposal_Scroll476.md.ots file is present as an unverified proof candidate, not a confirmed timestamp.
+- **Retrieval boundary:** Dropbox text extraction returned 1,136 characters for the 1,135-byte Markdown and 1,202 characters for the 1,201-byte JSON; this execution could not resolve the short-lived download endpoint. Raw-source SHA-256 values and ots verify output are therefore **not recorded**. No Bitcoin block is claimed.
+- **Additive implementation:** scripts/audit_scroll476_integrity.py computes hashes on exact local bytes, reports field/scope inconsistencies, distinguishes placeholder receipts from unverified OTS candidates, and refuses to overwrite an existing output. tests/test_scroll476_integrity.py adds four fixture regressions.
+- **Machine-readable record:** [Scroll 476 field-integrity audit](evidence/audits/2026-10-24-scroll476-field-integrity.json); [human-readable report](evidence/audits/2026-10-24-scroll476-field-integrity.md); related [issue #28](https://github.com/Zygros/conzet-sovereign-intelligence/issues/28).
+- **Status:** REPRODUCED_FIELD_INCONSISTENCY_METADATA_ONLY. Exact raw-byte reproduction and timestamp verification remain pending a byte-preserving source retrieval path; original Dropbox files were not modified.
