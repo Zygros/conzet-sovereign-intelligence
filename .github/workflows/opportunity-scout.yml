@@ -41,7 +41,7 @@ jobs:
 
       - name: Generate metadata-only duplicate-signal audit
         run: |
-          python scripts/scout_duplicate_audit.py scout-output/opportunity-scout.json \\
+          python scripts/scout_duplicate_audit.py scout-output/opportunity-scout.json \
             --output scout-output/duplicate-signal-audit.json
 
       - name: Generate review-pending provenance receipts
