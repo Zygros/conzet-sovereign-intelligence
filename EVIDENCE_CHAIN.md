@@ -448,3 +448,23 @@ No current/latest-run Bitcoin confirmation is claimed. No deployment or candidat
 
 No latest-run Bitcoin confirmation, candidate promotion, deployment, or semantic validation of candidate claims is claimed.
 
+
+
+## Scroll 476 field-integrity correction record — 2026-10-24
+
+- **Finding:** the paired Dropbox proposal Markdown and JSON both contain the digest e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, which is SHA-256 of zero bytes, while both source artifacts are non-empty. The intended hash scope is not explicit in the fetched files, so this record does not assume whether the field should identify the Markdown file, JSON file, or proposal text.
+- **Receipt classification:** DAO_Proposal_Scroll476.ots is a 74-byte placeholder whose extracted prefix is "OpenTimestamps placeholder"; do not count it as an OTS proof or anchor. A separate 514-byte DAO_Proposal_Scroll476.md.ots file is present as an unverified proof candidate, not a confirmed timestamp.
+- **Retrieval boundary:** Dropbox text extraction returned 1,136 characters for the 1,135-byte Markdown and 1,202 characters for the 1,201-byte JSON; this execution could not resolve the short-lived download endpoint. Raw-source SHA-256 values and ots verify output are therefore **not recorded**. No Bitcoin block is claimed.
+- **Additive implementation:** scripts/audit_scroll476_integrity.py computes hashes on exact local bytes, reports field/scope inconsistencies, distinguishes placeholder receipts from unverified OTS candidates, and refuses to overwrite an existing output. tests/test_scroll476_integrity.py adds four fixture regressions.
+- **Machine-readable record:** [Scroll 476 field-integrity audit](evidence/audits/2026-10-24-scroll476-field-integrity.json); [human-readable report](evidence/audits/2026-10-24-scroll476-field-integrity.md); related [issue #28](https://github.com/Zygros/conzet-sovereign-intelligence/issues/28).
+- **Status:** REPRODUCED_FIELD_INCONSISTENCY_METADATA_ONLY. Exact raw-byte reproduction and timestamp verification remain pending a byte-preserving source retrieval path; original Dropbox files were not modified.
+
+
+## Fresh Scout timestamp confirmation — observed 2026-10-24T20:04:48Z
+
+- **Recheck performed:** reran verification job 120973919288 in [Published Evidence Integrity run 40109682679](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679). The completed log reports `result=pass`, exit code 0, and `timestamp_confirmation_complete=true`.
+- **Proof confirmation:** both `manifest.sha256.ots` and `verification-receipts.json.ots` were `confirmed` at Bitcoin block **972947**. The verifier fetched the public block header from `mempool.space` and validated the OpenTimestamps attestation against that header.
+- **Payload identity:** `opportunity-scout.json` (102,319 bytes) matched SHA-256 `2ca43c08601cac4aa3171c0c97272d9da474f8e9a7ac31cc41ec2f0c15e9e602`; `verification-receipts.json` (214,384 bytes) matched SHA-256 `68b97a14b45374d257a9ddb5ef9083857970e0d6ba65e5f2f7d27a78cc83f0c2`. Both match the published manifest.
+- **Raw report artifact:** Actions uploaded `published-evidence-verification.zip`, artifact 12574345151, 1,050 bytes; ZIP SHA-256 `aa2df1f4bc427b605c4917841f76ef53104f077e32253ab177d75596c0615a50` ([artifact link](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679/artifacts/12574345151)).
+- **Scope remains bounded:** the Scout publication contains 100 discovery records, 97 receipts, and 3 rejections. All 97 receipts remain pending independent review; source claims are not marked verified, candidate source content was not fetched by the Scout, and discovered code was not executed. No candidate promotion or semantic validation is claimed.
+- **Append-only correction:** this fresh result supersedes the earlier `2026-10-24T16:02:20Z` pending-proof observation for run 40109587547. That historical observation remains preserved. See the [timestamp follow-up report](evidence/audits/2026-10-24-scout-timestamp-follow-up.md) and [machine-readable result](evidence/audits/2026-10-24-scout-timestamp-follow-up.json).
