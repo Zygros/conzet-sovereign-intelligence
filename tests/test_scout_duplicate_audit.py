@@ -64,6 +64,27 @@ class ScoutDuplicateAuditTests(unittest.TestCase):
         ]})
         self.assertEqual(report["summary"]["same_github_slug_and_long_description_groups"], 1)
 
+    def test_arxiv_summary_matches_github_description(self):
+        report = audit_document({"records": [
+            {
+                "title": "GitHub project",
+                "url": "https://github.com/owner/repo",
+                "description": LONG_DESCRIPTION,
+            },
+            {
+                "title": "arXiv paper",
+                "url": "https://arxiv.org/abs/2601.01234",
+                "summary": LONG_DESCRIPTION.upper(),
+            },
+        ]})
+        self.assertEqual(report["summary"]["identical_long_description_groups"], 1)
+        group = next(
+            item for item in report["signals"]
+            if item["signal_type"] == "identical_long_description"
+        )
+        self.assertEqual(group["classification"], "REVIEW_SIGNAL_ONLY")
+        self.assertEqual(group["record_count"], 2)
+
     def test_short_generic_descriptions_are_not_flagged(self):
         report = audit_document({"records": [
             {"title": "A", "url": "https://example.test/a", "description": "AI agent tools"},
