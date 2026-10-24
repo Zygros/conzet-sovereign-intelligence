@@ -143,8 +143,16 @@ def audit_document(document: Dict[str, Any]) -> Dict[str, Any]:
         "Two or more records have the same case/punctuation/whitespace-normalized title.",
     )
 
+    def _description_text(record: Dict[str, Any]) -> str:
+        """Use description when present; fall back to summary for arXiv-style records."""
+        description = record.get("description")
+        if isinstance(description, str) and description.strip():
+            return description
+        summary = record.get("summary")
+        return summary if isinstance(summary, str) else ""
+
     def long_description_key(record: Dict[str, Any], _index: int) -> Optional[str]:
-        description = normalize_text(record.get("description"))
+        description = normalize_text(_description_text(record))
         if len(description) < MIN_LONG_DESCRIPTION_CHARS:
             return None
         if len(description.split()) < MIN_LONG_DESCRIPTION_WORDS:
@@ -161,7 +169,7 @@ def audit_document(document: Dict[str, Any]) -> Dict[str, Any]:
     slug_groups: Dict[str, List[Tuple[int, Dict[str, Any], str, str]]] = {}
     for index, record in enumerate(records):
         identity = _repo_identity(record.get("url"))
-        description = normalize_text(record.get("description"))
+        description = normalize_text(_description_text(record))
         if not identity or len(description) < MIN_LONG_DESCRIPTION_CHARS:
             continue
         if len(description.split()) < MIN_LONG_DESCRIPTION_WORDS:
