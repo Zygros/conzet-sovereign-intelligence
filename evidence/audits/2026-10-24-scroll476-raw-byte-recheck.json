@@ -1,0 +1,73 @@
+{
+  "schema_version": "conzetian-scroll476-raw-byte-recheck/v1",
+  "observed_at": "2026-10-24T20:17:25Z",
+  "evidence_class": "RAW_BYTES_RETRIEVED_AND_PROVIDER_HASH_MATCHED",
+  "status": "CORRECTION_REQUIRED_EMPTY_PAYLOAD_DIGEST_ON_NONEMPTY_ARTIFACTS",
+  "related_issue": "https://github.com/Zygros/conzet-sovereign-intelligence/issues/28",
+  "retrieval": {
+    "method": "single-use Dropbox download URLs fetched through remote HTTP GET",
+    "http_status_for_all_files": 200,
+    "byte_lengths_match_dropbox_metadata": true,
+    "provider_content_hashes_recomputed_and_matched": true,
+    "source_contents_published_to_github": false,
+    "original_dropbox_files_modified": false
+  },
+  "source_artifacts": [
+    {
+      "filename": "DAO_Proposal_Scroll476.md",
+      "bytes": 1135,
+      "raw_sha256": "27f16d5d0910765997de7c0acd47b1ef5f6348e65727d463415bf6a7fe139e8c",
+      "dropbox_content_hash": "67f3fe9f3b2acd5cccaec3e50ed30f17d6f8f34f032ee75608025818202e6ec2",
+      "provider_hash_match": true
+    },
+    {
+      "filename": "DAO_Proposal_Scroll476.json",
+      "bytes": 1201,
+      "raw_sha256": "903db7de3539ea1dc5525b8b055fdf103b40f6b5002b3af2c494c1542b12d6b6",
+      "dropbox_content_hash": "043af00609e651e3051add756a034f19c60d3b21202535683e8593b04b621e6f",
+      "provider_hash_match": true
+    },
+    {
+      "filename": "DAO_Proposal_Scroll476.ots",
+      "bytes": 74,
+      "raw_sha256": "907573c5633e2ff313b6e015fc3b0c1f23e816ea41327b3c3024440abfc2932c",
+      "dropbox_content_hash": "4746cdcaf932d0b899ee0ceb2255f69dec84924b6d8de042e921a364d4d9a396",
+      "provider_hash_match": true,
+      "state": "PLACEHOLDER_NOT_A_VALID_PROOF"
+    },
+    {
+      "filename": "DAO_Proposal_Scroll476.md.ots",
+      "bytes": 514,
+      "raw_sha256": "d72caf277897ec70b3b048836303b78d5aecb8e33b857f14eb64cf7b7ac2f745",
+      "dropbox_content_hash": "02403030efab22d97245fba92f0cbfadc4833aba8154d3083b55725dd8dd9498",
+      "provider_hash_match": true,
+      "header": "OpenTimestamps/Proof binary header",
+      "state": "OTS_FORMAT_CANDIDATE_UNVERIFIED",
+      "ots_verify_run": false,
+      "bitcoin_block": null
+    }
+  ],
+  "verification_hash_fields": {
+    "markdown_value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_of_empty_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches_markdown_sha256": false,
+    "matches_json_sha256": false,
+    "json_proposal_text_utf8_sha256": "de4fba0451259d1fd35b1a9323bde63db79d932695c124f47c3c87acb77fa03e",
+    "matches_proposal_text_sha256": false,
+    "hash_scope_declared": false
+  },
+  "tests": {
+    "command": "python -m pytest -q",
+    "result": "4 passed",
+    "py_compile": "pass",
+    "audit_run_on_exact_source_bytes": "CORRECTION_REQUIRED_EMPTY_PAYLOAD_DIGEST_ON_NONEMPTY_ARTIFACTS"
+  },
+  "limits": [
+    "The existing .md.ots candidate has not been run through ots verify in this execution.",
+    "The local opentimestamps-client installation attempt failed on DNS resolution for the package index.",
+    "The remote verification attempt could not start because the Firecrawl execution service reached its concurrent-job limit.",
+    "No Bitcoin block confirmation for Scroll 476 is claimed.",
+    "The intended hash scope remains unresolved; no corrected value was written into the original files."
+  ]
+}

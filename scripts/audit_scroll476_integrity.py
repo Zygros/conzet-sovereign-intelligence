@@ -38,7 +38,7 @@ def _proof_status(path_text: Optional[str]) -> Dict[str, Any]:
     data = path.read_bytes()
     if data.startswith(b"OpenTimestamps placeholder"):
         state = "PLACEHOLDER_NOT_A_VALID_PROOF"
-    elif data.startswith(b"\x00OpenTimestamps\x00Proof"):
+    elif data.startswith(b"\x00OpenTimestamps\x00\x00Proof") or data.startswith(b"\x00OpenTimestamps\x00Proof"):
         state = "OTS_FORMAT_CANDIDATE_UNVERIFIED"
     else:
         state = "PRESENT_UNVERIFIED_FORMAT_UNKNOWN"
