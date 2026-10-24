@@ -42,7 +42,7 @@ def test_placeholder_receipt_is_never_counted_as_proof(tmp_path):
 def test_ots_header_candidate_is_still_unverified(tmp_path):
     markdown, payload = _fixture(tmp_path)
     candidate = tmp_path / "candidate.ots"
-    candidate.write_bytes(b"\x00OpenTimestamps\x00Proof\x00fixture")
+    candidate.write_bytes(b"\x00OpenTimestamps\x00\x00Proof\x00fixture")
     report = audit(str(markdown), str(payload), candidate_proof_path=str(candidate))
     proof = report["timestamp_proofs"]["markdown_receipt_candidate"]
     assert proof["state"] == "OTS_FORMAT_CANDIDATE_UNVERIFIED"
