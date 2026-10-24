@@ -2,8 +2,10 @@ name: Sovereign Opportunity Scout
 
 on:
   push:
+    branches: [main]
     paths:
       - "scripts/opportunity_scout.py"
+      - "scripts/scout_duplicate_audit.py"
       - "scripts/scout_verifier.py"
       - "scripts/a2a_envelope.py"
       - ".github/workflows/opportunity-scout.yml"
@@ -37,15 +39,20 @@ jobs:
           SCOUT_OUTPUT: scout-output
         run: python scripts/opportunity_scout.py
 
+      - name: Generate metadata-only duplicate-signal audit
+        run: |
+          python scripts/scout_duplicate_audit.py scout-output/opportunity-scout.json \\
+            --output scout-output/duplicate-signal-audit.json
+
       - name: Generate review-pending provenance receipts
         run: |
           python scripts/scout_verifier.py scout-output/opportunity-scout.json \
             --output scout-output/verification-receipts.json
 
-      - name: Hash discovery and receipt evidence
+      - name: Hash discovery, duplicate-signal, and receipt evidence
         run: |
           cd scout-output
-          sha256sum opportunity-scout.json verification-receipts.json > manifest.sha256
+          sha256sum opportunity-scout.json verification-receipts.json duplicate-signal-audit.json > manifest.sha256
           cat manifest.sha256
 
       - name: Upload discovery and receipt evidence
@@ -55,6 +62,7 @@ jobs:
           path: |
             scout-output/opportunity-scout.json
             scout-output/verification-receipts.json
+            scout-output/duplicate-signal-audit.json
             scout-output/manifest.sha256
           if-no-files-found: error
           retention-days: 30
@@ -121,6 +129,7 @@ jobs:
           mkdir -p "$DEST"
           cp incoming/opportunity-scout.json "$DEST/"
           cp incoming/verification-receipts.json "$DEST/"
+          cp incoming/duplicate-signal-audit.json "$DEST/"
           cp incoming/manifest.sha256 "$DEST/"
           for stamp in incoming/*.ots; do
             if [ -f "$stamp" ]; then cp "$stamp" "$DEST/"; fi
