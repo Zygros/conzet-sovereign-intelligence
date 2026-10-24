@@ -32,10 +32,10 @@ The additive read-only helper `scripts/audit_scroll476_integrity.py` now compute
 With exact local copies of the original files, run:
 
 ```bash
-python scripts/audit_scroll476_integrity.py \\
-  /path/to/DAO_Proposal_Scroll476.md \\
-  /path/to/DAO_Proposal_Scroll476.json \\
-  --placeholder-proof /path/to/DAO_Proposal_Scroll476.ots \\
+python scripts/audit_scroll476_integrity.py \
+  /path/to/DAO_Proposal_Scroll476.md \
+  /path/to/DAO_Proposal_Scroll476.json \
+  --placeholder-proof /path/to/DAO_Proposal_Scroll476.ots \
   --candidate-proof /path/to/DAO_Proposal_Scroll476.md.ots
 ```
 
