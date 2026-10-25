@@ -69,7 +69,9 @@ jobs:
 
   publish-evidence:
     needs: discover
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+    # Publication is restricted to the reviewed default branch. Manual dispatches
+    # from feature branches may generate review artifacts but cannot publish them.
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
