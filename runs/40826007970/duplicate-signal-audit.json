@@ -1,0 +1,25 @@
+{
+  "input_generated_at": "2026-10-29T05:54:43.578614+00:00",
+  "input_record_count": 99,
+  "limitations": [
+    "A duplicate signal is not proof of malicious intent, infringement, or claim truth.",
+    "The audit uses source metadata only; it does not fetch README files, git blobs, trees, or source code.",
+    "No record is deleted, rejected, executed, or automatically promoted by this audit.",
+    "Content-clone detection requires separately captured and reviewable source evidence."
+  ],
+  "result_class": "REVIEW_SIGNAL_ONLY",
+  "schema_version": "scout-duplicate-signal-audit/v1",
+  "scope": "public metadata only; no source fetching or code execution",
+  "signals": [],
+  "summary": {
+    "canonical_url_duplicate_groups": 0,
+    "exact_url_duplicate_groups": 0,
+    "identical_long_description_groups": 0,
+    "normalized_title_duplicate_groups": 0,
+    "records_scanned": 99,
+    "same_github_slug_and_long_description_groups": 0,
+    "signal_group_count": 0,
+    "signal_groups_by_type": {},
+    "unique_records_in_signal_groups": 0
+  }
+}
