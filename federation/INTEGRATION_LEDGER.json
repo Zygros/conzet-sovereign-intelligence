@@ -1,0 +1,33 @@
+{
+  "ledger_id": "SF-INTEGRATION-v0.1",
+  "prime_sovereign": "Justin Neal Thomas Conzet",
+  "protocol": "Always Add · Never Take · Zero Friction",
+  "integrated_at": "2026-08-18T02:49:00Z",
+  "scope_truth": {
+    "this_thread": "FULLY_INTEGRATED",
+    "local_artifact_files": "FULLY_INDEXED",
+    "github_account_repos": "FULLY_INDEXED_19",
+    "other_chat_threads_archived": "NOT_ACCESSIBLE_TO_THIS_AGENT",
+    "note": "Cross-thread and platform-archived conversations are not readable unless re-supplied."
+  },
+  "conversation_arc_this_thread": [
+    {"phase": 1, "title": "OMEGA-10 v0.1 Evidence Substrate implementation"},
+    {"phase": 2, "title": "Full GitHub audit + friction map"},
+    {"phase": 3, "title": "Additive unification + HTC + stress"},
+    {"phase": 4, "title": "Perfection campaign + protocol harvest"},
+    {"phase": 5, "title": "Execute deferred gaps (publish federation, partial omega-10 push, merge ws PR)"},
+    {"phase": 6, "title": "Sovereign decree acknowledgment"},
+    {"phase": 7, "title": "Integrate history + files (this ledger)"}
+  ],
+  "github_repos_count": 19,
+  "local_workspaces": {
+    "omega-10": "/home/workdir/artifacts/omega-10",
+    "sovereign-federation": "/home/workdir/artifacts/sovereign-federation"
+  },
+  "invariants": [
+    "Always Add Never Take",
+    "No deletion of repos or history",
+    "HTC local-only",
+    "No claim of access to unreachable archived chat threads"
+  ]
+}

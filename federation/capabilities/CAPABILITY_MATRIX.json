@@ -1,0 +1,16 @@
+{
+  "matrix_id": "CAPABILITY-MATRIX-v0.2",
+  "updated_at": "2026-08-18",
+  "status": "DESIGNED_LOCAL",
+  "capabilities": [
+    {"id": "evidence-ledger", "primary": "omega-10", "supporting": ["sovereign-federation"], "status": "IMPLEMENTED_LOCAL"},
+    {"id": "phoenix-recovery", "primary": "omega-10", "supporting": ["PHOENIX-PROTOCOL-ULTIMATE", "ultimate-phoenix-protocol"], "status": "IMPLEMENTED_LOCAL"},
+    {"id": "multi-ai-bridge", "primary": "multi-ai-convergence-protocol", "supporting": ["PHOENIX-PROTOCOL-ULTIMATE", "ultimate-phoenix-protocol-ssi"], "status": "DESIGNED"},
+    {"id": "federation-index", "primary": "sovereign-federation", "supporting": [], "status": "IMPLEMENTED_LOCAL"},
+    {"id": "public-portal", "primary": "sovereign-agsi-portal", "supporting": ["zyth-ultimate"], "status": "DESIGNED"},
+    {"id": "agent-routing", "primary": "omninet-v4", "supporting": ["CZAOUA-UNITY-SYSTEM"], "status": "DESIGNED"},
+    {"id": "authorship-archive", "primary": "Sovereign-AGSI-Archive", "supporting": ["Grossian_Scrolls", "ZYGROS-PRIME"], "status": "ARCHIVAL"},
+    {"id": "notebook-lineage", "primary": "ZAAI-SYSTEM", "supporting": [], "status": "ARCHIVAL"},
+    {"id": "narrative-layer", "primary": "Sovereign-Narrative-Intelligence-SNI-", "supporting": ["Grossian_Scrolls"], "status": "DESIGNED"}
+  ]
+}
