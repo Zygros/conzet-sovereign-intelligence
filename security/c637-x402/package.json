@@ -1,0 +1,11 @@
+{
+  "name": "c637-fail-closed-x402-reference",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
