@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# Logs
+*.log
+*.pyc
+.venv/
+.env.*
+.splus-runtime/
