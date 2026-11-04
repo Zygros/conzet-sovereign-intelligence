@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "a2a_task_envelope_and_action_receipt_contract_revalidation",
+  "recorded_at": "2026-11-04T19:46:05Z",
+  "evidence_class": "TESTED_ON_GITHUB_ACTIONS",
+  "repository": "Zygros/conzet-sovereign-intelligence",
+  "revision": {
+    "branch": "main",
+    "commit": "66c26079e3e659dcdb4acebbd44a1d95bca6c7bc"
+  },
+  "workflows": [
+    {
+      "name": "OmniNet Python CI",
+      "run_id": 41712020856,
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41712020856",
+      "jobs": [
+        {
+          "python": "3.8",
+          "job_id": 126182235512,
+          "status": "completed",
+          "conclusion": "success",
+          "full_pytest_passed": 100
+        },
+        {
+          "python": "3.9",
+          "job_id": 126182235050,
+          "status": "completed",
+          "conclusion": "success",
+          "full_pytest_passed": 100
+        },
+        {
+          "python": "3.10",
+          "job_id": 126182234694,
+          "status": "completed",
+          "conclusion": "success",
+          "full_pytest_passed": 100
+        },
+        {
+          "python": "3.11",
+          "job_id": 126182235266,
+          "status": "completed",
+          "conclusion": "success",
+          "full_pytest_passed": 100
+        }
+      ]
+    },
+    {
+      "name": "Phoenix Audit",
+      "run_id": 41712020994,
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41712020994",
+      "jobs": [
+        {
+          "name": "audit",
+          "job_id": 126182235093,
+          "status": "completed",
+          "conclusion": "success",
+          "python_source_probe_entered": true,
+          "root_pytest_passed": 100
+        }
+      ]
+    }
+  ],
+  "contract_tests": [
+    {
+      "path": "tests/test_a2a_envelope.py",
+      "passed": 7
+    },
+    {
+      "path": "tests/test_a2a_http_roundtrip.py",
+      "passed": 1
+    },
+    {
+      "path": "tests/test_a2a_roundtrip_acceptance.py",
+      "passed": 2
+    },
+    {
+      "path": "tests/test_execution_receipts.py",
+      "passed": 6
+    }
+  ],
+  "additional_targeted_suites": [
+    {
+      "path": "tests/test_cis_verification_harness.py",
+      "passed": 9
+    },
+    {
+      "path": "tests/test_conzetian_formula_regression.py",
+      "passed": 5
+    },
+    {
+      "paths": [
+        "tests/test_plugin_trust_policy.py",
+        "tests/test_maia_plugin_trust_integration.py"
+      ],
+      "passed": 9
+    }
+  ],
+  "hygiene": {
+    "black_check": "non_blocking_warning",
+    "files_reported_for_reformat": [
+      "tests/test_a2a_envelope.py",
+      "tests/test_a2a_http_roundtrip.py",
+      "tests/test_a2a_roundtrip_acceptance.py",
+      "tests/test_execution_receipts.py"
+    ],
+    "repository_wide_formatting_clean": false
+  },
+  "boundaries": [
+    "GitHub-hosted CI at the pinned main revision only.",
+    "The HTTP round-trip is localhost fixture traffic.",
+    "No live remote A2A, external-model authentication, production deployment, or provider credential use is established.",
+    "Receipt validation is structural; it does not authenticate external evidence or prove an action occurred."
+  ]
+}
