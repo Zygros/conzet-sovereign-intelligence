@@ -478,3 +478,15 @@ No latest-run Bitcoin confirmation, candidate promotion, deployment, or semantic
 - **Proof classification:** the 74-byte .ots is a literal placeholder and is not a proof. The 514-byte .md.ots begins with the serialized OpenTimestamps/Proof header; the helper now classifies it as `OTS_FORMAT_CANDIDATE_UNVERIFIED`, never as confirmed based only on presence/header.
 - **Verification boundary:** the exact bytes are now reconciled to Dropbox's provider hashes, but `ots verify` was not run. Local installation of opentimestamps-client failed because the package-index host did not resolve, and the attempted remote verification call hit the Firecrawl concurrent-job cap. No Bitcoin block for Scroll 476 is claimed.
 - **Additive report:** [raw-byte recheck Markdown](evidence/audits/2026-10-24-scroll476-raw-byte-recheck.md) and [machine-readable result](evidence/audits/2026-10-24-scroll476-raw-byte-recheck.json). This supplements rather than rewrites the earlier metadata-only report; the original Dropbox files are unchanged.
+
+
+## A2A task-envelope and action-receipt contract revalidation — 2026-11-04
+
+- **Source revision:** `66c26079e3e659dcdb4acebbd44a1d95bca6c7bc` on `main`.
+- **OmniNet Python CI:** [run 41712020856](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41712020856) completed successfully across Python 3.8, 3.9, 3.10, and 3.11. Each matrix job ran the full `PYTHONPATH=. pytest` suite: **100 passed** in each version.
+- **Contract cases observed in the logs:** `test_a2a_envelope.py` 7; `test_a2a_http_roundtrip.py` 1; `test_a2a_roundtrip_acceptance.py` 2; `test_execution_receipts.py` 6. The test modules were collected and passed in all four matrix jobs.
+- **Phoenix Audit:** [run 41712020994](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41712020994) completed successfully. Its log shows the corrected Python-source probe entering the audit and the root suite reporting **100 passed**.
+- **Additional targeted suites:** CIS verification harness 9 passed; formula regression 5 passed; plugin trust-policy integration 9 passed.
+- **Hygiene warning:** Black reported four A2A/receipt test modules would be reformatted. The workflow completed successfully; this is a non-blocking formatting warning, not a clean formatting result.
+- **Boundary:** the HTTP round-trip uses localhost fixtures. These tests do not prove live remote A2A connectivity, external-model authentication, deployment, provider credentials, or third-party reproduction. Receipt validation remains structural and does not authenticate external evidence or prove an external action occurred.
+- **Additive records:** [human-readable report](evidence/audits/2026-11-04-a2a-receipt-contract-revalidation.md) and [machine-readable JSON](evidence/audits/2026-11-04-a2a-receipt-contract-revalidation.json).
