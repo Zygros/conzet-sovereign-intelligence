@@ -1,0 +1,1 @@
+{"id": "OMEGA-10", "title": "Evidence Substrate Release", "status": "DESIGNED", "summary": "Packaged system with tests, CI, packaging, local demonstration.", "uncertainty": "Local implementation; remote push partial; not independently reproduced.", "claims": ["OMEGA-10 is designed and locally implemented under controlled conditions."], "evidence_links": [], "version": "0.1"}
