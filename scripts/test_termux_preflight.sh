@@ -58,7 +58,7 @@ pass() { printf 'PASS: %s\n' "$1"; }
 
 # Help and invalid arguments must not create the evidence directory.
 help_output="$(bash "$ROOT/scripts/termux_preflight.sh" --help)"
-[[ "$help_output" == *"Safe by default"* ]] || fail "help output omitted the safety boundary"
+[[ "$help_output" == *"never clones repositories"* ]] || fail "help output omitted the safety boundary"
 [[ ! -e "$HOME/conzetian-execution" ]] || fail "help path created the project directory"
 pass "help path is side-effect free"
 
