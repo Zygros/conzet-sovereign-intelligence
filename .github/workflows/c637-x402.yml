@@ -1,0 +1,29 @@
+name: C637 x402 Fail-Closed Tests
+
+on:
+  pull_request:
+    paths:
+      - "security/c637-x402/**"
+      - ".github/workflows/c637-x402.yml"
+  push:
+    branches:
+      - "c637/fail-closed-x402"
+    paths:
+      - "security/c637-x402/**"
+      - ".github/workflows/c637-x402.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: security/c637-x402
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm test
