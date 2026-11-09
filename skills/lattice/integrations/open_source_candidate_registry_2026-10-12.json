@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "observed_date": "2026-10-12",
+  "scope": "Focused public GitHub discovery and README-level inspection. Candidate records are not claims of full security audit or integration.",
+  "evidence_states": [
+    "DISCOVERED",
+    "INSPECTED",
+    "LICENSE_CHECKED",
+    "SECURITY_REVIEWED",
+    "PROTOTYPED",
+    "TESTED",
+    "INTEGRATED",
+    "VERIFIED",
+    "HOLD",
+    "REJECTED"
+  ],
+  "candidates": [
+    {
+      "id": "agent-skills-spec",
+      "name": "Agent Skills open format",
+      "source": "https://github.com/agentskills/agentskills",
+      "observed_ref": "main",
+      "license": "Apache-2.0 code; CC-BY-4.0 documentation per README, individual directories may differ",
+      "capability_gap": "Portable skill packaging and progressive disclosure",
+      "decision": "ADOPT_SPEC",
+      "state": "INSPECTED",
+      "risk": "Review each imported directory's own license and scripts",
+      "next": "Add format validation to CI; preserve Conzetian extensions in adjacent metadata"
+    },
+    {
+      "id": "skills-cli",
+      "name": "Vercel Skills CLI",
+      "source": "https://github.com/vercel-labs/skills",
+      "observed_ref": "main",
+      "license": "MIT per README badge",
+      "capability_gap": "Cross-agent skill discovery and installation",
+      "decision": "PROTOTYPE",
+      "state": "INSPECTED",
+      "risk": "Install-time supply-chain and remote content risks; do not bulk install",
+      "next": "Compare CLI output with read-only GitHub tree inventory in isolated environment"
+    },
+    {
+      "id": "skillsmd",
+      "name": "skillsmd",
+      "source": "https://github.com/avvertix/skillsmd",
+      "observed_ref": "main",
+      "license": "MIT per README",
+      "capability_gap": "Python-oriented skill workflow for Termux-friendly integration",
+      "decision": "PROTOTYPE",
+      "state": "INSPECTED",
+      "risk": "Dependency/package provenance and supported-client drift",
+      "next": "Review pyproject, tests, and package entry points before isolated test"
+    },
+    {
+      "id": "openclaw-agent-skills",
+      "name": "OpenClaw Agent Skills",
+      "source": "https://github.com/openclaw/agent-skills",
+      "observed_ref": "main",
+      "license": "MIT per README",
+      "capability_gap": "Review closeout, behavior validation, transcript provenance, handoff",
+      "decision": "SELECTIVE_SKILL_REVIEW",
+      "state": "INSPECTED",
+      "risk": "Skills may include scripts and session-data handling; review per skill",
+      "next": "Select 3 candidate skills; compare their workflow contracts against existing Conzetian equivalents"
+    },
+    {
+      "id": "cognee-memory",
+      "name": "Cognee agent memory platform",
+      "source": "https://github.com/topoteretes/cognee",
+      "observed_ref": "main",
+      "license": "NOT_YET_VERIFIED",
+      "capability_gap": "Structured knowledge graph and retrieval memory",
+      "decision": "HOLD_FOR_LICENSE_AND_RUNTIME_REVIEW",
+      "state": "DISCOVERED",
+      "risk": "Data store, dependency, deployment, privacy, and license requirements unknown from this pass",
+      "next": "Inspect LICENSE, minimal deployment, evaluation report, and data lifecycle"
+    },
+    {
+      "id": "mcp-memory-service",
+      "name": "MCP Memory Service",
+      "source": "https://github.com/doobidoo/mcp-memory-service",
+      "observed_ref": "main",
+      "license": "Apache-2.0 per README",
+      "capability_gap": "Shared persistent memory exposed via REST and MCP",
+      "decision": "PROTOTYPE_CANDIDATE",
+      "state": "INSPECTED",
+      "risk": "OAuth, data retention, remote MCP security, and deployment complexity",
+      "next": "Inspect auth boundaries, storage model, tests, and deletion/export guarantees"
+    },
+    {
+      "id": "browseros",
+      "name": "BrowserOS",
+      "source": "https://github.com/browseros-ai/BrowserOS",
+      "observed_ref": "main",
+      "license": "AGPL-3.0 per README",
+      "capability_gap": "Agent browser control and browser-native actions",
+      "decision": "HOLD_FOR_LICENSE_AND_THREAT_MODEL",
+      "state": "INSPECTED",
+      "risk": "AGPL obligations; browser privileges and user-data exposure",
+      "next": "Assess process boundaries and AGPL implications before any derivative integration"
+    },
+    {
+      "id": "agent-evaluation",
+      "name": "Agentic QE search family",
+      "source": "https://github.com/search?q=agentic+qe&type=repositories",
+      "observed_ref": "search result only",
+      "license": "UNVERIFIED",
+      "capability_gap": "Agent task evaluation and regression orchestration",
+      "decision": "DISCOVER_MORE",
+      "state": "DISCOVERED",
+      "risk": "Search result was not sufficient to establish canonical repo or license",
+      "next": "Identify canonical repositories and inspect benchmark reproducibility"
+    }
+  ]
+}
