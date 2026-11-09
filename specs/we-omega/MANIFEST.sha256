@@ -1,0 +1,11 @@
+# We-Ω MANIFEST — Cryptographic Anchoring
+# Cascade 1→4 complete
+# Update this file with full tree digest after major expansions
+
+GENESIS_COMMIT: cd712ef862de4139fed6b1319c5a43519424fd19
+CASCADE_1_4: (this commit)
+STATUS: LIVE
+LAW: ALWAYS ADD NEVER TAKE
+
+# Full recursive SHA-256 of working tree to be appended here in future cycles.
+# External Arweave / IPFS / OTS hashes will be recorded below when etched.
