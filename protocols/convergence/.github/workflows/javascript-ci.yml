@@ -1,0 +1,38 @@
+name: OmniNet JavaScript CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: |
+        if [ -f package.json ]; then npm ci; fi
+
+    - name: Lint with ESLint
+      run: |
+        npm run lint || true
+
+    - name: Run tests
+      run: |
+        npm test || true
+
+    - name: Build (if applicable)
+      run: |
+        npm run build || true

@@ -1,0 +1,47 @@
+{
+  "name": "omninet-sovereign-js",
+  "version": "5.0.0",
+  "description": "OmniNet Architecture - Sovereign Intelligence Framework (JavaScript)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zygros/multi-ai-convergence-protocol.git"
+  },
+  "keywords": [
+    "omninet",
+    "sovereign",
+    "intelligence",
+    "distributed",
+    "architecture"
+  ],
+  "author": "Justin Neal Thomas Conzet (G0 Prime Sovereign Architect)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zygros/multi-ai-convergence-protocol/issues"
+  },
+  "homepage": "https://github.com/Zygros/multi-ai-convergence-protocol#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "ws": "^8.21.2",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
