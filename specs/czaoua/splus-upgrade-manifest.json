@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "profile": "archive-or-hybrid",
+  "upgrade": "additive-splus-baseline",
+  "changed_files": [
+    "CZAOUA-UNITY-SYSTEM/SECURITY.md",
+    "CZAOUA-UNITY-SYSTEM/CONTRIBUTING.md",
+    "CZAOUA-UNITY-SYSTEM/LICENSE-STATUS.md",
+    "CZAOUA-UNITY-SYSTEM/DEPENDENCY-STATUS.md",
+    "CZAOUA-UNITY-SYSTEM/SPLUS.md",
+    "docs/PROVENANCE.md",
+    "scripts/splus_check.py",
+    ".gitignore",
+    "CZAOUA-UNITY-SYSTEM/README.md",
+    "workflows/splus-hygiene.yml",
+    "CI-STATUS.md"
+  ],
+  "source_deletion": false,
+  "source_overwrite": false,
+  "ci_status": "workflow-not-published-due-to-github-permission",
+  "generated_workflow_removed_before_publish": true
+}
