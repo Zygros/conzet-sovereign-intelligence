@@ -1,0 +1,19 @@
+{
+  "catalog_id": "SF-PROTOCOLS-v0.1",
+  "law": "P-064 Always Add Never Take",
+  "status": "DESIGNED_LOCAL",
+  "protocols": [
+    {"id": "P-064", "name": "Always Add Never Take", "status": "CORE_LAW"},
+    {"id": "P-027", "name": "HTC Bounded Chamber", "status": "IMPLEMENTED_LOCAL"},
+    {"id": "P-001", "name": "Instantaneous Value", "status": "DOCUMENTED"},
+    {"id": "P-102", "name": "Friction Auto-Solve", "status": "DOCUMENTED"},
+    {"id": "OMEGA-01", "name": "Phoenix Deterministic Recovery", "status": "IMPLEMENTED_LOCAL"},
+    {"id": "OMEGA-06", "name": "Evidence Substrate Core", "status": "IMPLEMENTED_LOCAL"},
+    {"id": "OMEGA-08", "name": "Red-Team Fault Framework", "status": "IMPLEMENTED_LOCAL"},
+    {"id": "OMEGA-09", "name": "Master Codex", "status": "IMPLEMENTED_LOCAL"},
+    {"id": "OMEGA-10", "name": "Evidence Substrate Release", "status": "IMPLEMENTED_LOCAL"},
+    {"id": "PHI-κ", "name": "κ-Coherence Routing", "source_repo": "omninet-v4", "status": "DOCUMENTED_CODE_PRESENT"},
+    {"id": "CONV-01", "name": "Multi-AI Convergence Relay", "status": "PROTOTYPE_LOCAL"},
+    {"id": "SSI-01", "name": "SSI CLI Engine", "status": "PROTOTYPE_LOCAL"}
+  ]
+}

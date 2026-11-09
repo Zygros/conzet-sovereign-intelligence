@@ -1,0 +1,18 @@
+{
+  "schema":"phoenix-400-swarm-topology/v1",
+  "status":"IMPLEMENTED",
+  "agents":400,
+  "logic_trees_per_agent":400,
+  "sub_actions_per_logic_tree":400,
+  "sub_logic_trees_per_sub_action":400,
+  "logical_leaf_count":25600000000,
+  "agent_tree_pairs":160000,
+  "agent_subaction_pairs":160000,
+  "address_format":"A###.L###.S###.Q###",
+  "execution":"lazy deterministic addressing; bounded shards",
+  "verification":"SHA-256 node identity + invariant checks",
+  "federation":"25 accessible Zygros repositories; 600 directed logical repository edges",
+  "external_scan":"Firecrawl public developer-index + asynchronous public-web/GitHub research",
+  "evidence_policy":"Implemented means artifacts exist; Verified requires an executed test; External means live infrastructure or independent validation is still required",
+  "side_effect_policy":"No credential propagation, no secret propagation, no private-data propagation, no writes to unrelated repositories"
+}

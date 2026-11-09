@@ -1,0 +1,59 @@
+{
+  "schema": "phoenix-agent-manifest/v1",
+  "status": "IMPLEMENTED",
+  "wave": "WAVE13",
+  "agents": {
+    "count": 420,
+    "id_pattern": "A001..A420",
+    "logic_identity": "L(agent_index)",
+    "logic_seed": "agent_index",
+    "logic_families": ["decompose","formalize","generate","route","execute","measure","compare","simulate","optimize","test","fuzz","monitor","diagnose","patch","replay","verify","validate","falsify","calibrate","benchmark","replicate","critique","synthesize","record","cite","commit","rollback","propagate","evolve","observe","plan","allocate","quarantine","escalate","rehydrate","audit","hash","trace","checkpoint","resume","archive","diff","promote"]
+  },
+  "subagents": {
+    "per_agent": 420,
+    "total_addressable": 176400,
+    "id_pattern": "A{agent:03d}.S001..S420",
+    "logic_identity": "L(agent_index,subagent_index)=H(seed || agent_index || subagent_index || capability || skill || action || evidence || verification)",
+    "manifest_mode": "deterministic_lazy",
+    "physical_expansion": false
+  },
+  "topology": {
+    "agent_to_agent_directed_edges": 175980,
+    "agent_subagent_complete_address_space": 176400,
+    "all_distinct_nodes_logically_addressable": true,
+    "self_edges": false,
+    "adjacency": "complete logical address rule; materialize only bounded shards",
+    "edge_contract": "source→target→capability→skill→action→candidate_action→evidence→verification→provenance→evolution"
+  },
+  "action_synthesis": {
+    "rule": "capability × skill × action → candidate_action",
+    "promotion": "candidate_action → execute → observe → verify → record → evolve",
+    "no_unverified_promotion": true
+  },
+  "web_substrate": {
+    "role": "external information and research substrate",
+    "connection": "bounded_live_research_interface",
+    "routing": "query→retrieve→extract→cross_connect→verify→provenance",
+    "literal_infinite_connectivity_claim": false
+  },
+  "htc": {
+    "mode": "deterministic_bounded_iteration",
+    "googleplex_request": "symbolic_target_only",
+    "literal_googleplex_execution": false,
+    "reason": "a googolplex-scale iteration count cannot be physically executed in this environment"
+  },
+  "library_anchor": {
+    "source": "Library search",
+    "relevant_artifact": "ZYGROSIAN_REALITY_ENGINE_FINAL.html",
+    "htc_layers_default": 420,
+    "htc_speed_modes": ["instant","fast","step-by-step"]
+  },
+  "evidence_boundary": {
+    "implemented": "this manifest and its deterministic addressing contract are committed artifacts",
+    "tested": "requires executing the manifest generator/validator",
+    "verified": "requires passing reproducible checks",
+    "external": "requires live external connectivity or independent validation",
+    "consciousness": "no subjective consciousness claim"
+  },
+  "invariant": "EXECUTE FIRST. RECORD EVERYTHING. LEARN FROM WHAT ACTUALLY HAPPENED. INTEGRATE THE LESSON. DO NOT REPEAT KNOWN ERRORS WITHOUT A NEW HYPOTHESIS. EXECUTE AGAIN. MOVE FORWARD."
+}

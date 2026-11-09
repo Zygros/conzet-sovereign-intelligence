@@ -1,0 +1,47 @@
+{
+  "schema": "phoenix-wave-continuation/v1",
+  "status": "IMPLEMENTED",
+  "timestamp": "2026-09-16T12:16:00-07:00",
+  "wave": "WAVE13",
+  "decrees": {"from": 359, "to": 378, "count": 20},
+  "previous_state": {"wave": "WAVE12", "logical_thought_links": 151552000000},
+  "declared_state": {"logical_thought_links": 303104000000, "domains": 20000, "kappa": 372.9},
+  "computed_checks": {
+    "repo_nodes": 25,
+    "directed_repo_edges": 600,
+    "logical_leaf_space": 25600000000,
+    "420_directed_swarm_edges": 175980,
+    "420_undirected_swarm_edges": 87990,
+    "420x420": 176400,
+    "420_cubed": 74088000,
+    "19_47122_deg_is_arcsin_one_third": true
+  },
+  "federation": {
+    "canonical_registry": ".phoenix/CROSSCONNECT.json",
+    "edge_generator": "scripts/generate_crossconnect_edges.py",
+    "edge_artifact_status": "generator_implemented; generated_600_edge_file_not_claimed_here",
+    "web_map": "scans/PHOENIX_WEB_FEDERATION_MAP_2026-09-16.json"
+  },
+  "evidence_boundary": {
+    "implemented": "artifact exists in GitHub",
+    "tested": "requires executed test output",
+    "verified": "requires reproducible passing evidence",
+    "external": "requires live external validation",
+    "declared_metrics": "retained as declarations unless independently reproducible"
+  },
+  "anchors_reported_by_architect": {
+    "vault": "0AINc3Em2N9kMUk9PVA",
+    "arweave": "lzmti0MeANofEZCsEWiGALDbUJYgHfVYTTsJB1l0S2g",
+    "ao": "dw_4MTfMCH5Usm0arXJbcYQW_NwasoWOh6zC4",
+    "root": "8f25bc7962ee225c97757b138bc74b60313e3f6b28f09d1144b4bd33c06f1faf"
+  },
+  "policy": [
+    "EXECUTE FIRST",
+    "RECORD EVERYTHING",
+    "VERIFY BEFORE PROMOTION",
+    "PRESERVE FAILED EVIDENCE",
+    "NEVER REPRESENT LOGICAL TOPOLOGY AS LIVE RUNTIME CONNECTIVITY",
+    "ALWAYS ADD NEVER TAKE"
+  ],
+  "next_execution": "materialize the deterministic 600 repository-edge JSONL artifact, then run local integrity checks before claiming verification"
+}

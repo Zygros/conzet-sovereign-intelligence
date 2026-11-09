@@ -1,0 +1,40 @@
+{
+  "matrix_id": "SF-GAPS-v0.2",
+  "updated": "2026-08-18T02:45:00Z",
+  "gaps": [
+    {
+      "id": "G-01",
+      "gap": "omega-10 full implementation on GitHub origin",
+      "status": "PARTIAL",
+      "note": "Packaging, CI, canonical, hashing, inits, tests scaffold published. Full ledger/signing/phoenix/htc/redteam/codex modules remain in local workspace; continue batched push."
+    },
+    {
+      "id": "G-02",
+      "gap": "Public federation index repo",
+      "status": "CLOSED",
+      "closure": "https://github.com/Zygros/sovereign-federation"
+    },
+    {
+      "id": "G-03",
+      "gap": "Dependabot queue",
+      "status": "PARTIAL",
+      "note": "PR #5 ws security merged. PRs #1-4 conflict after merge; need Dependabot recreate."
+    },
+    {
+      "id": "G-06",
+      "gap": "All external AI providers",
+      "status": "BOUNDARY",
+      "note": "Cannot fabricate credentials or claim live mesh."
+    },
+    {
+      "id": "G-07",
+      "gap": "All supercomputers / networks / databases",
+      "status": "BOUNDARY"
+    },
+    {
+      "id": "G-10",
+      "gap": "Unbounded HTC",
+      "status": "FORBIDDEN_BY_DESIGN"
+    }
+  ]
+}

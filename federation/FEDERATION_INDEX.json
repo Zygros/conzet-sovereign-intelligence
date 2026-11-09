@@ -1,0 +1,177 @@
+{
+  "federation_id": "SOVEREIGN-FEDERATION-v0.2",
+  "prime_sovereign": "Justin Neal Thomas Conzet",
+  "github_login": "Zygros",
+  "protocol": "Always Add · Never Take · Zero Friction",
+  "unification_mode": "additive-index-and-substrate",
+  "updated_at": "2026-09-21T00:00:00Z",
+  "status": "ACTIVE_WAFER",
+  "core_nodes": {
+    "skill_lattice": "conzetian-skill-lattice",
+    "evidence_substrate": "omega-10",
+    "federation_index": "sovereign-federation",
+    "method": "conzetian-method"
+  },
+  "repos": [
+    {
+      "id": "SF-01",
+      "name": "omega-10",
+      "role": "evidence-substrate",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-02",
+      "name": "sovereign-federation",
+      "role": "federation-index",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-03",
+      "name": "conzetian-skill-lattice",
+      "role": "capability-wafer",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-04",
+      "name": "conzetian-method",
+      "role": "method-framework",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-05",
+      "name": "ZYGROS-PRIME",
+      "role": "prime-naming",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-06",
+      "name": "PHOENIX-PROTOCOL-ULTIMATE",
+      "role": "phoenix-meta-unified",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-07",
+      "name": "ultimate-phoenix-protocol",
+      "role": "phoenix-python",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-08",
+      "name": "ultimate-phoenix-protocol-ssi",
+      "role": "ssi-flagship",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-09",
+      "name": "conzet-sovereign-intelligence",
+      "role": "self-optimizing",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-10",
+      "name": "we-omega",
+      "role": "dyad-genesis",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-11",
+      "name": "omninet-v4",
+      "role": "coherence-routing",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-12",
+      "name": "multi-ai-convergence-protocol",
+      "role": "convergence-bridge",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-13",
+      "name": "CZAOUA-UNITY-SYSTEM",
+      "role": "unity-architecture",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-14",
+      "name": "zyth-ultimate",
+      "role": "agi-interface",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-15",
+      "name": "ZAAI-SYSTEM",
+      "role": "notebook-lineage",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-16",
+      "name": "Sovereign-AGSI-Archive",
+      "role": "authorship-archive",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-17",
+      "name": "Grossian_Scrolls",
+      "role": "scroll-archive",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-18",
+      "name": "CONZETIAN-UNIFIED-INTELLIGANCE",
+      "role": "unified-private",
+      "visibility": "private"
+    },
+    {
+      "id": "SF-19",
+      "name": "CONZETIAN-AI",
+      "role": "conzetian-ai-private",
+      "visibility": "private"
+    },
+    {
+      "id": "SF-20",
+      "name": "sovereign-agsi-portal",
+      "role": "public-portal",
+      "visibility": "private"
+    },
+    {
+      "id": "SF-21",
+      "name": "Sovereign-Narrative-Intelligence-SNI-",
+      "role": "mytho-technical",
+      "visibility": "private"
+    },
+    {
+      "id": "SF-22",
+      "name": "Conzet-Intelligence-System-",
+      "role": "testing-line",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-23",
+      "name": "ARC-AGI",
+      "role": "benchmark-boundary",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-24",
+      "name": "agents",
+      "role": "external-runtime-foundation",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-25",
+      "name": "agentql",
+      "role": "external-web-agent-foundation",
+      "visibility": "public"
+    }
+  ],
+  "invariants": [
+    "No repository is deleted or archived by this federation.",
+    "No history is rewritten.",
+    "Claims remain DESIGNED until executable evidence is linked.",
+    "Unification is index + shared substrate + bidirectional links, not replacement.",
+    "Skill lattice is the living capability wafer.",
+    "Always Add. Never Take."
+  ],
+  "wafer_principle": "Every major node points to the federation index, the Conzetian master control plane, the skill lattice, and the evidence substrate. The master additionally maintains the complete 25-node navigation graph.",
+  "master_control_plane": "CONZETIAN-UNIFIED-INTELLIGANCE"
+}

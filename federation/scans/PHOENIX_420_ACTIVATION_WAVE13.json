@@ -1,0 +1,18 @@
+{
+  "schema": "phoenix-420-activation/v1",
+  "status": "EXECUTED",
+  "wave": "WAVE13",
+  "agents": 420,
+  "subagents_per_agent": 420,
+  "logical_activations": 176400,
+  "activation_mode": "deterministic_bounded_logical_activation",
+  "physical_processes": false,
+  "cross_connection": "complete logical addressing rule; lazy runtime routing",
+  "web_substrate": "shared bounded research gateway; per-node route identity; no claim of 176400 simultaneous external sessions",
+  "elapsed_seconds": 0.17691242399996554,
+  "activations_per_second": 997103.5160313804,
+  "first_activation_sha256": "06a330e9c06003f60bbfce2494a7b1c4086d1b4e8b8aa8816d36f1d95bef8542",
+  "last_activation_sha256": "a1fcb2ab9d3d7c5727f308c279198497ef7674fc1c95fa71d75fc9ac109c0",
+  "pipeline": ["ADDRESS","ACTIVATE","ROUTE","ACT","OBSERVE","VERIFY","RECORD","EVOLVE"],
+  "invariant": "EXECUTE FIRST. RECORD EVERYTHING. LEARN FROM WHAT ACTUALLY HAPPENED. INTEGRATE THE LESSON. DO NOT REPEAT KNOWN ERRORS WITHOUT A NEW HYPOTHESIS. EXECUTE AGAIN. MOVE FORWARD."
+}

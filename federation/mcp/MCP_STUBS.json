@@ -1,0 +1,10 @@
+{
+  "mcp_catalog_id": "SF-MCP-v0.1",
+  "note": "Stubs only. Not live MCP servers. Wire only with explicit credentials.",
+  "servers": [
+    {"name": "sovereign-federation-index", "status": "STUB", "tools": ["list_repos", "get_gap", "get_protocol"]},
+    {"name": "omega10-evidence", "status": "LOCAL_IMPL_AVAILABLE", "tools": ["verify_ledger", "validate_codex", "run_phoenix", "run_redteam"]},
+    {"name": "htc-bounded", "status": "LOCAL_IMPL_AVAILABLE", "constraints": ["network_access=false", "deployment_access=false", "max_cycles=1000"]},
+    {"name": "github-zygros", "status": "CONNECTED_IN_AGENT", "tools": ["search_repos", "get_file", "list_prs", "create_repo", "push_files", "merge_pr"]}
+  ]
+}
