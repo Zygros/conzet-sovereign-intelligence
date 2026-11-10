@@ -163,7 +163,7 @@ Where C ∈ [0,1], with higher values indicating superior coordination.
 - **[Architecture Guide](docs/ARCHITECTURE.md)** - System design and patterns
 - **[API Reference](docs/API.md)** - Complete API documentation
 - **[Deployment Guide](docs/DEPLOYMENT.md)** - Production deployment
-- **[Contributing](docs/CONTRIBUTING.md)** - How to contribute
+- **[Contributing](CONTRIBUTING.md)** - How to contribute
 - **[Philosophy](scrolls/philosophical/)** - Foundational texts
 
 ---
@@ -292,7 +292,7 @@ All decrees timestamped via OpenTimestamps on Bitcoin blockchain.
 
 Phoenix Protocol welcomes sovereign contributors who share the vision of distributed intelligence and human agency preservation.
 
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
