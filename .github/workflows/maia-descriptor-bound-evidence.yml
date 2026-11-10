@@ -1,0 +1,89 @@
+name: MAIA Descriptor-Bound Load Evidence
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - ".github/workflows/maia-descriptor-bound-evidence.yml"
+      - "genesis/plugin_trust_policy.py"
+      - "scripts/maia_framework_orchestrator.py"
+      - "tests/test_plugin_trust_policy.py"
+      - "tests/test_maia_plugin_trust_integration.py"
+      - "docs/MAIA_PLUGIN_DESCRIPTOR_BOUNDARY.md"
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test runner
+        run: python -m pip install pytest
+      - name: Run descriptor-bound trust tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pytest -q tests/test_plugin_trust_policy.py tests/test_maia_plugin_trust_integration.py | tee maia-descriptor-bound-test-results.txt
+      - name: Build reproducible evidence receipt
+        env:
+          REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          TESTED_COMMIT: ${{ github.sha }}
+          SOURCE_HEAD_COMMIT: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          import platform
+          import re
+
+          files = [
+              ".github/workflows/maia-descriptor-bound-evidence.yml",
+              "genesis/plugin_trust_policy.py",
+              "scripts/maia_framework_orchestrator.py",
+              "tests/test_plugin_trust_policy.py",
+              "tests/test_maia_plugin_trust_integration.py",
+              "docs/MAIA_PLUGIN_DESCRIPTOR_BOUNDARY.md",
+          ]
+          file_hashes = {
+              name: hashlib.sha256(open(name, "rb").read()).hexdigest()
+              for name in files
+          }
+          test_output = open("maia-descriptor-bound-test-results.txt", encoding="utf-8").read()
+          match = re.search(r"(\\d+) passed", test_output)
+          if not match:
+              raise SystemExit("pytest success summary was not found")
+          receipt = {
+              "schema": "conzetian.maia-descriptor-bound.evidence.v1",
+              "repository": os.environ["REPOSITORY"],
+              "run_id": int(os.environ["RUN_ID"]),
+              "source_head_commit": os.environ["SOURCE_HEAD_COMMIT"],
+              "tested_commit": os.environ["TESTED_COMMIT"],
+              "python": platform.python_version(),
+              "tests_passed": int(match.group(1)),
+              "test_result": test_output.strip(),
+              "files_sha256": file_hashes,
+              "deployment": False,
+              "external_anchors": False,
+              "live_device_execution": False,
+          }
+          canonical = json.dumps(receipt, sort_keys=True, separators=(",", ":")).encode()
+          receipt["evidence_sha256"] = hashlib.sha256(canonical).hexdigest()
+          with open("maia-descriptor-bound-evidence.json", "w", encoding="utf-8") as output:
+              json.dump(receipt, output, indent=2, sort_keys=True)
+              output.write("\\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: maia-descriptor-bound-evidence-${{ github.run_id }}
+          path: |
+            maia-descriptor-bound-test-results.txt
+            maia-descriptor-bound-evidence.json
+          if-no-files-found: error
+          retention-days: 90
