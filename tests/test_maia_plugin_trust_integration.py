@@ -88,20 +88,21 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             marker = root / "executed.txt"
             plugin = root / "safe.py"
             replacement = root / "replacement.py"
-            original_source = "\\n".join(
+            newline = chr(10)
+            original_source = newline.join(
                 [
                     "from pathlib import Path",
                     f"Path({str(marker)!r}).write_text('original')",
                     "def get_plugin_manifest(): return {'name': 'original'}",
                 ]
-            ) + "\\n"
-            replacement_source = "\\n".join(
+            ) + newline
+            replacement_source = newline.join(
                 [
                     "from pathlib import Path",
                     f"Path({str(marker)!r}).write_text('replacement')",
                     "def get_plugin_manifest(): return {'name': 'replacement'}",
                 ]
-            ) + "\\n"
+            ) + newline
             plugin.write_text(original_source, encoding="utf-8")
             replacement.write_text(replacement_source, encoding="utf-8")
             env = {
