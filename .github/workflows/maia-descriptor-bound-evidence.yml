@@ -56,7 +56,7 @@ jobs:
               for name in files
           }
           test_output = open("maia-descriptor-bound-test-results.txt", encoding="utf-8").read()
-          match = re.search(r"(\\d+) passed", test_output)
+          match = re.search(r"([0-9]+) passed", test_output)
           if not match:
               raise SystemExit("pytest success summary was not found")
           receipt = {
@@ -77,7 +77,7 @@ jobs:
           receipt["evidence_sha256"] = hashlib.sha256(canonical).hexdigest()
           with open("maia-descriptor-bound-evidence.json", "w", encoding="utf-8") as output:
               json.dump(receipt, output, indent=2, sort_keys=True)
-              output.write("\\n")
+              output.write(chr(10))
           PY
       - uses: actions/upload-artifact@v4
         with:
