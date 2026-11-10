@@ -3,3 +3,6 @@
 # Example:
 # numpy==1.24.0
 # requests==2.31.0
+
+# autofix 2026-11-10: imported unconditionally by scripts/phoenix_protocol_v2_core.py
+anthropic
