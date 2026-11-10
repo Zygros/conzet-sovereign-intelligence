@@ -88,16 +88,20 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             marker = root / "executed.txt"
             plugin = root / "safe.py"
             replacement = root / "replacement.py"
-            original_source = (
-                "from pathlib import Path\\n"
-                + "Path(" + repr(str(marker)) + ").write_text('original')\\n"
-                + "def get_plugin_manifest(): return {'name': 'original'}\\n"
-            )
-            replacement_source = (
-                "from pathlib import Path\\n"
-                + "Path(" + repr(str(marker)) + ").write_text('replacement')\\n"
-                + "def get_plugin_manifest(): return {'name': 'replacement'}\\n"
-            )
+            original_source = "\\n".join(
+                [
+                    "from pathlib import Path",
+                    f"Path({str(marker)!r}).write_text('original')",
+                    "def get_plugin_manifest(): return {'name': 'original'}",
+                ]
+            ) + "\\n"
+            replacement_source = "\\n".join(
+                [
+                    "from pathlib import Path",
+                    f"Path({str(marker)!r}).write_text('replacement')",
+                    "def get_plugin_manifest(): return {'name': 'replacement'}",
+                ]
+            ) + "\\n"
             plugin.write_text(original_source, encoding="utf-8")
             replacement.write_text(replacement_source, encoding="utf-8")
             env = {
@@ -129,6 +133,7 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             self.assertTrue(result["success"])
             self.assertEqual(result["plugin_name"], "original")
             self.assertEqual(marker.read_text(encoding="utf-8"), "original")
+
 
 if __name__ == "__main__":
     unittest.main()
