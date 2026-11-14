@@ -57,15 +57,6 @@ while (($#)); do
   esac
 done
 
-if [[ "$INSTALL_PREREQS" -eq 1 ]]; then
-  command -v pkg >/dev/null 2>&1 || {
-    echo "ERROR: pkg not found; the opt-in installer is Termux-only." >&2
-    exit 2
-  }
-  pkg update -y
-  pkg install -y python git sqlite openssl coreutils
-fi
-
 # Never chmod the caller's base directory. All restrictive permissions apply
 # only to a unique run directory created by this invocation.
 mkdir -p -- "$PROJECT_DIR"
@@ -91,6 +82,30 @@ echo "run_tests=$RUN_TESTS"
 echo ""
 
 FAILURES=0
+
+# Keep explicit package installation inside the evidence transcript. A missing
+# pkg binary or a failed update/install is recorded instead of aborting before
+# the per-run report and checksum manifest exist.
+if [[ "$INSTALL_PREREQS" -eq 1 ]]; then
+  if ! command -v pkg >/dev/null 2>&1; then
+    echo "BLOCKED prereq_install=pkg_not_found"
+    FAILURES=$((FAILURES + 1))
+  elif pkg update -y; then
+    echo "PASS pkg_update"
+    if pkg install -y python git sqlite openssl coreutils; then
+      echo "PASS pkg_install"
+    else
+      PKG_EXIT=$?
+      echo "FAIL pkg_install_exit_code=$PKG_EXIT"
+      FAILURES=$((FAILURES + 1))
+    fi
+  else
+    PKG_EXIT=$?
+    echo "FAIL pkg_update_exit_code=$PKG_EXIT"
+    echo "SKIP pkg_install reason=update_failed"
+    FAILURES=$((FAILURES + 1))
+  fi
+fi
 for cmd in python git sqlite3 openssl sha256sum; do
   if command -v "$cmd" >/dev/null 2>&1; then
     case "$cmd" in

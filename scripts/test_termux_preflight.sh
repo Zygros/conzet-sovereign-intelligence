@@ -45,6 +45,10 @@ STUB
 cat > "$BIN/pkg" <<'STUB'
 #!/usr/bin/env bash
 printf '%s\n' "$*" >> "$PKG_LOG"
+case "$*" in
+  "update -y") [[ "${PKG_FAIL_UPDATE:-0}" != 1 ]] || exit 7 ;;
+  "install -y python git sqlite openssl coreutils") [[ "${PKG_FAIL_INSTALL:-0}" != 1 ]] || exit 9 ;;
+esac
 STUB
 cat > "$BIN/pytest" <<'STUB'
 #!/usr/bin/env bash
@@ -102,5 +106,43 @@ bash "$ROOT/scripts/termux_preflight.sh" --project-dir "$TEMP_ROOT/install-run" 
 grep -Fxq "update -y" "$PKG_LOG" || fail "explicit install did not call pkg update"
 grep -Fxq "install -y python git sqlite openssl coreutils" "$PKG_LOG" || fail "explicit install did not request the declared packages"
 pass "package installation is gated behind the explicit flag and tested with a stub"
+
+# Installer failures must still produce a report, log, and verifiable checksum.
+set +e
+update_output="$(PKG_FAIL_UPDATE=1 bash "$ROOT/scripts/termux_preflight.sh" --project-dir "$TEMP_ROOT/update-failure" --install-prereqs 2>&1)"
+update_status=$?
+set -e
+[[ "$update_status" -eq 1 ]] || fail "pkg update failure did not return a recorded failure"
+UPDATE_RUN="$(printf '%s\n' "$update_output" | sed -n 's/^run_dir=//p' | head -n 1)"
+[[ -f "$UPDATE_RUN/receipts/preflight.txt" ]] || fail "pkg update failure report missing"
+grep -q 'FAIL pkg_update_exit_code=7' "$UPDATE_RUN/logs/preflight.log" || fail "pkg update failure not recorded in log"
+grep -q 'failure_count=1' "$UPDATE_RUN/receipts/preflight.txt" || fail "pkg update failure count missing"
+(cd "$UPDATE_RUN" && sha256sum -c artifacts/preflight-report.sha256 >/dev/null) || fail "pkg update failure checksum did not verify"
+pass "pkg update failure is captured in a complete evidence run"
+
+set +e
+install_output="$(PKG_FAIL_INSTALL=1 bash "$ROOT/scripts/termux_preflight.sh" --project-dir "$TEMP_ROOT/install-failure" --install-prereqs 2>&1)"
+install_status=$?
+set -e
+[[ "$install_status" -eq 1 ]] || fail "pkg install failure did not return a recorded failure"
+INSTALL_RUN="$(printf '%s\n' "$install_output" | sed -n 's/^run_dir=//p' | head -n 1)"
+[[ -f "$INSTALL_RUN/receipts/preflight.txt" ]] || fail "pkg install failure report missing"
+grep -q 'FAIL pkg_install_exit_code=9' "$INSTALL_RUN/logs/preflight.log" || fail "pkg install failure not recorded in log"
+grep -q 'failure_count=1' "$INSTALL_RUN/receipts/preflight.txt" || fail "pkg install failure count missing"
+(cd "$INSTALL_RUN" && sha256sum -c artifacts/preflight-report.sha256 >/dev/null) || fail "pkg install failure checksum did not verify"
+pass "pkg install failure is captured in a complete evidence run"
+
+mv "$BIN/pkg" "$BIN/pkg.disabled"
+set +e
+missing_output="$(bash "$ROOT/scripts/termux_preflight.sh" --project-dir "$TEMP_ROOT/missing-pkg" --install-prereqs 2>&1)"
+missing_status=$?
+set -e
+mv "$BIN/pkg.disabled" "$BIN/pkg"
+[[ "$missing_status" -eq 1 ]] || fail "missing pkg did not return a recorded failure"
+MISSING_RUN="$(printf '%s\n' "$missing_output" | sed -n 's/^run_dir=//p' | head -n 1)"
+[[ -f "$MISSING_RUN/receipts/preflight.txt" ]] || fail "missing pkg report missing"
+grep -q 'BLOCKED prereq_install=pkg_not_found' "$MISSING_RUN/logs/preflight.log" || fail "missing pkg blocker not recorded"
+(cd "$MISSING_RUN" && sha256sum -c artifacts/preflight-report.sha256 >/dev/null) || fail "missing pkg checksum did not verify"
+pass "missing pkg is captured as a blocker with reproducible evidence"
 
 printf 'All Termux preflight safety tests passed.\n'
