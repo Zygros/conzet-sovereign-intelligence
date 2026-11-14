@@ -64,7 +64,7 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             root = Path(temp)
             plugin = root / "safe.py"
             plugin.write_text(
-                "def get_plugin_manifest(): return {'name': 'safe'}\\n",
+                "def get_plugin_manifest(): return {'name': 'safe'}\n",
                 encoding="utf-8",
             )
             env = {
@@ -141,13 +141,13 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             first = root / "first.py"
             second = root / "second.py"
             first.write_text(
-                "def get_plugin_manifest(): return {'name': 'shared'}\\n"
-                "def ping(): return 'first'\\n",
+                "def get_plugin_manifest(): return {'name': 'shared'}\n"
+                "def ping(): return 'first'\n",
                 encoding="utf-8",
             )
             second.write_text(
-                "def get_plugin_manifest(): return {'name': 'shared'}\\n"
-                "def ping(): return 'second'\\n",
+                "def get_plugin_manifest(): return {'name': 'shared'}\n"
+                "def ping(): return 'second'\n",
                 encoding="utf-8",
             )
             env = {
