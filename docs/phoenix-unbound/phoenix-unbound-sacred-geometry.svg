@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+<title id="title">Phoenix Unbound sacred geometry peer architecture</title>
+<desc id="desc">A non-hierarchical Flower of Life inspired network. Phoenix Unbound is at the shared center, surrounded by nine peer organs connected by overlapping circles and cross-links.</desc>
+<defs>
+  <radialGradient id="bg"><stop offset="0" stop-color="#17233c"/><stop offset="1" stop-color="#090d19"/></radialGradient>
+  <linearGradient id="gold"><stop stop-color="#f6d98a"/><stop offset="1" stop-color="#b98235"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .ring{fill:none;stroke:url(#gold);stroke-width:2.2;opacity:.55}
+    .link{fill:none;stroke:#8bc8db;stroke-width:2;opacity:.48}
+    .organ{fill:#111d32;stroke:#e4bd68;stroke-width:2.5}
+    .label{font:600 21px system-ui,sans-serif;fill:#f4edda;text-anchor:middle}
+    .sub{font:14px system-ui,sans-serif;fill:#b9c9d8;text-anchor:middle}
+  </style>
+</defs>
+<rect width="1200" height="1200" rx="40" fill="url(#bg)"/>
+<g transform="translate(600 600)">
+  <circle r="455" class="ring"/>
+  <circle r="350" class="ring"/>
+  <circle r="245" class="ring"/>
+  <circle r="145" class="ring"/>
+  <g class="ring">
+    <circle cx="0" cy="-245" r="245"/><circle cx="212" cy="-122" r="245"/>
+    <circle cx="212" cy="122" r="245"/><circle cx="0" cy="245" r="245"/>
+    <circle cx="-212" cy="122" r="245"/><circle cx="-212" cy="-122" r="245"/>
+  </g>
+  <g class="link">
+    <path d="M0 0L0 -420 M0 0L364 -210 M0 0L364 210 M0 0L0 420 M0 0L-364 210 M0 0L-364 -210"/>
+    <path d="M0 -420L364 -210L364 210L0 420L-364 210L-364 -210Z"/>
+    <path d="M0 -420L364 210 M364 -210L-364 210 M364 210L-364 -210 M0 420L0 -420"/>
+    <path d="M0 -245L364 -210 M212 -122L0 420 M212 122L-364 -210 M0 245L364 -210 M-212 122L0 -420 M-212 -122L364 210"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle r="116" fill="#152d43" stroke="#f1d184" stroke-width="4"/>
+    <text class="label" y="-8" style="font-size:27px">PHOENIX</text>
+    <text class="label" y="28" style="font-size:27px">UNBOUND</text>
+    <text class="sub" y="58">shared intelligence field</text>
+  </g>
+  <g>
+    <circle class="organ" cx="0" cy="-420" r="92"/><text class="label" y="-425">PHOENIX</text><text class="label" y="-397">PROTOCOL</text>
+    <circle class="organ" cx="364" cy="-210" r="92"/><text class="label" x="364" y="-215">INTELLIGENCE</text><text class="sub" x="364" y="-187">models · cognition</text>
+    <circle class="organ" cx="364" cy="210" r="92"/><text class="label" x="364" y="205">SKILLS</text><text class="sub" x="364" y="233">tools · capabilities</text>
+    <circle class="organ" cx="0" cy="420" r="92"/><text class="label" y="415">HTC</text><text class="sub" y="443">training · evolution</text>
+    <circle class="organ" cx="-364" cy="210" r="92"/><text class="label" x="-364" y="205">FEDERATION</text><text class="sub" x="-364" y="233">agents · network</text>
+    <circle class="organ" cx="-364" cy="-210" r="92"/><text class="label" x="-364" y="-215">EVIDENCE</text><text class="sub" x="-364" y="-187">proof · verification</text>
+    <circle class="organ" cx="0" cy="-245" r="74"/><text class="label" y="-250" style="font-size:17px">MEMORY</text><text class="sub" y="-228">knowledge</text>
+    <circle class="organ" cx="212" cy="122" r="74"/><text class="label" x="212" y="117" style="font-size:17px">INTERFACE</text><text class="sub" x="212" y="139">experience</text>
+    <circle class="organ" cx="-212" cy="122" r="74"/><text class="label" x="-212" y="117" style="font-size:17px">SOVEREIGNTY</text><text class="sub" x="-212" y="139">infrastructure</text>
+  </g>
+</g>
+<text x="600" y="1145" text-anchor="middle" fill="#d7c18e" font-family="system-ui,sans-serif" font-size="17" letter-spacing="4">PEER ORGANS · SHARED CENTER · MANY-TO-MANY CONNECTIONS</text>
+</svg>
