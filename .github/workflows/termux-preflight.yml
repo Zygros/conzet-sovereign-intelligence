@@ -1,0 +1,28 @@
+name: Termux Preflight Safety
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - "scripts/termux_preflight.sh"
+      - "scripts/test_termux_preflight.sh"
+      - ".github/workflows/termux-preflight.yml"
+  pull_request:
+    paths:
+      - "scripts/termux_preflight.sh"
+      - "scripts/test_termux_preflight.sh"
+      - ".github/workflows/termux-preflight.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  preflight-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Bash syntax
+        run: bash -n scripts/termux_preflight.sh scripts/test_termux_preflight.sh
+      - name: Run safe-mode and opt-in regression tests
+        run: bash scripts/test_termux_preflight.sh
