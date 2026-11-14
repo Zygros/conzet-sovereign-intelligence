@@ -10,6 +10,7 @@ import sys
 import os
 import json
 import importlib.util
+import uuid
 from pathlib import Path
 from datetime import datetime
 
@@ -17,7 +18,7 @@ from datetime import datetime
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
-from genesis.plugin_trust_policy import validate_plugin_path
+from genesis.plugin_trust_policy import read_trusted_plugin_source
 
 class MAIAFrameworkOrchestrator:
     """
@@ -186,8 +187,9 @@ class MAIAFrameworkOrchestrator:
     
     def _discover_and_register_plugin(self, plugin_path):
         """
-        Internal method to discover and register a plugin.
+        Internal method to discover and register a plugin from validated bytes.
         """
+        module_name = None
         try:
             # Fail closed unless an operator explicitly configures a trusted root
             # and exact relative-path allowlist. Validation occurs before import.
@@ -230,7 +232,7 @@ class MAIAFrameworkOrchestrator:
                     "trust_gate": {"allowed": False, "reason": "PINNED_SHA256_REQUIRED"},
                 }
 
-            trust_result = validate_plugin_path(
+            trust_result = read_trusted_plugin_source(
                 plugin_path=plugin_path,
                 trusted_root=trusted_root,
                 allowed_plugins=allowlist,
@@ -243,15 +245,34 @@ class MAIAFrameworkOrchestrator:
                     "trust_gate": trust_result,
                 }
 
-            # The gate validates path and integrity metadata only. It does NOT
-            # sandbox the plugin; only allow reviewed code from a trusted root.
-            spec = importlib.util.spec_from_file_location("plugin_module", plugin_path)
+            # Execute the exact bytes read and hashed through the validated
+            # descriptor. Never reopen plugin_path after the trust decision.
+            source_bytes = trust_result.get("source_bytes")
+            resolved_path = trust_result.get("resolved_path", str(plugin_path))
+            if not isinstance(source_bytes, bytes):
+                return {
+                    "success": False,
+                    "error": "Plugin blocked: descriptor-bound source bytes unavailable.",
+                    "trust_gate": {"allowed": False, "reason": "SOURCE_BYTES_UNAVAILABLE"},
+                }
+
+            module_name = f"maia_plugin_{uuid.uuid4().hex}"
+            spec = importlib.util.spec_from_loader(
+                module_name, loader=None, origin=resolved_path
+            )
+            if spec is None:
+                raise ImportError("Unable to create a plugin module specification")
+            spec.has_location = True
             plugin_module = importlib.util.module_from_spec(spec)
-            sys.modules["plugin_module"] = plugin_module
-            spec.loader.exec_module(plugin_module)
+            sys.modules[module_name] = plugin_module
+            code = compile(source_bytes, resolved_path, "exec")
+            exec(code, plugin_module.__dict__)
 
             manifest = plugin_module.get_plugin_manifest()
             plugin_name = manifest["name"]
+
+            if plugin_name in self.plugin_registry or plugin_name in self.loaded_plugins:
+                raise ValueError(f"Duplicate plugin name rejected: {plugin_name}")
 
             self.plugin_registry[plugin_name] = manifest
             self.loaded_plugins[plugin_name] = plugin_module
@@ -260,6 +281,8 @@ class MAIAFrameworkOrchestrator:
             return {"success": True, "plugin_name": plugin_name, "manifest": manifest}
             
         except Exception as e:
+            if module_name is not None:
+                sys.modules.pop(module_name, None)
             error_msg = f"Failed to discover/register plugin at {plugin_path}: {e}"
             print(f"❌ {error_msg}")
             return {"success": False, "error": error_msg}
