@@ -135,6 +135,50 @@ class MAIATrustGateIntegrationTests(unittest.TestCase):
             self.assertEqual(result["plugin_name"], "original")
             self.assertEqual(marker.read_text(encoding="utf-8"), "original")
 
+    def test_duplicate_plugin_name_cannot_overwrite_registered_plugin(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            first = root / "first.py"
+            second = root / "second.py"
+            first.write_text(
+                "def get_plugin_manifest(): return {'name': 'shared'}\\n"
+                "def ping(): return 'first'\\n",
+                encoding="utf-8",
+            )
+            second.write_text(
+                "def get_plugin_manifest(): return {'name': 'shared'}\\n"
+                "def ping(): return 'second'\\n",
+                encoding="utf-8",
+            )
+            env = {
+                "MAIA_PLUGIN_TRUST_ROOT": str(root),
+                "MAIA_PLUGIN_ALLOWLIST": "first.py,second.py",
+                "MAIA_PLUGIN_SHA256_ALLOWLIST": (
+                    "first.py=" + hashlib.sha256(first.read_bytes()).hexdigest()
+                    + ",second.py=" + hashlib.sha256(second.read_bytes()).hexdigest()
+                ),
+            }
+            with patch.dict(os.environ, env, clear=True):
+                orchestrator = MAIAFrameworkOrchestrator()
+                accepted = orchestrator.act(
+                    "DISCOVER_AND_REGISTER_PLUGIN", plugin_path=str(first)
+                )
+                original_module = orchestrator.loaded_plugins["shared"]
+                rejected = orchestrator.act(
+                    "DISCOVER_AND_REGISTER_PLUGIN", plugin_path=str(second)
+                )
+                invoked = orchestrator.act(
+                    "INVOKE_PLUGIN_CAPABILITY",
+                    plugin_name="shared",
+                    capability_name="ping",
+                )
+            self.assertTrue(accepted["success"])
+            self.assertFalse(rejected["success"])
+            self.assertIn("Duplicate plugin name rejected", rejected["error"])
+            self.assertIs(orchestrator.loaded_plugins["shared"], original_module)
+            self.assertEqual(invoked["result"], "first")
+
+
 
 if __name__ == "__main__":
     unittest.main()

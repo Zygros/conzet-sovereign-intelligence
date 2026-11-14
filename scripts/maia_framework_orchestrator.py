@@ -271,6 +271,9 @@ class MAIAFrameworkOrchestrator:
             manifest = plugin_module.get_plugin_manifest()
             plugin_name = manifest["name"]
 
+            if plugin_name in self.plugin_registry or plugin_name in self.loaded_plugins:
+                raise ValueError(f"Duplicate plugin name rejected: {plugin_name}")
+
             self.plugin_registry[plugin_name] = manifest
             self.loaded_plugins[plugin_name] = plugin_module
             
