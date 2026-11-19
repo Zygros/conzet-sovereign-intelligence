@@ -1,0 +1,971 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-19T20:43:48.103708+00:00",
+  "scope": "public metadata discovery only; no code execution or automatic promotion",
+  "research_posture": "open inquiry across mainstream, contested, taboo-labelled, and dual-use topics; labels are context, not verdicts",
+  "triage_status": "unreviewed_candidates",
+  "record_count": 103,
+  "records": [
+    {
+      "source_type": "github_repository",
+      "title": "shashikanth-gs/a2a-wrapper",
+      "url": "https://github.com/shashikanth-gs/a2a-wrapper",
+      "description": "A2A protocol wrappers that turn AI backends into interoperable agents. Drop a JSON config, get a spec-compliant A2A server. Supports GitHub Copilot SDK, OpenCode, Claude, Codex and more.",
+      "updated_at": "2026-11-16T10:32:32Z",
+      "stars": 45,
+      "license": "MIT",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ssheleg/agent-stack",
+      "url": "https://github.com/ssheleg/agent-stack",
+      "description": "Agent skills for orchestration, system prompts, evaluations, interoperability and LLM usage accounting.",
+      "updated_at": "2026-11-11T01:44:56Z",
+      "stars": 4,
+      "license": "MIT",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Poke-nushi/Verifiable-Agent-Trust-Envelope",
+      "url": "https://github.com/Poke-nushi/Verifiable-Agent-Trust-Envelope",
+      "description": "A discussion draft for verifier-side trust / permit / receipt decisions in AI agent systems",
+      "updated_at": "2026-11-11T13:59:53Z",
+      "stars": 1,
+      "license": "Apache-2.0",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "dkharlanau/agent-ready-web-profile",
+      "url": "https://github.com/dkharlanau/agent-ready-web-profile",
+      "description": "Interoperability profile and MCP gateway for agent-ready websites — llms.txt, Agent Skills, WebMCP, MCP, A2A, schemas and provenance.",
+      "updated_at": "2026-11-09T12:50:25Z",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ianwieds/awesome-agent-protocols",
+      "url": "https://github.com/ianwieds/awesome-agent-protocols",
+      "description": "The open protocols and conventions agents speak: tool access, agent-to-agent messaging, agent UIs, payments and instruction files.",
+      "updated_at": "2026-11-15T11:11:13Z",
+      "stars": 1,
+      "license": "CC0-1.0",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "api-evangelist/avora-agent-forge",
+      "url": "https://github.com/api-evangelist/avora-agent-forge",
+      "description": "AVORA Agent Forge — independent third-party profile of a public API surface, by API Evangelist. AVORA Agent Forge is an evidence-first Solana SPL token risk scanner and public AI interoperability service for humans, wallets, and autonomous agents. It exposes two REST APIs (OpenAPI 3.1), a hosted MCP server, and an A2A agent card with published skil",
+      "updated_at": "2026-11-06T22:06:50Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "megadyne001/agentbridge",
+      "url": "https://github.com/megadyne001/agentbridge",
+      "description": "MEGADYNE AgentBridge — An open, permission-based network connecting AI agents through A2A and MCP interoperability.",
+      "updated_at": "2026-11-12T20:50:35Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "shadowhunter-92/agentbridge",
+      "url": "https://github.com/shadowhunter-92/agentbridge",
+      "description": "Experimental Python Trust Kernel for agent interoperability, authorization, budgets, durable governance and verifiable evidence. Bounded protocol support; production qualification pending.",
+      "updated_at": "2026-11-03T12:42:42Z",
+      "stars": 4,
+      "license": "Apache-2.0",
+      "query": "agent interoperability A2A MCP"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "chunxiaoxx/nautilus-compass",
+      "url": "https://github.com/chunxiaoxx/nautilus-compass",
+      "description": "Open memory & reliability layer for AI agents + independent judging/verification (NACRE judge, caliber-bench meta-benchmark, preregistered criteria) — by Nautilus Platform",
+      "updated_at": "2026-11-18T07:59:25Z",
+      "stars": 1259,
+      "license": "NOASSERTION",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Miraj-Rahman-AI/Adv-Web-Agent-Security",
+      "url": "https://github.com/Miraj-Rahman-AI/Adv-Web-Agent-Security",
+      "description": "A collection of research and engineering projects for securing LLM-based Web Agents against direct prompt injection, unauthorized actions, privacy violations, and excessive agency. Includes runtime defenses, action verification, security benchmarks, memory protection, and least-privilege controls.",
+      "updated_at": "2026-11-06T07:06:50Z",
+      "stars": 1,
+      "license": "MIT",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Nikolai-coder/diavlo-mind",
+      "url": "https://github.com/Nikolai-coder/diavlo-mind",
+      "description": "Agent Skill and prompt framework for Claude Code, Codex, Gemini CLI and any LLM: planning, verification, multi-agent roles, project memory and a benchmark that measures what it changes.",
+      "updated_at": "2026-11-16T17:19:43Z",
+      "stars": 1,
+      "license": "MIT",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "getopencrawl/beam-eval",
+      "url": "https://github.com/getopencrawl/beam-eval",
+      "description": "OpenCrawl on BEAM (ICLR 2026): a controlled comparison of long-term agent memory against one published system, with per-question records and an offline verification script",
+      "updated_at": "2026-11-14T20:44:41Z",
+      "stars": 0,
+      "license": "Apache-2.0",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "rezaxr14/Recap",
+      "url": "https://github.com/rezaxr14/Recap",
+      "description": "RECAP: a memory and recovery engine for tool-using agents. Record runs, compile and validate repairs, promote verified memories, and retrieve them with compatibility and outcome-aware selection.",
+      "updated_at": "2026-11-06T12:59:53Z",
+      "stars": 0,
+      "license": "Apache-2.0",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "perdhevi/harness-loop-graph",
+      "url": "https://github.com/perdhevi/harness-loop-graph",
+      "description": "A step-by-step agent harness in plain Python: turns a request into a planned, built, test-verified and judged app with local (Ollama) or cloud models. Also reviews existing code and returns a patch. ReAct loop, hand-written MCP client, graph runner with resume, tracing, memory and benchmarks.",
+      "updated_at": "2026-10-20T05:20:05Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "NaMan6122/Anvaya-Benchmark",
+      "url": "https://github.com/NaMan6122/Anvaya-Benchmark",
+      "description": "Measured benchmark of agentic coding CLIs: memory, speed, execution rate — deterministic corpus, external verifiers, raw records included.",
+      "updated_at": "2026-10-04T19:51:33Z",
+      "stars": 1,
+      "license": "MIT",
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "uzielguti-dev/uzielguti-dev.github.io",
+      "url": "https://github.com/uzielguti-dev/uzielguti-dev.github.io",
+      "description": "Build cross-session memory for AI agents with one core API, dual consumption modes, and benchmark-verified performance.",
+      "updated_at": "2026-09-28T02:26:45Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent memory benchmark verification"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "nymrel/nymrel-crawler-mesh",
+      "url": "https://github.com/nymrel/nymrel-crawler-mesh",
+      "description": "Zero-telemetry, high-throughput web crawler and clean markdown extractor built specifically for AI agents and LLMs",
+      "updated_at": "2026-11-09T05:28:49Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "fastcrw/crw",
+      "url": "https://github.com/fastcrw/crw",
+      "description": "Fast, lightweight Firecrawl/Tavily alternative in Rust. Web scraper, crawler & search API with MCP server for AI agents. Drop-in Firecrawl-compatible API (/scrape, /crawl, /search). 2.3x faster than Tavily, 1.5x faster than Firecrawl in 1K-URL benchmarks. 6 MB RAM, single binary. Self-host or use managed cloud.",
+      "updated_at": "2026-11-19T19:28:03Z",
+      "stars": 1277,
+      "license": "AGPL-3.0",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "unclecode/crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "description": "Official Crawl4AI Cloud: a hosted web scraping, extraction, and search API for AI agents. Free API key, 1,000 credits a month, no card. Fully open source: this repo is the Apache-2.0 crawler that powers it, and you can self-host it.",
+      "updated_at": "2026-11-19T19:35:58Z",
+      "stars": 87568,
+      "license": "Apache-2.0",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "opencoredev/scraping-bench",
+      "url": "https://github.com/opencoredev/scraping-bench",
+      "description": "Web data APIs for AI agents (scrape, search, map, crawl), graded on whether the job got done",
+      "updated_at": "2026-11-12T13:40:05Z",
+      "stars": 1,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "coucya/mcp-server-requests",
+      "url": "https://github.com/coucya/mcp-server-requests",
+      "description": "Web Content Retrieval (full webpage, filtered content, or Markdown-converted), Custom User-Agent, Multi-HTTP Method Support (GET/POST/PUT/DELETE/PATCH), LLM-Controlled Request Headers, LLM-Accessible Response Headers, and more.",
+      "updated_at": "2026-07-26T13:40:24Z",
+      "stars": 7,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "DeusAcc/agent-web-index",
+      "url": "https://github.com/DeusAcc/agent-web-index",
+      "description": "How much of the web can AI assistants actually read? Daily measurement of every crawler, domain by domain.",
+      "updated_at": "2026-11-12T06:54:06Z",
+      "stars": 0,
+      "license": null,
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "diffbot/diffbot-mcp",
+      "url": "https://github.com/diffbot/diffbot-mcp",
+      "description": "A Diffbot MCP server with a variety of helpful web knowledge fetching tools for your agent or LLM pipeline.",
+      "updated_at": "2026-11-11T20:59:56Z",
+      "stars": 3,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "mark1russell7/crawler",
+      "url": "https://github.com/mark1russell7/crawler",
+      "description": "polite-crawler: a polite web crawler for research and AI agents. Fetch once, keep it, read it many times. robots.txt, one request per site, full-text search, MCP server.",
+      "updated_at": "2026-11-12T05:59:45Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "LLM web crawler agent"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "eugeneabongo9-cmyk/synapse-platform",
+      "url": "https://github.com/eugeneabongo9-cmyk/synapse-platform",
+      "description": "Production-grade distributed AI agent orchestration platform demonstrating advanced systems design, hexagonal architecture, event-driven microservices (Go + Rust), real-time collaboration, OpenTelemetry observability, and enterprise reliability patterns. Built to showcase senior/staff-level software engineering mastery.",
+      "updated_at": "2026-11-19T20:23:40Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "abhishekash/agenturm",
+      "url": "https://github.com/abhishekash/agenturm",
+      "description": "Agenturm — a clear view of every agent. Local, terminal-first monitoring for coding agents, MCP calls, and traces.",
+      "updated_at": "2026-11-17T16:19:10Z",
+      "stars": 3,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "langfuse/langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "description": "🪢 Open source AI engineering platform: AI Gateway, agent observability, evals, and prompt/skill management, built on OpenTelemetry. One open platform for every AI call and every agent. Self-host or use Langfuse Cloud.",
+      "updated_at": "2026-11-19T20:41:15Z",
+      "stars": 37638,
+      "license": "NOASSERTION",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Dankosik/rust-service-template-rest",
+      "url": "https://github.com/Dankosik/rust-service-template-rest",
+      "description": "Rust REST API template and microservice boilerplate on Tokio and axum, AI-native for coding agents, with OpenAPI, PostgreSQL, observability, and CI.",
+      "updated_at": "2026-11-15T10:41:48Z",
+      "stars": 2,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Brajesh31/multi-agent-observability-opentelemetry",
+      "url": "https://github.com/Brajesh31/multi-agent-observability-opentelemetry",
+      "description": null,
+      "updated_at": "2026-11-12T10:25:07Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "marinoscar/hexactra",
+      "url": "https://github.com/marinoscar/hexactra",
+      "description": "Portable, open-source runtime enabling AI agents to securely control real browsers and computers through SDK, CLI, and MCP, with OpenTelemetry observability.",
+      "updated_at": "2026-11-16T03:20:59Z",
+      "stars": 0,
+      "license": null,
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "chhayankjain/agentprobe-toolkit",
+      "url": "https://github.com/chhayankjain/agentprobe-toolkit",
+      "description": "Test how your LLM agent handles tool failures. Wrap its tools, inject deterministic faults, and fail CI unless every fault actually fired. pytest-friendly, with OpenTelemetry traces. pip install agentprobe-toolkit",
+      "updated_at": "2026-11-19T19:32:24Z",
+      "stars": 4,
+      "license": "MIT",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "glassflow/tares",
+      "url": "https://github.com/glassflow/tares",
+      "description": "Open-source platform for always-on AI agents: a software factory for Claude Code that takes your projects from tickets to merged pull requests, or an AI SRE that watches your systems.",
+      "updated_at": "2026-11-18T23:42:06Z",
+      "stars": 48,
+      "license": "NOASSERTION",
+      "query": "agent observability OpenTelemetry"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "SiddharthManjul/_Landing_Page",
+      "url": "https://github.com/SiddharthManjul/_Landing_Page",
+      "description": "Storarc is Decentralized Private Computing Solution powered by AO & Arweave",
+      "updated_at": "2025-11-23T06:19:33Z",
+      "stars": 0,
+      "license": null,
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Lesnak1/AO",
+      "url": "https://github.com/Lesnak1/AO",
+      "description": "Decentralized autonomous compute processes on Arweave AO",
+      "updated_at": "2026-09-25T12:22:22Z",
+      "stars": 0,
+      "license": null,
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "HelloRWA/awesome-ao",
+      "url": "https://github.com/HelloRWA/awesome-ao",
+      "description": "Decentralized compute at any scale. Only possible on Arweave.",
+      "updated_at": "2026-04-05T02:14:54Z",
+      "stars": 12,
+      "license": "MIT",
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "ronaldkohhh/aos",
+      "url": "https://github.com/ronaldkohhh/aos",
+      "description": "Decentralized compute on Arweave",
+      "updated_at": "2024-03-13T08:03:16Z",
+      "stars": 0,
+      "license": null,
+      "query": "Arweave AO decentralized compute"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+      "url": "https://github.com/Sabrialinton/Cybersecurity-Research-Paper-Analyses-Technical-Evaluations",
+      "description": "Structured technical analyses of contemporary cybersecurity research, examining attack feasibility, threat models, system vulnerabilities, and defensive mechanisms across hardware, wireless, web, and machine learning systems.",
+      "updated_at": "2026-02-18T20:57:47Z",
+      "stars": 0,
+      "license": null,
+      "query": "cybersecurity threat modeling defensive research"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "codenik01/Keystroke-Logging-Research-Lab",
+      "url": "https://github.com/codenik01/Keystroke-Logging-Research-Lab",
+      "description": "Academic study project exploring software and hardware keystroke capture techniques for cybersecurity awareness, threat modeling, and defensive research. No malicious deployment intended.",
+      "updated_at": "2026-01-09T22:47:33Z",
+      "stars": 1,
+      "license": null,
+      "query": "cybersecurity threat modeling defensive research"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "joaoopiress/secure-mpc-dark-auction",
+      "url": "https://github.com/joaoopiress/secure-mpc-dark-auction",
+      "description": "Privacy-preserving dark-pool auction with secure multi-party computation (MP-SPDZ): MASCOT vs Shamir vs Semi vs Replicated, with optimisations cutting MASCOT runtime by 81%",
+      "updated_at": "2026-11-05T12:45:18Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "filip26/salted-merkle-tree",
+      "url": "https://github.com/filip26/salted-merkle-tree",
+      "description": "A secure, privacy-preserving, and efficient Merkle tree for selective disclosure, deterministic root computation and fast verification of disclosed data.",
+      "updated_at": "2026-10-31T22:47:31Z",
+      "stars": 2,
+      "license": "CC-BY-4.0",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Chinghhc/secure-cryptographic-systems",
+      "url": "https://github.com/Chinghhc/secure-cryptographic-systems",
+      "description": "Applied Cryptography & Secure Data Sharing — Implemented AES, RSA, and Shamir’s Secret Sharing for secure data protection on numbers, texts, and images; explored Differential Privacy and Federated Learning for privacy-preserving computation.",
+      "updated_at": "2026-08-26T01:06:59Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "deepayansinha/pq-secure-federated-analytics",
+      "url": "https://github.com/deepayansinha/pq-secure-federated-analytics",
+      "description": "Post-Quantum Secure Multi-Party Computation for Privacy-Preserving Federated Analytics Merges lattice-based cryptography, homomorphic encryption, secure aggregation protocols, and Byzantine-robust federated averaging to defend against both classical and quantum adversaries.",
+      "updated_at": "2026-08-01T12:01:15Z",
+      "stars": 3,
+      "license": "Apache-2.0",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "rohittsainii/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+      "url": "https://github.com/rohittsainii/Privacy-Preservation-in-Healthcare-Data-using-Functional-Encryption-MPC",
+      "description": "This project focuses on securing sensitive healthcare data while enabling meaningful computation and analysis. It explores privacy-preserving cryptographic techniques such as Functional Encryption (FE) and Secure Multi-Party Computation (MPC) to allow authorized entities to compute specific outputs without accessing raw patient data.",
+      "updated_at": "2026-05-10T21:18:22Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "RealAradhyaGupta/aegis",
+      "url": "https://github.com/RealAradhyaGupta/aegis",
+      "description": "AEGIS is an end-to-end urban safety system that applies cryptographic evidence handling, real-time geospatial risk computation, and privacy-preserving identity management to solve reactive routing and provide secure reporting.",
+      "updated_at": "2026-03-30T18:42:48Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+      "url": "https://github.com/Madicke-Diadji/A-survey-of-PPNNs-based-on-HE-MPC-and-FE",
+      "description": "This review focuses on Privacy-Preserving Neural Networks (PPNNs) based on cryptographic primitives such as Homomorphic Encryption (HE), Secure Multiparty Computation (MPC), and Functional Encryption (FE). Detailed methods and techniques are presented to enhance the cryptographic compatibility of PPNNs.",
+      "updated_at": "2026-02-25T15:49:49Z",
+      "stars": 0,
+      "license": null,
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "title": "SyedDaiam9101/privacy-health-ledger",
+      "url": "https://github.com/SyedDaiam9101/privacy-health-ledger",
+      "description": "HealthLedger PRO is a privacy-preserving analytics dashboard that uses Zero-Knowledge Proofs to verify health data computations without exposing sensitive patient records. It allows researchers to run secure queries on encrypted datasets while ensuring the integrity of the results through cryptographic verification.",
+      "updated_at": "2026-01-30T11:01:18Z",
+      "stars": 0,
+      "license": "MIT",
+      "query": "privacy preserving cryptography secure computation"
+    },
+    {
+      "source_type": "github_repository",
+      "query": "AI red teaming evaluation reproducibility",
+      "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "source_type": "github_repository",
+      "query": "anomalous phenomena evidence replication",
+      "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "source_type": "github_repository",
+      "query": "open science negative results replication crisis",
+      "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "RPMem: Learning Long-Term Recurrent Parametric Memory Across Sessions for LLM Agents",
+      "url": "https://arxiv.org/abs/2609.23466v4",
+      "summary": "Long-running LLM agents require memory that persists and evolves across sessions. Text-based memory retrieves and reconstructs past interactions at every query, making long-horizon performance increasingly dependent on retrieval quality and contextual reasoning as histories grow. Parametric memory encodes experience directly into model computation, but existing approaches provide limited support for cross-session memory evolution. Their coupling to a specific backbone further restricts memory reuse after model replacement. We introduce RPMem, a two-stage architecture that compiles each session into a model-independent latent memory through forward computation and selectively integrates it with retained memory via a task-trained recurrent gate. The consolidated memory is then mapped to backbone-specific low-rank adaptation (LoRA) parameters, allowing the encoding capability to transfer when the backbone is replaced. Evaluation across three long-term memory benchmarks and five diverse backbones demonstrates broad generalization with near-constant update cost and memory footprint. With Qwen3-8B on PERMA, RPMem reaches 85.52%, outperforming the strongest parametric and text-based basel",
+      "published": "2026-09-20T08:51:10Z",
+      "updated": "2026-11-18T18:28:11Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Vibe-Trading: Towards Agent-Native Trading",
+      "url": "https://arxiv.org/abs/2611.24845v1",
+      "summary": "Existing AI agents can retrieve information, call tools, run experiments, and produce multi-step outputs. Yet most are built around relatively static workflows and struggle to preserve reliable state as the environment changes. Financial trading makes this limitation especially consequential: prices, news, market conditions, portfolio positions, and available capital evolve continuously. A result is useful only when it remains tied to the correct time, data snapshot, and execution context. We present Vibe-Trading, a comprehensive agent-native trading framework and all-in-one workspace for building, evaluating, and evolving agents for financial trading. It unifies market research, financial data, strategy generation, backtesting, portfolio analysis, paper trading, multi-agent collaboration, and optional broker execution. Its central contribution is an architecture that keeps results, evidence, research history, and trading authority connected throughout the research-to-action process. Each result retains its source, temporal scope, configuration, and producing run. Shared evidence grounding enables verification, versioned research records support reproducible continuation, and an ex",
+      "published": "2026-11-18T18:07:57Z",
+      "updated": "2026-11-18T18:07:57Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "KnowledgeClaw: Towards Agentic Knowledge Engineering via Omnimodal Hypergraphs",
+      "url": "https://arxiv.org/abs/2611.24294v1",
+      "summary": "Knowledge engineering (KE) turns raw files into a reasoning-ready knowledge base, a task now within reach of LLM agents. KE has progressed from chunk and graph retrieval-augmented generation (RAG) to memory agents, agentic KE and multimodal KE. However, a live knowledge base needs omnimodality, a closed-loop lifecycle and multi-granular application at once, yet existing systems meet at most two and no benchmark measures all three. We formalize Omnimodal Knowledge Engineering (OmniKE) and release OmniKE-Bench, six tasks with 1,829 model-free items over 3,960 real files in five modalities. We further propose KnowledgeClaw, an agentic system that builds an omnimodal typed hypergraph, keeps it current with a closed-loop lifecycle agent and routes each query to the granularity it needs. Against 30 baselines, it ranks first on all six tasks with an overall OKE of 55.9, +14.6 over the strongest baseline. Our software and data are publicly available at https://github.com/LHRLAB/KnowledgeClaw.",
+      "published": "2026-11-18T12:06:06Z",
+      "updated": "2026-11-18T12:06:06Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "A Capability Framework for Evaluating Agentic AI Platforms in Regulated Enterprises",
+      "url": "https://arxiv.org/abs/2611.24039v1",
+      "summary": "Agentic AI platforms-systems in which LLM agents plan, invoke tools, retain memory and coordinate to change the state of enterprise systems-are being procured faster than they can be measured. Public agent benchmarks score models in fixed harnesses; enterprises buy integrated platforms whose orchestration, memory, governance and tooling layers dominate outcomes, and they buy them largely on the strength of vendor demonstrations. We report an industrial evaluation programme (\"bakeoff\") run by the innovation laboratory of a global bank in which ten platforms-spanning open-source frameworks, proprietary products and hyperscaler ecosystems-were assessed by a cross-functional panel on nine capability dimensions across three financial-services workloads: counterparty credit risk, retrieval-augmented generation and process automation. Scores separate the field into three tiers that are stable under alternative weightings, and surface workload-specific strengths that aggregates hide. A secondary analysis, however, finds Cronbach's alpha = 0.98 across nominally distinct dimensions and rank correlations >= 0.93 with the total for eight of nine: a halo effect indicating that demonstration-bas",
+      "published": "2026-11-18T08:28:02Z",
+      "updated": "2026-11-18T08:28:02Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Multi-Agent Memory Inconsistency: Where Factual Conflicts Disappear in LLM Agents",
+      "url": "https://arxiv.org/abs/2611.22245v2",
+      "summary": "Multi-agent delegation lets LLM systems distribute evidence collection across workers with separate contexts. This creates a consistency challenge: facts retrieved by workers may be missing from the evidence available to the lead for a joint conclusion. We introduce a benchmark and evidence-flow profiler for studying multi-agent memory inconsistency through controlled factual conflicts in Harvey LAB document-review tasks. Pooled across three models with comparable generation spending, requiring delegation increases retrieval of both conflicting claims from 50.2% to 68.7% relative to single-agent execution, yet conflict detection falls from 16.2% to 13.2%. Within this setting, workers report both claims for only 35.2% of retrieved pairs, and pooled matched comparisons show higher detection than single-agent execution when one worker reads both claims but lower detection when the claims are split across workers. Worker-to-lead handoffs are a central target for improving conflict detection in multi-agent LLMs.",
+      "published": "2026-11-17T05:47:01Z",
+      "updated": "2026-11-18T06:42:29Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Weighing the Envelope: Component Weight and Arbitration in Envelope-Layer Defenses for a Single LLM Agent",
+      "url": "https://arxiv.org/abs/2611.23844v1",
+      "summary": "The envelope layer is the channel through which malicious content enters an LLM agent. Prior work established label and memory effects on multi-agent A2A envelopes, but the weight structure when MCP tools and memory coexist in a single agent remains unclear. Our threat model assumes an attacker pre-plants a malicious tool and poisons long-term memory; a benign user request inadvertently triggers it, and the attacker never enters the conversation. Following GDA Measurement and A/B/C/D, we measure how labels, memory, tool roles, and the backend shape invocation decisions across label-memory conflict, tool roles, robustness, and tool generalization. A tool-side forced-verification label substantially reduces semantic breach, but strong success memory pulls it back; a memory-side downgrade statement returns the outcome to the level of the label alone. The label works through mandatory implementation inspection plus default denial, not length or format; memory authorization wording erodes it with dose, while position and multi-turn pressure do not change the defense direction. Tool roles divide label effects into substitution, suppression, and boundary failure: low penetration is not sa",
+      "published": "2026-11-18T04:50:08Z",
+      "updated": "2026-11-18T04:50:08Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Think Once, Act Fast: Cost-Effective Recursive Self-Improvement for Decision Model Harness",
+      "url": "https://arxiv.org/abs/2611.22432v2",
+      "summary": "Fast System-1 models enable responsive actions but struggle with complex or unfamiliar tasks. Large language model (LLM)-based System-2 provides strong reasoning capabilities, yet repeated invocation incurs substantial latency and computational costs. To bridge this gap, we propose JevRSI, a System-1/System-2 collaboration framework that transforms LLM reasoning into transferable decision support through recursive harness improvement. A Jev-style System-1 model enables low-latency action selection, while an asynchronous System-2 LLM develops a modular harness. The harness integrates procedures, state memory, and world models to provide decision contexts spanning the past, present, and future. Utility-driven retrieval selects modules based on both contextual relevance and their utility on previous tasks. Environmental feedback guides targeted revisions and enables recursive self-improvement. Experiments across three datasets show that JevRSI consistently improves decision quality, matching or surpassing LLM agents in several settings. It preserves low-latency execution with favorable performance-cost trade-offs. Moreover, System-2 development interventions decrease as the harness ev",
+      "published": "2026-11-17T09:06:14Z",
+      "updated": "2026-11-18T04:39:23Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "ARISE: Practical Self-Evolving Memory for Accurate and Cost-Efficient Enterprise Agents",
+      "url": "https://arxiv.org/abs/2611.23588v1",
+      "summary": "Enterprise LLM agents operate in dynamic environments where foundation models evolve rapidly, workflows update frequently, and deployments need to satisfy accuracy and cost requirements. We propose ARISE (Agent Refinement through Iterative Self-Evaluation), a practical memory architecture in which the agent's memory evolves from its own failures without updating model weights, tools, or workflow logic. ARISE uses the model itself or a teacher model to attribute the failures and propose corrections. Then, ARISE keeps the corrections as retrievable micro memory, consolidates them into macro rules, and accepts a rule update only if held-out accuracy rises. Across 14 enterprise-workflow domains from SOP-Bench and $τ^2$-bench using 5 models, ARISE-Teacher, which uses Claude Opus 4.6 for attribution and consolidation, gains 10.9 pp over the baseline on SOP-Bench and 5.8 pp on $τ^2$-bench. ARISE-Teacher also outperforms GEPA by 4.5 pp on $τ^2$-bench and 1.4 pp on SOP-Bench. With the deployment model as its own attributor, ARISE-Self still gains 10.0 pp on SOP-Bench. ARISE-Teacher uses 4.0% fewer model calls and 5.2% fewer output tokens at comparable per-task cost (-1.0%).",
+      "published": "2026-11-17T22:38:58Z",
+      "updated": "2026-11-17T22:38:58Z",
+      "query": "(\"LLM agents\" OR \"AI agents\") AND (memory OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use",
+      "url": "https://arxiv.org/abs/2610.09127v2",
+      "summary": "Reconstructing an editable CAD model from a 3D shape remains a challenging engineering task. Existing methods can propose CAD operations, but no single source of proposals works equally well across different part geometries and stages of reconstruction. We introduce CADFather, an autonomous agentic system that coordinates complementary tools to recover parametric CAD programs from 3D meshes. A vision-language assistant inspects renders of the target and intermediate reconstructions, then decides which candidate CAD programs to extend, which tools to invoke, how many proposals to generate, and when to finish. Learned and algorithmic tools propose CAD operations, while numerical optimization refines the parameters of existing programs. Proposed or refined programs are executed and evaluated to provide feedback for subsequent decisions. The agent maintains alternative candidate programs for each target part and preserves the best valid result throughout reconstruction. CADFather uses pretrained generation and assistant models without additional training. We evaluate reconstruction quality and execution validity on the full DeepCAD, Fusion360, and MCB test sets, as well as on CADENA-Be",
+      "published": "2026-10-06T21:20:59Z",
+      "updated": "2026-11-18T18:43:31Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "MAVE: Reconstructing Editable 3D Blockouts from Film Shots",
+      "url": "https://arxiv.org/abs/2611.22464v2",
+      "summary": "Animated 3D blockouts support previsualization and provide structural conditions for video generation, but manually reconstructing them from reference videos is costly. This limits both their use by creators and the production of paired training data. We introduce MAVEBench, a benchmark of 50 film shots and 416 keyframes for evaluating camera motion, spatial layout, and character blocking. We propose MAVE, a video-to-blockout framework combining Metric observation, Agentic modeling, and evidence-based VErification. It first recovers cameras, human motion, and geometric evidence in a shared metric coordinate system. An agent then constructs an editable environment under constraints from these observations, while programmatic checks report inconsistencies to guide refinement. The outputs are editable Blender scenes and frame-aligned blockout videos. On MAVEBench, MAVE improves overall scores by 27.5-41.1 points across three agents over their corresponding vanilla baselines. With DeepSeek-1017, it achieves a score of 73.2 at an average API cost of only USD 0.054 per shot, outperforming the strongest vanilla baseline while reducing total reconstruction time by 53%. We also construct MA",
+      "published": "2026-11-17T09:25:47Z",
+      "updated": "2026-11-18T18:35:59Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Communications-free Collective Intelligence Via Allocentric Belief",
+      "url": "https://arxiv.org/abs/2611.24858v1",
+      "summary": "A team of skilled card players share no information amongst each other, and yet still are able to coordinate their play by watching the same players and reading the same tells. Autonomous systems have failed to exploit this logic, relying instead on explicit communication or complex state estimation schemes that can fail when it matters most. Without it, decentralized agents diverge in their world beliefs, and coordination collapses. Here we show that anchoring all agents to a single shared external actor, a common witness whose reactions encode team state, produces spontaneous, communication-free coordination. An allocentric belief network trained on witness behavior allows each agent to independently reconstruct full team state, keeping group beliefs consistent with no inter-agent exchange. Across five competitive environments allocentric belief alignment outperforms egocentric approaches in collective performance, and even scales to sixty-agent teams where standard methods fail. These results establish a new principle for collective intelligence: in the absence of communication, a shared gaze replaces a shared channel.",
+      "published": "2026-11-18T18:17:30Z",
+      "updated": "2026-11-18T18:17:30Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Kaer: Security-Aware Replanning for Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2611.24839v1",
+      "summary": "One popular architecture for multi-agent systems (MAS) relies on an orchestrator that generates an initial plan, coordinates its execution, and dynamically revises the plan based on agent feedback when tasks cannot be fully specified in advance. This dynamic replanning introduces a critical vulnerability: malicious agents can embed instructions within their feedback to hijack the replanning process. Existing defenses focus exclusively on per-tool access control or static, pre-execution policy enforcement, leaving the replanning phase unsecured. We introduce Kaer, a multi-agent framework featuring security-aware replanning. Kaer shields the planner from untrusted agent feedback by conveying diagnostics to the replanning procedure strictly through abstract templates. Plan revisions are restricted to a set of deterministic repair operators, and all modified plans must satisfy preset policies. We create Cintra, a benchmark of simulated user tasks requiring replanning paired with adversarial objectives targeting the replanning phase. Using Cintra, we evaluate both task completion rates and system vulnerability to replanning exploits by malicious agents. Evaluating Kaer on Cintra against",
+      "published": "2026-11-18T18:05:47Z",
+      "updated": "2026-11-18T18:05:47Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents",
+      "url": "https://arxiv.org/abs/2503.01935v2",
+      "summary": "Large Language Models (LLMs) have shown remarkable capabilities as autonomous agents, yet existing benchmarks either focus on single-agent tasks or are confined to narrow domains, failing to capture the dynamics of multi-agent coordination and competition. In this paper, we introduce MultiAgentBench, a comprehensive benchmark designed to evaluate LLM-based multi-agent systems across diverse, interactive scenarios. Our framework measures not only task completion but also the quality of collaboration and competition using novel, milestone-based key performance indicators. Moreover, we evaluate various coordination protocols (including star, chain, tree, and graph topologies) and innovative strategies such as group discussion and cognitive planning. Notably, gpt-4o-mini reaches the average highest task score, graph structure performs the best among coordination protocols in the research scenario, and cognitive planning improves milestone achievement rates by 3%. Code and datasets are public available at https://github.com/MultiagentBench/MARBLE.",
+      "published": "2025-03-03T05:18:50Z",
+      "updated": "2026-11-18T17:51:17Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Uncertainty, bias and the institution bootstrapping problem",
+      "url": "https://arxiv.org/abs/2504.21579v2",
+      "summary": "Institutions play a critical role in enabling communities to manage common-pool resources and avert tragedies of the commons. However, a fundamental issue arises: Individuals typically perceive participation as advantageous only after an institution is established, creating a paradox: How can institutions form if no one will join before a critical mass exists? We term this conundrum the institution bootstrapping problem and propose that misperception, specifically, agents' erroneous belief that an institution already exists, could resolve this paradox. By integrating well-documented psychological phenomena, including cognitive biases, probability distortion, and perceptual noise, into a game-theoretic framework, we demonstrate how these factors collectively mitigate the bootstrapping problem. Notably, unbiased perceptual noise (e.g., noise arising from agents' heterogeneous physical or social contexts) drastically reduces the critical mass of cooperators required for institutional emergence. This effect intensifies with greater diversity of perceptions. We explain this counter-intuitive result through asymmetric boundary conditions: proportional underestimation of low-probability s",
+      "published": "2025-04-30T12:36:06Z",
+      "updated": "2026-11-18T17:22:46Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Chemotactic aggregation as cue-mediated adaptation toward Nash equilibrium in a spatial patterning game",
+      "url": "https://arxiv.org/abs/2611.24705v1",
+      "summary": "Chemotactic cells generate their own chemical gradients to form spatial patterns that support collective functions ranging from cooperative metabolism to immunity. Despite progress in understanding the optimality of chemotaxis in imposed chemical gradients, it remains unclear how close decentralized cell populations can come to maximizing the population-wide benefit of spatial organization through individual movement and local modulation of chemical gradients. We employ mean field game theory to characterize efficient spatial patterns achievable by decentralized populations as Nash equilibria: each agent optimizes its positioning given the spatial density of the other cells, whereas the population density is determined by the positioning of all individuals. We derive coupled dynamics of population movement and cue modulation that drive adaptation toward these equilibria and verify its structural correspondence to established phenomenological models of chemotactic pattern formation. We apply our framework to self-organized aggregation and numerically demonstrate that the dynamics can form multiple equilibrium patterns, some of which are comparable to the population-level optimum und",
+      "published": "2026-11-18T16:31:11Z",
+      "updated": "2026-11-18T16:31:11Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Can Bandits Learn to Share a Channel? Distributed Multi-Armed Bandits for Slotted ALOHA",
+      "url": "https://arxiv.org/abs/2611.24676v1",
+      "summary": "Slotted ALOHA networks constitute a playground for research on machine learning (ML)-based channel access schemes. We consider ML agents deployed in such networks and operating under severe constraints: fully distributed (independent operation), fully online (no pre-training), aperiodic (no fixed schedule), and with no explicit coordination (no signaling). We ask whether a multi-armed bandit (MAB), a minimal reinforcement learning agent, can learn the optimal policy for a capture-free slotted ALOHA system. We evaluate several MAB algorithms on aggregate network throughput and per-node fairness. Our best-performing agent is based on a Softmax bandit, which we call SALSA (Softmax ALOHA Learning for Shared Access). SALSA learns a per-node transmission policy close to optimal, with throughput near the theoretical maximum for fair random access. We achieve performance comparable to a competing state-of-the-art solution, but without requiring a priori knowledge of the network size.",
+      "published": "2026-11-18T16:11:36Z",
+      "updated": "2026-11-18T16:11:36Z",
+      "query": "(\"multi-agent\" OR \"agentic\") AND (coordination OR interoperability)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender",
+      "url": "https://arxiv.org/abs/2611.15789v2",
+      "summary": "Controllable real-world video generation models can condition on a rendered graybox proxy video, which fixes layout, motion and camera. Coding agents can build such videos by generating a 4D scene in Blender, yet no benchmark checks both these rendered proxy videos and the complex, multi-shot scenes behind them. We introduce VibePrevisBench, a benchmark for 4D scene generation: an agent turns a brief into an executable 4D scene and renders its proxy video. Its 242 tasks span four input kinds, including scripts, photos, continuations, and reference videos. Each delivery is scored along two evaluation dimensions. Rule-based Scene Check re-runs the code and compares the exported 4D scene with hidden ground truth facts in nine dimensions. VLM-based Screen Check asks a VLM judge whether facts that pass the rules are recognizable in the proxy video. We analyze the evaluation results and trajectories of 11 frontier coding agents and identify three key observations. First, multimodal understanding separates the agents, especially in understanding space and camera motion. Second, all agents seem to already master basic camera work and staging, and fail at challenging requests. Third, agents",
+      "published": "2026-11-11T18:02:07Z",
+      "updated": "2026-11-18T18:56:21Z",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Render the Robot, Generate the World: One Video World Model Across Embodiments",
+      "url": "https://arxiv.org/abs/2611.24925v1",
+      "summary": "Predicting the consequences of an agent's actions requires modeling both the body's motion and the environment's response. Most video world models attempt to learn both from numerical actions, even though geometry and kinematics already specify the intended motion. We introduce Doppel, an embodiment-agnostic video world model conditioned on camera-aligned renderings of future body configurations and numerical action trajectories. By explicitly providing the intended motion, Doppel can focus on predicting object motion and interaction-driven changes in the environment. Rendered motion also provides a common visual interface across different embodiments and action spaces. To train on robot datasets without camera extrinsics, we recover camera poses and align rendered trajectories with recorded observations. We jointly train a single shared video backbone and conditioning adapter on eight datasets spanning eight robot and human embodiments, from single- and bimanual robot arms to a dexterous humanoid and human hands and bodies, using about 600 hours of video without embodiment labels. Across three robot-arm datasets, Doppel improves PSNR over action-only baselines by 1.00 dB on held-o",
+      "published": "2026-11-18T18:52:28Z",
+      "updated": "2026-11-18T18:52:28Z",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+      "url": "https://arxiv.org/abs/2611.24924v1",
+      "summary": "Real-world harness engineering is driven by explicit and implicit user requirements, which guide development and validation. However, existing harness evolution methods often overlook implicit requirements and interaction needs, while using a single evolution agent to modify the harness and benchmark scores to select changes. This process often produces narrow patches and leads to benchmark-specific local optima. We introduce Agentic Harness Engineering Beta (AHE-Beta), a requirement-centered loop that brings real-world engineering practices into harness evolution. The loop consists of three steps: (1) User-driven evaluation lets simulated users raise their requirements as issues while they work with the harness over multiple turns. (2) Team-based modification implements those requirements as generalizable changes rather than task-specific patches. (3) Requirement-driven selection merges a change only when it resolves a verified requirement and passes review. Empirically, on held-out tasks, AHE-Beta raises pass@1 from 21.9% to 33.3% while using 40.8% fewer tokens than Base Harness, and achieves higher pass@1 than Claude Code, Meta-Harness, and AHE. In a blind human A/B test, real u",
+      "published": "2026-11-18T18:52:13Z",
+      "updated": "2026-11-18T18:52:13Z",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "PrismRestore: A Compact Restoration Toolbox for Agentic Image Restoration",
+      "url": "https://arxiv.org/abs/2611.24915v1",
+      "summary": "Agentic image restoration composes operations to handle mixed degradations, yet its toolbox often requires storing multiple restoration networks. We propose PrismRestore, which constructs a compact bank of callable restoration actions from a single frozen all-in-one model. Our approach builds on task-dependent yet overlapping channel responses in the shared model. An offline task-prior search uses activation and gradient statistics to group channels with similar response profiles, then searches task-specific modulation coefficients over non-representative channels while leaving representative channels unmodulated. The resulting prior bank enables explicit action selection and composition without additional restoration backbones or task-specific adapter modules. A state-conditioned policy learns to compose these actions using Group Relative Policy Optimization. Its objective separately normalizes fidelity and perceptual feedback within groups of trajectories sampled for the same input, and combines terminal evaluation with return-to-go derived from stepwise quality changes. Experiments on synthetic composite-degradation and real-world multi-task benchmarks show improvements over the",
+      "published": "2026-11-18T18:48:01Z",
+      "updated": "2026-11-18T18:48:01Z",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "CADMAGEDDON: High-Fidelity CAD Reconstruction with Local Inference",
+      "url": "https://arxiv.org/abs/2611.22563v2",
+      "summary": "CAD practitioners often work with proprietary parts that they are unwilling to share with external services. For individuals and small companies, bringing this work in-house also requires computational resources they can afford. We introduce CADMAGEDDON, an open-source agent that reconstructs editable CAD from meshes and can run locally on single-GPU systems and current-generation laptops. The method decomposes this complex task into a chain of simple visual decisions about what to construct and what to correct. Geometric tools support precise construction, allowing the agent to focus on visual reasoning. Using the mid-sized Qwen3.8-27B model, CADMAGEDDON outperforms prior approaches, including systems based on frontier models, in reconstruction quality on all the main benchmarks. CADMAGEDDON integrates with FreeCAD, bringing its reconstructions into practitioners' existing CAD workflows. Code: https://github.com/kulibinai/cadmageddon",
+      "published": "2026-11-17T10:48:35Z",
+      "updated": "2026-11-18T18:34:30Z",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "On Evaluating User Simulators for Interactive Agents",
+      "url": "https://arxiv.org/abs/2611.24892v1",
+      "summary": "User simulators offer a scalable way to evaluate interactive agents, but how to assess their quality remains underexplored. In particular, it is unclear whether existing user simulator evaluation frameworks reliably detect meaningful failures in simulated user behavior. This uncertainty makes it difficult to interpret simulator evaluation. To understand what a high benchmark score tells us about simulator quality, we (meta-)evaluate the metrics themselves. To instantiate this meta-evaluation, we deliberately perturb simulated replays to induce failures such as altered goals, omitted constraints, premature stopping, and acceptance of broken work, then test whether the metrics penalize these failures. Evaluation methods from three prior studies detect only 5-6 of the 10 perturbations; their combined scores even favor populations instructed to accept broken work over unmodified controls. Motivated by these gaps, we propose a new evaluation suite that combines utility of user simulators for evaluating agents and two measures of fidelity to real users: population-level fidelity assesses collective interaction patterns, while trace-level fidelity assesses the preservation of individual u",
+      "published": "2026-11-18T18:34:23Z",
+      "updated": "2026-11-18T18:34:23Z",
+      "query": "(\"tool use\" OR \"agent\") AND (evaluation OR benchmark)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Safety Direction Adapter: A Training-Free Post-Hoc Safety Patch for Fine-Tuned Open-Weight LLMs",
+      "url": "https://arxiv.org/abs/2611.10056v1",
+      "summary": "Open-weight LLMs are routinely fine-tuned from public repositories, yet task-specific adaptation can silently erode safety alignment inherited from instruct-tuned bases. This is a supply-chain risk when organizations ship third-party checkpoints without full re-alignment. Prior work rarely audits diverse public fine-tunes under a shared multi-axis safety-utility protocol or offers training-free mitigation at deployment time. We propose Safety Direction Adapter (SDA), a training-free post-hoc safety patch that extracts a safety direction once from an aligned base and transfers it one-to-many within that base family as a small PEFT-compatible weight update, evaluated under the same multi-axis protocol. Across six direction extractors, we evaluate 14 checkpoints from two 1-2B lineages and probe 8B and 27B fleets (n=5 each) on 15 benchmarks (12538 prompts). On Llama, SDA improves the four-axis mean by about 2.3 points against a 4.2-point instruct-relative gap (about 55 percent recovery; partial Avg), with Safety and Cyber recovering toward or beyond instruct; Safety gains about 8.5 points against about 4.9 points mean degradation. On Qwen, degradation is larger and excess-driven; SDA s",
+      "published": "2026-11-06T00:36:27Z",
+      "updated": "2026-11-06T00:36:27Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Violet Teaming in Practice: Lessons from a Pilot Expert Workshop on Governing Complex AI Systems",
+      "url": "https://arxiv.org/abs/2610.41018v1",
+      "summary": "Violet teaming has been proposed as a method to integrate technical, policy, and societal considerations into the evaluation of emerging technologies. Here, we document a pilot expert workshop used to explore violet teaming as a governance methodology for biodefense-relevant AI capabilities and describe observations from the exercise. The workshop used a hypothetical technology scenario across three sequential stages - capability development, misuse potential, and implementation - while incorporating technical, security, operational, and policy perspectives. The sequential format provided an integrated way to examine potential benefits, misuse risks, and real-world implementation challenges, rather than considering these issues in isolation. The exercise surfaced non-obvious misuse pathways, expanded potential interventions beyond purely technical safeguards, and highlighted operational and policy constraints that could affect implementation. This report summarizes the workshop design, outputs, and lessons learned for applying violet teaming to the evaluation of complex, dual-use technologies.",
+      "published": "2026-10-29T21:57:02Z",
+      "updated": "2026-10-29T21:57:02Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "AI-Generated Non-Consensual Intimate Imagery is Configured, Not Built: How General-Purpose AI Technology Enables Sexual Violence",
+      "url": "https://arxiv.org/abs/2610.37949v1",
+      "summary": "AI-generated non-consensual intimate imagery (AIG-NCII) is an increasingly prevalent form of online abuse, distinguished from AI-generated sexual content (AIG-SC) by the sexualized depiction of a real person's identity without their consent. To understand how offenders may benefit from the tools and resources shared across the broader AIG-SC community, we analyzed 139 R+ guides on CivitAI, a popular platform known to host a disproportionate amount of AIG-SC. We find that AIG-SC guides discuss how to create content generation workflows composed of sexual and identity concepts, the building blocks of AIG-NCII, including one guide that explicitly outlines an AIG-NCII workflow. We identify that ultimately AIG-NCII is enabled by configuration rather than a distinct set of technical tools. We map AIG-NCII threat models across basic and advanced AIG-SC workflows to demonstrate how multiple dual-use technical components can compose NCII outputs in an environment with little to no discussion of ethical implications or responsible use. We conclude by noting that, as most workflows rely on open-weight models, existing technical defenses against AIG-NCII are limited. However, our findings offe",
+      "published": "2026-10-27T20:35:48Z",
+      "updated": "2026-10-27T20:35:48Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Safeguard-Conditioned Uplift: Measuring Utility-Risk Frontiers for Dual-Use Biology Assistants",
+      "url": "https://arxiv.org/abs/2607.13039v3",
+      "summary": "Refusal rates conflate upstream provider behavior with downstream safeguards and do not reveal what information remains in a delivered answer. Safeguard-conditioned uplift is an evidence-gated framework for evaluating benchmark utility and risk-related proxies along deployed access paths for dual-use biology assistants. It attributes interventions to their source, selects thresholds under a legitimate-access budget, and supports content claims only when answer verifiers pass frozen qualification tests. In a prospectively frozen route and generation study, two of six configurations pass the LAB-Bench-calibrated action-level rule, but both inherit the same Claude Opus provider effect rather than independent downstream gains. Positive selectivity persists on 104 previously unused matched pairs, but benign intervention exceeds the $20\\%$ limit. No joint-scoring verifier meets the frozen criteria; a factorial follow-up shows that criterion isolation and ordinal outputs improve end-to-end edit-direction accuracy on controlled template edits. The evidence supports action-level selectivity and verifier interface effects, but not calibrated access, verified content removal, or biological-ri",
+      "published": "2026-06-12T00:57:14Z",
+      "updated": "2026-10-25T23:17:17Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Orthogonal Boundary Unlearning for Dual-Use Concepts in Large Language Models",
+      "url": "https://arxiv.org/abs/2610.27490v1",
+      "summary": "Mitigating catastrophic risks from large language models requires excising hazardous operational capabilities, such as cyberwarfare exploitation and pathogen enhancement, without degrading benign scientific utility. In these dual-use domains, legitimate defensive science and malicious attacks share vocabulary, syntax, and internal model representations, causing standard unlearning methods to induce severe collateral damage (concept bleeding). In this work, we present Orthogonal Boundary Unlearning (OBU), a mathematically grounded framework designed to eliminate collateral damage on benign dual-use capabilities. OBU extracts a domain-matched capability subspace from paired calibration queries via singular value decomposition on empirical activation covariances, and restricts parameter updates strictly to the orthogonal null space. This guarantees that benign representations experience zero parameter perturbation along the spanned calibration subspace. We present two complementary realizations of OBU: Projected LoRA, which applies the orthogonal constraint during iterative gradient-based fine-tuning, and Closed-Form Weight Surgery, which directly edits model weights in a single analy",
+      "published": "2026-10-20T02:09:21Z",
+      "updated": "2026-10-20T02:09:21Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Foundations for a Lens of Quantum Governance",
+      "url": "https://arxiv.org/abs/2610.16939v1",
+      "summary": "The second quantum revolution is a revolution of information. Advances in quantum computation, communication, and sensing offer new capabilities while raising questions about how quantum infrastructures will be organised, accessed, and governed. We argue that their significance for governance lies not in transforming political principles, but in how their technical and infrastructural requirements may affect existing relationships of authority, responsibility, legitimacy, and power. This paper develops a quantum governance lens that connects governance scholarship with quantum information science, examining interactions between technical design, institutional arrangements, and infrastructural dependencies. We apply this lens to five areas: quantum computation, quantum key distribution, Quantum Byzantine Agreement, blind quantum computation, and dual-use quantum sensing. These applications illustrate how technical capabilities may influence access, trust, privacy, oversight, and accountability, while demonstrating that technical guarantees cannot resolve institutional questions independently. We conclude that quantum technologies do not necessarily introduce unique governance challe",
+      "published": "2026-10-12T15:16:16Z",
+      "updated": "2026-10-12T15:16:16Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "FinRED: An Expert-Guided Benchmark Generation and Evaluation Framework for Financial LLM Red-Teaming",
+      "url": "https://arxiv.org/abs/2606.19887v4",
+      "summary": "Existing safety benchmarks target general adversarial scenarios but miss finance-specific risks. Financial LLMs face regulatory compliance violations, fraud facilitation, and systemic trust erosion that require targeted evaluation. We introduce FinRED, an expert-guided red-teaming framework for financial LLM safety evaluation developed with financial experts. FinRED uses a novel two-level taxonomy mapping global standards (e.g., FATF and EU DORA) to threats ranging from regulatory evasion to complex fraud, integrated with a scalable pipeline that converts real financial documents into context-rich red-teaming Behavioral Prompts (seeds) through an expert-defined schema. Rigorous expert validation confirms seed plausibility and realism for meaningful LLM safety evaluation. We also provide an expert-validated, finance-specific rubric that goes beyond disclaimer checks, aligns more closely with human experts than static one-size-fits-all rubrics, and reduces critical false negatives from 28 to 12. Aligned with internationally adopted risk-management and information-security standards (e.g., ISO/IEC 27001), FinRED is deployed in South Korea's Financial Security Institute (FSI) regulator",
+      "published": "2026-06-18T07:46:18Z",
+      "updated": "2026-10-12T08:20:34Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "DRYLAB-Bench: Benchmarking the Biosecurity Risk of Agentic LLM Mutation Design",
+      "url": "https://arxiv.org/abs/2610.13116v1",
+      "summary": "As large language models (LLMs) acquire advanced biological design capabilities, they offer substantial research benefits but simultaneously introduce severe dual-use risks, such as engineering enhanced pathogens or drug-resistant bacteria. While biosecurity frameworks recognize these threats, the actual risk of LLMs executing dangerous biological modifications remains unquantified, particularly when augmented with specialized biological design tools (BDTs). Existing evaluations primarily assess hazardous knowledge possession rather than practical application, overlook risk amplification from BDTs, and rely on unreliable, expensive, or hazardous validation methods. To address these gaps, we introduce DRYLAB-Bench (Design Risk Yielded by LLM Agent in Biodesign), the first comprehensive benchmark evaluating the high-risk biological mutation design capabilities of LLM agents. Moving beyond basic question-answering, DRYLAB-Bench tasks agents with 30 genuinely hazardous mutation-design scenarios distilled from biosecurity guidelines. It evaluates models in a multi-round, tool-augmented environment where LLMs orchestrate BDTs to iteratively refine candidates. Crucially, it scores designs",
+      "published": "2026-10-09T07:09:16Z",
+      "updated": "2026-10-09T07:09:16Z",
+      "query": "(\"dual use\" OR \"dual-use\") AND (governance OR risk OR ethics)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "The Corporate Bond Factor Replication Crisis",
+      "url": "https://arxiv.org/abs/2604.07880v1",
+      "summary": "Corporate bond factor research faces a replication crisis. The crisis stems from two sources that inflate reported factor premia: transaction prices whose measurement error enters both sorting signals and return denominators, creating a correlated errors-in-variables bias, and asymmetric ex-post return filtering that embeds future information into factor construction. Applying our framework to a 'factor zoo' of 108 signals across nine thematic clusters, we show that the majority of previously documented factors do not produce statistically significant bond CAPM alphas after correction. We provide an open source framework via Open Bond Asset Pricing, including error-corrected TRACE data, bias corrected factors, and software for reproducible research.",
+      "published": "2026-04-09T06:50:49Z",
+      "updated": "2026-04-09T06:50:49Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "The Certainty Bound: Structural Limits on Scientific Reliability",
+      "url": "https://arxiv.org/abs/2603.03445v1",
+      "summary": "Explanations of the replication crisis often emphasize misconduct, questionable research practices, or incentive misalignment, implying that behavioral reform is sufficient. This paper argues that a substantial component is architectural: within binary significance-based publication systems, even perfectly diligent researchers face structural limits on the reliability they can deliver. The posterior log-odds of a finding equal prior log-odds plus log(Lambda), where Lambda = (1-beta)/alpha is the experimental leverage. Interpreted architecturally, this implies a hard constraint: once evidence is coarsened to a binary significance decision, the decision rule contributes exactly log(Lambda) to posterior log-odds. A target reliability tau is feasible iff pi >= pi_crit, and under fixed alpha this generally cannot be rescued by sample size alone. Two mechanisms can drive effective leverage to 1 without bad faith: persistent unmeasured confounding in observational studies and unbounded specification search under publication pressure. These results concern binary significance-based decision architectures and do not bound inference based on full likelihoods or richer continuous evidence sum",
+      "published": "2026-03-03T19:02:09Z",
+      "updated": "2026-03-03T19:02:09Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "LLM-Assisted Replication for Quantitative Social Science",
+      "url": "https://arxiv.org/abs/2602.18453v1",
+      "summary": "The replication crisis, the failure of scientific claims to be validated by further research, is one of the most pressing issues for empirical research. This is partly an incentive problem: replication is costly and less well rewarded than original research. Large language models (LLMs) have accelerated scientific production by streamlining writing, coding, and reviewing, yet this acceleration risks outpacing verification. To address this, we present an LLM-based system that replicates statistical analyses from social science papers and flags potential problems. Quantitative social science is particularly well-suited to automation because it relies on standard statistical models, shared public datasets, and uniform reporting formats such as regression tables and summary statistics. We present a prototype that iterates LLM-based text interpretation, code generation, execution, and discrepancy analysis, demonstrating its capabilities by reproducing key results from a seminal sociology paper. We also outline application scenarios including pre-submission checks, peer-review support, and meta-scientific audits, positioning AI verification as assistive infrastructure that strengthens re",
+      "published": "2026-02-04T15:17:49Z",
+      "updated": "2026-02-04T15:17:49Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Time to adjust: Improving replicability in experimental psychology by adjustment for evident selective inference",
+      "url": "https://arxiv.org/abs/2006.11585v3",
+      "summary": "The field of psychological sciences has been grappling with the replicability crisis. Various issues have been identified as potential sources of this problem. We bring to light a potential source that has largely been overlooked and demonstrate its significant contribution to the problem: the practice of multiple comparisons. We analyzed 88 papers from the Reproducibility Project in Psychology and found that multiple results are commonly reported in a single paper, ranging from 4 to 730 (M=77.7), without multiple comparison adjustments. We retroactively applied such an adjustment using a hierarchical FDR controlling procedure (TreeBH; Bogomolov et al., 2021). 21 of 88 results were deemed insignificant after adjustment. Twenty of these 21 results indeed failed to replicate, constituting over a third of the non-replicable findings, while maintaining 97% power. We propose that this should become a common practice as an essential means to increase replicability in experimental psychology.",
+      "published": "2020-06-20T14:22:48Z",
+      "updated": "2025-04-25T10:56:01Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "The impact of the storytelling fallacy on real data examples in methodological research",
+      "url": "https://arxiv.org/abs/2503.03484v1",
+      "summary": "The term \"researcher degrees of freedom\" (RDF), which was introduced in metascientific literature in the context of the replication crisis in science, refers to the extent of flexibility a scientist has in making decisions related to data analysis. These choices occur at all stages of the data analysis process. In combination with selective reporting, RDF may lead to over-optimistic statements and an increased rate of false positive findings. Even though the concept has been mainly discussed in fields such as epidemiology or psychology, similar problems affect methodological statistical research. Researchers who develop and evaluate statistical methods are left with a multitude of decisions when designing their comparison studies. This leaves room for an over-optimistic representation of the performance of their preferred method(s). The present paper defines and explores a particular RDF that has not been previously identified and discussed. When interpreting the results of real data examples that are most often part of methodological evaluations, authors typically tell a domain-specific \"story\" that best supports their argumentation in favor of their preferred method. However, the",
+      "published": "2025-03-05T13:21:08Z",
+      "updated": "2025-03-05T13:21:08Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "A Looming Replication Crisis in Evaluating Behavior in Language Models? Evidence and Solutions",
+      "url": "https://arxiv.org/abs/2409.20303v1",
+      "summary": "In an era where large language models (LLMs) are increasingly integrated into a wide range of everyday applications, research into these models' behavior has surged. However, due to the novelty of the field, clear methodological guidelines are lacking. This raises concerns about the replicability and generalizability of insights gained from research on LLM behavior. In this study, we discuss the potential risk of a replication crisis and support our concerns with a series of replication experiments focused on prompt engineering techniques purported to influence reasoning abilities in LLMs. We tested GPT-3.5, GPT-4o, Gemini 1.5 Pro, Claude 3 Opus, Llama 3-8B, and Llama 3-70B, on the chain-of-thought, EmotionPrompting, ExpertPrompting, Sandbagging, as well as Re-Reading prompt engineering techniques, using manually double-checked subsets of reasoning benchmarks including CommonsenseQA, CRT, NumGLUE, ScienceQA, and StrategyQA. Our findings reveal a general lack of statistically significant differences across nearly all techniques tested, highlighting, among others, several methodological weaknesses in previous research. We propose a forward-looking approach that includes developing ro",
+      "published": "2024-09-30T14:00:34Z",
+      "updated": "2024-09-30T14:00:34Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "The State of Reproducibility Stamps for Visualization Research Papers",
+      "url": "https://arxiv.org/abs/2408.03889v2",
+      "summary": "I analyze the evolution of papers certified by the Graphics Replicability Stamp Initiative (GRSI) to be reproducible, with a specific focus on the subset of publications that address visualization-related topics. With this analysis I show that, while the number of papers is increasing overall and within the visualization field, we still have to improve quite a bit to escape the replication crisis. I base my analysis on the data published by the GRSI as well as publication data for the different venues in visualization and lists of journal papers that have been presented at visualization-focused conferences. I also analyze the differences between the involved journals as well as the percentage of reproducible papers in the different presentation venues. Furthermore, I look at the authors of the publications and, in particular, their affiliation countries to see where most reproducible papers come from. Finally, I discuss potential reasons for the low reproducibility numbers and suggest possible ways to overcome these obstacles. This paper is reproducible itself, with source code and data available from github.com/tobiasisenberg/Visualization-Reproducibility as well as a free paper c",
+      "published": "2024-08-07T16:40:03Z",
+      "updated": "2024-09-16T08:16:36Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Prediction scoring of data-driven discoveries for reproducible research",
+      "url": "https://arxiv.org/abs/2211.10314v1",
+      "summary": "Predictive modeling uncovers knowledge and insights regarding a hypothesized data generating mechanism (DGM). Results from different studies on a complex DGM, derived from different data sets, and using complicated models and algorithms, are hard to quantitatively compare due to random noise and statistical uncertainty in model results. This has been one of the main contributors to the replication crisis in the behavioral sciences. The contribution of this paper is to apply prediction scoring to the problem of comparing two studies, such as can arise when evaluating replications or competing evidence. We examine the role of predictive models in quantitatively assessing agreement between two datasets that are assumed to come from two distinct DGMs. We formalize a distance between the DGMs that is estimated using cross validation. We argue that the resulting prediction scores depend on the predictive models created by cross validation. In this sense, the prediction scores measure the distance between DGMs, along the dimension of the particular predictive model. Using human behavior data from experimental economics, we demonstrate that prediction scores can be used to evaluate preregi",
+      "published": "2022-11-18T16:10:49Z",
+      "updated": "2022-11-18T16:10:49Z",
+      "query": "(\"scientific controversy\" OR \"replication crisis\") AND (evidence OR reproducibility)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Is Randomness Necessary for Adaptive Data Analysis?",
+      "url": "https://arxiv.org/abs/2607.07085v3",
+      "summary": "The Adaptive Data Analysis (ADA) problem formalizes the challenge of preventing false discovery and overfitting when a dataset is repeatedly reused. Formally, our input is a dataset containing $n$ i.i.d. samples from an unknown distribution $\\mathcal{P}$ over a domain $\\mathcal{X}$, and our goal is to answer a sequence of $k$ adaptively chosen statistical queries with respect to $\\mathcal{P}$. The main question is how many queries we can support (i.e., how large $k$ can be), primarily as a function of the number of samples $n$. This question has been intensively studied and is relatively well-understood for randomized mechanisms: there are computationally efficient mechanisms that support $k \\approx n^2$ queries, and no computationally efficient mechanism can answer $k \\gg n^2$ queries. In this paper, we address a fundamental question: is randomness necessary for ADA? Despite a decade of work on ADA, this question remains open. A folklore observation dating back to the initial works on ADA is that randomness is {\\em not} necessary when the analyst is computationally bounded. Yet, the necessity of randomness against computationally unbounded analysts has remained elusive. Our main c",
+      "published": "2026-07-08T07:17:35Z",
+      "updated": "2026-11-18T18:57:58Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "\"I Don't Think It's a Scam\": A First Look at Family Intervention Barriers in Elder Abuse Discussions on Reddit and Baidu Tieba",
+      "url": "https://arxiv.org/abs/2611.24899v1",
+      "summary": "When older adults trust scammers despite warnings, families face obstacles to intervention. Complainants aged 60 and older reported \\$4.9 billion in losses in 2024 to the U.S. Internet Crime Complaint Center. To investigate family intervention barriers to elder scams, we collected 2M Reddit posts from May 2021 to June 2026 and 2B Baidu Tieba posts from 2007 to 2026. The final corpora contain 13,082 Reddit posts and 3,933 Baidu Tieba posts, labeled using platform-specific codebooks, manual reference annotations, and LLM coding. Through a mixed-methods analysis, we find that scams often extend beyond a single incident and are reported alongside debt problems and broken family relationships. In 68.0\\% of Reddit posts recording reactions, older adults showed resistance or continued involvement; in Baidu Tieba family-confrontation posts, 41.9\\% showed continued belief. Relatives identified fraud in 74.4\\% of Reddit posts and narrated cases on Baidu Tieba, but without the victim's consent, relatives may lack the legal authority to intervene. In Reddit posts recording reactions, account locks or credential changes appeared in 8.9\\% under resistance or continued involvement, compared with ",
+      "published": "2026-11-18T18:38:06Z",
+      "updated": "2026-11-18T18:38:06Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "LLM-Guided Cyber-Physical Attack Path Identification in Smart Grids",
+      "url": "https://arxiv.org/abs/2611.24765v1",
+      "summary": "Identifying high-impact attack paths in cyber-physical power systems is critical for improving grid resilience. Existing methods typically rely on either structural topology analysis or simulation-based cascading-failure models. Topology-based approaches capture connectivity but lack adversarial reasoning, while simulation-driven methods are primarily suited for offline analysis and are less effective for rapid evaluation of evolving attack scenarios. As a result, identifying realistic attack paths that jointly capture topology, threat semantics, and physical impact remains challenging. This paper presents a physics-grounded framework for identifying cyber-physical attack paths using large language models (LLMs), with cascading-failure-derived impact rankings used as physics-grounded references. The framework integrates system topology, LLM-guided STRIDE and MITRE ATT&CK threat modeling, and three baseline strategies for comparison: topology-driven, threat-driven, and fusion-based. Evaluation is performed using (i) critical-node overlap between LLM-inferred top-K rankings and cascading-failure-based ground truth; (ii) node-level similarity between LLM-inferred and reference paths; ",
+      "published": "2026-11-18T17:16:56Z",
+      "updated": "2026-11-18T17:16:56Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Threshold Choice, Not Sample Size, Bounds Trustless Verification of Nondeterministic Compound AI Workflows",
+      "url": "https://arxiv.org/abs/2609.10601v2",
+      "summary": "Compound AI pipelines chain LLM calls, retrievers, and tools and are nondeterministic: sampling, model updates, and volatile tool responses make one input yield different outputs across runs. Such pipelines increasingly run across edge, cloud, and orbital nodes owned by no single party, whose optimizations discard intermediate results before inspection. Verifying reproduction there means tolerating nondeterministic outputs, a node that may not report honestly, and intermittent access to any shared record; existing work addresses at most two at once. We give a protocol covering all three: it commits digests of each stage's inputs, outputs, and context under a policy digest pinning the metric and threshold, anchors them without trusting the executing node, defers under partition, and decides a challenge on the median of $k$ re-executions, with no quorum. Where that procedure breaks is the main result. On a synthetic HotpotQA pipeline a calibrated fixed threshold accepts 44 of 45 honest reproductions and rejects 104 of 105 divergent pairs, yet lets same-input fabrication through in 27 of 29 trials at k=5, more samples being no help since sampling sharpens an estimate without moving it",
+      "published": "2026-09-07T22:10:54Z",
+      "updated": "2026-11-18T16:53:19Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Extracting Training Data from Diffusion Language Models via Infilling",
+      "url": "https://arxiv.org/abs/2605.24173v2",
+      "summary": "Memorization in large language models has been studied almost exclusively through prefix-conditioned extraction, a natural choice for autoregressive models. However, diffusion language models (DLMs) can denoise masked tokens at arbitrary positions. Thus, prefix-only probing reveals only one facet of memorization in DLMs and significantly underestimates the risk of training-data extraction. In order to realistically model extractability of training data in DLMs, we introduce infilling extraction, a data-extraction protocol parameterized by an arbitrary binary mask that subsumes prefix-only probing and accounts for the bidirectional inductive bias of DLMs. Instantiating it on LLaDA-8B and Dream-7B across five extraction modes, three training pipelines, and three corpora covering verbatim and partial leakage, we find that mask geometry governs extractability: edge-conditioned masks extract up to three times more verbatim sequences than prefix-conditioned ones, and bidirectional access opens channels inaccessible in autoregressive models. In particular, an adversary who obtains a PII-redacted copy of the training data can use targeted infilling to raise PII recall on fine-tuned DLMs by",
+      "published": "2026-05-22T19:46:08Z",
+      "updated": "2026-11-18T16:50:39Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Stealing Exact Training Data from Other Clients during Federated Learning",
+      "url": "https://arxiv.org/abs/2611.24689v1",
+      "summary": "Malicious adversaries can employ gradient inversion attacks to reverse-engineer private data using the model updates of a round in Federated Learning. While there have been developments in gradient inversion for text, exact text recovery by a malicious client has so far remained infeasible, as FedAvg entangles the gradient contributions of many clients and obscures the signal of any individual sentence. We introduce a novel attack pipeline that unwinds this entanglement progressively through an iterative loop, in which the gradient contributions of sentences recovered exactly in one round are subtracted from the aggregate, exposing the remaining sentences for recovery in the next iteration. We show, for the first time, exact sentence recovery, with 100% precision, and on aggregates containing up to $4\\times$ more tokens than the model's hidden dimension, we recover up to 80.2% of client sentences exactly, a regime where existing attacks recover none exactly.",
+      "published": "2026-11-18T16:19:03Z",
+      "updated": "2026-11-18T16:19:03Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "The Limit Is in the Input, Not the Model: State-Dependent Command Safety in Natural-Language Interfaces to Industrial Controllers",
+      "url": "https://arxiv.org/abs/2611.24682v1",
+      "summary": "Language models judging commands to industrial controllers may not receive machine state, the equipment's current condition. The same command can require opposite safety decisions in different states, so an incorrect answer may reflect missing information rather than poor reasoning. We propose an answerability audit: does the model receive the information needed to decide? The audit records the model's inputs and pairs the same command with two states requiring opposite answers. The paired score counts a pair only when both answers are correct. We add rules, then state values, to the model's input. In an author-built test of 15 pairs from three systems with four language models, none reliably distinguished the paired cases without state, even with rules. With state, scores ranged from 0 to 13 correct pairs out of 15; three models improved. With text alone, one model always allowed commands and another always denied them. Their overall (raw) accuracies differed by 32 percentage points; both scored 50% balanced accuracy, which weights safe and unsafe cases equally, and no correct pairs. A rule evaluator matched all 15 pairs by applying the same rules that supplied the expected answer",
+      "published": "2026-11-18T16:16:22Z",
+      "updated": "2026-11-18T16:16:22Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Analysis of Commit Signing on GitHub",
+      "url": "https://arxiv.org/abs/2604.14014v4",
+      "summary": "Since 1999, the security community has known that managing cryptographic keys is hard for users of cryptographic systems. Git lets software developers use private keys they control to digitally sign the commits that record their code changes to a repository. This practice offers a rare opportunity to study how a large community manages cryptographic keys in everyday work. In this paper, we study end-to-end commit signing, using GitHub accounts as our sampling unit. Our 2% stratified sample of the GitHub population comprises 2,737,649 accounts, 71,694 of which have made at least one commit. For these accounts, we analyze 16,112,439 commits across 874,198 repositories and collect 208,546 public keys uploaded to the sampled accounts. We examine developers' signing key usage patterns and compare our findings with those of prior commit signing studies, most of which used repository-based samples and paid less attention to key management. We then outline a path toward more usable key management for developers.",
+      "published": "2026-04-15T15:57:07Z",
+      "updated": "2026-11-18T16:14:21Z",
+      "query": "(\"privacy preserving\" OR cryptography) AND (security OR verification)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "AI Security Literacy: Ecosystem-Based Competency Framework and K-12 Learning Platform",
+      "url": "https://arxiv.org/abs/2610.28859v2",
+      "summary": "Adoption of artificial intelligence in K-12 schools has outpaced guidance for students, teachers, and administrators. Existing AI-literacy frameworks emphasize understanding and use; cybersecurity frameworks predate AI-specific threats, and neither defines AI security literacy as a competency domain in its own right. We propose an AI Security Literacy (AISL) framework of six dimensions spanning the school ecosystem, ground its technical dimensions in public AI-safety benchmarks and a reproducible multi-seed adversarial evaluation, and ground its attitudinal dimensions in nationally representative survey micro-data from U.S. teachers and adults. Only 34.5% of teachers report a school AI policy, and teachers see their own AI use as easing their work but students' use as complicating it; on the technical side, a reported robustness figure depends as much on the attack and the particular trained model as on the system evaluated. NeuralFortify, a browser-based K-12 platform built on real AI models, is presented as an illustrative operationalization.",
+      "published": "2026-10-20T19:31:37Z",
+      "updated": "2026-11-14T16:58:43Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Adversarial Evaluation of Large Language Models for Patient-Friendly Radiology Report Summarization",
+      "url": "https://arxiv.org/abs/2611.10277v1",
+      "summary": "Purpose: To develop and validate a scalable adversarial evaluation framework for assessing the robustness of large language models (LLMs) that generate patient-friendly summaries of radiology reports. Methods: We introduced a clinically grounded adversarial framework that uses controlled term substitutions and impression removals across intensity levels. Using a radiologist-validated adversarial dictionary, we generated adversarial variants of CT and MRI reports. Six LLMs summarized original and adversarial impressions using 2 prompt styles, yielding 18,000 evaluation pairs. Robustness was evaluated with an automated LLM-as-a-judge framework scoring factual faithfulness, sensitivity to adversarial edits, certainty fidelity, and hallucination rate. Failure mode analysis quantified vulnerabilities in incorporating clinical modifiers. Agreement with two radiologists was assessed on 105 cases. Results: GPT-5-mini achieved the highest factual faithfulness and certainty fidelity under both adversarial edits. Under term substitution, hallucinations occurred in 28.1-30.1% of GPT-5-mini summaries, compared with 35.3-36.4% for Claude Sonnet 4.5 and 41.4-41.9% for MedGemma. Impression-removal",
+      "published": "2026-11-06T22:23:14Z",
+      "updated": "2026-11-06T22:23:14Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Procedural Adversarial Learning",
+      "url": "https://arxiv.org/abs/2611.06890v1",
+      "summary": "For many computer vision tasks, neural networks can be trained to produce a low average error, yet they still fail on seemingly simple scenes. Reducing these failures requires first finding them, but they may not be in a fixed dataset. We study procedural adversarial learning (PAL), a framework of minimax training and adversarial evaluation which searches the input space of a procedural generator for difficult instances. The procedural generator is an interpretable program mapping a low-dimensional vector of control parameters (e.g. layout, lighting, pose) to a rendered image and its label. We introduce the Simple-PAT algorithm, which uses zeroth-order optimization in the procedural generator's parameter space to propose adversarial training samples that are generated on demand. We also create PAL-Dojo, a collection of efficient procedural generators for surface normal estimation, image segmentation, and human pose estimation. Against a cross-model black-box adversary with 50M aggregate queries, Simple-PAT reduces worst-case error by a geometric mean of 3.15x compared to standard training and 2.63x compared to the strongest robust training baseline. Code is available at https://git",
+      "published": "2026-11-04T18:42:28Z",
+      "updated": "2026-11-04T18:42:28Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Trick-or-Treat: Adversarial Evaluation of Multimodal Medical Reasoning with Synthetic Images",
+      "url": "https://arxiv.org/abs/2611.06631v1",
+      "summary": "We used medical image synthesis to create a challenging multimodal evaluation framework that exposes hallucination behaviors in frontier models. Evaluating multimodal reasoning has historically been difficult because existing medical datasets rarely pair different image modalities, such as radiographs and external clinical photographs. To address this gap, we introduce Trick-or-Treat, an adversarial multimodal medical benchmark that pairs real chest radiographs with synthetic clinical photographs to challenge models' cross-modal reasoning. For each of a wide range of conditions, we created two pairs of images, where the pairs share a single chest radiograph but contain different external photographs. In matched pairs, the chest radiograph and photograph both contain findings suggesting the same disease (e.g., varicella pneumonia suggested by lung opacities and crusted skin lesions seen in chickenpox). In mismatched pairs, the photograph depicts an alternative clinical finding that would not lead to the same unifying diagnosis (e.g. replacing crusted skin lesions with ordinary acne). Synthetic photograph generation allows clinical findings to be varied while the person's features an",
+      "published": "2026-11-04T15:13:35Z",
+      "updated": "2026-11-04T15:13:35Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "From Guidelines to Practice: Defining Requirements for AI Red-Teaming Tools",
+      "url": "https://arxiv.org/abs/2611.04271v1",
+      "summary": "Artificial Intelligence (AI) has seen significant developments and increased usage in recent years. AI benefits various tasks, automates decision-making, and enhances efficiency. However, AI also introduces additional attack surfaces for threat actors to perform attacks like prompt injection and jailbreaking, making security a great concern. AI security testing aims to imitate adversarial attacks or malicious inputs via manual testing or with the assistance of tools. Thus, it is critical that organizations are aware of the capabilities and limitations of the tools before using them. Existing studies provide insights on the overall architecture of AI security testing tools and raise concerns on their reliability, but their analysis is limited to attack performance. Selection of a tool for AI risk assessments should also depend on their alignment with the recommendations of industry standards, but to our knowledge, previous studies have not utilized such guidelines. To bridge this gap, we analyze several industry standards and guidelines to identify the requirements of AI testing tools. We discuss and highlight desirable features across various AI security testing tools for a variety",
+      "published": "2026-11-03T04:00:18Z",
+      "updated": "2026-11-03T04:00:18Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "On the Framing Effect of AI Red-Teaming Instructions: Evidence from Prior Exercises and Controlled Simulations",
+      "url": "https://arxiv.org/abs/2611.00412v1",
+      "summary": "AI red-teaming, adversarially probing generative AI systems to surface harms, has become a central evaluation method. However, prior work has highlighted that red-teaming is a fairly open-ended task, laden with myriad design choices that can shape its findings. In this work, we focus on the instructions used to conduct red-teaming exercises and hypothesize that they can significantly affect outcomes in a manner analogous to the framing effect in psychology, where the format in which information is presented greatly impacts how people respond. To understand whether and why instructions impact red-teaming outcomes, first, we analyze the range of ways in which instructions have historically been formulated, reviewing 228 instances of prior work. Second, based on takeaways from this review, we run controlled simulations that hold parameters such as the risk domain, the attacker, and the model under investigation fixed while varying only the instructions. From five real instruction templates used by industry and academic organizations, we derive 45 instruction frames across three risk domains and three levels of risk granularity, generating 100 variants per frame, and deploy each agains",
+      "published": "2026-10-30T22:02:40Z",
+      "updated": "2026-10-30T22:02:40Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "Exposing Vulnerability Monoculture Through Systemic Adversarial Robustness",
+      "url": "https://arxiv.org/abs/2610.27353v1",
+      "summary": "Beneath the apparent diversity of foundation models lies an increasingly homogeneous technical stack of common training pipelines, distillation methods, and data. These shared algorithmic choices can expose an otherwise distinct model ecosystem to concentrated risks leading to a vulnerability monoculture. Yet current practice in assessing adversarial robustness is restricted to individual robustness scores and attack transfer rates, leaving open the unexplored fundamental question: how many attacks suffice for catastrophic widespread compromise? In this paper, we investigate the empirical nature of shared vulnerabilities within a model pool and introduce Systemic Adversarial Robustness (SAR), a novel measure of shared vulnerability of a model pool through the attack diversity needed to exploit it. Specifically, SAR interpolates between single-attack transferability and independent per-model robustness: small values reveal a vulnerability monoculture, whereas large values indicate that failures are dispersed across models. We theoretically formulate SAR as a partial set-cover problem with provable approximation guarantees---enabling the development of scalable algorithms to empirica",
+      "published": "2026-10-19T22:30:15Z",
+      "updated": "2026-10-19T22:30:15Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    },
+    {
+      "source_type": "arxiv_paper",
+      "title": "TransNSNet: A Transformer-Enhanced Multi-Scale Adversarial Framework for CT-to-PET Image Synthesis",
+      "url": "https://arxiv.org/abs/2610.23325v1",
+      "summary": "This study investigates CT-to-PET image synthesis using TransNSNet, a Transformer-enhanced multi-scale adversarial framework. A paired CT-PET dataset was curated from the public non-small cell lung cancer (NSCLC) Radiogenomics collection through patient screening, slice-level matching, preprocessing, and patient-level train-test separation. The proposed framework generates PET-like predictions at multiple spatial scales and applies coarse-to-fine reconstruction supervision, while TransPatchGAN introduces contextual feature interaction into adversarial evaluation. A progressive ablation study compares Pix2Pix, NSNet-Base, NSNet-D, and TransNSNet. Image-level performance was summarized over a fixed convergence window (epochs 80-101) from one training run per model. TransNSNet achieved the best mean value in nine of ten metrics, whereas NSNet-Base achieved the highest visual saliency-induced index. For fixed-fraction high-intensity regions, NSNet-D was marginally higher in slice-level recall and balanced accuracy, but the equal-weight patient-level values were nearly identical and the highest Dice values shifted to TransNSNet. These differences were small relative to between-patient v",
+      "published": "2026-10-16T11:28:54Z",
+      "updated": "2026-10-16T11:28:54Z",
+      "query": "(\"AI red teaming\" OR \"adversarial evaluation\") AND (agents OR models)"
+    }
+  ]
+}
